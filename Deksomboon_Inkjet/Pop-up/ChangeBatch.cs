@@ -87,7 +87,7 @@ namespace Deksomboon_Inkjet.Pop_up
                 DataLog.Update_DateLog(Int32.Parse(ord_id), Int32.Parse(txtSumCount.Text), start_date, Int32.Parse(txtEmpID.Text), txtTenDigitOld.Text, txtOrderDate.Text);
 
                 //DataLog.Add_DatLog(Int32.Parse(ord_id), txtTenDigit.Text, 0, start_date, end_date, Int32.Parse(txtEmpID.Text));
-                DataLog.Add_Authorized_Log(Int32.Parse(ord_id), Int32.Parse(txtEmpID.Text), start_date, "จบ batch", 2, txtTenDigitOld.Text);
+                DataLog.Add_Authorized_Log(Int32.Parse(ord_id), Int32.Parse(txtEmpID.Text), start_date, "จบ batch", 1, txtTenDigitOld.Text);
 
                 DialogResult = DialogResult.OK;
             }
