@@ -232,9 +232,9 @@
             this.label1.ForeColor = System.Drawing.Color.Gray;
             this.label1.Location = new System.Drawing.Point(407, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(458, 34);
+            this.label1.Size = new System.Drawing.Size(530, 34);
             this.label1.TabIndex = 5;
-            this.label1.Text = "ระบบควบคุมข้อมูลเครื่องพิมพ์ Control Room";
+            this.label1.Text = "ระบบควบคุมข้อมูลเครื่องพิมพ์ Control Room 5555";
             // 
             // btnExit
             // 
