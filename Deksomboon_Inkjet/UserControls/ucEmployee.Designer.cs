@@ -60,9 +60,9 @@
             this.btnEditEmployee.Controls.Add(this.DataGridEmployee);
             this.btnEditEmployee.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.btnEditEmployee.Location = new System.Drawing.Point(21, 17);
+            this.btnEditEmployee.Location = new System.Drawing.Point(0, 0);
             this.btnEditEmployee.Name = "btnEditEmployee";
-            this.btnEditEmployee.Size = new System.Drawing.Size(976, 592);
+            this.btnEditEmployee.Size = new System.Drawing.Size(995, 616);
             this.btnEditEmployee.TabIndex = 7;
             this.btnEditEmployee.Text = "จัดการพนักงาน";
             // 
@@ -161,7 +161,7 @@
             this.DataGridEmployee.RowHeadersVisible = false;
             this.DataGridEmployee.RowHeadersWidth = 51;
             this.DataGridEmployee.RowTemplate.Height = 30;
-            this.DataGridEmployee.Size = new System.Drawing.Size(943, 440);
+            this.DataGridEmployee.Size = new System.Drawing.Size(962, 464);
             this.DataGridEmployee.TabIndex = 0;
             this.DataGridEmployee.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridEmployee.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -246,7 +246,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnEditEmployee);
             this.Name = "ucEmployee";
-            this.Size = new System.Drawing.Size(1014, 625);
+            this.Size = new System.Drawing.Size(995, 616);
             this.Load += new System.EventHandler(this.ucEmployee_Load_1);
             this.btnEditEmployee.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridEmployee)).EndInit();

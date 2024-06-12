@@ -68,12 +68,11 @@
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel4);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel3);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel1);
-            this.guna2GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GroupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2GroupBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(1014, 625);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(995, 616);
             this.guna2GroupBox1.TabIndex = 4;
             this.guna2GroupBox1.Text = "ประวัติการผลิต";
             // 
@@ -102,7 +101,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1014, 62);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(995, 62);
             this.tableLayoutPanel1.TabIndex = 76;
             // 
             // btnExport
@@ -116,7 +115,7 @@
             this.btnExport.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
             this.btnExport.Font = new System.Drawing.Font("Prompt", 9F);
             this.btnExport.ForeColor = System.Drawing.Color.Black;
-            this.btnExport.Location = new System.Drawing.Point(875, 3);
+            this.btnExport.Location = new System.Drawing.Point(856, 3);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(136, 39);
             this.btnExport.TabIndex = 69;
@@ -131,7 +130,7 @@
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(3, 3);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(109, 56);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(107, 56);
             this.guna2HtmlLabel2.TabIndex = 57;
             this.guna2HtmlLabel2.Text = "พนักงาน";
             this.guna2HtmlLabel2.TextAlignment = System.Drawing.ContentAlignment.TopRight;
@@ -146,7 +145,7 @@
             this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSearch.Font = new System.Drawing.Font("Prompt", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch.Location = new System.Drawing.Point(734, 3);
+            this.btnSearch.Location = new System.Drawing.Point(719, 3);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(130, 39);
             this.btnSearch.TabIndex = 63;
@@ -155,7 +154,7 @@
             // 
             // guna2DateTimePicker2
             // 
-            this.guna2DateTimePicker2.Location = new System.Drawing.Point(593, 3);
+            this.guna2DateTimePicker2.Location = new System.Drawing.Point(583, 3);
             this.guna2DateTimePicker2.Name = "guna2DateTimePicker2";
             this.guna2DateTimePicker2.Size = new System.Drawing.Size(125, 32);
             this.guna2DateTimePicker2.TabIndex = 72;
@@ -165,7 +164,7 @@
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(505, 3);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(496, 3);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(68, 28);
             this.guna2HtmlLabel6.TabIndex = 64;
@@ -178,9 +177,9 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(281, 3);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(276, 3);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(82, 56);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(81, 56);
             this.guna2HtmlLabel5.TabIndex = 73;
             this.guna2HtmlLabel5.Text = "Start Date";
             this.guna2HtmlLabel5.TextAlignment = System.Drawing.ContentAlignment.TopRight;
@@ -198,9 +197,9 @@
             this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(118, 3);
+            this.guna2ComboBox1.Location = new System.Drawing.Point(116, 3);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(157, 36);
+            this.guna2ComboBox1.Size = new System.Drawing.Size(154, 36);
             this.guna2ComboBox1.TabIndex = 60;
             this.guna2ComboBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.guna2ComboBox1.ValueMember = "emp_id";
@@ -211,7 +210,7 @@
             // 
             // guna2DateTimePicker1
             // 
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(369, 3);
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(363, 3);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
             this.guna2DateTimePicker1.Size = new System.Drawing.Size(125, 32);
             this.guna2DateTimePicker1.TabIndex = 63;
@@ -261,7 +260,7 @@
             this.DataGridOrderLog.RowHeadersVisible = false;
             this.DataGridOrderLog.RowHeadersWidth = 51;
             this.DataGridOrderLog.RowTemplate.Height = 30;
-            this.DataGridOrderLog.Size = new System.Drawing.Size(981, 494);
+            this.DataGridOrderLog.Size = new System.Drawing.Size(962, 485);
             this.DataGridOrderLog.TabIndex = 68;
             this.DataGridOrderLog.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridOrderLog.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -377,7 +376,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2GroupBox1);
             this.Name = "ucOrderLog";
-            this.Size = new System.Drawing.Size(1014, 625);
+            this.Size = new System.Drawing.Size(995, 616);
             this.Load += new System.EventHandler(this.ucOrderLog_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);

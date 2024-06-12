@@ -55,12 +55,11 @@
             this.guna2GroupBox1.Controls.Add(this.btnEdit);
             this.guna2GroupBox1.Controls.Add(this.btnAdd);
             this.guna2GroupBox1.Controls.Add(this.DataGridEmployee);
-            this.guna2GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GroupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2GroupBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(1014, 625);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(995, 616);
             this.guna2GroupBox1.TabIndex = 7;
             this.guna2GroupBox1.Text = "จัดการอินเจ็ก";
             // 
@@ -159,7 +158,7 @@
             this.DataGridEmployee.RowHeadersVisible = false;
             this.DataGridEmployee.RowHeadersWidth = 51;
             this.DataGridEmployee.RowTemplate.Height = 30;
-            this.DataGridEmployee.Size = new System.Drawing.Size(981, 473);
+            this.DataGridEmployee.Size = new System.Drawing.Size(962, 464);
             this.DataGridEmployee.TabIndex = 14;
             this.DataGridEmployee.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridEmployee.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -244,7 +243,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2GroupBox1);
             this.Name = "ucInkjet";
-            this.Size = new System.Drawing.Size(1014, 625);
+            this.Size = new System.Drawing.Size(995, 616);
             this.Load += new System.EventHandler(this.ucInkjet_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridEmployee)).EndInit();
