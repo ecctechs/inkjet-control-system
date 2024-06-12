@@ -37,12 +37,12 @@
             this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.DataGridLocation = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.locationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.locationidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.locationnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empemailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.locationprefixDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.locationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridLocation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.locationBindingSource)).BeginInit();
@@ -59,7 +59,7 @@
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2GroupBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(1548, 621);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(978, 599);
             this.guna2GroupBox1.TabIndex = 6;
             this.guna2GroupBox1.Text = "จัดการไลน์ผลิต";
             // 
@@ -157,7 +157,7 @@
             this.DataGridLocation.RowHeadersVisible = false;
             this.DataGridLocation.RowHeadersWidth = 51;
             this.DataGridLocation.RowTemplate.Height = 30;
-            this.DataGridLocation.Size = new System.Drawing.Size(1515, 469);
+            this.DataGridLocation.Size = new System.Drawing.Size(945, 447);
             this.DataGridLocation.TabIndex = 14;
             this.DataGridLocation.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridLocation.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -180,10 +180,6 @@
             this.DataGridLocation.ThemeStyle.RowsStyle.Height = 30;
             this.DataGridLocation.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridLocation.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // locationBindingSource
-            // 
-            this.locationBindingSource.DataSource = typeof(Deksomboon_Inkjet.Class.location);
             // 
             // locationidDataGridViewTextBoxColumn
             // 
@@ -227,13 +223,17 @@
             this.locationprefixDataGridViewTextBoxColumn.Name = "locationprefixDataGridViewTextBoxColumn";
             this.locationprefixDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // locationBindingSource
+            // 
+            this.locationBindingSource.DataSource = typeof(Deksomboon_Inkjet.Class.location);
+            // 
             // ucLocation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2GroupBox1);
             this.Name = "ucLocation";
-            this.Size = new System.Drawing.Size(1548, 621);
+            this.Size = new System.Drawing.Size(978, 599);
             this.Load += new System.EventHandler(this.ucLocation_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridLocation)).EndInit();

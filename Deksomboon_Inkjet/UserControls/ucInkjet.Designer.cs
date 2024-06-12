@@ -37,13 +37,13 @@
             this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.DataGridEmployee = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.inkjetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.inkjetidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inkjetnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.locationidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.locationnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inkjetstatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inkjetconnectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inkjetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inkjetBindingSource)).BeginInit();
@@ -60,7 +60,7 @@
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2GroupBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(1548, 621);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(978, 599);
             this.guna2GroupBox1.TabIndex = 7;
             this.guna2GroupBox1.Text = "จัดการอินเจ็ก";
             // 
@@ -159,7 +159,7 @@
             this.DataGridEmployee.RowHeadersVisible = false;
             this.DataGridEmployee.RowHeadersWidth = 51;
             this.DataGridEmployee.RowTemplate.Height = 30;
-            this.DataGridEmployee.Size = new System.Drawing.Size(1515, 469);
+            this.DataGridEmployee.Size = new System.Drawing.Size(945, 447);
             this.DataGridEmployee.TabIndex = 14;
             this.DataGridEmployee.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridEmployee.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -182,10 +182,6 @@
             this.DataGridEmployee.ThemeStyle.RowsStyle.Height = 30;
             this.DataGridEmployee.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridEmployee.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // inkjetBindingSource
-            // 
-            this.inkjetBindingSource.DataSource = typeof(Deksomboon_Inkjet.Class.Inkjet);
             // 
             // inkjetidDataGridViewTextBoxColumn
             // 
@@ -238,13 +234,17 @@
             this.inkjetconnectDataGridViewTextBoxColumn.ReadOnly = true;
             this.inkjetconnectDataGridViewTextBoxColumn.Visible = false;
             // 
+            // inkjetBindingSource
+            // 
+            this.inkjetBindingSource.DataSource = typeof(Deksomboon_Inkjet.Class.Inkjet);
+            // 
             // ucInkjet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2GroupBox1);
             this.Name = "ucInkjet";
-            this.Size = new System.Drawing.Size(1548, 621);
+            this.Size = new System.Drawing.Size(978, 599);
             this.Load += new System.EventHandler(this.ucInkjet_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridEmployee)).EndInit();

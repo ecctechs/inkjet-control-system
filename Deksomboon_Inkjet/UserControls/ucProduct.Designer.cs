@@ -35,16 +35,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.DataGridEmployee = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.materialBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnUpload = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
-            this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.materialidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.perindDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.slifeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materialdesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.formulaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materialBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnUpload = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).BeginInit();
@@ -62,7 +62,7 @@
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2GroupBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(1548, 621);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(978, 599);
             this.guna2GroupBox1.TabIndex = 2;
             this.guna2GroupBox1.Text = "จัดการข้อมูลสินค้า";
             this.guna2GroupBox1.Click += new System.EventHandler(this.guna2GroupBox1_Click);
@@ -119,7 +119,7 @@
             this.DataGridEmployee.RowHeadersVisible = false;
             this.DataGridEmployee.RowHeadersWidth = 51;
             this.DataGridEmployee.RowTemplate.Height = 35;
-            this.DataGridEmployee.Size = new System.Drawing.Size(1515, 458);
+            this.DataGridEmployee.Size = new System.Drawing.Size(945, 436);
             this.DataGridEmployee.TabIndex = 11;
             this.DataGridEmployee.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridEmployee.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -143,6 +143,46 @@
             this.DataGridEmployee.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridEmployee.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // materialidDataGridViewTextBoxColumn
+            // 
+            this.materialidDataGridViewTextBoxColumn.DataPropertyName = "material_id";
+            this.materialidDataGridViewTextBoxColumn.HeaderText = "หมายเลขวัสดุ";
+            this.materialidDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.materialidDataGridViewTextBoxColumn.Name = "materialidDataGridViewTextBoxColumn";
+            this.materialidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // perindDataGridViewTextBoxColumn
+            // 
+            this.perindDataGridViewTextBoxColumn.DataPropertyName = "per_ind";
+            this.perindDataGridViewTextBoxColumn.HeaderText = "Per. Ind.";
+            this.perindDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.perindDataGridViewTextBoxColumn.Name = "perindDataGridViewTextBoxColumn";
+            this.perindDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // slifeDataGridViewTextBoxColumn
+            // 
+            this.slifeDataGridViewTextBoxColumn.DataPropertyName = "slife";
+            this.slifeDataGridViewTextBoxColumn.HeaderText = "SLIfe";
+            this.slifeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.slifeDataGridViewTextBoxColumn.Name = "slifeDataGridViewTextBoxColumn";
+            this.slifeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // materialdesDataGridViewTextBoxColumn
+            // 
+            this.materialdesDataGridViewTextBoxColumn.DataPropertyName = "material_des";
+            this.materialdesDataGridViewTextBoxColumn.HeaderText = "รายละเอียดวัสดุ";
+            this.materialdesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.materialdesDataGridViewTextBoxColumn.Name = "materialdesDataGridViewTextBoxColumn";
+            this.materialdesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // formulaDataGridViewTextBoxColumn
+            // 
+            this.formulaDataGridViewTextBoxColumn.DataPropertyName = "formula";
+            this.formulaDataGridViewTextBoxColumn.HeaderText = "Formula";
+            this.formulaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.formulaDataGridViewTextBoxColumn.Name = "formulaDataGridViewTextBoxColumn";
+            this.formulaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // materialBindingSource
             // 
             this.materialBindingSource.DataSource = typeof(Deksomboon_Inkjet.Class.Material);
@@ -158,7 +198,7 @@
             this.btnUpload.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(202)))), ((int)(((byte)(240)))));
             this.btnUpload.Font = new System.Drawing.Font("Prompt", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpload.ForeColor = System.Drawing.Color.Black;
-            this.btnUpload.Location = new System.Drawing.Point(1348, 63);
+            this.btnUpload.Location = new System.Drawing.Point(778, 63);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(180, 45);
             this.btnUpload.TabIndex = 10;
@@ -215,53 +255,13 @@
             this.btnAdd.Text = "เพิ่มข้อมูลสินค้า";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // materialidDataGridViewTextBoxColumn
-            // 
-            this.materialidDataGridViewTextBoxColumn.DataPropertyName = "material_id";
-            this.materialidDataGridViewTextBoxColumn.HeaderText = "หมายเลขวัสดุ";
-            this.materialidDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.materialidDataGridViewTextBoxColumn.Name = "materialidDataGridViewTextBoxColumn";
-            this.materialidDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // perindDataGridViewTextBoxColumn
-            // 
-            this.perindDataGridViewTextBoxColumn.DataPropertyName = "per_ind";
-            this.perindDataGridViewTextBoxColumn.HeaderText = "Per. Ind.";
-            this.perindDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.perindDataGridViewTextBoxColumn.Name = "perindDataGridViewTextBoxColumn";
-            this.perindDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // slifeDataGridViewTextBoxColumn
-            // 
-            this.slifeDataGridViewTextBoxColumn.DataPropertyName = "slife";
-            this.slifeDataGridViewTextBoxColumn.HeaderText = "SLIfe";
-            this.slifeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.slifeDataGridViewTextBoxColumn.Name = "slifeDataGridViewTextBoxColumn";
-            this.slifeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // materialdesDataGridViewTextBoxColumn
-            // 
-            this.materialdesDataGridViewTextBoxColumn.DataPropertyName = "material_des";
-            this.materialdesDataGridViewTextBoxColumn.HeaderText = "รายละเอียดวัสดุ";
-            this.materialdesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.materialdesDataGridViewTextBoxColumn.Name = "materialdesDataGridViewTextBoxColumn";
-            this.materialdesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // formulaDataGridViewTextBoxColumn
-            // 
-            this.formulaDataGridViewTextBoxColumn.DataPropertyName = "formula";
-            this.formulaDataGridViewTextBoxColumn.HeaderText = "Formula";
-            this.formulaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.formulaDataGridViewTextBoxColumn.Name = "formulaDataGridViewTextBoxColumn";
-            this.formulaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // ucProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2GroupBox1);
             this.Name = "ucProduct";
-            this.Size = new System.Drawing.Size(1548, 621);
+            this.Size = new System.Drawing.Size(978, 599);
             this.Load += new System.EventHandler(this.ucProduct_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridEmployee)).EndInit();

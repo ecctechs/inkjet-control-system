@@ -37,13 +37,13 @@
             this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddEmployee = new Guna.UI2.WinForms.Guna2Button();
             this.DataGridEmployee = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.empidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emppasswordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emproleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empemailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnEditEmployee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
@@ -60,7 +60,7 @@
             this.btnEditEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.btnEditEmployee.Location = new System.Drawing.Point(0, 0);
             this.btnEditEmployee.Name = "btnEditEmployee";
-            this.btnEditEmployee.Size = new System.Drawing.Size(1548, 621);
+            this.btnEditEmployee.Size = new System.Drawing.Size(978, 599);
             this.btnEditEmployee.TabIndex = 7;
             this.btnEditEmployee.Text = "จัดการพนักงาน";
             // 
@@ -159,7 +159,7 @@
             this.DataGridEmployee.RowHeadersVisible = false;
             this.DataGridEmployee.RowHeadersWidth = 51;
             this.DataGridEmployee.RowTemplate.Height = 30;
-            this.DataGridEmployee.Size = new System.Drawing.Size(1515, 469);
+            this.DataGridEmployee.Size = new System.Drawing.Size(945, 447);
             this.DataGridEmployee.TabIndex = 0;
             this.DataGridEmployee.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridEmployee.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -183,10 +183,6 @@
             this.DataGridEmployee.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridEmployee.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.DataGridEmployee.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridEmployee_CellContentClick);
-            // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataSource = typeof(Deksomboon_Inkjet.Class.Employee);
             // 
             // empidDataGridViewTextBoxColumn
             // 
@@ -238,13 +234,17 @@
             this.empemailDataGridViewTextBoxColumn.Name = "empemailDataGridViewTextBoxColumn";
             this.empemailDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataSource = typeof(Deksomboon_Inkjet.Class.Employee);
+            // 
             // ucEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnEditEmployee);
             this.Name = "ucEmployee";
-            this.Size = new System.Drawing.Size(1548, 621);
+            this.Size = new System.Drawing.Size(978, 599);
             this.Load += new System.EventHandler(this.ucEmployee_Load_1);
             this.btnEditEmployee.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridEmployee)).EndInit();
