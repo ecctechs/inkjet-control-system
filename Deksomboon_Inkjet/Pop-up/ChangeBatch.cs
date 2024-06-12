@@ -1,0 +1,182 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Deksomboon_Inkjet.Class;
+using Deksomboon_Inkjet.UserControls;
+using Guna.UI2.WinForms;
+
+namespace Deksomboon_Inkjet.Pop_up
+{
+    public partial class ChangeBatch : Form
+    {
+        public ChangeBatch(Order obj, string form, string emp_code, string emp_pass, int sum_count, string emp_id, string ord_date_start)
+        {
+            InitializeComponent();
+
+
+            string inkjet_name = LocalStorage.ReadInkjetData();
+            string lcation_prefix = LocalStorage.ReadLocationPrefixData();
+            List<Inkjet> record = Inkjet.ListInkjetLocationByInkjetName(inkjet_name);
+            //Console.WriteLine(record[0].location_id.ToString());
+
+            txtLine.Text = lcation_prefix;
+            txtLineID.Text = record[0].location_id.ToString();
+            txtInkjetID.Text = record[0].inkjet_id.ToString();
+
+            txtEmpcode.Text = emp_code;
+            txtEmppass.Text = emp_pass;
+
+            txtCheckForm.Text = form;
+
+            get_product();
+
+            cboMaterial.Enabled = false;
+
+            txtOrdID.Text = obj.ord_id.ToString();
+            cboOrdType.Text = obj.ord_type.ToString();
+            guna2HtmlLabel1.Text = "เปลี่ยน batch";
+            cboMaterial.SelectedValue = obj.material_id;
+            txtBatch.Text = obj.ord_batch;
+            txtBatchOld.Text = obj.ord_batch;
+            txtSumCount.Text = sum_count.ToString();
+            txtEmpID.Text = emp_id.ToString();
+            txtOrderDate.Text = ord_date_start;
+
+            //DateTime myDate = DateTime.ParseExact(obj.ord_date.ToString(), "dd/MM/yyyy hh:mm",
+            //                     System.Globalization.CultureInfo.InvariantCulture);
+            DateTime dateInBuddhistEra = DateTime.ParseExact(obj.ord_date, "dd/M/yyyy H:mm:ss", CultureInfo.InvariantCulture);
+            guna2DateTimePicker1.Value = dateInBuddhistEra;
+            guna2DateTimePicker1.Enabled = false;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string line = txtLineID.Text;
+            string batch = txtBatch.Text.Trim();
+            string material_selected = cboMaterial.SelectedValue.ToString();
+            string inkjet = txtInkjetID.Text;
+            string type = "งานเร่งด่วน";
+            string form = txtCheckForm.Text;
+            string ord_id = txtOrdID.Text;
+
+            DateTime st = DateTime.Now.AddYears(-543);
+            string start_date = st.AddSeconds(-st.Second).ToString();
+            //string date = guna2DateTimePicker1.Value.AddYears(-543).ToString("dd/MM/yyyy hh:mm");
+
+            DateTime st1 = guna2DateTimePicker1.Value.AddYears(-543);
+            string date = st1.AddSeconds(-st1.Second).ToString();
+
+            //string end_date = DateTime.Now.AddYears(-543).ToString("dd/MM/yyyy hh:mm");
+            DialogResult confrim_startjet = MessageBox.Show("คุณแน่ใจที่จะจบ batch : " + txtBatchOld.Text + " หรือไม่", "Comfrim End Batch", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (confrim_startjet == DialogResult.Yes)
+            {
+                Order.Update_Order(ord_id, line, inkjet, material_selected, batch, type, date);
+                Order.Update_Order_Status(ord_id, batch, "จบ batch");
+                DataLog.Update_DateLog(Int32.Parse(ord_id), Int32.Parse(txtSumCount.Text), start_date, Int32.Parse(txtEmpID.Text), txtTenDigitOld.Text, txtOrderDate.Text);
+
+                //DataLog.Add_DatLog(Int32.Parse(ord_id), txtTenDigit.Text, 0, start_date, end_date, Int32.Parse(txtEmpID.Text));
+                DataLog.Add_Authorized_Log(Int32.Parse(ord_id), Int32.Parse(txtEmpID.Text), start_date, "จบ batch", 2, txtTenDigitOld.Text);
+
+                DialogResult = DialogResult.OK;
+            }
+        }
+
+        private void txtBatch_TextChanged(object sender, EventArgs e)
+        {
+            gen10number();
+        }
+
+        public void gen10number()
+        {
+            DateTime order_date_test = guna2DateTimePicker1.Value;
+            string batch = txtBatch.Text;
+            string formula = txtFormula.Text;
+            string line = txtLine.Text;
+            string slife = txtSLife.Text;
+
+            Console.WriteLine(order_date_test);
+
+            string tenDigit = GenerateBatchNumber.order_batch_number_generate(order_date_test, batch, formula, line);
+            string BBF = GenerateBatchNumber.order_bbf_generate(order_date_test, slife);
+
+            txtTenDigit.Text = tenDigit;
+            txtBBF.Text = BBF;
+        }
+
+        public void get_product()
+        {
+            List<Material> records = Material.ListMaterial();
+            records.Insert(0, new Material() { material_id = "0", material_des = "เลือก" });
+            cboMaterial.DataSource = records;
+        }
+
+        public void get_old_10_digit()
+        {
+            DateTime order_date_test = guna2DateTimePicker1.Value;
+            string batch = txtBatch.Text;
+            string formula = txtFormula.Text;
+            string line = txtLine.Text;
+            string slife = txtSLife.Text;
+
+            Console.WriteLine(order_date_test);
+
+            string tenDigit = GenerateBatchNumber.order_batch_number_generate(order_date_test, batch, formula, line);
+            string BBF = GenerateBatchNumber.order_bbf_generate(order_date_test, slife);
+
+            txtTenDigitOld.Text = tenDigit;
+
+
+        }
+
+        private void cboMaterial_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var material_selected = cboMaterial.SelectedValue;
+            List<Material> records = Material.ListMaterialByID(material_selected.ToString());
+            if (records.Count > 0)
+            {
+                txtFormula.Text = records[0].formula;
+                txtSLife.Text = records[0].slife.ToString();
+            }
+            else
+            {
+                txtFormula.Text = "";
+                txtSLife.Text = "";
+            }
+            gen10number();
+        }
+
+        private void ChangeBatch_Load(object sender, EventArgs e)
+        {
+
+            get_old_10_digit();
+        }
+
+        private void txtBatch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Check if the key pressed is not a control character (like Backspace)
+            // and is not a letter or digit
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar))
+            {
+                // If it's not, then handle the event by setting e.Handled to true
+                e.Handled = true;
+            }
+            else if (e.KeyChar >= '\u0E00' && e.KeyChar <= '\u0E7F')
+            {
+                // If the character is in the Thai Unicode block, handle the event
+                e.Handled = true;
+            }
+        }
+    }
+}
