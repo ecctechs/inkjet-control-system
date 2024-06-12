@@ -63,7 +63,7 @@
             this.pannel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pannel1.Location = new System.Drawing.Point(0, 0);
             this.pannel1.Name = "pannel1";
-            this.pannel1.Size = new System.Drawing.Size(303, 717);
+            this.pannel1.Size = new System.Drawing.Size(303, 1029);
             this.pannel1.TabIndex = 1;
             // 
             // btnUCauth
@@ -222,7 +222,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(303, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1041, 12);
+            this.panel2.Size = new System.Drawing.Size(1595, 12);
             this.panel2.TabIndex = 2;
             // 
             // label1
@@ -244,7 +244,7 @@
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(1280, 14);
+            this.btnExit.Location = new System.Drawing.Point(1834, 14);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(59, 60);
             this.btnExit.TabIndex = 6;
@@ -260,14 +260,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainPanel.Location = new System.Drawing.Point(324, 80);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(995, 616);
+            this.mainPanel.Size = new System.Drawing.Size(1549, 928);
             this.mainPanel.TabIndex = 7;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1344, 717);
+            this.ClientSize = new System.Drawing.Size(1898, 1029);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label1);
