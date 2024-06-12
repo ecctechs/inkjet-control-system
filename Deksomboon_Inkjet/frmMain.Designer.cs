@@ -258,9 +258,9 @@
             this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainPanel.Location = new System.Drawing.Point(331, 91);
+            this.mainPanel.Location = new System.Drawing.Point(318, 80);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(984, 602);
+            this.mainPanel.Size = new System.Drawing.Size(1014, 625);
             this.mainPanel.TabIndex = 7;
             // 
             // frmMain
