@@ -16,10 +16,10 @@ namespace Deksomboon_Inkjet.Class
             try
             {
                 // Get the path to the desktop directory
-                string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
                 // Combine the path with the file path
-                string filePath = Path.Combine(path, "desksomboon", "Data", "data.txt");
+                string filePath = Path.Combine(path, "ECC Software", "deksomboon", "data.txt");
 
                 // Check if the file exists
                 if (!File.Exists(filePath))
@@ -57,10 +57,10 @@ namespace Deksomboon_Inkjet.Class
             try
             {
                 // Get the path to the desktop directory
-                string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
                 // Combine the path with the file path
-                string filePath = Path.Combine(path, "desksomboon", "Data", "data.txt");
+                string filePath = Path.Combine(path, "ECC Software", "deksomboon", "data.txt");
 
                 // Check if the file exists
                 if (!File.Exists(filePath))
@@ -102,10 +102,10 @@ namespace Deksomboon_Inkjet.Class
             try
             {
                 // Get the path to the desktop directory
-                string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
                 // Combine the path with the file path
-                string filePath = Path.Combine(path, "desksomboon", "Data", "data.txt");
+                string filePath = Path.Combine(path, "ECC Software", "deksomboon", "data.txt");
 
                 // Check if the file exists
                 if (!File.Exists(filePath))
@@ -143,10 +143,10 @@ namespace Deksomboon_Inkjet.Class
             try
             {
                 // Get the path to the desktop directory
-                string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
                 // Combine the path with the file path
-                string filePath = Path.Combine(path, "desksomboon", "Data", "data.txt");
+                string filePath = Path.Combine(path, "ECC Software", "deksomboon", "data.txt");
 
                 // Check if the file exists
                 if (!File.Exists(filePath))
@@ -186,10 +186,10 @@ namespace Deksomboon_Inkjet.Class
             try
             {
                 // Get the path to the desktop directory
-                string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
                 // Combine the path with the file path
-                string filePath = Path.Combine(path, "desksomboon", "Data", "data.txt");
+                string filePath = Path.Combine(path, "ECC Software", "deksomboon", "data.txt");
 
                 // Check if the file exists
                 if (!File.Exists(filePath))
@@ -229,10 +229,10 @@ namespace Deksomboon_Inkjet.Class
             try
             {
                 // Get the path to the desktop directory
-                string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
                 // Combine the path with the file path
-                string filePath = Path.Combine(path, "desksomboon", "Data", "data.txt");
+                string filePath = Path.Combine(path, "ECC Software", "deksomboon", "data.txt");
 
                 // Check if the file exists
                 if (!File.Exists(filePath))
@@ -270,10 +270,10 @@ namespace Deksomboon_Inkjet.Class
             try
             {
                 // Get the path to the desktop directory
-                string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
                 // Combine the path with the file path
-                string filePath = Path.Combine(path, "desksomboon", "Data", "data.txt");
+                string filePath = Path.Combine(path, "ECC Software", "deksomboon", "data.txt");
 
                 // Check if the file exists
                 if (!File.Exists(filePath))
@@ -313,10 +313,10 @@ namespace Deksomboon_Inkjet.Class
             try
             {
                 // Get the path to the desktop directory
-                string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
                 // Combine the path with the file path
-                string filePath = Path.Combine(path, "desksomboon", "Data", "data.txt");
+                string filePath = Path.Combine(path, "ECC Software", "deksomboon", "data.txt");
 
                 // Check if the file exists
                 if (!File.Exists(filePath))
@@ -354,10 +354,10 @@ namespace Deksomboon_Inkjet.Class
             try
             {
                 // Get the path to the desktop directory
-                string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
                 // Combine the path with the file path
-                string filePath = Path.Combine(path, "desksomboon", "Data", "data.txt");
+                string filePath = Path.Combine(path, "ECC Software", "deksomboon", "data.txt");
 
                 // Check if the file exists
                 if (!File.Exists(filePath))
