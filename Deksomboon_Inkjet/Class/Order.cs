@@ -480,15 +480,28 @@ namespace Deksomboon_Inkjet.Class
                     dbManager.OpenConnection();
 
                     // ดึงข้อมูล order จากฐานข้อมูล
-                    string query = @"SELECT * FROM order_detail
-            LEFT JOIN location
-            ON order_detail.location_id = location.location_id
-            LEFT JOIN material 
-            ON order_detail.material_id = material.material_id
-            LEFT JOIN inkjet 
-            ON inkjet.inkjet_id = order_detail.inkjet_id 
-            WHERE location.location_name = @location AND inkjet.inkjet_name = @inkjet AND ord_status = 'รับออร์เดอร์' OR ord_status = 'กำลังผลิต' OR ord_status = 'หยุดผลิตชั่วคราว' OR ord_status = 'จบ batch'
-            ORDER BY ord_position";
+                    //        string query = @"SELECT * FROM order_detail
+                    //LEFT JOIN location
+                    //ON order_detail.location_id = location.location_id
+                    //LEFT JOIN material 
+                    //ON order_detail.material_id = material.material_id
+                    //LEFT JOIN inkjet 
+                    //ON inkjet.inkjet_id = order_detail.inkjet_id 
+                    //WHERE location.location_name = @location AND inkjet.inkjet_name = @inkjet AND ord_status = 'รับออร์เดอร์' OR ord_status = 'กำลังผลิต' OR ord_status = 'หยุดผลิตชั่วคราว' OR ord_status = 'จบ batch'
+                    //ORDER BY ord_position";
+
+                    string query = $@"
+    SELECT * FROM order_detail
+    LEFT JOIN location ON order_detail.location_id = location.location_id
+    LEFT JOIN material ON order_detail.material_id = material.material_id
+    LEFT JOIN inkjet ON inkjet.inkjet_id = order_detail.inkjet_id
+    WHERE location.location_name = '{location}' 
+    AND inkjet.inkjet_name = '{inkjet}'
+    AND (order_detail.ord_status = 'รับออร์เดอร์' 
+         OR order_detail.ord_status = 'กำลังผลิต' 
+         OR order_detail.ord_status = 'หยุดผลิตชั่วคราว' 
+         OR order_detail.ord_status = 'จบ batch')
+    ORDER BY order_detail.ord_position";
 
                     using (NpgsqlCommand command = new NpgsqlCommand(query, dbManager.connection))
                     {

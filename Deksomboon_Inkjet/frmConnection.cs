@@ -83,10 +83,14 @@ namespace Deksomboon_Inkjet
         {
             string line = cboLine.Text;
             string inkjet = guna2ComboBox2.Text;
+            //string line = cboLine.SelectedValue.ToString();
+            //string inkjet = guna2ComboBox2.SelectedValue.ToString();
             string line_prefix = txtLocationPrefix.Text;
 
+            //Console.WriteLine("--------->>"+ line);
 
-            if (line == "เลือก" || inkjet == "เลือก")
+
+            if (line == "0" || inkjet == "0")
             {
                 MessageBox.Show("Please Fill All Data");
             }

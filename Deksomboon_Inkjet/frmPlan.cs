@@ -268,8 +268,18 @@ namespace Deksomboon_Inkjet
         }
         private async void btnHome_Click(object sender, EventArgs e)
         {
+            bool isConnected = await DatabaseManager.CheckDataBaseAsync();
+            btnHome.Enabled = false;
+            if (isConnected == true)
+            {
                 open_line_setting();
-                refreash_order();           
+            }
+            else
+            {
+                MessageBox.Show("Database is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            btnHome.Enabled = true;
+            refreash_order();           
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
@@ -1060,41 +1070,21 @@ namespace Deksomboon_Inkjet
         }
 
 
-        private void EmegencyButton_Click(object sender, EventArgs e)
+        private async void EmegencyButton_Click(object sender, EventArgs e)
         {
-            string emp_id = Authorized.authorized_level_1(txtEmployeeCode.Text, txtEmployeepass.Text);
+            bool isConnected = await DatabaseManager.CheckDataBaseAsync();
 
-            if (!string.IsNullOrEmpty(emp_id))
-            {
-
-                Order obj = orderBindingSource.Current as Order;
-                string form = "1";
-
-                using (AddEmegencyOrder frm = new AddEmegencyOrder(obj, form, txtEmployeeCode.Text, txtEmployeepass.Text , 0 , emp_id , txtOrderDateStart.Text))
-                {
-                    if (frm.ShowDialog() == DialogResult.OK)
-                    {
-                        refreash_order();
-                    }
-                    else
-                    {
-                        refreash_order();
-                    }
-                }
-            }
-        }
-
-        private void UpdateButton_Click(object sender, EventArgs e)
-        {
-            Order obj = orderBindingSource.Current as Order;
-            if (obj != null)
+            if (isConnected == true)
             {
                 string emp_id = Authorized.authorized_level_1(txtEmployeeCode.Text, txtEmployeepass.Text);
+
                 if (!string.IsNullOrEmpty(emp_id))
                 {
-                    string form = "2";
 
-                    using (AddEmegencyOrder frm = new AddEmegencyOrder(obj, form, txtEmployeeCode.Text, txtEmployeepass.Text , 0 , emp_id , txtOrderDateStart.Text))
+                    Order obj = orderBindingSource.Current as Order;
+                    string form = "1";
+
+                    using (AddEmegencyOrder frm = new AddEmegencyOrder(obj, form, txtEmployeeCode.Text, txtEmployeepass.Text, 0, emp_id, txtOrderDateStart.Text))
                     {
                         if (frm.ShowDialog() == DialogResult.OK)
                         {
@@ -1106,6 +1096,45 @@ namespace Deksomboon_Inkjet
                         }
                     }
                 }
+            }
+            else
+            {
+                MessageBox.Show("Database is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private async void UpdateButton_Click(object sender, EventArgs e)
+        {
+            bool isConnected = await DatabaseManager.CheckDataBaseAsync();
+
+            if (isConnected == true)
+            {
+                Order obj = orderBindingSource.Current as Order;
+                if (obj != null)
+                {
+                    string emp_id = Authorized.authorized_level_1(txtEmployeeCode.Text, txtEmployeepass.Text);
+                    if (!string.IsNullOrEmpty(emp_id))
+                    {
+                        string form = "2";
+
+                        using (AddEmegencyOrder frm = new AddEmegencyOrder(obj, form, txtEmployeeCode.Text, txtEmployeepass.Text, 0, emp_id, txtOrderDateStart.Text))
+                        {
+                            if (frm.ShowDialog() == DialogResult.OK)
+                            {
+                                refreash_order();
+                            }
+                            else
+                            {
+                                refreash_order();
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Database is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
