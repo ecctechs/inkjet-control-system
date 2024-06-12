@@ -55,6 +55,7 @@
             this.guna2GroupBox1.Controls.Add(this.btnEdit);
             this.guna2GroupBox1.Controls.Add(this.btnAdd);
             this.guna2GroupBox1.Controls.Add(this.DataGridEmployee);
+            this.guna2GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GroupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2GroupBox1.Location = new System.Drawing.Point(0, 0);
