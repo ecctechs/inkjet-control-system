@@ -71,12 +71,13 @@
             // 
             this.guna2GroupBox1.Controls.Add(this.tableLayoutPanel1);
             this.guna2GroupBox1.Controls.Add(this.DataGridOrder);
+            this.guna2GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GroupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2GroupBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.Padding = new System.Windows.Forms.Padding(3);
-            this.guna2GroupBox1.Size = new System.Drawing.Size(995, 616);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(1041, 705);
             this.guna2GroupBox1.TabIndex = 3;
             this.guna2GroupBox1.Text = "รายการออร์เดอร์ ";
             // 
@@ -103,7 +104,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(989, 50);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1035, 50);
             this.tableLayoutPanel1.TabIndex = 74;
             // 
             // guna2HtmlLabel5
@@ -112,7 +113,7 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(232, 3);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(238, 3);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(148, 44);
             this.guna2HtmlLabel5.TabIndex = 73;
@@ -125,7 +126,7 @@
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(536, 3);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(555, 3);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(148, 44);
             this.guna2HtmlLabel6.TabIndex = 64;
@@ -143,7 +144,7 @@
             this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
             this.btnSearch.Font = new System.Drawing.Font("Prompt", 9F);
             this.btnSearch.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch.Location = new System.Drawing.Point(844, 3);
+            this.btnSearch.Location = new System.Drawing.Point(890, 3);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(142, 44);
             this.btnSearch.TabIndex = 62;
@@ -163,7 +164,7 @@
             this.cboLine.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cboLine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cboLine.ItemHeight = 30;
-            this.cboLine.Location = new System.Drawing.Point(78, 3);
+            this.cboLine.Location = new System.Drawing.Point(84, 3);
             this.cboLine.Name = "cboLine";
             this.cboLine.Size = new System.Drawing.Size(148, 36);
             this.cboLine.TabIndex = 60;
@@ -176,7 +177,7 @@
             // 
             // guna2DateTimePicker2
             // 
-            this.guna2DateTimePicker2.Location = new System.Drawing.Point(690, 3);
+            this.guna2DateTimePicker2.Location = new System.Drawing.Point(709, 3);
             this.guna2DateTimePicker2.Name = "guna2DateTimePicker2";
             this.guna2DateTimePicker2.Size = new System.Drawing.Size(139, 32);
             this.guna2DateTimePicker2.TabIndex = 72;
@@ -189,14 +190,14 @@
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(3, 3);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(69, 44);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(75, 44);
             this.guna2HtmlLabel4.TabIndex = 57;
             this.guna2HtmlLabel4.Text = "ไลน์ผลิต";
             this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2DateTimePicker1
             // 
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(386, 3);
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(392, 3);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
             this.guna2DateTimePicker1.Size = new System.Drawing.Size(139, 32);
             this.guna2DateTimePicker1.TabIndex = 63;
@@ -256,7 +257,7 @@
             this.DataGridOrder.RowHeadersVisible = false;
             this.DataGridOrder.RowHeadersWidth = 51;
             this.DataGridOrder.RowTemplate.Height = 30;
-            this.DataGridOrder.Size = new System.Drawing.Size(956, 482);
+            this.DataGridOrder.Size = new System.Drawing.Size(1002, 571);
             this.DataGridOrder.TabIndex = 20;
             this.DataGridOrder.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridOrder.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -426,7 +427,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2GroupBox1);
             this.Name = "ucOrderView";
-            this.Size = new System.Drawing.Size(995, 616);
+            this.Size = new System.Drawing.Size(1041, 705);
             this.Load += new System.EventHandler(this.ucOrderView_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);

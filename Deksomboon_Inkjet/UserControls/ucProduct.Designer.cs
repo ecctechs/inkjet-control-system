@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.DataGridEmployee = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnUpload = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.materialidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.perindDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.slifeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materialdesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.formulaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materialBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnUpload = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
-            this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).BeginInit();
@@ -57,11 +57,12 @@
             this.guna2GroupBox1.Controls.Add(this.btnDelete);
             this.guna2GroupBox1.Controls.Add(this.btnEdit);
             this.guna2GroupBox1.Controls.Add(this.btnAdd);
+            this.guna2GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GroupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2GroupBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(995, 616);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(1041, 705);
             this.guna2GroupBox1.TabIndex = 2;
             this.guna2GroupBox1.Text = "จัดการข้อมูลสินค้า";
             this.guna2GroupBox1.Click += new System.EventHandler(this.guna2GroupBox1_Click);
@@ -70,22 +71,22 @@
             // 
             this.DataGridEmployee.AllowUserToAddRows = false;
             this.DataGridEmployee.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.DataGridEmployee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.DataGridEmployee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.DataGridEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DataGridEmployee.AutoGenerateColumns = false;
             this.DataGridEmployee.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DataGridEmployee.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridEmployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridEmployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.DataGridEmployee.ColumnHeadersHeight = 40;
             this.DataGridEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.DataGridEmployee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -95,30 +96,30 @@
             this.materialdesDataGridViewTextBoxColumn,
             this.formulaDataGridViewTextBoxColumn});
             this.DataGridEmployee.DataSource = this.materialBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridEmployee.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridEmployee.DefaultCellStyle = dataGridViewCellStyle7;
             this.DataGridEmployee.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridEmployee.Location = new System.Drawing.Point(13, 134);
             this.DataGridEmployee.Name = "DataGridEmployee";
             this.DataGridEmployee.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridEmployee.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridEmployee.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.DataGridEmployee.RowHeadersVisible = false;
             this.DataGridEmployee.RowHeadersWidth = 51;
             this.DataGridEmployee.RowTemplate.Height = 35;
-            this.DataGridEmployee.Size = new System.Drawing.Size(962, 453);
+            this.DataGridEmployee.Size = new System.Drawing.Size(1008, 542);
             this.DataGridEmployee.TabIndex = 11;
             this.DataGridEmployee.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridEmployee.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -142,50 +143,6 @@
             this.DataGridEmployee.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridEmployee.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // materialidDataGridViewTextBoxColumn
-            // 
-            this.materialidDataGridViewTextBoxColumn.DataPropertyName = "material_id";
-            this.materialidDataGridViewTextBoxColumn.HeaderText = "หมายเลขวัสดุ";
-            this.materialidDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.materialidDataGridViewTextBoxColumn.Name = "materialidDataGridViewTextBoxColumn";
-            this.materialidDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // perindDataGridViewTextBoxColumn
-            // 
-            this.perindDataGridViewTextBoxColumn.DataPropertyName = "per_ind";
-            this.perindDataGridViewTextBoxColumn.HeaderText = "Per. Ind.";
-            this.perindDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.perindDataGridViewTextBoxColumn.Name = "perindDataGridViewTextBoxColumn";
-            this.perindDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // slifeDataGridViewTextBoxColumn
-            // 
-            this.slifeDataGridViewTextBoxColumn.DataPropertyName = "slife";
-            this.slifeDataGridViewTextBoxColumn.HeaderText = "SLIfe";
-            this.slifeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.slifeDataGridViewTextBoxColumn.Name = "slifeDataGridViewTextBoxColumn";
-            this.slifeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // materialdesDataGridViewTextBoxColumn
-            // 
-            this.materialdesDataGridViewTextBoxColumn.DataPropertyName = "material_des";
-            this.materialdesDataGridViewTextBoxColumn.HeaderText = "รายละเอียดวัสดุ";
-            this.materialdesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.materialdesDataGridViewTextBoxColumn.Name = "materialdesDataGridViewTextBoxColumn";
-            this.materialdesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // formulaDataGridViewTextBoxColumn
-            // 
-            this.formulaDataGridViewTextBoxColumn.DataPropertyName = "formula";
-            this.formulaDataGridViewTextBoxColumn.HeaderText = "Formula";
-            this.formulaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.formulaDataGridViewTextBoxColumn.Name = "formulaDataGridViewTextBoxColumn";
-            this.formulaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // materialBindingSource
-            // 
-            this.materialBindingSource.DataSource = typeof(Deksomboon_Inkjet.Class.Material);
-            // 
             // btnUpload
             // 
             this.btnUpload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -197,7 +154,7 @@
             this.btnUpload.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(202)))), ((int)(((byte)(240)))));
             this.btnUpload.Font = new System.Drawing.Font("Prompt", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpload.ForeColor = System.Drawing.Color.Black;
-            this.btnUpload.Location = new System.Drawing.Point(795, 63);
+            this.btnUpload.Location = new System.Drawing.Point(841, 63);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(180, 45);
             this.btnUpload.TabIndex = 10;
@@ -254,13 +211,57 @@
             this.btnAdd.Text = "เพิ่มข้อมูลสินค้า";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // materialidDataGridViewTextBoxColumn
+            // 
+            this.materialidDataGridViewTextBoxColumn.DataPropertyName = "material_id";
+            this.materialidDataGridViewTextBoxColumn.HeaderText = "หมายเลขวัสดุ";
+            this.materialidDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.materialidDataGridViewTextBoxColumn.Name = "materialidDataGridViewTextBoxColumn";
+            this.materialidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // perindDataGridViewTextBoxColumn
+            // 
+            this.perindDataGridViewTextBoxColumn.DataPropertyName = "per_ind";
+            this.perindDataGridViewTextBoxColumn.HeaderText = "Per. Ind.";
+            this.perindDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.perindDataGridViewTextBoxColumn.Name = "perindDataGridViewTextBoxColumn";
+            this.perindDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // slifeDataGridViewTextBoxColumn
+            // 
+            this.slifeDataGridViewTextBoxColumn.DataPropertyName = "slife";
+            this.slifeDataGridViewTextBoxColumn.HeaderText = "SLIfe";
+            this.slifeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.slifeDataGridViewTextBoxColumn.Name = "slifeDataGridViewTextBoxColumn";
+            this.slifeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // materialdesDataGridViewTextBoxColumn
+            // 
+            this.materialdesDataGridViewTextBoxColumn.DataPropertyName = "material_des";
+            this.materialdesDataGridViewTextBoxColumn.HeaderText = "รายละเอียดวัสดุ";
+            this.materialdesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.materialdesDataGridViewTextBoxColumn.Name = "materialdesDataGridViewTextBoxColumn";
+            this.materialdesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // formulaDataGridViewTextBoxColumn
+            // 
+            this.formulaDataGridViewTextBoxColumn.DataPropertyName = "formula";
+            this.formulaDataGridViewTextBoxColumn.HeaderText = "Formula";
+            this.formulaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.formulaDataGridViewTextBoxColumn.Name = "formulaDataGridViewTextBoxColumn";
+            this.formulaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // materialBindingSource
+            // 
+            this.materialBindingSource.DataSource = typeof(Deksomboon_Inkjet.Class.Material);
+            // 
             // ucProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2GroupBox1);
             this.Name = "ucProduct";
-            this.Size = new System.Drawing.Size(995, 616);
+            this.Size = new System.Drawing.Size(1041, 705);
             this.Load += new System.EventHandler(this.ucProduct_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridEmployee)).EndInit();

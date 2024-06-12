@@ -255,10 +255,10 @@
             // 
             // mainPanel
             // 
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.mainPanel.Location = new System.Drawing.Point(303, 80);
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(303, 12);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1041, 637);
+            this.mainPanel.Size = new System.Drawing.Size(1041, 705);
             this.mainPanel.TabIndex = 7;
             // 
             // frmMain
