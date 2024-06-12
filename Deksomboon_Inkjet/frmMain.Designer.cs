@@ -62,9 +62,8 @@
             this.pannel1.Controls.Add(this.btnUCproduct);
             this.pannel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pannel1.Location = new System.Drawing.Point(0, 0);
-            this.pannel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pannel1.Name = "pannel1";
-            this.pannel1.Size = new System.Drawing.Size(341, 708);
+            this.pannel1.Size = new System.Drawing.Size(303, 717);
             this.pannel1.TabIndex = 1;
             // 
             // btnUCauth
@@ -75,10 +74,9 @@
             this.btnUCauth.ForeColor = System.Drawing.Color.White;
             this.btnUCauth.Image = ((System.Drawing.Image)(resources.GetObject("btnUCauth.Image")));
             this.btnUCauth.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUCauth.Location = new System.Drawing.Point(14, 804);
-            this.btnUCauth.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUCauth.Location = new System.Drawing.Point(12, 643);
             this.btnUCauth.Name = "btnUCauth";
-            this.btnUCauth.Size = new System.Drawing.Size(321, 95);
+            this.btnUCauth.Size = new System.Drawing.Size(285, 76);
             this.btnUCauth.TabIndex = 8;
             this.btnUCauth.Text = "      Auth Log";
             this.btnUCauth.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -93,10 +91,9 @@
             this.btnUClocation.ForeColor = System.Drawing.Color.White;
             this.btnUClocation.Image = ((System.Drawing.Image)(resources.GetObject("btnUClocation.Image")));
             this.btnUClocation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUClocation.Location = new System.Drawing.Point(14, 291);
-            this.btnUClocation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUClocation.Location = new System.Drawing.Point(12, 233);
             this.btnUClocation.Name = "btnUClocation";
-            this.btnUClocation.Size = new System.Drawing.Size(321, 95);
+            this.btnUClocation.Size = new System.Drawing.Size(285, 76);
             this.btnUClocation.TabIndex = 7;
             this.btnUClocation.Text = "      Location";
             this.btnUClocation.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -111,10 +108,9 @@
             this.btnUCorderlog.ForeColor = System.Drawing.Color.White;
             this.btnUCorderlog.Image = ((System.Drawing.Image)(resources.GetObject("btnUCorderlog.Image")));
             this.btnUCorderlog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUCorderlog.Location = new System.Drawing.Point(14, 701);
-            this.btnUCorderlog.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUCorderlog.Location = new System.Drawing.Point(12, 561);
             this.btnUCorderlog.Name = "btnUCorderlog";
-            this.btnUCorderlog.Size = new System.Drawing.Size(321, 95);
+            this.btnUCorderlog.Size = new System.Drawing.Size(285, 76);
             this.btnUCorderlog.TabIndex = 6;
             this.btnUCorderlog.Text = "      Order Log";
             this.btnUCorderlog.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -129,10 +125,9 @@
             this.btnUCorderview.ForeColor = System.Drawing.Color.White;
             this.btnUCorderview.Image = ((System.Drawing.Image)(resources.GetObject("btnUCorderview.Image")));
             this.btnUCorderview.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUCorderview.Location = new System.Drawing.Point(14, 599);
-            this.btnUCorderview.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUCorderview.Location = new System.Drawing.Point(12, 479);
             this.btnUCorderview.Name = "btnUCorderview";
-            this.btnUCorderview.Size = new System.Drawing.Size(321, 95);
+            this.btnUCorderview.Size = new System.Drawing.Size(285, 76);
             this.btnUCorderview.TabIndex = 5;
             this.btnUCorderview.Text = "      Order View";
             this.btnUCorderview.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -142,10 +137,9 @@
             // SidePanel
             // 
             this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(29)))), ((int)(((byte)(59)))));
-            this.SidePanel.Location = new System.Drawing.Point(0, 86);
-            this.SidePanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SidePanel.Location = new System.Drawing.Point(0, 69);
             this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(11, 100);
+            this.SidePanel.Size = new System.Drawing.Size(10, 80);
             this.SidePanel.TabIndex = 3;
             // 
             // btnUCorder
@@ -156,10 +150,9 @@
             this.btnUCorder.ForeColor = System.Drawing.Color.White;
             this.btnUCorder.Image = ((System.Drawing.Image)(resources.GetObject("btnUCorder.Image")));
             this.btnUCorder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUCorder.Location = new System.Drawing.Point(14, 496);
-            this.btnUCorder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUCorder.Location = new System.Drawing.Point(12, 397);
             this.btnUCorder.Name = "btnUCorder";
-            this.btnUCorder.Size = new System.Drawing.Size(327, 95);
+            this.btnUCorder.Size = new System.Drawing.Size(291, 76);
             this.btnUCorder.TabIndex = 4;
             this.btnUCorder.Text = "      Order";
             this.btnUCorder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -174,10 +167,9 @@
             this.btnUCinkjet.ForeColor = System.Drawing.Color.White;
             this.btnUCinkjet.Image = ((System.Drawing.Image)(resources.GetObject("btnUCinkjet.Image")));
             this.btnUCinkjet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUCinkjet.Location = new System.Drawing.Point(14, 394);
-            this.btnUCinkjet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUCinkjet.Location = new System.Drawing.Point(12, 315);
             this.btnUCinkjet.Name = "btnUCinkjet";
-            this.btnUCinkjet.Size = new System.Drawing.Size(327, 95);
+            this.btnUCinkjet.Size = new System.Drawing.Size(291, 76);
             this.btnUCinkjet.TabIndex = 3;
             this.btnUCinkjet.Text = "         Inkjet";
             this.btnUCinkjet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -192,10 +184,9 @@
             this.btnUCemployee.ForeColor = System.Drawing.Color.White;
             this.btnUCemployee.Image = ((System.Drawing.Image)(resources.GetObject("btnUCemployee.Image")));
             this.btnUCemployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUCemployee.Location = new System.Drawing.Point(14, 189);
-            this.btnUCemployee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUCemployee.Location = new System.Drawing.Point(12, 151);
             this.btnUCemployee.Name = "btnUCemployee";
-            this.btnUCemployee.Size = new System.Drawing.Size(321, 95);
+            this.btnUCemployee.Size = new System.Drawing.Size(285, 76);
             this.btnUCemployee.TabIndex = 2;
             this.btnUCemployee.Text = "      Employee";
             this.btnUCemployee.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -210,10 +201,9 @@
             this.btnUCproduct.ForeColor = System.Drawing.Color.White;
             this.btnUCproduct.Image = ((System.Drawing.Image)(resources.GetObject("btnUCproduct.Image")));
             this.btnUCproduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUCproduct.Location = new System.Drawing.Point(14, 86);
-            this.btnUCproduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUCproduct.Location = new System.Drawing.Point(12, 69);
             this.btnUCproduct.Name = "btnUCproduct";
-            this.btnUCproduct.Size = new System.Drawing.Size(321, 95);
+            this.btnUCproduct.Size = new System.Drawing.Size(285, 76);
             this.btnUCproduct.TabIndex = 1;
             this.btnUCproduct.Text = "      Product";
             this.btnUCproduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -230,10 +220,9 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(29)))), ((int)(((byte)(59)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(341, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(303, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(999, 15);
+            this.panel2.Size = new System.Drawing.Size(1041, 12);
             this.panel2.TabIndex = 2;
             // 
             // label1
@@ -241,17 +230,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(458, 16);
+            this.label1.Location = new System.Drawing.Point(407, 13);
             this.label1.Name = "label1";
-<<<<<<< HEAD
-            this.label1.Size = new System.Drawing.Size(530, 34);
+            this.label1.Size = new System.Drawing.Size(581, 32);
             this.label1.TabIndex = 5;
             this.label1.Text = "ระบบควบคุมข้อมูลเครื่องพิมพ์ Control Room 5555";
-=======
-            this.label1.Size = new System.Drawing.Size(746, 38);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "ระบบควบคุมข้อมูลเครื่องพิมพ์ Control Room Notebook";
->>>>>>> fe6213886fc61e2fc45397d27b4d30987ef3ffea
             // 
             // btnExit
             // 
@@ -261,10 +244,9 @@
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(1268, 18);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnExit.Location = new System.Drawing.Point(1280, 14);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(66, 75);
+            this.btnExit.Size = new System.Drawing.Size(59, 60);
             this.btnExit.TabIndex = 6;
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExit.UseVisualStyleBackColor = true;
@@ -276,24 +258,22 @@
             this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainPanel.Location = new System.Drawing.Point(385, 114);
-            this.mainPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mainPanel.Location = new System.Drawing.Point(331, 91);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(920, 541);
+            this.mainPanel.Size = new System.Drawing.Size(984, 602);
             this.mainPanel.TabIndex = 7;
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1340, 708);
+            this.ClientSize = new System.Drawing.Size(1344, 717);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pannel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
