@@ -59,7 +59,7 @@
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2GroupBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(978, 599);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(1014, 625);
             this.guna2GroupBox1.TabIndex = 6;
             this.guna2GroupBox1.Text = "จัดการไลน์ผลิต";
             // 
@@ -157,7 +157,7 @@
             this.DataGridLocation.RowHeadersVisible = false;
             this.DataGridLocation.RowHeadersWidth = 51;
             this.DataGridLocation.RowTemplate.Height = 30;
-            this.DataGridLocation.Size = new System.Drawing.Size(945, 447);
+            this.DataGridLocation.Size = new System.Drawing.Size(981, 473);
             this.DataGridLocation.TabIndex = 14;
             this.DataGridLocation.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridLocation.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -233,7 +233,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2GroupBox1);
             this.Name = "ucLocation";
-            this.Size = new System.Drawing.Size(978, 599);
+            this.Size = new System.Drawing.Size(1014, 625);
             this.Load += new System.EventHandler(this.ucLocation_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridLocation)).EndInit();

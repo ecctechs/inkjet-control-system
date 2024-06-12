@@ -60,7 +60,7 @@
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2GroupBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(978, 599);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(1014, 625);
             this.guna2GroupBox1.TabIndex = 7;
             this.guna2GroupBox1.Text = "จัดการอินเจ็ก";
             // 
@@ -159,7 +159,7 @@
             this.DataGridEmployee.RowHeadersVisible = false;
             this.DataGridEmployee.RowHeadersWidth = 51;
             this.DataGridEmployee.RowTemplate.Height = 30;
-            this.DataGridEmployee.Size = new System.Drawing.Size(945, 447);
+            this.DataGridEmployee.Size = new System.Drawing.Size(981, 473);
             this.DataGridEmployee.TabIndex = 14;
             this.DataGridEmployee.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridEmployee.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -244,7 +244,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2GroupBox1);
             this.Name = "ucInkjet";
-            this.Size = new System.Drawing.Size(978, 599);
+            this.Size = new System.Drawing.Size(1014, 625);
             this.Load += new System.EventHandler(this.ucInkjet_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridEmployee)).EndInit();

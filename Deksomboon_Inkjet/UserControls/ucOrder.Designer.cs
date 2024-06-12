@@ -72,7 +72,7 @@
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2GroupBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(978, 599);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(1014, 625);
             this.guna2GroupBox1.TabIndex = 5;
             this.guna2GroupBox1.Text = "จัดการออร์เดอร์";
             // 
@@ -95,7 +95,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(978, 52);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1014, 52);
             this.tableLayoutPanel1.TabIndex = 20;
             // 
             // btnAdd
@@ -142,7 +142,7 @@
             this.btnSubmit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
             this.btnSubmit.Font = new System.Drawing.Font("Prompt", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnSubmit.Location = new System.Drawing.Point(795, 3);
+            this.btnSubmit.Location = new System.Drawing.Point(831, 3);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(180, 45);
             this.btnSubmit.TabIndex = 18;
@@ -239,7 +239,7 @@
             this.DataGridOrder.RowHeadersVisible = false;
             this.DataGridOrder.RowHeadersWidth = 51;
             this.DataGridOrder.RowTemplate.Height = 30;
-            this.DataGridOrder.Size = new System.Drawing.Size(945, 450);
+            this.DataGridOrder.Size = new System.Drawing.Size(981, 476);
             this.DataGridOrder.TabIndex = 19;
             this.DataGridOrder.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridOrder.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -410,7 +410,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2GroupBox1);
             this.Name = "ucOrder";
-            this.Size = new System.Drawing.Size(978, 599);
+            this.Size = new System.Drawing.Size(1014, 625);
             this.Load += new System.EventHandler(this.ucOrder_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);

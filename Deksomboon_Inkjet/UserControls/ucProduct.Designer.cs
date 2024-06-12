@@ -62,7 +62,7 @@
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2GroupBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(978, 599);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(1014, 625);
             this.guna2GroupBox1.TabIndex = 2;
             this.guna2GroupBox1.Text = "จัดการข้อมูลสินค้า";
             this.guna2GroupBox1.Click += new System.EventHandler(this.guna2GroupBox1_Click);
@@ -119,7 +119,7 @@
             this.DataGridEmployee.RowHeadersVisible = false;
             this.DataGridEmployee.RowHeadersWidth = 51;
             this.DataGridEmployee.RowTemplate.Height = 35;
-            this.DataGridEmployee.Size = new System.Drawing.Size(945, 436);
+            this.DataGridEmployee.Size = new System.Drawing.Size(981, 462);
             this.DataGridEmployee.TabIndex = 11;
             this.DataGridEmployee.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridEmployee.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -198,7 +198,7 @@
             this.btnUpload.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(202)))), ((int)(((byte)(240)))));
             this.btnUpload.Font = new System.Drawing.Font("Prompt", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpload.ForeColor = System.Drawing.Color.Black;
-            this.btnUpload.Location = new System.Drawing.Point(778, 63);
+            this.btnUpload.Location = new System.Drawing.Point(814, 63);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(180, 45);
             this.btnUpload.TabIndex = 10;
@@ -261,7 +261,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2GroupBox1);
             this.Name = "ucProduct";
-            this.Size = new System.Drawing.Size(978, 599);
+            this.Size = new System.Drawing.Size(1014, 625);
             this.Load += new System.EventHandler(this.ucProduct_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridEmployee)).EndInit();
