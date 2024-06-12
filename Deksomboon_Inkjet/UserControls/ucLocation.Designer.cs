@@ -43,9 +43,11 @@
             this.empemailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.locationprefixDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.locationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridLocation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.locationBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2GroupBox1
@@ -156,7 +158,7 @@
             this.DataGridLocation.RowHeadersVisible = false;
             this.DataGridLocation.RowHeadersWidth = 51;
             this.DataGridLocation.RowTemplate.Height = 30;
-            this.DataGridLocation.Size = new System.Drawing.Size(962, 464);
+            this.DataGridLocation.Size = new System.Drawing.Size(959, 468);
             this.DataGridLocation.TabIndex = 14;
             this.DataGridLocation.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridLocation.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -226,17 +228,26 @@
             // 
             this.locationBindingSource.DataSource = typeof(Deksomboon_Inkjet.Class.location);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.guna2GroupBox1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(995, 616);
+            this.panel1.TabIndex = 7;
+            // 
             // ucLocation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.guna2GroupBox1);
+            this.Controls.Add(this.panel1);
             this.Name = "ucLocation";
             this.Size = new System.Drawing.Size(995, 616);
             this.Load += new System.EventHandler(this.ucLocation_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridLocation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.locationBindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -254,5 +265,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn empnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn empemailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn locationprefixDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panel1;
     }
 }
