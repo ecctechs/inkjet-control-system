@@ -1480,9 +1480,10 @@
             this.ClientSize = new System.Drawing.Size(1344, 717);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPlan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ระบบควบคุมข้อมูลเครื่องพิมพ์ สําหรับหน้าไลน์ผลิต";
+            this.Text = "โปรแกรมควบคุมเครื่องพิมพ์ หน้าไลน์ผลิต";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPlan_FormClosed);
             this.Load += new System.EventHandler(this.frmPlan_Load_1);
             this.Shown += new System.EventHandler(this.frmPlan_Shown);

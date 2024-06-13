@@ -16,11 +16,24 @@ namespace Deksomboon_Inkjet.UserControls
 {
     public partial class ucAuthLog : UserControl
     {
+        private Timer timer;
         public ucAuthLog()
         {
             InitializeComponent();
+            InitializeTimer();
         }
 
+        private void InitializeTimer()
+        {
+            timer = new Timer();
+            timer.Interval = 5000; // 5 วินาที
+            timer.Tick += new EventHandler(OnTimerTick);
+            timer.Start();
+        }
+        private async void OnTimerTick(object sender, EventArgs e)
+        {
+            search_authlog();
+        }
 
         private void ucAuthLog_Load(object sender, EventArgs e)
         {

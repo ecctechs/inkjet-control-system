@@ -17,14 +17,27 @@ namespace Deksomboon_Inkjet.UserControls
 {
     public partial class ucOrderLog : UserControl
     {
+        private Timer timer;
         public ucOrderLog()
         {
             InitializeComponent();
+            InitializeTimer();
         }
 
         private void ucOrderLog_Load(object sender, EventArgs e)
         {
             get_employee();
+            search_datalog();
+        }
+        private void InitializeTimer()
+        {
+            timer = new Timer();
+            timer.Interval = 5000; // 5 วินาที
+            timer.Tick += new EventHandler(OnTimerTick);
+            timer.Start();
+        }
+        private async void OnTimerTick(object sender, EventArgs e)
+        {
             search_datalog();
         }
 
