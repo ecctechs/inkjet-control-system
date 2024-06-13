@@ -394,6 +394,18 @@ namespace Deksomboon_Inkjet
 
                 }
             }
+            else
+            {
+                txtBatch.Text = "";
+                txtDate.Text = "";
+                txtMaterialDes.Text = "";
+                txtFormula.Text = "";
+                txtOrderStatus.Text = "";
+                txtSLife.Text = "";
+                locationprefixtextbox.Text = "";
+                txtOrdID.Text = "";
+
+            }
             OrderGrid.ClearSelection();
         }
 
