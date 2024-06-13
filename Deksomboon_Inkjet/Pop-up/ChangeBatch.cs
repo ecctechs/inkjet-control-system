@@ -77,19 +77,25 @@ namespace Deksomboon_Inkjet.Pop_up
 
             DateTime st1 = guna2DateTimePicker1.Value.AddYears(-543);
             string date = st1.AddSeconds(-st1.Second).ToString();
-
-            //string end_date = DateTime.Now.AddYears(-543).ToString("dd/MM/yyyy hh:mm");
-            DialogResult confrim_startjet = MessageBox.Show("คุณแน่ใจที่จะจบ batch : " + txtBatchOld.Text + " หรือไม่", "Comfrim End Batch", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (confrim_startjet == DialogResult.Yes)
+            if (string.IsNullOrEmpty(batch))
             {
-                Order.Update_Order(ord_id, line, inkjet, material_selected, batch, type, date);
-                Order.Update_Order_Status(ord_id, batch, "จบ batch");
-                DataLog.Update_DateLog(Int32.Parse(ord_id), Int32.Parse(txtSumCount.Text), start_date, Int32.Parse(txtEmpID.Text), txtTenDigitOld.Text, txtOrderDate.Text);
+                MessageBox.Show("กรุณาใส่ batch");
+            }
+            else
+            {
+                //string end_date = DateTime.Now.AddYears(-543).ToString("dd/MM/yyyy hh:mm");
+                DialogResult confrim_startjet = MessageBox.Show("คุณแน่ใจที่จะจบ batch : " + txtBatchOld.Text + " หรือไม่", "Comfrim End Batch", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confrim_startjet == DialogResult.Yes)
+                {
+                    Order.Update_Order(ord_id, line, inkjet, material_selected, batch, type, date);
+                    Order.Update_Order_Status(ord_id, batch, "จบ batch");
+                    DataLog.Update_DateLog(Int32.Parse(ord_id), Int32.Parse(txtSumCount.Text), start_date, Int32.Parse(txtEmpID.Text), txtTenDigitOld.Text, txtOrderDate.Text);
 
-                //DataLog.Add_DatLog(Int32.Parse(ord_id), txtTenDigit.Text, 0, start_date, end_date, Int32.Parse(txtEmpID.Text));
-                DataLog.Add_Authorized_Log(Int32.Parse(ord_id), Int32.Parse(txtEmpID.Text), start_date, "จบ batch", 1, txtTenDigitOld.Text);
+                    //DataLog.Add_DatLog(Int32.Parse(ord_id), txtTenDigit.Text, 0, start_date, end_date, Int32.Parse(txtEmpID.Text));
+                    DataLog.Add_Authorized_Log(Int32.Parse(ord_id), Int32.Parse(txtEmpID.Text), start_date, "จบ batch", 1, txtTenDigitOld.Text);
 
-                DialogResult = DialogResult.OK;
+                    DialogResult = DialogResult.OK;
+                }
             }
         }
 

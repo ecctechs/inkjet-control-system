@@ -87,7 +87,7 @@
             this.guna2HtmlLabel8.AutoSize = false;
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(33, 540);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(25, 361);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(141, 31);
             this.guna2HtmlLabel8.TabIndex = 70;
@@ -105,7 +105,7 @@
             this.cboPosition.Font = new System.Drawing.Font("Prompt", 10.2F);
             this.cboPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cboPosition.ItemHeight = 30;
-            this.cboPosition.Location = new System.Drawing.Point(182, 535);
+            this.cboPosition.Location = new System.Drawing.Point(171, 361);
             this.cboPosition.Name = "cboPosition";
             this.cboPosition.Size = new System.Drawing.Size(281, 36);
             this.cboPosition.TabIndex = 69;
@@ -126,7 +126,7 @@
             this.txtBatch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBatch.Font = new System.Drawing.Font("Prompt", 10.2F);
             this.txtBatch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBatch.Location = new System.Drawing.Point(180, 413);
+            this.txtBatch.Location = new System.Drawing.Point(172, 254);
             this.txtBatch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBatch.MaxLength = 1;
             this.txtBatch.Name = "txtBatch";
@@ -143,7 +143,7 @@
             this.guna2HtmlLabel7.AutoSize = false;
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(33, 418);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(25, 259);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(141, 31);
             this.guna2HtmlLabel7.TabIndex = 67;
@@ -161,7 +161,7 @@
             this.cboMaterial.Font = new System.Drawing.Font("Prompt", 10.2F);
             this.cboMaterial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cboMaterial.ItemHeight = 30;
-            this.cboMaterial.Location = new System.Drawing.Point(180, 220);
+            this.cboMaterial.Location = new System.Drawing.Point(172, 102);
             this.cboMaterial.Name = "cboMaterial";
             this.cboMaterial.Size = new System.Drawing.Size(281, 36);
             this.cboMaterial.TabIndex = 66;
@@ -183,7 +183,7 @@
             this.btnClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
             this.btnClose.Font = new System.Drawing.Font("Prompt", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(343, 817);
+            this.btnClose.Location = new System.Drawing.Point(334, 601);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(119, 45);
             this.btnClose.TabIndex = 63;
@@ -200,7 +200,7 @@
             this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(135)))), ((int)(((byte)(84)))));
             this.btnSave.Font = new System.Drawing.Font("Prompt", 9F);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(226, 817);
+            this.btnSave.Location = new System.Drawing.Point(218, 601);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(110, 45);
             this.btnSave.TabIndex = 62;
@@ -219,7 +219,7 @@
             this.txtFormula.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFormula.Font = new System.Drawing.Font("Prompt", 10.2F);
             this.txtFormula.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFormula.Location = new System.Drawing.Point(180, 284);
+            this.txtFormula.Location = new System.Drawing.Point(172, 151);
             this.txtFormula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFormula.MaxLength = 3;
             this.txtFormula.Name = "txtFormula";
@@ -242,7 +242,7 @@
             this.txtSLife.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSLife.Font = new System.Drawing.Font("Prompt", 10.2F);
             this.txtSLife.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSLife.Location = new System.Drawing.Point(180, 348);
+            this.txtSLife.Location = new System.Drawing.Point(172, 206);
             this.txtSLife.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSLife.Name = "txtSLife";
             this.txtSLife.PasswordChar = '\0';
@@ -257,7 +257,7 @@
             this.guna2HtmlLabel6.AutoSize = false;
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(33, 289);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(25, 151);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(141, 31);
             this.guna2HtmlLabel6.TabIndex = 59;
@@ -268,7 +268,7 @@
             this.guna2HtmlLabel5.AutoSize = false;
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(33, 353);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(25, 211);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(141, 31);
             this.guna2HtmlLabel5.TabIndex = 58;
@@ -279,18 +279,19 @@
             this.guna2HtmlLabel4.AutoSize = false;
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(33, 156);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(97, 1);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(141, 31);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(69, 31);
             this.guna2HtmlLabel4.TabIndex = 57;
             this.guna2HtmlLabel4.Text = "อินเจ็ก";
+            this.guna2HtmlLabel4.Visible = false;
             // 
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.AutoSize = false;
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(33, 225);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(25, 102);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(141, 31);
             this.guna2HtmlLabel3.TabIndex = 56;
@@ -301,11 +302,12 @@
             this.guna2HtmlLabel2.AutoSize = false;
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(33, 89);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(84, 23);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(141, 31);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(59, 31);
             this.guna2HtmlLabel2.TabIndex = 55;
             this.guna2HtmlLabel2.Text = "ไลน์ผลิต";
+            this.guna2HtmlLabel2.Visible = false;
             // 
             // txtLine
             // 
@@ -319,7 +321,7 @@
             this.txtLine.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLine.Font = new System.Drawing.Font("Prompt", 10.2F);
             this.txtLine.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLine.Location = new System.Drawing.Point(180, 89);
+            this.txtLine.Location = new System.Drawing.Point(276, 13);
             this.txtLine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLine.MaxLength = 3;
             this.txtLine.Name = "txtLine";
@@ -327,8 +329,9 @@
             this.txtLine.PlaceholderText = "";
             this.txtLine.ReadOnly = true;
             this.txtLine.SelectedText = "";
-            this.txtLine.Size = new System.Drawing.Size(281, 36);
+            this.txtLine.Size = new System.Drawing.Size(44, 14);
             this.txtLine.TabIndex = 72;
+            this.txtLine.Visible = false;
             // 
             // txtInkjet
             // 
@@ -342,7 +345,7 @@
             this.txtInkjet.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtInkjet.Font = new System.Drawing.Font("Prompt", 10.2F);
             this.txtInkjet.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtInkjet.Location = new System.Drawing.Point(180, 151);
+            this.txtInkjet.Location = new System.Drawing.Point(326, 1);
             this.txtInkjet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtInkjet.MaxLength = 3;
             this.txtInkjet.Name = "txtInkjet";
@@ -350,8 +353,9 @@
             this.txtInkjet.PlaceholderText = "";
             this.txtInkjet.ReadOnly = true;
             this.txtInkjet.SelectedText = "";
-            this.txtInkjet.Size = new System.Drawing.Size(281, 36);
+            this.txtInkjet.Size = new System.Drawing.Size(41, 36);
             this.txtInkjet.TabIndex = 73;
+            this.txtInkjet.Visible = false;
             // 
             // guna2GroupBox1
             // 
@@ -359,7 +363,7 @@
             this.guna2GroupBox1.Controls.Add(this.txtTenDigit);
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox1.Location = new System.Drawing.Point(35, 653);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(25, 467);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.Padding = new System.Windows.Forms.Padding(5);
             this.guna2GroupBox1.Size = new System.Drawing.Size(428, 128);
@@ -450,7 +454,7 @@
             this.txtLineID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLineID.Font = new System.Drawing.Font("Prompt", 10.2F);
             this.txtLineID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLineID.Location = new System.Drawing.Point(202, 1);
+            this.txtLineID.Location = new System.Drawing.Point(183, 1);
             this.txtLineID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLineID.MaxLength = 3;
             this.txtLineID.Name = "txtLineID";
@@ -491,7 +495,7 @@
             this.guna2HtmlLabel9.AutoSize = false;
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(33, 481);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(25, 309);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             this.guna2HtmlLabel9.Size = new System.Drawing.Size(141, 31);
             this.guna2HtmlLabel9.TabIndex = 103;
@@ -550,7 +554,7 @@
             this.guna2HtmlLabel10.AutoSize = false;
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel10.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(33, 604);
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(25, 418);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             this.guna2HtmlLabel10.Size = new System.Drawing.Size(141, 31);
             this.guna2HtmlLabel10.TabIndex = 106;
@@ -570,7 +574,7 @@
             this.cboOrdType.Items.AddRange(new object[] {
             "งานทั่วไป",
             "งานเร่งด่วน"});
-            this.cboOrdType.Location = new System.Drawing.Point(183, 599);
+            this.cboOrdType.Location = new System.Drawing.Point(173, 413);
             this.cboOrdType.Name = "cboOrdType";
             this.cboOrdType.Size = new System.Drawing.Size(280, 36);
             this.cboOrdType.TabIndex = 107;
@@ -587,7 +591,7 @@
             this.txtEmpcode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmpcode.Font = new System.Drawing.Font("Prompt", 10.2F);
             this.txtEmpcode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmpcode.Location = new System.Drawing.Point(12, 835);
+            this.txtEmpcode.Location = new System.Drawing.Point(25, 635);
             this.txtEmpcode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpcode.MaxLength = 3;
             this.txtEmpcode.Name = "txtEmpcode";
@@ -611,7 +615,7 @@
             this.txtEmppass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmppass.Font = new System.Drawing.Font("Prompt", 10.2F);
             this.txtEmppass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmppass.Location = new System.Drawing.Point(97, 835);
+            this.txtEmppass.Location = new System.Drawing.Point(111, 635);
             this.txtEmppass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmppass.MaxLength = 3;
             this.txtEmppass.Name = "txtEmppass";
@@ -635,7 +639,7 @@
             this.txtTenDigitOld.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenDigitOld.Font = new System.Drawing.Font("Prompt", 10.2F);
             this.txtTenDigitOld.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenDigitOld.Location = new System.Drawing.Point(33, 801);
+            this.txtTenDigitOld.Location = new System.Drawing.Point(25, 602);
             this.txtTenDigitOld.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTenDigitOld.MaxLength = 3;
             this.txtTenDigitOld.Name = "txtTenDigitOld";
@@ -723,7 +727,7 @@
             // 
             this.guna2DateTimePicker1.CalendarFont = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.guna2DateTimePicker1.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(183, 479);
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(172, 307);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
             this.guna2DateTimePicker1.Size = new System.Drawing.Size(280, 33);
             this.guna2DateTimePicker1.TabIndex = 114;
@@ -733,7 +737,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 874);
+            this.ClientSize = new System.Drawing.Size(493, 665);
             this.Controls.Add(this.guna2DateTimePicker1);
             this.Controls.Add(this.txtOrderDate);
             this.Controls.Add(this.txtEmpID);
