@@ -815,7 +815,7 @@ namespace Deksomboon_Inkjet
 
         private async void StartButton_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtBatch.Text))
+            if (!string.IsNullOrEmpty(txtBatch.Text))
             {
                 if (serialPortManager.IsOpen())
                 {
