@@ -68,20 +68,13 @@
             this.txtTenDigit = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.OrderGrid = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.ordpositionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.materialdesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ordbatchDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.formulaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.slifeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ordtypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.materialidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ord_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ord_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.location_prefix = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ord_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.location_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inkjet_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
@@ -116,6 +109,13 @@
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.txtRS232Status = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.ordpositionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materialdesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.formulaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.slifeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ordtypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materialidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -128,7 +128,6 @@
             this.guna2GroupBox4.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             this.tableLayoutPanel9.SuspendLayout();
             this.guna2GroupBox3.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -140,6 +139,7 @@
             this.panel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.menuStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -866,22 +866,6 @@
             this.OrderGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.OrderGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // ordpositionDataGridViewTextBoxColumn
-            // 
-            this.ordpositionDataGridViewTextBoxColumn.DataPropertyName = "ord_position";
-            this.ordpositionDataGridViewTextBoxColumn.HeaderText = "อันดับการพิมพ์";
-            this.ordpositionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ordpositionDataGridViewTextBoxColumn.Name = "ordpositionDataGridViewTextBoxColumn";
-            this.ordpositionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // materialdesDataGridViewTextBoxColumn
-            // 
-            this.materialdesDataGridViewTextBoxColumn.DataPropertyName = "material_des";
-            this.materialdesDataGridViewTextBoxColumn.HeaderText = "รายละเอียดวัสดุ";
-            this.materialdesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.materialdesDataGridViewTextBoxColumn.Name = "materialdesDataGridViewTextBoxColumn";
-            this.materialdesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // ordbatchDataGridViewTextBoxColumn
             // 
             this.ordbatchDataGridViewTextBoxColumn.DataPropertyName = "ord_batch";
@@ -890,39 +874,6 @@
             this.ordbatchDataGridViewTextBoxColumn.Name = "ordbatchDataGridViewTextBoxColumn";
             this.ordbatchDataGridViewTextBoxColumn.ReadOnly = true;
             this.ordbatchDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // formulaDataGridViewTextBoxColumn
-            // 
-            this.formulaDataGridViewTextBoxColumn.DataPropertyName = "formula";
-            this.formulaDataGridViewTextBoxColumn.HeaderText = "Formula";
-            this.formulaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.formulaDataGridViewTextBoxColumn.Name = "formulaDataGridViewTextBoxColumn";
-            this.formulaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // slifeDataGridViewTextBoxColumn
-            // 
-            this.slifeDataGridViewTextBoxColumn.DataPropertyName = "slife";
-            this.slifeDataGridViewTextBoxColumn.HeaderText = "SLIfe";
-            this.slifeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.slifeDataGridViewTextBoxColumn.Name = "slifeDataGridViewTextBoxColumn";
-            this.slifeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // ordtypeDataGridViewTextBoxColumn
-            // 
-            this.ordtypeDataGridViewTextBoxColumn.DataPropertyName = "ord_type";
-            this.ordtypeDataGridViewTextBoxColumn.HeaderText = "ประเภท";
-            this.ordtypeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ordtypeDataGridViewTextBoxColumn.Name = "ordtypeDataGridViewTextBoxColumn";
-            this.ordtypeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // materialidDataGridViewTextBoxColumn
-            // 
-            this.materialidDataGridViewTextBoxColumn.DataPropertyName = "material_id";
-            this.materialidDataGridViewTextBoxColumn.HeaderText = "material_id";
-            this.materialidDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.materialidDataGridViewTextBoxColumn.Name = "materialidDataGridViewTextBoxColumn";
-            this.materialidDataGridViewTextBoxColumn.ReadOnly = true;
-            this.materialidDataGridViewTextBoxColumn.Visible = false;
             // 
             // ord_date
             // 
@@ -977,10 +928,6 @@
             this.inkjet_id.Name = "inkjet_id";
             this.inkjet_id.ReadOnly = true;
             this.inkjet_id.Visible = false;
-            // 
-            // orderBindingSource
-            // 
-            this.orderBindingSource.DataSource = typeof(Deksomboon_Inkjet.Class.Order);
             // 
             // tableLayoutPanel9
             // 
@@ -1157,7 +1104,7 @@
             this.txtPrintState.Font = new System.Drawing.Font("Prompt", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrintState.Location = new System.Drawing.Point(131, 3);
             this.txtPrintState.Name = "txtPrintState";
-            this.txtPrintState.Size = new System.Drawing.Size(508, 22);
+            this.txtPrintState.Size = new System.Drawing.Size(168, 21);
             this.txtPrintState.TabIndex = 19;
             this.txtPrintState.Text = "Print States : Not Connect";
             this.txtPrintState.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1202,7 +1149,7 @@
             this.txtJetState.Font = new System.Drawing.Font("Prompt", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtJetState.Location = new System.Drawing.Point(131, 3);
             this.txtJetState.Name = "txtJetState";
-            this.txtJetState.Size = new System.Drawing.Size(508, 22);
+            this.txtJetState.Size = new System.Drawing.Size(151, 21);
             this.txtJetState.TabIndex = 19;
             this.txtJetState.Text = "Jet State : Not Connect";
             this.txtJetState.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1246,7 +1193,7 @@
             this.txtDBStatus.Font = new System.Drawing.Font("Prompt", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDBStatus.Location = new System.Drawing.Point(131, 3);
             this.txtDBStatus.Name = "txtDBStatus";
-            this.txtDBStatus.Size = new System.Drawing.Size(508, 21);
+            this.txtDBStatus.Size = new System.Drawing.Size(154, 21);
             this.txtDBStatus.TabIndex = 19;
             this.txtDBStatus.Text = "Database : Not Connect";
             this.txtDBStatus.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1290,7 +1237,7 @@
             this.txtRS232S.Font = new System.Drawing.Font("Prompt", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRS232S.Location = new System.Drawing.Point(131, 3);
             this.txtRS232S.Name = "txtRS232S";
-            this.txtRS232S.Size = new System.Drawing.Size(508, 19);
+            this.txtRS232S.Size = new System.Drawing.Size(139, 21);
             this.txtRS232S.TabIndex = 19;
             this.txtRS232S.Text = "RS-232 : Not Connect";
             this.txtRS232S.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1333,9 +1280,9 @@
             this.EndOrderButton,
             this.EmegencyButton,
             this.UpdateButton});
-            this.menuStrip2.Location = new System.Drawing.Point(260, 0);
+            this.menuStrip2.Location = new System.Drawing.Point(522, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(824, 103);
+            this.menuStrip2.Size = new System.Drawing.Size(299, 103);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -1473,6 +1420,59 @@
             this.guna2HtmlLabel5.Text = "Inkjet : Not Connect";
             this.guna2HtmlLabel5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // ordpositionDataGridViewTextBoxColumn
+            // 
+            this.ordpositionDataGridViewTextBoxColumn.DataPropertyName = "ord_position";
+            this.ordpositionDataGridViewTextBoxColumn.HeaderText = "อันดับการพิมพ์";
+            this.ordpositionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ordpositionDataGridViewTextBoxColumn.Name = "ordpositionDataGridViewTextBoxColumn";
+            this.ordpositionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // materialdesDataGridViewTextBoxColumn
+            // 
+            this.materialdesDataGridViewTextBoxColumn.DataPropertyName = "material_des";
+            this.materialdesDataGridViewTextBoxColumn.HeaderText = "รายละเอียดวัสดุ";
+            this.materialdesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.materialdesDataGridViewTextBoxColumn.Name = "materialdesDataGridViewTextBoxColumn";
+            this.materialdesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // formulaDataGridViewTextBoxColumn
+            // 
+            this.formulaDataGridViewTextBoxColumn.DataPropertyName = "formula";
+            this.formulaDataGridViewTextBoxColumn.HeaderText = "Formula";
+            this.formulaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.formulaDataGridViewTextBoxColumn.Name = "formulaDataGridViewTextBoxColumn";
+            this.formulaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // slifeDataGridViewTextBoxColumn
+            // 
+            this.slifeDataGridViewTextBoxColumn.DataPropertyName = "slife";
+            this.slifeDataGridViewTextBoxColumn.HeaderText = "SLIfe";
+            this.slifeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.slifeDataGridViewTextBoxColumn.Name = "slifeDataGridViewTextBoxColumn";
+            this.slifeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ordtypeDataGridViewTextBoxColumn
+            // 
+            this.ordtypeDataGridViewTextBoxColumn.DataPropertyName = "ord_type";
+            this.ordtypeDataGridViewTextBoxColumn.HeaderText = "ประเภท";
+            this.ordtypeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ordtypeDataGridViewTextBoxColumn.Name = "ordtypeDataGridViewTextBoxColumn";
+            this.ordtypeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // materialidDataGridViewTextBoxColumn
+            // 
+            this.materialidDataGridViewTextBoxColumn.DataPropertyName = "material_id";
+            this.materialidDataGridViewTextBoxColumn.HeaderText = "material_id";
+            this.materialidDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.materialidDataGridViewTextBoxColumn.Name = "materialidDataGridViewTextBoxColumn";
+            this.materialidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.materialidDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // orderBindingSource
+            // 
+            this.orderBindingSource.DataSource = typeof(Deksomboon_Inkjet.Class.Order);
+            // 
             // frmPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1499,7 +1499,6 @@
             this.guna2GroupBox4.ResumeLayout(false);
             this.guna2GroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
             this.tableLayoutPanel9.ResumeLayout(false);
             this.guna2GroupBox3.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
@@ -1517,6 +1516,7 @@
             this.tableLayoutPanel2.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

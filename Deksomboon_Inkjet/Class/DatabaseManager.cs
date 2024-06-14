@@ -4,6 +4,7 @@ using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Npgsql;
 
@@ -17,7 +18,7 @@ namespace Deksomboon_Inkjet.Class
         public DatabaseManager()
         {
             // เชื่อมต่อกับฐานข้อมูล PostgreSQL
-            string connString = "Host=192.168.0.2;Username=postgres;Password=123456;Database=deksomboon_local";
+            string connString = "Host=192.168.0.2;Username=postgres;Password=123456;Database=deksomboon_local;Timeout=1";
             connection = new NpgsqlConnection(connString);
             connString = "Host=192.168.0.2;Username=postgres;Password=123456;Database=deksomboon_local";
         }
@@ -130,5 +131,6 @@ namespace Deksomboon_Inkjet.Class
 
             return check;
         }
+
     }
 }
