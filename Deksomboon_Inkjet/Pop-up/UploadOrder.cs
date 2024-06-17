@@ -77,9 +77,9 @@ namespace Deksomboon_Inkjet.Pop_up
                 List<string[]> data = File.ReadAllLines(filePath)
                                            .Select(line => line.Split(','))
                                            .ToList();
-
+                string ip = LocalStorage.ReadIPaddress();
                 // เชื่อมต่อฐานข้อมูล PostgreSQL
-                string connectionString = "Host=192.168.0.2;Username=postgres;Password=123456;Database=deksomboon_local";
+                string connectionString = "Host="+ ip + ";Username=postgres;Password=123456;Database=deksomboon_local";
                 using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
                 {
                     connection.Open();

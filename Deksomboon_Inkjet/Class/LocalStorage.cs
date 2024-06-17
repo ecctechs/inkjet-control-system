@@ -138,6 +138,47 @@ namespace Deksomboon_Inkjet.Class
             }
         }
 
+        public static string ReadIPaddress()
+        {
+            try
+            {
+                // Get the path to the desktop directory
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+                // Combine the path with the file path
+                string filePath = Path.Combine(path, "ECC Software", "deksomboon", "data.txt");
+
+                // Check if the file exists
+                if (!File.Exists(filePath))
+                {
+                    Console.WriteLine("Expiration file not found. Please check the file path.");
+                    return null;
+                }
+
+                // Read all text from the file
+                string fileContent = File.ReadAllText(filePath);
+
+                // Find the latest inkjet data
+                string[] lines = fileContent.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+                foreach (string line in lines)
+                {
+                    if (line.StartsWith("IPaddress="))
+                    {
+                        return line.Substring("IPaddress=".Length);
+                    }
+                }
+
+                // If inkjet data is not found
+                Console.WriteLine("comport data not found in the file.");
+                return null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+                return null;
+            }
+        }
+
         public static void AddInkjetData(string inkjetValue)
         {
             try

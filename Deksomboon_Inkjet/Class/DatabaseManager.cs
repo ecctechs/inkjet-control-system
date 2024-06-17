@@ -17,8 +17,9 @@ namespace Deksomboon_Inkjet.Class
 
         public DatabaseManager()
         {
+            string ip = LocalStorage.ReadIPaddress();
             // เชื่อมต่อกับฐานข้อมูล PostgreSQL
-            string connString = "Host=192.168.0.2;Username=postgres;Password=123456;Database=deksomboon_local;Timeout=1";
+            string connString = "Host="+ ip + ";Username=postgres;Password=123456;Database=deksomboon_local;Timeout=1";
             connection = new NpgsqlConnection(connString);
             connString = "Host=192.168.0.2;Username=postgres;Password=123456;Database=deksomboon_local";
         }
