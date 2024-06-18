@@ -64,7 +64,7 @@ namespace Deksomboon_Inkjet.Class
                 int numberOfDays = Int32.Parse(slife);
 
                 // บวกจำนวนวันกับวันที่ปัจจุบัน
-                DateTime resultDate = date.AddDays(numberOfDays);
+                DateTime resultDate = date.AddMonths(numberOfDays);
 
                 string resultDateString = resultDate.AddYears(-543).ToString("dd/MM/yyyy"); // รูปแบบสตริงตามที่ต้องการ เช่น "yyyy-MM-dd"
 

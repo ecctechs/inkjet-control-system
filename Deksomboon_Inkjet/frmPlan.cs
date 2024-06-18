@@ -652,7 +652,7 @@ namespace Deksomboon_Inkjet
         {
             bool send_text = false;
             string tenDigit = txtTenDigit.Text;
-            string bbf = txtBBF.Text;
+            string bbf = "BBF "+txtBBF.Text;
 
             byte[] messageBytes = Encoding.UTF8.GetBytes(tenDigit);
             byte[] messageBytes2 = Encoding.UTF8.GetBytes(bbf);
@@ -963,8 +963,8 @@ namespace Deksomboon_Inkjet
                     Console.WriteLine(status[0]);
                     if (status[0] == "Jet Running")
                     {
-                        if (status[1] == "Waiting" || status[1] == "Printing")
-                        {
+                        //if (status[1] == "Waiting" || status[1] == "Printing")
+                        //{
                             string emp_id = Authorized.authorized_level_1(txtEmployeeCode.Text, txtEmployeepass.Text);
                             if (!string.IsNullOrEmpty(emp_id))
                             {
@@ -974,7 +974,7 @@ namespace Deksomboon_Inkjet
                                     bool jet_stop = await command_stop_print();
                                     if (jet_stop == true)
                                     {
-                                        MessageBox.Show("Stop Jet สําเร็จ");
+                                        MessageBox.Show("Stop Print สําเร็จ");
 
                                         int count_inkjet = await command_count();
                                         txtCountEnd.Text = count_inkjet.ToString();
@@ -1005,15 +1005,15 @@ namespace Deksomboon_Inkjet
                                     }
                                     else
                                     {
-                                        MessageBox.Show("Stop Jet ไม่สําเร็จ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        MessageBox.Show("Stop Print ไม่สําเร็จ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     }
                                 }
                             }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Jet State is not available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        //}
+                        //else
+                        //{
+                        //    MessageBox.Show("Jet State is not available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        //}
                     }
                     else
                     {
