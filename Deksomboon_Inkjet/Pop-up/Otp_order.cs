@@ -66,14 +66,30 @@ namespace Deksomboon_Inkjet.Pop_up
             if (isOTPVerified)
             {
                 Console.WriteLine("OTP verification successful. Access granted.");
-                MessageBox.Show("OTP verification successful. Access granted.", " OTP", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("OTP ถูกส่งไปให้ Manager เรียบร้อยแล้ว", " OTP", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DialogResult = DialogResult.OK;
             }
             else
             {
                 Console.WriteLine("OTP verification failed. Access denied.");
-                MessageBox.Show("OTP verification failed. Access denied.", " OTP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("OTP ไม่ถูกต้อง กรุณากรอกใหม่", " OTP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
          }
+
+        public void get_detail_manager()
+        {
+            string location_name = LocalStorage.ReadLocationData();
+            List<location> records = location.ListLocationByID(location_name);
+            Console.WriteLine(records[0].emp_email);
+
+            txtManagerName.Text = records[0].emp_name;
+            txtManagerEmail.Text = records[0].emp_email;
+
+        }
+
+        private void Otp_order_Load(object sender, EventArgs e)
+        {
+            get_detail_manager();
+        }
     }
 }

@@ -33,6 +33,10 @@
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtManagerName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtManagerEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -76,7 +80,7 @@
             this.btnClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
             this.btnClose.Font = new System.Drawing.Font("Prompt", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(205, 207);
+            this.btnClose.Location = new System.Drawing.Point(214, 291);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(119, 45);
             this.btnClose.TabIndex = 56;
@@ -93,7 +97,7 @@
             this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(135)))), ((int)(((byte)(84)))));
             this.btnSave.Font = new System.Drawing.Font("Prompt", 9F);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(339, 207);
+            this.btnSave.Location = new System.Drawing.Point(339, 291);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(110, 45);
             this.btnSave.TabIndex = 55;
@@ -111,11 +115,81 @@
             this.guna2HtmlLabel2.TabIndex = 54;
             this.guna2HtmlLabel2.Text = "ตรวจสอบ OTP";
             // 
+            // txtManagerName
+            // 
+            this.txtManagerName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtManagerName.DefaultText = "";
+            this.txtManagerName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtManagerName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtManagerName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtManagerName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtManagerName.Enabled = false;
+            this.txtManagerName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtManagerName.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.txtManagerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtManagerName.Location = new System.Drawing.Point(168, 166);
+            this.txtManagerName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtManagerName.Name = "txtManagerName";
+            this.txtManagerName.PasswordChar = '\0';
+            this.txtManagerName.PlaceholderText = "";
+            this.txtManagerName.ReadOnly = true;
+            this.txtManagerName.SelectedText = "";
+            this.txtManagerName.Size = new System.Drawing.Size(281, 36);
+            this.txtManagerName.TabIndex = 58;
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.AutoSize = false;
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(21, 171);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(141, 31);
+            this.guna2HtmlLabel3.TabIndex = 59;
+            this.guna2HtmlLabel3.Text = "Manager";
+            // 
+            // txtManagerEmail
+            // 
+            this.txtManagerEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtManagerEmail.DefaultText = "";
+            this.txtManagerEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtManagerEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtManagerEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtManagerEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtManagerEmail.Enabled = false;
+            this.txtManagerEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtManagerEmail.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.txtManagerEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtManagerEmail.Location = new System.Drawing.Point(168, 213);
+            this.txtManagerEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtManagerEmail.Name = "txtManagerEmail";
+            this.txtManagerEmail.PasswordChar = '\0';
+            this.txtManagerEmail.PlaceholderText = "";
+            this.txtManagerEmail.ReadOnly = true;
+            this.txtManagerEmail.SelectedText = "";
+            this.txtManagerEmail.Size = new System.Drawing.Size(281, 36);
+            this.txtManagerEmail.TabIndex = 60;
+            // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.AutoSize = false;
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(21, 218);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(141, 31);
+            this.guna2HtmlLabel4.TabIndex = 61;
+            this.guna2HtmlLabel4.Text = "Email";
+            // 
             // Otp_order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 275);
+            this.ClientSize = new System.Drawing.Size(493, 348);
+            this.Controls.Add(this.guna2HtmlLabel4);
+            this.Controls.Add(this.txtManagerEmail);
+            this.Controls.Add(this.guna2HtmlLabel3);
+            this.Controls.Add(this.txtManagerName);
             this.Controls.Add(this.txtOTP);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
@@ -125,6 +199,7 @@
             this.Name = "Otp_order";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Otp_order";
+            this.Load += new System.EventHandler(this.Otp_order_Load);
             this.ResumeLayout(false);
 
         }
@@ -136,5 +211,9 @@
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2TextBox txtManagerName;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2TextBox txtManagerEmail;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
     }
 }

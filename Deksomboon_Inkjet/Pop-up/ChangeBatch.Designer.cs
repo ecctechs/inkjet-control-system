@@ -81,6 +81,7 @@
             this.txtBatch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtBatch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBatch.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.txtBatch.ForeColor = System.Drawing.Color.Black;
             this.txtBatch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBatch.Location = new System.Drawing.Point(173, 345);
             this.txtBatch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

@@ -228,21 +228,38 @@ namespace Deksomboon_Inkjet
 
         public void open_line_setting()
         {
-            // ตรวจสอบว่าฟอร์มถูกสร้างแล้วหรือยัง
-            if (frmConnectionInstance == null || frmConnectionInstance.IsDisposed)
-            {
-                frmConnectionInstance = new frmConnection();
-                refreash_order();
-            }
+            DateTime st = DateTime.Now.AddYears(-543);
+            string start_date = st.AddSeconds(-st.Second).ToString();
+            string emp_id = Authorized.authorized_level_1(txtEmployeeCode.Text, txtEmployeepass.Text);
 
-            // แสดงฟอร์มการตั้งค่า
-            if (frmConnectionInstance.ShowDialog() == DialogResult.OK)
+            if (!string.IsNullOrEmpty(emp_id))
             {
-                string inkjet_local = LocalStorage.ReadInkjetData();
-                string location_local = LocalStorage.ReadLocationData();
-                txtLineSetting.Text = location_local;
-                txtInkjetSetting.Text = inkjet_local;
-                refreash_order();
+                // ตรวจสอบว่าฟอร์มถูกสร้างแล้วหรือยัง
+                if (frmConnectionInstance == null || frmConnectionInstance.IsDisposed)
+                {
+                    frmConnectionInstance = new frmConnection();
+                    refreash_order();
+                }
+
+                // แสดงฟอร์มการตั้งค่า
+                if (frmConnectionInstance.ShowDialog() == DialogResult.OK)
+                {
+
+                    string inkjet_local = LocalStorage.ReadInkjetData();
+                    string location_local = LocalStorage.ReadLocationData();
+                    txtLineSetting.Text = location_local;
+                    txtInkjetSetting.Text = inkjet_local;
+                    Console.WriteLine("----------------<<<"+txtOrdID.Text+ txtTenDigit.Text);
+                    if (string.IsNullOrEmpty(txtOrdID.Text) || string.IsNullOrEmpty(txtTenDigit.Text))
+                    {
+                        DataLog.Add_Authorized_Log(0, Int32.Parse(emp_id), start_date, "เปลี่ยนไลน์ผลิต/เครื่องพิมพ์", 1, txtTenDigit.Text);
+                    }
+                    else
+                    {
+                        DataLog.Add_Authorized_Log(Int32.Parse(txtOrdID.Text), Int32.Parse(emp_id), start_date, "เปลี่ยนไลน์ผลิต/เครื่องพิมพ์", 1, txtTenDigit.Text);
+                    }                   
+                        refreash_order();
+                }
             }
         }
         private void frmPlan_Shown(object sender, EventArgs e)
@@ -268,18 +285,22 @@ namespace Deksomboon_Inkjet
         }
         private async void btnHome_Click(object sender, EventArgs e)
         {
+
+
             bool isConnected = await DatabaseManager.CheckDataBaseAsync();
-            btnHome.Enabled = false;
-            if (isConnected == true)
-            {
-                open_line_setting();
-            }
-            else
-            {
-                MessageBox.Show("Database is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            btnHome.Enabled = true;
-            refreash_order();           
+            btnHome.Enabled = false;           
+                if (isConnected == true)
+                {
+                    open_line_setting();
+                }
+                else
+                {
+                    MessageBox.Show("Database is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                btnHome.Enabled = true;
+                refreash_order();
+            
+
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
@@ -340,7 +361,7 @@ namespace Deksomboon_Inkjet
                 string BBF = GenerateBatchNumber.order_bbf_generate(order_date_test, slife);
 
                 txtTenDigit.Text = tenDigit;
-                txtBBF.Text = BBF;
+                txtBBF.Text = "BBF " + BBF;
                 //row1order.Text = tenDigit;
                 //row2order.Text = BBF;
             }
