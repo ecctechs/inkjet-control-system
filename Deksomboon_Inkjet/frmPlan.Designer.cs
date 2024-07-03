@@ -99,8 +99,8 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.StopButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.StartButton = new System.Windows.Forms.ToolStripMenuItem();
             this.EndBatchButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.StartButton = new System.Windows.Forms.ToolStripMenuItem();
             this.EndOrderButton = new System.Windows.Forms.ToolStripMenuItem();
             this.EmegencyButton = new System.Windows.Forms.ToolStripMenuItem();
             this.UpdateButton = new System.Windows.Forms.ToolStripMenuItem();
@@ -726,7 +726,7 @@
             this.guna2GroupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2GroupBox4.Location = new System.Drawing.Point(1039, 3);
             this.guna2GroupBox4.Name = "guna2GroupBox4";
-            this.guna2GroupBox4.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.guna2GroupBox4.Padding = new System.Windows.Forms.Padding(5);
             this.guna2GroupBox4.Size = new System.Drawing.Size(254, 214);
             this.guna2GroupBox4.TabIndex = 1;
             this.guna2GroupBox4.Text = "ข้อความที่พิมพ์";
@@ -787,7 +787,7 @@
             this.guna2GroupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2GroupBox2.Location = new System.Drawing.Point(3, 243);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
-            this.guna2GroupBox2.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.guna2GroupBox2.Padding = new System.Windows.Forms.Padding(5);
             this.guna2GroupBox2.Size = new System.Drawing.Size(1296, 192);
             this.guna2GroupBox2.TabIndex = 1;
             this.guna2GroupBox2.Text = "Order List Record";
@@ -1279,10 +1279,9 @@
             this.EndOrderButton,
             this.EmegencyButton,
             this.UpdateButton});
-            this.menuStrip2.Location = new System.Drawing.Point(213, 0);
+            this.menuStrip2.Location = new System.Drawing.Point(495, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
-            this.menuStrip2.Size = new System.Drawing.Size(917, 105);
+            this.menuStrip2.Size = new System.Drawing.Size(353, 105);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -1299,18 +1298,6 @@
             this.StopButton.Visible = false;
             this.StopButton.Click += new System.EventHandler(this.StopButton_Click);
             // 
-            // StartButton
-            // 
-            this.StartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StartButton.Image = ((System.Drawing.Image)(resources.GetObject("StartButton.Image")));
-            this.StartButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.StartButton.Margin = new System.Windows.Forms.Padding(10);
-            this.StartButton.Name = "StartButton";
-            this.StartButton.Size = new System.Drawing.Size(101, 81);
-            this.StartButton.Text = "เริ่มผลิต";
-            this.StartButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
-            // 
             // EndBatchButton
             // 
             this.EndBatchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1323,6 +1310,18 @@
             this.EndBatchButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.EndBatchButton.Visible = false;
             this.EndBatchButton.Click += new System.EventHandler(this.EndBatchButton_Click);
+            // 
+            // StartButton
+            // 
+            this.StartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartButton.Image = ((System.Drawing.Image)(resources.GetObject("StartButton.Image")));
+            this.StartButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.StartButton.Margin = new System.Windows.Forms.Padding(10);
+            this.StartButton.Name = "StartButton";
+            this.StartButton.Size = new System.Drawing.Size(101, 81);
+            this.StartButton.Text = "เริ่มผลิต";
+            this.StartButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
             // EndOrderButton
             // 

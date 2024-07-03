@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\O-tak\OneDrive\Documents\ECC Software\deksomboon\installer\</PublishUrl>
+    <PublishUrl>C:\Users\theer\OneDrive\Documents\ECC Software\deksomboon\installer\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
