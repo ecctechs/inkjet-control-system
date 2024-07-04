@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using Deksomboon_Inkjet.Class;
 using Deksomboon_Inkjet.Pop_up;
 using Npgsql;
+using TheArtOfDevHtmlRenderer.Adapters.Entities;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Deksomboon_Inkjet
@@ -103,15 +104,15 @@ namespace Deksomboon_Inkjet
             else if (jetStatus == "Jet Stopped")
             {
                 txtJetState.Text = "Jet State : " + jetStatus;
-                indicationJet.BorderColor = Color.Red;
-                indicationJet.FillColor = Color.FromArgb(192, 0, 0);
+                indicationJet.BorderColor = Color.FromArgb(192, 0, 0);
+                indicationJet.FillColor = Color.Red;
                 txtJetState.ForeColor = System.Drawing.Color.Red;
             }
             else
             {
                 txtJetState.Text = "Jet State : " + jetStatus;
-                indicationJet.BorderColor = Color.Red;
-                indicationJet.FillColor = Color.FromArgb(192, 0, 0);
+                indicationJet.BorderColor = Color.FromArgb(192, 0, 0);
+                indicationJet.FillColor = Color.Red;
                 txtJetState.ForeColor = System.Drawing.Color.Red;
             }
 
@@ -125,22 +126,22 @@ namespace Deksomboon_Inkjet
             else if (PrintStatus == "Undefined")
             {
                 txtPrintState.Text = "Print States : " + PrintStatus;
-                indicationPrintStates.BorderColor = Color.Red;
-                indicationPrintStates.FillColor = Color.FromArgb(192, 0, 0);
+                indicationPrintStates.BorderColor = Color.FromArgb(192, 0, 0);
+                indicationPrintStates.FillColor = Color.Red;
                 txtPrintState.ForeColor = System.Drawing.Color.Red;
             }
             else if (PrintStatus == "Idle")
             {
                 txtPrintState.Text = "Print States : " + PrintStatus;
-                indicationPrintStates.BorderColor = Color.Red;
-                indicationPrintStates.FillColor = Color.FromArgb(192, 0, 0);
+                indicationPrintStates.BorderColor = Color.FromArgb(192, 0, 0);
+                indicationPrintStates.FillColor = Color.Red;
                 txtPrintState.ForeColor = System.Drawing.Color.Red;
             }
             else if (PrintStatus == "Generating Pixels")
             {
                 txtPrintState.Text = "Print States : " + PrintStatus;
-                indicationPrintStates.BorderColor = Color.Red;
-                indicationPrintStates.FillColor = Color.FromArgb(192, 0, 0);
+                indicationPrintStates.BorderColor = Color.FromArgb(192, 0, 0);
+                indicationPrintStates.FillColor = Color.Red;
                 txtPrintState.ForeColor = System.Drawing.Color.Red;
             }
             else if (PrintStatus == "Waiting")
@@ -153,22 +154,22 @@ namespace Deksomboon_Inkjet
             else if (PrintStatus == "Last")
             {
                 txtPrintState.Text = "Print States : " + PrintStatus;
-                indicationPrintStates.BorderColor = Color.Red;
-                indicationPrintStates.FillColor = Color.FromArgb(192, 0, 0);
+                indicationPrintStates.BorderColor = Color.FromArgb(192, 0, 0);
+                indicationPrintStates.FillColor = Color.Red;
                 txtPrintState.ForeColor = System.Drawing.Color.Red;
             }
             else if (PrintStatus == "Printing/Generating Pixels")
             {
                 txtPrintState.Text = "Print States : " + PrintStatus;
-                indicationPrintStates.BorderColor = Color.Red;
-                indicationPrintStates.FillColor = Color.FromArgb(192, 0, 0);
+                indicationPrintStates.BorderColor = Color.FromArgb(192, 0, 0);
+                indicationPrintStates.FillColor = Color.Red;
                 txtPrintState.ForeColor = System.Drawing.Color.Red;
             }
             else
             {
                 txtPrintState.Text = "Print States : " + PrintStatus;
-                indicationPrintStates.BorderColor = Color.Red;
-                indicationPrintStates.FillColor = Color.FromArgb(192, 0, 0);
+                indicationPrintStates.BorderColor = Color.FromArgb(192, 0, 0);
+                indicationPrintStates.FillColor = Color.Red;
                 txtPrintState.ForeColor = System.Drawing.Color.Red;
             }
             Console.WriteLine("------------------------------------------------------------------------------------------------------------------");
