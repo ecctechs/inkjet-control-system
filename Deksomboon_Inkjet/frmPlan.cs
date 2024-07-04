@@ -905,8 +905,7 @@ namespace Deksomboon_Inkjet
 
                                         if (check_send_text == true)
                                         {
-
-                                            MessageBox.Show("ส่งข้อความไปที่ inkjet เรียบร้อยแล้ว");
+                                            MessageBox.Show("ส่งข้อความไปที่เครื่องอินเจ็กเรียบร้อยแล้ว", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                             refreash_order();
                                         }
                                         else

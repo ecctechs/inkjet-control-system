@@ -126,7 +126,7 @@ namespace Deksomboon_Inkjet.Class
                         command.ExecuteNonQuery();
 
                         Console.WriteLine("location added successfully.");
-                        MessageBox.Show("location added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("เพิ่มข้อมูลเรียบร้อย", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
@@ -167,7 +167,7 @@ namespace Deksomboon_Inkjet.Class
                         if (rowsAffected > 0)
                         {
                             Console.WriteLine("location with ID " + location_id + " updated successfully.");
-                            MessageBox.Show("location with ID " + location_id + " updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("แก้ไขข้อมูลเรียบร้อย", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -201,7 +201,7 @@ namespace Deksomboon_Inkjet.Class
                         // Check if any rows were affected by the delete
                         if (rowsAffected > 0)
                         {
-                            MessageBox.Show("location deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("ลบข้อมูลเรียบร้อยแล้ว", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {

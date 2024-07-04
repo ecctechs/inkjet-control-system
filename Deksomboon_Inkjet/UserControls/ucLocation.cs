@@ -64,7 +64,7 @@ namespace Deksomboon_Inkjet.UserControls
         {
             location obj = locationBindingSource.Current as location;
 
-            DialogResult result = MessageBox.Show("Are you sure you want to delete Location with Name " + obj.location_name + "?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("คุณต้องการลบไลน์ผลิต " + obj.location_name + " หรือไม่?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {

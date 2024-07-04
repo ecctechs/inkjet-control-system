@@ -80,7 +80,7 @@ namespace Deksomboon_Inkjet.UserControls
         {
             Inkjet obj = inkjetBindingSource.Current as Inkjet;
 
-            DialogResult result = MessageBox.Show("Are you sure you want to delete Inkjet with Name " + obj.inkjet_name + "?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("คุณต้องการลบอินเจ็ก " + obj.inkjet_name + "หรือ?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {

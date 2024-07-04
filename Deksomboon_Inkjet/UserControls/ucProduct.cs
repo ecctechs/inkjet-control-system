@@ -69,7 +69,7 @@ namespace Deksomboon_Inkjet.UserControls
         {
             Material obj = materialBindingSource.Current as Material;
 
-            DialogResult result = MessageBox.Show("Are you sure you want to delete Material with ID " + obj.material_id + "?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("คุณต้องการลบสินค้าหมายเลขวัสดุ " + obj.material_id + " หรือไม่?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {

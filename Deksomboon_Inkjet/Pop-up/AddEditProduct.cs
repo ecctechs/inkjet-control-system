@@ -66,7 +66,7 @@ namespace Deksomboon_Inkjet.Pop_up
 
             if (chk_duplicate == false)
             {
-                MessageBox.Show("Material ID: " + material_id + " มีอยู่ในระบบแล้ว");
+                MessageBox.Show("หมายเลขวัสดุ : " + material_id + " มีอยู่ในระบบแล้ว");
                 return;
             }
 

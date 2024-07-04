@@ -30,12 +30,14 @@ namespace Deksomboon_Inkjet.Pop_up
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+
             string location_name = LocalStorage.ReadLocationData();
             List<location> records = location.ListLocationByID(location_name);
             Console.WriteLine(records[0].emp_email);
 
             if (records.Count > 0)
             {
+                btnClose.Enabled = false;
                 EmailService email = new EmailService();
                 string otp = GenerateOTP(); // สร้าง OTP ใหม่
                 generatedOTP1 = otp;
@@ -44,6 +46,8 @@ namespace Deksomboon_Inkjet.Pop_up
                 string subject = "Your One-Time Password (OTP)";
                 string detail = "Your OTP is:" + otp;
                 email.send(name, subject, detail);
+                MessageBox.Show("OTP ได้ถูกส่งไปยังอีเมล "+ records[0].emp_email + " เรียบร้อยแล้ว", " OTP", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnClose.Enabled = true;
             }
             else
             {
@@ -66,13 +70,13 @@ namespace Deksomboon_Inkjet.Pop_up
             if (isOTPVerified)
             {
                 Console.WriteLine("OTP verification successful. Access granted.");
-                MessageBox.Show("OTP ถูกส่งไปให้ Manager เรียบร้อยแล้ว", " OTP", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("การตรวจสอบ OTP เสร็จสิ้นเรียบร้อย", " OTP", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DialogResult = DialogResult.OK;
             }
             else
             {
                 Console.WriteLine("OTP verification failed. Access denied.");
-                MessageBox.Show("OTP ไม่ถูกต้อง กรุณากรอกใหม่", " OTP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("การตรวจสอบ OTP ไม่สำเร็จ กรุณาลองอีกครั้ง", " OTP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
          }
 

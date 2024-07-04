@@ -67,7 +67,7 @@ namespace Deksomboon_Inkjet.UserControls
         {
             Order_temp obj = ordertempBindingSource.Current as Order_temp;
 
-            DialogResult result = MessageBox.Show("Are you sure you want to delete Order with ID " + obj.ord_id + "?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("คุณต้องการลบออร์เดอร์หมายเลข " + obj.ord_id + " หรือไม่?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {

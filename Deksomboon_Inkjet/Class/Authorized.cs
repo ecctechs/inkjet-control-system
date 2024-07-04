@@ -26,13 +26,13 @@ namespace Deksomboon_Inkjet.Class
                 }
                 else
                 {
-                    MessageBox.Show("ไม่พบข้อมูลพนักงานหรือรหัสผ่านไม่ถูกต้อง");
+                    MessageBox.Show("ไม่พบข้อมูลพนักงานหรือรหัสผ่านไม่ถูกต้อง", "Authorized Identity", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return null;
                 }
             }
             else
             {
-                MessageBox.Show("กรุณากรอก รหัสพนักงานและพาสเวิร์ด");
+                MessageBox.Show("กรุณากรอกข้อมูลรหัสผ่านและพาสเวิร์ดสำหรับยืนยันตัว", "Authorized Identity", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return null;
             }
         }
@@ -62,13 +62,13 @@ namespace Deksomboon_Inkjet.Class
                 }
                 else
                 {
-                    MessageBox.Show("ไม่พบข้อมูลพนักงานหรือรหัสผ่านไม่ถูกต้อง");
+                    MessageBox.Show("ไม่พบข้อมูลพนักงานหรือรหัสผ่านไม่ถูกต้อง", "Authorized Identity", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return null;
                 }
             }
             else
             {
-                MessageBox.Show("กรุณากรอก รหัสพนักงานและพาสเวิร์ด");
+                MessageBox.Show("กรุณากรอกข้อมูลรหัสผ่านและพาสเวิร์ดสำหรับยืนยันตัว", "Authorized Identity", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return null;
             }
         }

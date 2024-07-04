@@ -99,7 +99,7 @@ namespace Deksomboon_Inkjet
                 LocalStorage.AddInkjetData(inkjet);
                 LocalStorage.AddLocationData(line);
                 LocalStorage.AddLocationPrefixData(line_prefix);
-                MessageBox.Show("บันทึกข้อมูลเรียบร้อยแล้ว");
+                MessageBox.Show("เปลี่ยนไลน์ผลิตสําเร็จ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DialogResult = DialogResult.OK;
             }
         }

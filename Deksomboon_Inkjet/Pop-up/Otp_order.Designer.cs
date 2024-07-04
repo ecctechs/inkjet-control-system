@@ -43,8 +43,8 @@
             // 
             this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Prompt", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(131, 36);
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(122, 22);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(289, 31);
             this.guna2HtmlLabel1.TabIndex = 53;
@@ -59,9 +59,9 @@
             this.txtOTP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtOTP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtOTP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOTP.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.txtOTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtOTP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOTP.Location = new System.Drawing.Point(168, 113);
+            this.txtOTP.Location = new System.Drawing.Point(168, 72);
             this.txtOTP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOTP.Name = "txtOTP";
             this.txtOTP.PasswordChar = '\0';
@@ -77,12 +77,12 @@
             this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
-            this.btnClose.Font = new System.Drawing.Font("Prompt", 9F);
+            this.btnClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(214, 291);
+            this.btnClose.Location = new System.Drawing.Point(168, 265);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(119, 45);
+            this.btnClose.Size = new System.Drawing.Size(119, 43);
             this.btnClose.TabIndex = 56;
             this.btnClose.Text = "ส่ง OTP";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -95,11 +95,11 @@
             this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(135)))), ((int)(((byte)(84)))));
-            this.btnSave.Font = new System.Drawing.Font("Prompt", 9F);
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(339, 291);
+            this.btnSave.Location = new System.Drawing.Point(329, 265);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(110, 45);
+            this.btnSave.Size = new System.Drawing.Size(120, 43);
             this.btnSave.TabIndex = 55;
             this.btnSave.Text = "ยืนยัน";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -108,8 +108,8 @@
             // 
             this.guna2HtmlLabel2.AutoSize = false;
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(21, 118);
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(21, 77);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(141, 31);
             this.guna2HtmlLabel2.TabIndex = 54;
@@ -125,9 +125,9 @@
             this.txtManagerName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtManagerName.Enabled = false;
             this.txtManagerName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtManagerName.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.txtManagerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtManagerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtManagerName.Location = new System.Drawing.Point(168, 166);
+            this.txtManagerName.Location = new System.Drawing.Point(168, 134);
             this.txtManagerName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtManagerName.Name = "txtManagerName";
             this.txtManagerName.PasswordChar = '\0';
@@ -141,8 +141,8 @@
             // 
             this.guna2HtmlLabel3.AutoSize = false;
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(21, 171);
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(21, 139);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(141, 31);
             this.guna2HtmlLabel3.TabIndex = 59;
@@ -158,9 +158,9 @@
             this.txtManagerEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtManagerEmail.Enabled = false;
             this.txtManagerEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtManagerEmail.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.txtManagerEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtManagerEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtManagerEmail.Location = new System.Drawing.Point(168, 213);
+            this.txtManagerEmail.Location = new System.Drawing.Point(168, 198);
             this.txtManagerEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtManagerEmail.Name = "txtManagerEmail";
             this.txtManagerEmail.PasswordChar = '\0';
@@ -174,8 +174,8 @@
             // 
             this.guna2HtmlLabel4.AutoSize = false;
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(21, 218);
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(21, 198);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(141, 31);
             this.guna2HtmlLabel4.TabIndex = 61;
@@ -185,7 +185,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 348);
+            this.ClientSize = new System.Drawing.Size(493, 320);
             this.Controls.Add(this.guna2HtmlLabel4);
             this.Controls.Add(this.txtManagerEmail);
             this.Controls.Add(this.guna2HtmlLabel3);
@@ -198,7 +198,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Otp_order";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Otp_order";
+            this.Text = "ยืนยัน otp";
             this.Load += new System.EventHandler(this.Otp_order_Load);
             this.ResumeLayout(false);
 

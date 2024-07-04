@@ -1012,7 +1012,7 @@
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(144, 34);
             this.guna2HtmlLabel1.TabIndex = 23;
-            this.guna2HtmlLabel1.Text = "Password";
+            this.guna2HtmlLabel1.Text = "พาสเวิร์ดพนักงาน";
             this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2HtmlLabel2
@@ -1279,9 +1279,9 @@
             this.EndOrderButton,
             this.EmegencyButton,
             this.UpdateButton});
-            this.menuStrip2.Location = new System.Drawing.Point(495, 0);
+            this.menuStrip2.Location = new System.Drawing.Point(213, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(353, 105);
+            this.menuStrip2.Size = new System.Drawing.Size(917, 105);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 

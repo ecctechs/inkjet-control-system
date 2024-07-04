@@ -67,7 +67,7 @@ namespace Deksomboon_Inkjet.UserControls
         {
             Employee obj = employeeBindingSource.Current as Employee;
 
-            DialogResult result = MessageBox.Show("Are you sure you want to delete Employee with Name " + obj.emp_name + "?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("คุณต้องการลบพนักงานชื่อ " + obj.emp_name + " หรือไม่?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {

@@ -198,7 +198,7 @@ namespace Deksomboon_Inkjet.Class
                         command.ExecuteNonQuery();
 
                         Console.WriteLine("inkjet added successfully.");
-                        MessageBox.Show("inkjet added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("เพิ่มข้อมูลเรียบร้อย", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
@@ -238,7 +238,7 @@ namespace Deksomboon_Inkjet.Class
                         if (rowsAffected > 0)
                         {
                             Console.WriteLine("inkjet with ID " + inkjet_id + " updated successfully.");
-                            MessageBox.Show("inkjet with ID " + inkjet_id + " updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("แก้ไขข้อมูลเรียบร้อย", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -316,7 +316,7 @@ namespace Deksomboon_Inkjet.Class
                         // Check if any rows were affected by the delete
                         if (rowsAffected > 0)
                         {
-                            MessageBox.Show("inkjet deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("ลบข้อมูลเรียบร้อยแล้ว", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {

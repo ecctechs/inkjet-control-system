@@ -119,14 +119,14 @@ namespace Deksomboon_Inkjet.Class
                         command.ExecuteNonQuery();
 
                         Console.WriteLine("Material added successfully.");
-                        MessageBox.Show("Material added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("เพิ่มข้อมูลเรียบร้อย", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
             catch (Exception e)
             {
                 Console.WriteLine("Error adding material: " + e.ToString());
-                MessageBox.Show("Error adding material: " + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("เพิ่มข้อมูลล้มเหลว: " + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -161,7 +161,7 @@ namespace Deksomboon_Inkjet.Class
                         if (rowsAffected > 0)
                         {
                             Console.WriteLine("Material with ID " + material_id + " updated successfully.");
-                            MessageBox.Show("Material with ID " + material_id + " updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("แก้ไขข้อมูลเรียบร้อย", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -196,7 +196,7 @@ namespace Deksomboon_Inkjet.Class
                         // Check if any rows were affected by the delete
                         if (rowsAffected > 0)
                         {
-                            MessageBox.Show("Materials deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("ข้อมูลถูกลบเรียบร้อย", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {

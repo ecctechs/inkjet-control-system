@@ -82,8 +82,8 @@ namespace Deksomboon_Inkjet.Class
 
                         command.ExecuteNonQuery();
 
-                        Console.WriteLine("Employee added successfully.");
-                        MessageBox.Show("Employee added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Console.WriteLine("เพิ่มข้อมูลเรียบร้อย");
+                        MessageBox.Show("เพิ่มข้อมูลเรียบร้อย", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
@@ -119,7 +119,7 @@ namespace Deksomboon_Inkjet.Class
                         command.ExecuteNonQuery();
 
                         Console.WriteLine("Employee updated successfully.");
-                        MessageBox.Show("Employee updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("แก้ไขข้อมูลเรียบร้อย", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
@@ -162,7 +162,7 @@ namespace Deksomboon_Inkjet.Class
                         command.ExecuteNonQuery();
 
                         Console.WriteLine("Employee deleted successfully.");
-                        MessageBox.Show("Employee deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("ลบข้อมูลเรียบร้อยแล้ว", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }

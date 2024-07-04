@@ -111,7 +111,7 @@ namespace Deksomboon_Inkjet.Class
                         command.ExecuteNonQuery();
 
                         Console.WriteLine("Order added successfully.");
-                        MessageBox.Show("Order added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("เพิ่มข้อมูลเรียบร้อย", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
@@ -195,7 +195,7 @@ namespace Deksomboon_Inkjet.Class
                             transaction.Commit();
 
                             Console.WriteLine("Emergency order added successfully.");
-                            MessageBox.Show("Emergency order added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("เพิ่มออร์เดอร์เร่งด่วนเรียบร้อย", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         catch (Exception ex)
                         {
@@ -247,7 +247,7 @@ namespace Deksomboon_Inkjet.Class
                         if (rowsAffected > 0)
                         {
                             Console.WriteLine("Order with ID " + order_id + " updated successfully.");
-                            MessageBox.Show("Order with ID " + order_id + " updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("แก้ไขข้อมูลเรียบร้อย", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -292,7 +292,7 @@ namespace Deksomboon_Inkjet.Class
                         if (rowsAffected > 0)
                         {
                             Console.WriteLine("Order with ID " + order_id + " updated successfully.");
-                            MessageBox.Show("Order with ID " + order_id + " updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("แก้ไขข้อมูลเรียบร้อย", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -326,7 +326,7 @@ namespace Deksomboon_Inkjet.Class
                         // Check if any rows were affected by the delete
                         if (rowsAffected > 0)
                         {
-                            MessageBox.Show("Order deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("ลบข้อมูลเรียบร้อยแล้ว", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -548,7 +548,7 @@ namespace Deksomboon_Inkjet.Class
 
                         }
                     }
-                    MessageBox.Show("Order Submit successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("ส่งออร์เดอร์ไปหน้าไลน์ผลิตเรียบร้อยแล้ว", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clear_temp_order();
                 }
             }

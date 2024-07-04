@@ -48,6 +48,10 @@
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.comboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.DataGridAuth = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.logauthorizedidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.batchnumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,10 +61,6 @@
             this.ordidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataLogAuthBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GroupBox1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -122,7 +122,7 @@
             this.guna2HtmlLabel10.AutoSize = false;
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel10.Location = new System.Drawing.Point(347, 3);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             this.guna2HtmlLabel10.Size = new System.Drawing.Size(166, 41);
@@ -135,7 +135,7 @@
             this.guna2HtmlLabel11.AutoSize = false;
             this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2HtmlLabel11.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel11.Location = new System.Drawing.Point(3, 3);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
             this.guna2HtmlLabel11.Size = new System.Drawing.Size(166, 41);
@@ -158,8 +158,9 @@
             this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSearch.Font = new System.Drawing.Font("Prompt", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.Black;
+            this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Location = new System.Drawing.Point(702, 3);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(155, 41);
@@ -176,7 +177,7 @@
             this.btnExport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnExport.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnExport.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.btnExport.Font = new System.Drawing.Font("Prompt", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExport.ForeColor = System.Drawing.Color.Black;
             this.btnExport.Location = new System.Drawing.Point(863, 3);
             this.btnExport.Name = "btnExport";
@@ -231,7 +232,7 @@
             this.guna2HtmlLabel8.AutoSize = false;
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel8.Location = new System.Drawing.Point(691, 3);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(166, 41);
@@ -265,7 +266,7 @@
             this.guna2HtmlLabel7.AutoSize = false;
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.Location = new System.Drawing.Point(347, 3);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(166, 41);
@@ -278,7 +279,7 @@
             this.guna2HtmlLabel6.AutoSize = false;
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(3, 3);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(166, 41);
@@ -382,6 +383,50 @@
             this.DataGridAuth.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridAuth.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // guna2HtmlLabel5
+            // 
+            this.guna2HtmlLabel5.AutoSize = false;
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(271, 57);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(141, 31);
+            this.guna2HtmlLabel5.TabIndex = 76;
+            this.guna2HtmlLabel5.Text = "Level";
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.AutoSize = false;
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(14, 57);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(141, 31);
+            this.guna2HtmlLabel2.TabIndex = 75;
+            this.guna2HtmlLabel2.Text = "Action";
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.AutoSize = false;
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(758, 57);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(141, 31);
+            this.guna2HtmlLabel3.TabIndex = 69;
+            this.guna2HtmlLabel3.Text = "Start Date";
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.AutoSize = false;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(524, 57);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(141, 31);
+            this.guna2HtmlLabel1.TabIndex = 68;
+            this.guna2HtmlLabel1.Text = "พนักงาน";
+            // 
             // logauthorizedidDataGridViewTextBoxColumn
             // 
             this.logauthorizedidDataGridViewTextBoxColumn.DataPropertyName = "log_authorized_id";
@@ -452,50 +497,6 @@
             // dataLogAuthBindingSource
             // 
             this.dataLogAuthBindingSource.DataSource = typeof(Deksomboon_Inkjet.Class.DataLogAuth);
-            // 
-            // guna2HtmlLabel5
-            // 
-            this.guna2HtmlLabel5.AutoSize = false;
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(271, 57);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(141, 31);
-            this.guna2HtmlLabel5.TabIndex = 76;
-            this.guna2HtmlLabel5.Text = "Level";
-            // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.AutoSize = false;
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(14, 57);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(141, 31);
-            this.guna2HtmlLabel2.TabIndex = 75;
-            this.guna2HtmlLabel2.Text = "Action";
-            // 
-            // guna2HtmlLabel3
-            // 
-            this.guna2HtmlLabel3.AutoSize = false;
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(758, 57);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(141, 31);
-            this.guna2HtmlLabel3.TabIndex = 69;
-            this.guna2HtmlLabel3.Text = "Start Date";
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.AutoSize = false;
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(524, 57);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(141, 31);
-            this.guna2HtmlLabel1.TabIndex = 68;
-            this.guna2HtmlLabel1.Text = "พนักงาน";
             // 
             // ucAuthLog
             // 
