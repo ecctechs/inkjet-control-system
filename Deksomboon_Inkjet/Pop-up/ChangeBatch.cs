@@ -51,7 +51,7 @@ namespace Deksomboon_Inkjet.Pop_up
 
             //DateTime myDate = DateTime.ParseExact(obj.ord_date.ToString(), "dd/MM/yyyy hh:mm",
             //                     System.Globalization.CultureInfo.InvariantCulture);
-            DateTime dateInBuddhistEra = DateTime.ParseExact(obj.ord_date, "dd/M/yyyy H:mm:ss", CultureInfo.InvariantCulture);
+            DateTime dateInBuddhistEra = DateTime.ParseExact(obj.ord_date, "d/M/yyyy H:mm:ss", CultureInfo.InvariantCulture);
             guna2DateTimePicker1.Value = dateInBuddhistEra;
             guna2DateTimePicker1.Enabled = false;
         }
@@ -67,7 +67,7 @@ namespace Deksomboon_Inkjet.Pop_up
             string batch = txtBatch.Text.Trim();
             string material_selected = cboMaterial.SelectedValue.ToString();
             string inkjet = txtInkjetID.Text;
-            string type = "งานเร่งด่วน";
+            string type = cboOrdType.Text;
             string form = txtCheckForm.Text;
             string ord_id = txtOrdID.Text;
 

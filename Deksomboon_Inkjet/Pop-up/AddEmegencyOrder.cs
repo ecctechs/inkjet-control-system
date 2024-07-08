@@ -55,13 +55,14 @@ namespace Deksomboon_Inkjet.Pop_up
 
                 txtEmpID.Text = emp_id.ToString();
                 txtOrdID.Text = obj.ord_id.ToString();
+                //MessageBox.Show(obj.ord_type.ToString());
                 cboOrdType.Text = obj.ord_type.ToString();
                 guna2HtmlLabel1.Text = "แก้ไข Order";
                 cboMaterial.SelectedValue = obj.material_id;
                 txtBatch.Text = obj.ord_batch;
                 this.Text = "แก้ไข Order";
-
-                DateTime dateInBuddhistEra = DateTime.ParseExact(obj.ord_date, "dd/M/yyyy H:mm:ss", CultureInfo.InvariantCulture);
+                //MessageBox.Show(obj.ord_date);
+                DateTime dateInBuddhistEra = DateTime.ParseExact(obj.ord_date, "d/M/yyyy H:mm:ss", CultureInfo.InvariantCulture);
                 DateTime dateInChristianEra = dateInBuddhistEra.AddYears(-543); // แปลงเป็นคริสต์ศักราช
 
                 Console.WriteLine("---------------------->>>" + dateInChristianEra);
@@ -194,7 +195,7 @@ namespace Deksomboon_Inkjet.Pop_up
             string batch = txtBatch.Text.Trim();
             string material_selected = cboMaterial.SelectedValue.ToString();
             string inkjet = txtInkjetID.Text;
-            string type = "งานเร่งด่วน";
+            string type = cboOrdType.Text;
             string form = txtCheckForm.Text;
             string ord_id = txtOrdID.Text;
             //string ord_date = guna2DateTimePicker1.Value.ToString();

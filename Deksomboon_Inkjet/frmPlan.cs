@@ -362,7 +362,7 @@ namespace Deksomboon_Inkjet
                 string BBF = GenerateBatchNumber.order_bbf_generate(order_date_test, slife);
 
                 txtTenDigit.Text = tenDigit;
-                txtBBF.Text = "BBF " + BBF;
+                txtBBF.Text = "" + BBF;
                 //row1order.Text = tenDigit;
                 //row2order.Text = BBF;
             }
