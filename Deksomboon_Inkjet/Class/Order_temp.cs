@@ -28,6 +28,10 @@ namespace Deksomboon_Inkjet.Class
         public string ord_temp { get; set; }
         public string ord_date { get; set; }
 
+        public int ord_amount { get; set; }
+
+        public int ord_count { get; set; }
+
         public static List<Order_temp> ListOrder()
         {
             List<Order_temp> listOrder = new List<Order_temp>();

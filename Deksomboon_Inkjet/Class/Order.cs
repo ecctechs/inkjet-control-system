@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
 
 namespace Deksomboon_Inkjet.Class
 {
@@ -27,6 +28,10 @@ namespace Deksomboon_Inkjet.Class
         public string ord_date { get; set; }
 
         public string location_prefix { get; set; }
+
+        public int ord_amount { get; set; }
+
+        public int ord_count { get; set; }
 
         public static List<Order> ListOrder()
         {
@@ -337,6 +342,60 @@ namespace Deksomboon_Inkjet.Class
             }
         }
 
+        public static void Update_Order_Date(List<Order> record)
+        {
+            try
+            {
+                DateTime st1 = DateTime.Now.AddYears(-543);
+                string date_now = st1.AddSeconds(-st1.Second).ToString();
+
+                using (var dbManager = new DatabaseManager())
+                {
+                    dbManager.OpenConnection();
+
+                    foreach (Order order in record)
+                    {
+                        string query = @"UPDATE order_detail 
+                                 SET location_id = @location_id, 
+                                     material_id = @material_id, 
+                                     inkjet_id = @inkjet_id, 
+                                     ord_batch = @ord_batch,
+                                     ord_date = @ord_date,
+                                     ord_type = @ord_type 
+                                 WHERE ord_id = @ord_id";
+
+                        using (NpgsqlCommand command = new NpgsqlCommand(query, dbManager.connection))
+                        {
+                            command.Parameters.AddWithValue("@location_id", order.location_id); // ตั้งค่าพารามิเตอร์ต่างๆ
+                            command.Parameters.AddWithValue("@inkjet_id", order.inkjet_id);
+                            command.Parameters.AddWithValue("@material_id", order.material_id);
+                            command.Parameters.AddWithValue("@ord_batch", order.ord_batch);
+                            command.Parameters.AddWithValue("@ord_type", order.ord_type);
+                            command.Parameters.AddWithValue("@ord_date", date_now); // ตั้งค่า ord_date เป็นวันที่ปัจจุบัน
+                            command.Parameters.AddWithValue("@ord_id", order.ord_id); // ตั้งค่า ord_id
+
+                            int rowsAffected = command.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
+                            {
+                                Console.WriteLine("Order with ID " + order.ord_id + " updated successfully.");
+                                // แสดงผลลัพธ์หรือแจ้งเตือนตามที่คุณต้องการ
+                            }
+                            else
+                            {
+                                Console.WriteLine("Order with ID " + order.ord_id + " not found.");
+                                // แสดงผลลัพธ์หรือแจ้งเตือนตามที่คุณต้องการ
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error updating Order: " + e.ToString());
+                // แสดงข้อผิดพลาดหรือแจ้งเตือนตามที่คุณต้องการ
+            }
+        }
 
         public static void Update_Order(string order_id, string line, string inkjet, string material, string batch, string type , string ord_date)
         {

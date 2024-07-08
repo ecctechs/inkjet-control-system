@@ -58,11 +58,54 @@ namespace Deksomboon_Inkjet
             //cboBaudRate.SelectedIndex = 0;
             //cboParity.SelectedIndex = 0;
             //cboStopBit.SelectedIndex = 0;
+            get_location();
+
+            string inkjet_local = LocalStorage.ReadInkjetData();
+            string location_local = LocalStorage.ReadLocationData();
+
+            //Console.WriteLine(lcation_prefix);
+
+            if (inkjet_local != null && location_local != null)
+            {
+                cboLine.Text = location_local;
+                guna2ComboBox2.Text = inkjet_local;
+            }
+            else
+            {
+                cboLine.SelectedIndex = 0;
+                //guna2ComboBox2.SelectedIndex = 0;
+            }
         }
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
             rs232_connect();
+            line_setting();
+        }
+
+        public void line_setting()
+        {
+            string line = cboLine.Text;
+            string inkjet = guna2ComboBox2.Text;
+            //string line = cboLine.SelectedValue.ToString();
+            //string inkjet = guna2ComboBox2.SelectedValue.ToString();
+            string line_prefix = txtLocationPrefix.Text;
+
+            //Console.WriteLine("--------->>"+ cboLine.SelectedIndex + "---" + inkjet);
+
+
+            if (cboLine.SelectedIndex == 0 || guna2ComboBox2.SelectedIndex == 0)
+            {
+                MessageBox.Show("Please Fill All Data");
+            }
+            else
+            {
+                LocalStorage.AddInkjetData(inkjet);
+                LocalStorage.AddLocationData(line);
+                LocalStorage.AddLocationPrefixData(line_prefix);
+                MessageBox.Show("เปลี่ยนไลน์ผลิตสําเร็จ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DialogResult = DialogResult.OK;
+            }
         }
 
         public void rs232_connect()
@@ -80,7 +123,7 @@ namespace Deksomboon_Inkjet
 
                 if (serialPortManager.IsOpen())
                 {
-                    DialogResult = DialogResult.OK;
+                    //DialogResult = DialogResult.OK;
                     LocalStorage.Add_Local_ComPort(PortName);
                 }
             }
@@ -105,6 +148,28 @@ namespace Deksomboon_Inkjet
             else
             {
                 DialogResult = DialogResult.Cancel;
+            }
+        }
+
+        public void get_location()
+        {
+            List<location> records = location.ListLocation();
+            records.Insert(0, new location() { location_id = 0, location_name = "เลือก" });
+            locationBindingSource.DataSource = records;
+        }
+
+        private void cboLine_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var line_selected = cboLine.SelectedValue;
+            int lineId = Convert.ToInt32(line_selected);
+            List<Inkjet> records = Inkjet.ListInkjetByID(lineId);
+            records.Insert(0, new Inkjet() { inkjet_id = 0, inkjet_name = "เลือก" });
+            inkjetBindingSource.DataSource = records;
+
+            List<location> records2 = location.ListLocationByID(cboLine.Text);
+            if (lineId > 0)
+            {
+                txtLocationPrefix.Text = records2[0].location_prefix;
             }
         }
     }

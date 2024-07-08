@@ -236,14 +236,14 @@ namespace Deksomboon_Inkjet
             if (!string.IsNullOrEmpty(emp_id))
             {
                 // ตรวจสอบว่าฟอร์มถูกสร้างแล้วหรือยัง
-                if (frmConnectionInstance == null || frmConnectionInstance.IsDisposed)
+                if (frmSettingInstance == null || frmSettingInstance.IsDisposed)
                 {
-                    frmConnectionInstance = new frmConnection();
+                    frmSettingInstance = new frmSetting();
                     refreash_order();
                 }
 
                 // แสดงฟอร์มการตั้งค่า
-                if (frmConnectionInstance.ShowDialog() == DialogResult.OK)
+                if (frmSettingInstance.ShowDialog() == DialogResult.OK)
                 {
 
                     string inkjet_local = LocalStorage.ReadInkjetData();
@@ -286,32 +286,42 @@ namespace Deksomboon_Inkjet
         }
         private async void btnHome_Click(object sender, EventArgs e)
         {
-
-
-            bool isConnected = await DatabaseManager.CheckDataBaseAsync();
-            btnHome.Enabled = false;           
-                if (isConnected == true)
-                {
-                    open_line_setting();
-                }
-                else
-                {
-                    MessageBox.Show("Database is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                btnHome.Enabled = true;
+            //bool isConnected = await DatabaseManager.CheckDataBaseAsync();
+            //btnHome.Enabled = false;           
+            //    if (isConnected == true)
+            //    {
+            //        open_line_setting();
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Database is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //    btnHome.Enabled = true;
                 refreash_order();
-            
-
         }
 
-        private void btnSetting_Click(object sender, EventArgs e)
+        private async void btnSetting_Click(object sender, EventArgs e)
         {
-            open_rs232_setting();
+            //open_rs232_setting();
+
+            bool isConnected = await DatabaseManager.CheckDataBaseAsync();
+            btnHome.Enabled = false;
+            if (isConnected == true)
+            {
+                open_line_setting();
+            }
+            else
+            {
+                MessageBox.Show("Database is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            btnHome.Enabled = true;
+            refreash_order();
         }
 
         private void frmPlan_Load_1(object sender, EventArgs e)
         {
             refreash_order();
+            update_order_date();
         }
 
         public void refreash_order()
@@ -321,7 +331,19 @@ namespace Deksomboon_Inkjet
             get_order_detail_first_row();
             gen_10_number();
             clear_authroized();
+            
         }
+
+        public void update_order_date()
+        {
+            string inkjet_local = LocalStorage.ReadInkjetData();
+            string location_local = LocalStorage.ReadLocationData();
+            List<Order> records = Order.ListAndUpdateOrderByInkjetLocation(location_local, inkjet_local);
+            orderBindingSource.DataSource = records;
+
+            Order.Update_Order_Date(records);
+        }
+
         public void clear_authroized()
         {
             txtEmployeeCode.Text = "";
@@ -1244,6 +1266,45 @@ namespace Deksomboon_Inkjet
             string inkjet_name = txtInkjetSetting.Text;
 
             Inkjet.Update_Inkjet_status(inkjet_name, "Disconnect");
+        }
+
+        private void btnEditOrderPosition_Click(object sender, EventArgs e)
+        {
+            tableLayoutOrderPosition.Visible = true;
+            btnEditOrderPosition.Visible = false;
+
+            OrderGrid.Rows[0].Selected = false;
+            OrderGrid.Enabled = true;
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            tableLayoutOrderPosition.Visible = false;
+            btnEditOrderPosition.Visible = true;
+
+            OrderGrid.ClearSelection();
+            OrderGrid.Rows[0].Selected = true;
+            OrderGrid.Enabled = false;
+
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("คุณต้องการอัพเดทตําแหน่งออร์เดอร์ใหม่หรือไม่ ? ", "Confirm Swap Order", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+
+                tableLayoutOrderPosition.Visible = false;
+                btnEditOrderPosition.Visible = true;
+
+                OrderGrid.ClearSelection();
+                OrderGrid.Rows[0].Selected = true;
+                OrderGrid.Enabled = false;
+                
+            }
+
         }
     }
 }

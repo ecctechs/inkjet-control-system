@@ -47,7 +47,8 @@ namespace Deksomboon_Inkjet.Class
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Configuration error: " + ex.Message);
+                //MessageBox.Show("Configuration error: " + ex.Message);
+                Console.WriteLine("Configuration error: " + ex.Message);
             }
         }
 
@@ -64,11 +65,13 @@ namespace Deksomboon_Inkjet.Class
                 else
                 {
                     MessageBox.Show("Serial Port is already open.");
+                    
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Open error: " + ex.Message);
+                //MessageBox.Show("Open error: " + ex.Message);
+                Console.WriteLine("Open error: " + ex.Message);
             }
         }
 
