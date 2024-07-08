@@ -350,12 +350,12 @@ namespace Deksomboon_Inkjet
             txtEmployeepass.Text = "";
         }
 
-        public async void get_order()
+        public void get_order()
         {
                 string inkjet_local = LocalStorage.ReadInkjetData();
                 string location_local = LocalStorage.ReadLocationData();
                 List<Order> records = Order.ListAndUpdateOrderByInkjetLocation(location_local, inkjet_local);
-                orderBindingSource.DataSource = records;           
+                orderBindingSource.DataSource = records;
         }
 
         public void get_setting()
@@ -1306,5 +1306,21 @@ namespace Deksomboon_Inkjet
             }
 
         }
+
+
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ordUPbtn_Click(object sender, EventArgs e)
+        {
+   
+        }
+
+
+
+
     }
 }

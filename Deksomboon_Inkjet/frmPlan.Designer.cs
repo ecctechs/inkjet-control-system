@@ -67,14 +67,27 @@
             this.txtBBF = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenDigit = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnEditOrderPosition = new Guna.UI2.WinForms.Guna2Button();
+            this.tableLayoutOrderPosition = new System.Windows.Forms.TableLayoutPanel();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.ordUPbtn = new Guna.UI2.WinForms.Guna2Button();
             this.OrderGrid = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ordpositionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materialdesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ordbatchDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.formulaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.slifeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ordtypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materialidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ord_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ord_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.location_prefix = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ord_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.location_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inkjet_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
@@ -109,19 +122,6 @@
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.txtRS232Status = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.tableLayoutOrderPosition = new System.Windows.Forms.TableLayoutPanel();
-            this.ordUPbtn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnEditOrderPosition = new Guna.UI2.WinForms.Guna2Button();
-            this.ordpositionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.materialdesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.formulaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.slifeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ordtypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.materialidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -133,7 +133,9 @@
             this.tableLayoutPanel14.SuspendLayout();
             this.guna2GroupBox4.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
+            this.tableLayoutOrderPosition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             this.tableLayoutPanel9.SuspendLayout();
             this.guna2GroupBox3.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -145,8 +147,6 @@
             this.panel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.menuStrip2.SuspendLayout();
-            this.tableLayoutOrderPosition.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -802,6 +802,107 @@
             this.guna2GroupBox2.Text = "Order List Record";
             this.guna2GroupBox2.TextOffset = new System.Drawing.Point(0, -7);
             // 
+            // btnEditOrderPosition
+            // 
+            this.btnEditOrderPosition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditOrderPosition.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditOrderPosition.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditOrderPosition.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEditOrderPosition.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEditOrderPosition.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEditOrderPosition.ForeColor = System.Drawing.Color.White;
+            this.btnEditOrderPosition.Location = new System.Drawing.Point(1111, 0);
+            this.btnEditOrderPosition.Name = "btnEditOrderPosition";
+            this.btnEditOrderPosition.Size = new System.Drawing.Size(180, 28);
+            this.btnEditOrderPosition.TabIndex = 2;
+            this.btnEditOrderPosition.Text = "แก้ไขลําดับออร์เดอร์";
+            this.btnEditOrderPosition.Click += new System.EventHandler(this.btnEditOrderPosition_Click);
+            // 
+            // tableLayoutOrderPosition
+            // 
+            this.tableLayoutOrderPosition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutOrderPosition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.tableLayoutOrderPosition.ColumnCount = 4;
+            this.tableLayoutOrderPosition.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutOrderPosition.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutOrderPosition.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutOrderPosition.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutOrderPosition.Controls.Add(this.guna2Button3, 3, 0);
+            this.tableLayoutOrderPosition.Controls.Add(this.guna2Button2, 2, 0);
+            this.tableLayoutOrderPosition.Controls.Add(this.guna2Button1, 0, 0);
+            this.tableLayoutOrderPosition.Controls.Add(this.ordUPbtn, 1, 0);
+            this.tableLayoutOrderPosition.Location = new System.Drawing.Point(614, 0);
+            this.tableLayoutOrderPosition.Name = "tableLayoutOrderPosition";
+            this.tableLayoutOrderPosition.RowCount = 1;
+            this.tableLayoutOrderPosition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutOrderPosition.Size = new System.Drawing.Size(548, 31);
+            this.tableLayoutOrderPosition.TabIndex = 1;
+            this.tableLayoutOrderPosition.Visible = false;
+            // 
+            // guna2Button3
+            // 
+            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button3.ForeColor = System.Drawing.Color.White;
+            this.guna2Button3.Location = new System.Drawing.Point(414, 3);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.Size = new System.Drawing.Size(131, 25);
+            this.guna2Button3.TabIndex = 3;
+            this.guna2Button3.Text = "Save";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.Location = new System.Drawing.Point(277, 3);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(131, 25);
+            this.guna2Button2.TabIndex = 2;
+            this.guna2Button2.Text = "ยกเลิก";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(3, 3);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(131, 25);
+            this.guna2Button1.TabIndex = 1;
+            this.guna2Button1.Text = "UP";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // ordUPbtn
+            // 
+            this.ordUPbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ordUPbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ordUPbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ordUPbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ordUPbtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ordUPbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ordUPbtn.ForeColor = System.Drawing.Color.White;
+            this.ordUPbtn.Location = new System.Drawing.Point(140, 3);
+            this.ordUPbtn.Name = "ordUPbtn";
+            this.ordUPbtn.Size = new System.Drawing.Size(131, 25);
+            this.ordUPbtn.TabIndex = 0;
+            this.ordUPbtn.Text = "DOWN";
+            this.ordUPbtn.Click += new System.EventHandler(this.ordUPbtn_Click);
+            // 
             // OrderGrid
             // 
             this.OrderGrid.AllowUserToAddRows = false;
@@ -875,6 +976,22 @@
             this.OrderGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.OrderGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // ordpositionDataGridViewTextBoxColumn
+            // 
+            this.ordpositionDataGridViewTextBoxColumn.DataPropertyName = "ord_position";
+            this.ordpositionDataGridViewTextBoxColumn.HeaderText = "อันดับการพิมพ์";
+            this.ordpositionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ordpositionDataGridViewTextBoxColumn.Name = "ordpositionDataGridViewTextBoxColumn";
+            this.ordpositionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // materialdesDataGridViewTextBoxColumn
+            // 
+            this.materialdesDataGridViewTextBoxColumn.DataPropertyName = "material_des";
+            this.materialdesDataGridViewTextBoxColumn.HeaderText = "รายละเอียดวัสดุ";
+            this.materialdesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.materialdesDataGridViewTextBoxColumn.Name = "materialdesDataGridViewTextBoxColumn";
+            this.materialdesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // ordbatchDataGridViewTextBoxColumn
             // 
             this.ordbatchDataGridViewTextBoxColumn.DataPropertyName = "ord_batch";
@@ -883,6 +1000,40 @@
             this.ordbatchDataGridViewTextBoxColumn.Name = "ordbatchDataGridViewTextBoxColumn";
             this.ordbatchDataGridViewTextBoxColumn.ReadOnly = true;
             this.ordbatchDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // formulaDataGridViewTextBoxColumn
+            // 
+            this.formulaDataGridViewTextBoxColumn.DataPropertyName = "formula";
+            this.formulaDataGridViewTextBoxColumn.HeaderText = "Formula";
+            this.formulaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.formulaDataGridViewTextBoxColumn.Name = "formulaDataGridViewTextBoxColumn";
+            this.formulaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // slifeDataGridViewTextBoxColumn
+            // 
+            this.slifeDataGridViewTextBoxColumn.DataPropertyName = "slife";
+            this.slifeDataGridViewTextBoxColumn.HeaderText = "SLIfe";
+            this.slifeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.slifeDataGridViewTextBoxColumn.Name = "slifeDataGridViewTextBoxColumn";
+            this.slifeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.slifeDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // ordtypeDataGridViewTextBoxColumn
+            // 
+            this.ordtypeDataGridViewTextBoxColumn.DataPropertyName = "ord_type";
+            this.ordtypeDataGridViewTextBoxColumn.HeaderText = "ประเภท";
+            this.ordtypeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ordtypeDataGridViewTextBoxColumn.Name = "ordtypeDataGridViewTextBoxColumn";
+            this.ordtypeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // materialidDataGridViewTextBoxColumn
+            // 
+            this.materialidDataGridViewTextBoxColumn.DataPropertyName = "material_id";
+            this.materialidDataGridViewTextBoxColumn.HeaderText = "material_id";
+            this.materialidDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.materialidDataGridViewTextBoxColumn.Name = "materialidDataGridViewTextBoxColumn";
+            this.materialidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.materialidDataGridViewTextBoxColumn.Visible = false;
             // 
             // ord_date
             // 
@@ -937,6 +1088,10 @@
             this.inkjet_id.Name = "inkjet_id";
             this.inkjet_id.ReadOnly = true;
             this.inkjet_id.Visible = false;
+            // 
+            // orderBindingSource
+            // 
+            this.orderBindingSource.DataSource = typeof(Deksomboon_Inkjet.Class.Order);
             // 
             // tableLayoutPanel9
             // 
@@ -1112,7 +1267,7 @@
             this.txtPrintState.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrintState.Location = new System.Drawing.Point(131, 3);
             this.txtPrintState.Name = "txtPrintState";
-            this.txtPrintState.Size = new System.Drawing.Size(152, 18);
+            this.txtPrintState.Size = new System.Drawing.Size(508, 22);
             this.txtPrintState.TabIndex = 19;
             this.txtPrintState.Text = "Print States : Not Connect";
             this.txtPrintState.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1157,7 +1312,7 @@
             this.txtJetState.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtJetState.Location = new System.Drawing.Point(131, 3);
             this.txtJetState.Name = "txtJetState";
-            this.txtJetState.Size = new System.Drawing.Size(137, 18);
+            this.txtJetState.Size = new System.Drawing.Size(508, 22);
             this.txtJetState.TabIndex = 19;
             this.txtJetState.Text = "Jet State : Not Connect";
             this.txtJetState.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1201,7 +1356,7 @@
             this.txtDBStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDBStatus.Location = new System.Drawing.Point(131, 3);
             this.txtDBStatus.Name = "txtDBStatus";
-            this.txtDBStatus.Size = new System.Drawing.Size(145, 18);
+            this.txtDBStatus.Size = new System.Drawing.Size(508, 21);
             this.txtDBStatus.TabIndex = 19;
             this.txtDBStatus.Text = "Database : Not Connect";
             this.txtDBStatus.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1245,7 +1400,7 @@
             this.txtRS232S.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRS232S.Location = new System.Drawing.Point(131, 3);
             this.txtRS232S.Name = "txtRS232S";
-            this.txtRS232S.Size = new System.Drawing.Size(129, 18);
+            this.txtRS232S.Size = new System.Drawing.Size(508, 19);
             this.txtRS232S.TabIndex = 19;
             this.txtRS232S.Text = "RS-232 : Not Connect";
             this.txtRS232S.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1428,159 +1583,6 @@
             this.guna2HtmlLabel5.Text = "Inkjet : Not Connect";
             this.guna2HtmlLabel5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tableLayoutOrderPosition
-            // 
-            this.tableLayoutOrderPosition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutOrderPosition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.tableLayoutOrderPosition.ColumnCount = 4;
-            this.tableLayoutOrderPosition.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutOrderPosition.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutOrderPosition.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutOrderPosition.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutOrderPosition.Controls.Add(this.guna2Button3, 3, 0);
-            this.tableLayoutOrderPosition.Controls.Add(this.guna2Button2, 2, 0);
-            this.tableLayoutOrderPosition.Controls.Add(this.guna2Button1, 0, 0);
-            this.tableLayoutOrderPosition.Controls.Add(this.ordUPbtn, 1, 0);
-            this.tableLayoutOrderPosition.Location = new System.Drawing.Point(614, 0);
-            this.tableLayoutOrderPosition.Name = "tableLayoutOrderPosition";
-            this.tableLayoutOrderPosition.RowCount = 1;
-            this.tableLayoutOrderPosition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutOrderPosition.Size = new System.Drawing.Size(548, 31);
-            this.tableLayoutOrderPosition.TabIndex = 1;
-            this.tableLayoutOrderPosition.Visible = false;
-            // 
-            // ordUPbtn
-            // 
-            this.ordUPbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.ordUPbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.ordUPbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.ordUPbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ordUPbtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ordUPbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ordUPbtn.ForeColor = System.Drawing.Color.White;
-            this.ordUPbtn.Location = new System.Drawing.Point(140, 3);
-            this.ordUPbtn.Name = "ordUPbtn";
-            this.ordUPbtn.Size = new System.Drawing.Size(131, 25);
-            this.ordUPbtn.TabIndex = 0;
-            this.ordUPbtn.Text = "DOWN";
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(3, 3);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(131, 25);
-            this.guna2Button1.TabIndex = 1;
-            this.guna2Button1.Text = "UP";
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(277, 3);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(131, 25);
-            this.guna2Button2.TabIndex = 2;
-            this.guna2Button2.Text = "ยกเลิก";
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(414, 3);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(131, 25);
-            this.guna2Button3.TabIndex = 3;
-            this.guna2Button3.Text = "Save";
-            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
-            // 
-            // btnEditOrderPosition
-            // 
-            this.btnEditOrderPosition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditOrderPosition.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditOrderPosition.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditOrderPosition.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEditOrderPosition.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEditOrderPosition.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnEditOrderPosition.ForeColor = System.Drawing.Color.White;
-            this.btnEditOrderPosition.Location = new System.Drawing.Point(1111, 0);
-            this.btnEditOrderPosition.Name = "btnEditOrderPosition";
-            this.btnEditOrderPosition.Size = new System.Drawing.Size(180, 28);
-            this.btnEditOrderPosition.TabIndex = 2;
-            this.btnEditOrderPosition.Text = "แก้ไขลําดับออร์เดอร์";
-            this.btnEditOrderPosition.Click += new System.EventHandler(this.btnEditOrderPosition_Click);
-            // 
-            // ordpositionDataGridViewTextBoxColumn
-            // 
-            this.ordpositionDataGridViewTextBoxColumn.DataPropertyName = "ord_position";
-            this.ordpositionDataGridViewTextBoxColumn.HeaderText = "อันดับการพิมพ์";
-            this.ordpositionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ordpositionDataGridViewTextBoxColumn.Name = "ordpositionDataGridViewTextBoxColumn";
-            this.ordpositionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // materialdesDataGridViewTextBoxColumn
-            // 
-            this.materialdesDataGridViewTextBoxColumn.DataPropertyName = "material_des";
-            this.materialdesDataGridViewTextBoxColumn.HeaderText = "รายละเอียดวัสดุ";
-            this.materialdesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.materialdesDataGridViewTextBoxColumn.Name = "materialdesDataGridViewTextBoxColumn";
-            this.materialdesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // formulaDataGridViewTextBoxColumn
-            // 
-            this.formulaDataGridViewTextBoxColumn.DataPropertyName = "formula";
-            this.formulaDataGridViewTextBoxColumn.HeaderText = "Formula";
-            this.formulaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.formulaDataGridViewTextBoxColumn.Name = "formulaDataGridViewTextBoxColumn";
-            this.formulaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // slifeDataGridViewTextBoxColumn
-            // 
-            this.slifeDataGridViewTextBoxColumn.DataPropertyName = "slife";
-            this.slifeDataGridViewTextBoxColumn.HeaderText = "SLIfe";
-            this.slifeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.slifeDataGridViewTextBoxColumn.Name = "slifeDataGridViewTextBoxColumn";
-            this.slifeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.slifeDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // ordtypeDataGridViewTextBoxColumn
-            // 
-            this.ordtypeDataGridViewTextBoxColumn.DataPropertyName = "ord_type";
-            this.ordtypeDataGridViewTextBoxColumn.HeaderText = "ประเภท";
-            this.ordtypeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ordtypeDataGridViewTextBoxColumn.Name = "ordtypeDataGridViewTextBoxColumn";
-            this.ordtypeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // materialidDataGridViewTextBoxColumn
-            // 
-            this.materialidDataGridViewTextBoxColumn.DataPropertyName = "material_id";
-            this.materialidDataGridViewTextBoxColumn.HeaderText = "material_id";
-            this.materialidDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.materialidDataGridViewTextBoxColumn.Name = "materialidDataGridViewTextBoxColumn";
-            this.materialidDataGridViewTextBoxColumn.ReadOnly = true;
-            this.materialidDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // orderBindingSource
-            // 
-            this.orderBindingSource.DataSource = typeof(Deksomboon_Inkjet.Class.Order);
-            // 
             // frmPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1606,7 +1608,9 @@
             this.tableLayoutPanel14.ResumeLayout(false);
             this.guna2GroupBox4.ResumeLayout(false);
             this.guna2GroupBox2.ResumeLayout(false);
+            this.tableLayoutOrderPosition.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
             this.tableLayoutPanel9.ResumeLayout(false);
             this.guna2GroupBox3.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
@@ -1624,8 +1628,6 @@
             this.tableLayoutPanel2.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
-            this.tableLayoutOrderPosition.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
