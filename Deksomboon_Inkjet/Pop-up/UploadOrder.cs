@@ -169,7 +169,7 @@ namespace Deksomboon_Inkjet.Pop_up
                             string ord_batch = row[1].Trim();
 
                             // ตรวจสอบความถูกต้องของ ord_batch
-                            if (ord_batch.Length <= 1)
+                            if (ord_batch.Length <= 1 )
                             {
                                 // เพิ่มการตรวจสอบว่า material_id มีอยู่ในตาราง material หรือไม่
                                 string checkMaterialQuery = "SELECT COUNT(*) FROM material WHERE material_id = @material_id";

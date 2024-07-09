@@ -737,7 +737,7 @@ namespace Deksomboon_Inkjet.Class
         //    }
         //}
 
-        public static List<Order> Update_Order_Position(List<Order> records)
+        public static void Update_Order_Position(int ord_id , int ord_position)
         {
             try
             {
@@ -745,43 +745,23 @@ namespace Deksomboon_Inkjet.Class
                 {
                     dbManager.OpenConnection();
 
-                    // เริ่มต้นการทำ transaction
-                    using (var transaction = dbManager.connection.BeginTransaction())
-                    {
-                        try
-                        {
-                            var count = 1;
-                            // Loop through each order and update its position
-                            foreach (var order in records)
-                            {
-                                string query_update = "UPDATE order_detail SET ord_position = @ord_position WHERE ord_id = @ord_id";
-                                using (var command = new NpgsqlCommand(query_update, dbManager.connection))
-                                {
-                                    command.Parameters.AddWithValue("ord_position", count);
-                                    command.Parameters.AddWithValue("ord_id", order.ord_id);
-                                    command.ExecuteNonQuery();
-                                }
-                                order.ord_position = count; // อัปเดตตำแหน่งในออบเจ็กต์ Order ด้วย
-                                count++;
-                            }
+                    string query = "UPDATE order_detail SET ord_position = @ord_position WHERE ord_id = @ord_id";
 
-                            // Commit การทำ transaction
-                            transaction.Commit();
-                        }
-                        catch (Exception ex)
-                        {
-                            transaction.Rollback();
-                            throw ex;
-                        }
+                    using (var command = new NpgsqlCommand(query, dbManager.connection))
+                    {
+                        command.Parameters.AddWithValue("ord_position", ord_position);
+                        command.Parameters.AddWithValue("ord_id", ord_id);
+                        command.ExecuteNonQuery();
                     }
                 }
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error updating Order: " + e.ToString());
-                System.Windows.Forms.MessageBox.Show("Error updating Order: " + e.Message, "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                Console.WriteLine(ex.ToString());
+                throw;
             }
-            return records; // คืนค่า List<Order> ที่ได้รับการอัปเดตตำแหน่งแล้ว
         }
+
+   
     }
 }

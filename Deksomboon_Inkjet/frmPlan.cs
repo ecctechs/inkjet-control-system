@@ -331,7 +331,6 @@ namespace Deksomboon_Inkjet
             get_order_detail_first_row();
             gen_10_number();
             clear_authroized();
-            
         }
 
         public void update_order_date()
@@ -339,7 +338,7 @@ namespace Deksomboon_Inkjet
             string inkjet_local = LocalStorage.ReadInkjetData();
             string location_local = LocalStorage.ReadLocationData();
             List<Order> records = Order.ListAndUpdateOrderByInkjetLocation(location_local, inkjet_local);
-            orderBindingSource.DataSource = records;
+            //orderBindingSource.DataSource = records;
 
             Order.Update_Order_Date(records);
         }
@@ -350,12 +349,109 @@ namespace Deksomboon_Inkjet
             txtEmployeepass.Text = "";
         }
 
+        DataTable table = new DataTable();
+        int rowIndex;
         public void get_order()
         {
-                string inkjet_local = LocalStorage.ReadInkjetData();
-                string location_local = LocalStorage.ReadLocationData();
-                List<Order> records = Order.ListAndUpdateOrderByInkjetLocation(location_local, inkjet_local);
-                orderBindingSource.DataSource = records;
+            string inkjet_local = LocalStorage.ReadInkjetData();
+            string location_local = LocalStorage.ReadLocationData();
+            List<Order> records = Order.ListAndUpdateOrderByInkjetLocation(location_local, inkjet_local);
+            //orderBindingSource.DataSource = records;
+            //ตรวจสอบว่า DataTable ยังไม่ถูกสร้าง หรือถูก Clear ให้สร้าง Column ใหม่
+            if (table.Columns.Count == 0)
+            {
+                table.Columns.Add("ลำดับการพิมพ์", typeof(int));
+                table.Columns.Add("รายละเอียดวัสดุ", typeof(string));
+                table.Columns.Add("Formula", typeof(string));
+                table.Columns.Add("ประเภท", typeof(string));
+                table.Columns.Add("ord_id", typeof(int));
+                table.Columns.Add("ordbatchDataGridViewTextBoxColumn", typeof(string));
+                table.Columns.Add("slifeDataGridViewTextBoxColumn", typeof(int));  // เพิ่ม column สำหรับ slife
+                table.Columns.Add("location_prefix", typeof(string));  // เพิ่ม column สำหรับ location_prefix
+                table.Columns.Add("ord_date", typeof(string));  // เพิ่ม column สำหรับ ord_date
+                table.Columns.Add("ord_status", typeof(string));  // เพิ่ม column สำหรับ ord_date
+
+            }
+            else
+            {
+                // Clear ข้อมูลเก่าใน DataTable
+                table.Rows.Clear();
+            }
+
+            // เพิ่มข้อมูล records เข้าไปใน DataTable
+            foreach (var record in records)
+            {
+                table.Rows.Add(
+                    record.ord_position,
+                    record.material_des,
+                    record.formula,
+                    record.ord_type,
+                    record.ord_id,
+                    record.ord_batch,
+                    record.slife,  // เพิ่มข้อมูลสำหรับ slife
+                    record.location_prefix,  // เพิ่มข้อมูลสำหรับ location_prefix
+                    record.ord_date,  // เพิ่มข้อมูลสำหรับ ord_date
+                    record.ord_status
+                // เพิ่มข้อมูลอื่นๆ ตามต้องการ
+                );
+            }
+
+            // ตั้งค่า DataSource ของ DataGridView เป็น DataTable ที่มีข้อมูลใหม่
+            OrderGrid.DataSource = table;
+
+
+        }
+
+        public void get_order_detail_first_row()
+        {
+            if (table.Rows.Count > 0) // ตรวจสอบว่า DataTable (table) มีข้อมูลหรือไม่
+            {
+                System.Drawing.Color customColor = System.Drawing.Color.FromArgb(231, 229, 255);
+                // เซ็ตสีพื้นหลังของแถวแรก
+                //table.Rows[0]["ลำดับการพิมพ์"] = customColor;
+                OrderGrid.Enabled = false;
+
+                // รับข้อมูลจากแถวที่เลือก (แถวที่ 0)
+                DataRow selectedRow = table.Rows[0];
+
+                // ตรวจสอบว่ามีข้อมูลในแถวหรือไม่
+                if (selectedRow != null)
+                {
+                    // รับค่าข้อมูลจากเซลล์แต่ละเซลล์ในแถวที่เลือก
+                    string columnBatch = selectedRow["ordbatchDataGridViewTextBoxColumn"].ToString();
+                    string columnDate = selectedRow["ord_date"].ToString();
+                    string columnMaterial = selectedRow["รายละเอียดวัสดุ"].ToString();
+                    string columnFormula = selectedRow["Formula"].ToString();
+                    string columnOrderStaus = selectedRow["ord_status"].ToString();
+                    string columnSlife = selectedRow["slifeDataGridViewTextBoxColumn"].ToString();
+                    string columnLocationPrefix = selectedRow["location_prefix"].ToString();
+                    string columnOrderID = selectedRow["ord_id"].ToString();
+
+                    // นำข้อมูลไปแสดงใน TextBox หรือคอนโทรลที่ต้องการ
+                    txtBatch.Text = columnBatch;
+                    txtDate.Text = columnDate;
+                    txtMaterialDes.Text = columnMaterial;
+                    txtFormula.Text = columnFormula;
+                    txtOrderStatus.Text = columnOrderStaus;
+                    txtSLife.Text = columnSlife;
+                    locationprefixtextbox.Text = columnLocationPrefix;
+                    txtOrdID.Text = columnOrderID;
+                }
+            }
+            else
+            {
+                // กรณีไม่มีข้อมูลใน DataTable
+                txtBatch.Text = "";
+                txtDate.Text = "";
+                txtMaterialDes.Text = "";
+                txtFormula.Text = "";
+                txtOrderStatus.Text = "";
+                txtSLife.Text = "";
+                locationprefixtextbox.Text = "";
+                txtOrdID.Text = "";
+            }
+            OrderGrid.Columns["ordbatchDataGridViewTextBoxColumn"].Visible = false;
+            OrderGrid.Columns["slifeDataGridViewTextBoxColumn"].Visible = false;
         }
 
         public void get_setting()
@@ -390,68 +486,70 @@ namespace Deksomboon_Inkjet
             }
         }
 
-        public void get_order_detail_first_row()
-        {
-            //Console.WriteLine(OrderGrid.RowCount);
-            if (OrderGrid.RowCount > 0)
-            {
+        //public void get_order_detail_first_row()
+        //{
+        //    //Console.WriteLine(OrderGrid.RowCount);
+        //    if (OrderGrid.RowCount > 0)
+        //    {
 
-                System.Drawing.Color customColor = System.Drawing.Color.FromArgb(231, 229, 255);
-                OrderGrid.Rows[0].DefaultCellStyle.BackColor = customColor;
-                OrderGrid.Rows[0].Selected = true;
-                OrderGrid.Enabled = false;
+        //        System.Drawing.Color customColor = System.Drawing.Color.FromArgb(231, 229, 255);
+        //        OrderGrid.Rows[0].DefaultCellStyle.BackColor = customColor;
+        //        OrderGrid.Rows[0].Selected = true;
+        //        OrderGrid.Enabled = false;
 
-                // รับข้อมูลจากแถวที่เลือก
-                DataGridViewRow selectedRow = OrderGrid.SelectedRows[0];
+        //        // รับข้อมูลจากแถวที่เลือก
+        //        DataGridViewRow selectedRow = OrderGrid.SelectedRows[0];
 
-                // ตรวจสอบว่ามีข้อมูลในแถวหรือไม่
-                if (selectedRow != null)
-                {
-                    // รับค่าข้อมูลจากเซลล์แต่ละเซลล์ในแถวที่เลือก
-                    string columnBatch = selectedRow.Cells["ordbatchDataGridViewTextBoxColumn"].Value.ToString();
-                    string columnDate = selectedRow.Cells["ord_date"].Value.ToString();
-                    string columnMaterial = selectedRow.Cells["materialdesDataGridViewTextBoxColumn"].Value.ToString();
-                    string columnFormula = selectedRow.Cells["formulaDataGridViewTextBoxColumn"].Value.ToString();
-                    string columnOrderStaus = selectedRow.Cells["ord_status"].Value.ToString();
-                    string columnSlife = selectedRow.Cells["slifeDataGridViewTextBoxColumn"].Value.ToString();
-                    string columnLocationPrefix = selectedRow.Cells["location_prefix"].Value.ToString();
-                    string columnOrderID = selectedRow.Cells["ord_id"].Value.ToString();
-                    //string columnLineID = selectedRow.Cells["location_id"].Value.ToString();
-                    //string columnInkjetID = selectedRow.Cells["inkjet_id"].Value.ToString();
+        //        // ตรวจสอบว่ามีข้อมูลในแถวหรือไม่
+        //        if (selectedRow != null)
+        //        {
+        //            // รับค่าข้อมูลจากเซลล์แต่ละเซลล์ในแถวที่เลือก
+        //            string columnBatch = selectedRow.Cells["ordbatchDataGridViewTextBoxColumn"].Value.ToString();
+        //            string columnDate = selectedRow.Cells["ord_date"].Value.ToString();
+        //            string columnMaterial = selectedRow.Cells["materialdesDataGridViewTextBoxColumn"].Value.ToString();
+        //            string columnFormula = selectedRow.Cells["formulaDataGridViewTextBoxColumn"].Value.ToString();
+        //            string columnOrderStaus = selectedRow.Cells["ord_status"].Value.ToString();
+        //            string columnSlife = selectedRow.Cells["slifeDataGridViewTextBoxColumn"].Value.ToString();
+        //            string columnLocationPrefix = selectedRow.Cells["location_prefix"].Value.ToString();
+        //            string columnOrderID = selectedRow.Cells["ord_id"].Value.ToString();
+        //            //string columnLineID = selectedRow.Cells["location_id"].Value.ToString();
+        //            //string columnInkjetID = selectedRow.Cells["inkjet_id"].Value.ToString();
 
-                    //// นำข้อมูลไปแสดงใน TextBox หรือคอนโทรลที่ต้องการ
-                    txtBatch.Text = columnBatch;
-                    txtDate.Text = columnDate;
-                    txtMaterialDes.Text = columnMaterial;
-                    txtFormula.Text = columnFormula;
-                    txtOrderStatus.Text = columnOrderStaus;
-                    txtSLife.Text = columnSlife;
-                    locationprefixtextbox.Text = columnLocationPrefix;
-                    txtOrdID.Text = columnOrderID;
-                    //txtLineID.Text = columnLineID;
-                    //txtInkjetID.Text = columnInkjetID;
+        //            //// นำข้อมูลไปแสดงใน TextBox หรือคอนโทรลที่ต้องการ
+        //            txtBatch.Text = columnBatch;
+        //            txtDate.Text = columnDate;
+        //            txtMaterialDes.Text = columnMaterial;
+        //            txtFormula.Text = columnFormula;
+        //            txtOrderStatus.Text = columnOrderStaus;
+        //            txtSLife.Text = columnSlife;
+        //            locationprefixtextbox.Text = columnLocationPrefix;
+        //            txtOrdID.Text = columnOrderID;
+        //            //txtLineID.Text = columnLineID;
+        //            //txtInkjetID.Text = columnInkjetID;
 
-                    //string tenDigit = GenerateBatchNumber.order_batch_number_generate(order_date, batch, formula, line);
-                    //string BBF = GenerateBatchNumber.order_bbf_generate(order_date, slife);
+        //            //string tenDigit = GenerateBatchNumber.order_batch_number_generate(order_date, batch, formula, line);
+        //            //string BBF = GenerateBatchNumber.order_bbf_generate(order_date, slife);
 
-                    //row1orderOLD.Text = tenDigit;
+        //            //row1orderOLD.Text = tenDigit;
 
-                }
-            }
-            else
-            {
-                txtBatch.Text = "";
-                txtDate.Text = "";
-                txtMaterialDes.Text = "";
-                txtFormula.Text = "";
-                txtOrderStatus.Text = "";
-                txtSLife.Text = "";
-                locationprefixtextbox.Text = "";
-                txtOrdID.Text = "";
+        //        }
+        //    }
+        //    else
+        //    {
+        //        txtBatch.Text = "";
+        //        txtDate.Text = "";
+        //        txtMaterialDes.Text = "";
+        //        txtFormula.Text = "";
+        //        txtOrderStatus.Text = "";
+        //        txtSLife.Text = "";
+        //        locationprefixtextbox.Text = "";
+        //        txtOrdID.Text = "";
 
-            }
-            OrderGrid.ClearSelection();
-        }
+        //    }
+        //    OrderGrid.ClearSelection();
+        //}
+
+
 
 
 
@@ -1077,6 +1175,10 @@ namespace Deksomboon_Inkjet
         private async void EndBatchButton_Click(object sender, EventArgs e)
         {
             string ord_status = txtOrderStatus.Text;
+            string inkjet_local = LocalStorage.ReadInkjetData();
+            string location_local = LocalStorage.ReadLocationData();
+            List<Order> records = Order.ListAndUpdateOrderByInkjetLocation(location_local, inkjet_local);
+            orderBindingSource.DataSource = records;
 
             if (serialPortManager.IsOpen())
             {
@@ -1135,6 +1237,10 @@ namespace Deksomboon_Inkjet
         private async void EmegencyButton_Click(object sender, EventArgs e)
         {
             bool isConnected = await DatabaseManager.CheckDataBaseAsync();
+            string inkjet_local = LocalStorage.ReadInkjetData();
+            string location_local = LocalStorage.ReadLocationData();
+            List<Order> records = Order.ListAndUpdateOrderByInkjetLocation(location_local, inkjet_local);
+            orderBindingSource.DataSource = records;
 
             if (isConnected == true)
             {
@@ -1169,6 +1275,10 @@ namespace Deksomboon_Inkjet
         private async void UpdateButton_Click(object sender, EventArgs e)
         {
             bool isConnected = await DatabaseManager.CheckDataBaseAsync();
+            string inkjet_local = LocalStorage.ReadInkjetData();
+            string location_local = LocalStorage.ReadLocationData();
+            List<Order> records = Order.ListAndUpdateOrderByInkjetLocation(location_local, inkjet_local);
+            orderBindingSource.DataSource = records;
 
             if (isConnected == true)
             {
@@ -1273,19 +1383,10 @@ namespace Deksomboon_Inkjet
             tableLayoutOrderPosition.Visible = true;
             btnEditOrderPosition.Visible = false;
 
-            OrderGrid.Rows[0].Selected = false;
+            
+            //OrderGrid.Rows[0].Selected = true;
             OrderGrid.Enabled = true;
-
-        }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-            tableLayoutOrderPosition.Visible = false;
-            btnEditOrderPosition.Visible = true;
-
             OrderGrid.ClearSelection();
-            OrderGrid.Rows[0].Selected = true;
-            OrderGrid.Enabled = false;
 
         }
 
@@ -1295,32 +1396,96 @@ namespace Deksomboon_Inkjet
 
             if (result == DialogResult.Yes)
             {
-
                 tableLayoutOrderPosition.Visible = false;
                 btnEditOrderPosition.Visible = true;
 
                 OrderGrid.ClearSelection();
                 OrderGrid.Rows[0].Selected = true;
                 OrderGrid.Enabled = false;
-                
+
+                // วนลูปผ่านแถวทั้งหมดใน DataTable
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+                    // อ่านข้อมูลจากแถวนี้
+                    int ordPosition = i + 1; // ตำแหน่งใหม่ของ Order ที่จะอัพเดท
+                    int ord_id = Convert.ToInt32(table.Rows[i]["ord_id"]);
+
+                    // อัพเดท ord_position ใน DataTable
+                    table.Rows[i]["ลำดับการพิมพ์"] = ordPosition;
+
+                    // อัพเดท ord_position ในฐานข้อมูล
+                    Order.Update_Order_Position(ord_id, ordPosition);
+                   
+                    // อัพเดท ord_position ในข้อมูล Order จริง (หากต้องการ)
+                    // ตัวอย่างเช่น records[i].ord_position = ordPosition;
+                    // โดย records คือ List<Order> ที่ถูกใช้ในการสร้าง DataTable
+                }
+
+                // ให้ DataGridView ทำการ Refresh เพื่อแสดงค่า ord_position ใหม่
+                OrderGrid.Refresh();
+                refreash_order();
             }
 
         }
 
-
-
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btnUP_Click(object sender, EventArgs e)
         {
+            // ตรวจสอบว่ามีแถวที่ถูกเลือก
+            if (OrderGrid.SelectedCells.Count > 0)
+            {
+                int rowIndex = OrderGrid.SelectedCells[0].OwningRow.Index;
 
+                // ตรวจสอบว่าไม่ได้อยู่ที่แถวแรกแล้ว
+                if (rowIndex > 0)
+                {
+                    // สร้าง DataRow จากแถวที่ถูกเลือก
+                    DataRow rowToMoveUp = table.NewRow();
+                    rowToMoveUp.ItemArray = table.Rows[rowIndex].ItemArray.Clone() as object[];
+
+                    // เลื่อนแถวขึ้น
+                    table.Rows.RemoveAt(rowIndex);
+                    table.Rows.InsertAt(rowToMoveUp, rowIndex - 1);
+
+                    // ยกเลิกการเลือกและเลือกแถวที่ถูกเลื่อนขึ้นมาใหม่
+                    OrderGrid.ClearSelection();
+                    OrderGrid.Rows[rowIndex - 1].Selected = true;
+                }
+            }
         }
 
-        private void ordUPbtn_Click(object sender, EventArgs e)
+        private void btnDown_Click(object sender, EventArgs e)
         {
-   
+            // ตรวจสอบว่ามีแถวที่ถูกเลือก
+            if (OrderGrid.SelectedCells.Count > 0)
+            {
+                int rowIndex = OrderGrid.SelectedCells[0].OwningRow.Index;
+
+                // ตรวจสอบว่าไม่ได้อยู่ที่แถวสุดท้ายแล้ว
+                if (rowIndex < OrderGrid.Rows.Count - 1)
+                {
+                    // สร้าง DataRow จากแถวที่ถูกเลือก
+                    DataRow rowToMoveDown = table.NewRow();
+                    rowToMoveDown.ItemArray = table.Rows[rowIndex].ItemArray.Clone() as object[];
+
+                    // เลื่อนแถวลง
+                    table.Rows.RemoveAt(rowIndex);
+                    table.Rows.InsertAt(rowToMoveDown, rowIndex + 1);
+
+                    // ยกเลิกการเลือกและเลือกแถวที่ถูกเลื่อนลงมาใหม่
+                    OrderGrid.ClearSelection();
+                    OrderGrid.Rows[rowIndex + 1].Selected = true;
+                }
+            }
         }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            tableLayoutOrderPosition.Visible = false;
+            btnEditOrderPosition.Visible = true;
 
-
-
+            OrderGrid.ClearSelection();
+            OrderGrid.Rows[0].Selected = true;
+            OrderGrid.Enabled = false;
+        }
     }
 }

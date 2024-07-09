@@ -75,7 +75,7 @@
             // 
             this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Prompt", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(172, 23);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(289, 31);
@@ -86,7 +86,7 @@
             // 
             this.guna2HtmlLabel8.AutoSize = false;
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel8.Location = new System.Drawing.Point(25, 361);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(141, 31);
@@ -102,7 +102,7 @@
             this.cboPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPosition.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cboPosition.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboPosition.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.cboPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.cboPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cboPosition.ItemHeight = 30;
             this.cboPosition.Location = new System.Drawing.Point(171, 361);
@@ -124,7 +124,7 @@
             this.txtBatch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtBatch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtBatch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBatch.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.txtBatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtBatch.ForeColor = System.Drawing.Color.Black;
             this.txtBatch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBatch.Location = new System.Drawing.Point(172, 254);
@@ -143,7 +143,7 @@
             // 
             this.guna2HtmlLabel7.AutoSize = false;
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.Location = new System.Drawing.Point(25, 259);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(141, 31);
@@ -159,7 +159,7 @@
             this.cboMaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMaterial.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cboMaterial.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboMaterial.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.cboMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.cboMaterial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cboMaterial.ItemHeight = 30;
             this.cboMaterial.Location = new System.Drawing.Point(172, 102);
@@ -182,7 +182,7 @@
             this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
-            this.btnClose.Font = new System.Drawing.Font("Prompt", 9F);
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Location = new System.Drawing.Point(334, 601);
             this.btnClose.Name = "btnClose";
@@ -199,7 +199,7 @@
             this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(135)))), ((int)(((byte)(84)))));
-            this.btnSave.Font = new System.Drawing.Font("Prompt", 9F);
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(218, 601);
             this.btnSave.Name = "btnSave";
@@ -218,7 +218,7 @@
             this.txtFormula.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtFormula.Enabled = false;
             this.txtFormula.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFormula.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.txtFormula.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtFormula.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFormula.Location = new System.Drawing.Point(172, 151);
             this.txtFormula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -241,7 +241,7 @@
             this.txtSLife.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSLife.Enabled = false;
             this.txtSLife.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSLife.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.txtSLife.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtSLife.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSLife.Location = new System.Drawing.Point(172, 206);
             this.txtSLife.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -257,7 +257,7 @@
             // 
             this.guna2HtmlLabel6.AutoSize = false;
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(25, 151);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(141, 31);
@@ -268,7 +268,7 @@
             // 
             this.guna2HtmlLabel5.AutoSize = false;
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(25, 211);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(141, 31);
@@ -279,7 +279,7 @@
             // 
             this.guna2HtmlLabel4.AutoSize = false;
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(97, 1);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(69, 31);
@@ -291,7 +291,7 @@
             // 
             this.guna2HtmlLabel3.AutoSize = false;
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(25, 102);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(141, 31);
@@ -302,7 +302,7 @@
             // 
             this.guna2HtmlLabel2.AutoSize = false;
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(84, 23);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(59, 31);
@@ -320,7 +320,7 @@
             this.txtLine.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtLine.Enabled = false;
             this.txtLine.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLine.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.txtLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtLine.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLine.Location = new System.Drawing.Point(276, 13);
             this.txtLine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -344,7 +344,7 @@
             this.txtInkjet.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtInkjet.Enabled = false;
             this.txtInkjet.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtInkjet.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.txtInkjet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtInkjet.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtInkjet.Location = new System.Drawing.Point(326, 1);
             this.txtInkjet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -382,7 +382,7 @@
             this.txtBBF.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtBBF.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtBBF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBBF.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.txtBBF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtBBF.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBBF.Location = new System.Drawing.Point(5, 81);
             this.txtBBF.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -406,7 +406,7 @@
             this.txtTenDigit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTenDigit.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtTenDigit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenDigit.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.txtTenDigit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtTenDigit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenDigit.Location = new System.Drawing.Point(5, 45);
             this.txtTenDigit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -429,7 +429,7 @@
             this.txtLineFull.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtLineFull.Enabled = false;
             this.txtLineFull.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLineFull.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.txtLineFull.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtLineFull.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLineFull.Location = new System.Drawing.Point(2, 1);
             this.txtLineFull.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -453,7 +453,7 @@
             this.txtLineID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtLineID.Enabled = false;
             this.txtLineID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLineID.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.txtLineID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtLineID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLineID.Location = new System.Drawing.Point(183, 1);
             this.txtLineID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -477,7 +477,7 @@
             this.txtInkjetID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtInkjetID.Enabled = false;
             this.txtInkjetID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtInkjetID.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.txtInkjetID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtInkjetID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtInkjetID.Location = new System.Drawing.Point(383, 1);
             this.txtInkjetID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -495,7 +495,7 @@
             // 
             this.guna2HtmlLabel9.AutoSize = false;
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel9.Location = new System.Drawing.Point(25, 309);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             this.guna2HtmlLabel9.Size = new System.Drawing.Size(141, 31);
@@ -512,7 +512,7 @@
             this.txtCheckForm.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCheckForm.Enabled = false;
             this.txtCheckForm.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCheckForm.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.txtCheckForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtCheckForm.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCheckForm.Location = new System.Drawing.Point(2, 56);
             this.txtCheckForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -536,7 +536,7 @@
             this.txtOrdID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtOrdID.Enabled = false;
             this.txtOrdID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOrdID.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.txtOrdID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtOrdID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtOrdID.Location = new System.Drawing.Point(111, 55);
             this.txtOrdID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -548,13 +548,12 @@
             this.txtOrdID.SelectedText = "";
             this.txtOrdID.Size = new System.Drawing.Size(79, 26);
             this.txtOrdID.TabIndex = 105;
-            this.txtOrdID.Visible = false;
             // 
             // guna2HtmlLabel10
             // 
             this.guna2HtmlLabel10.AutoSize = false;
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel10.Location = new System.Drawing.Point(25, 418);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             this.guna2HtmlLabel10.Size = new System.Drawing.Size(141, 31);
@@ -590,7 +589,7 @@
             this.txtEmpcode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtEmpcode.Enabled = false;
             this.txtEmpcode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmpcode.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.txtEmpcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtEmpcode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmpcode.Location = new System.Drawing.Point(25, 635);
             this.txtEmpcode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -614,7 +613,7 @@
             this.txtEmppass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtEmppass.Enabled = false;
             this.txtEmppass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmppass.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.txtEmppass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtEmppass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmppass.Location = new System.Drawing.Point(111, 635);
             this.txtEmppass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -638,7 +637,7 @@
             this.txtTenDigitOld.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTenDigitOld.Enabled = false;
             this.txtTenDigitOld.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenDigitOld.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.txtTenDigitOld.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtTenDigitOld.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenDigitOld.Location = new System.Drawing.Point(25, 602);
             this.txtTenDigitOld.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -662,7 +661,7 @@
             this.txtSumCount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSumCount.Enabled = false;
             this.txtSumCount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSumCount.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.txtSumCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtSumCount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSumCount.Location = new System.Drawing.Point(241, 56);
             this.txtSumCount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -686,7 +685,7 @@
             this.txtEmpID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtEmpID.Enabled = false;
             this.txtEmpID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmpID.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.txtEmpID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtEmpID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmpID.Location = new System.Drawing.Point(326, 56);
             this.txtEmpID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -710,7 +709,7 @@
             this.txtOrderDate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtOrderDate.Enabled = false;
             this.txtOrderDate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOrderDate.Font = new System.Drawing.Font("Prompt", 10.2F);
+            this.txtOrderDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtOrderDate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtOrderDate.Location = new System.Drawing.Point(411, 55);
             this.txtOrderDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -726,11 +725,11 @@
             // 
             // guna2DateTimePicker1
             // 
-            this.guna2DateTimePicker1.CalendarFont = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Prompt", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.guna2DateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.guna2DateTimePicker1.Location = new System.Drawing.Point(172, 307);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(280, 33);
+            this.guna2DateTimePicker1.Size = new System.Drawing.Size(280, 27);
             this.guna2DateTimePicker1.TabIndex = 114;
             this.guna2DateTimePicker1.ValueChanged += new System.EventHandler(this.guna2DateTimePicker1_ValueChanged_1);
             // 

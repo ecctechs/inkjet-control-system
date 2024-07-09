@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPlan));
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -70,24 +70,16 @@
             this.btnEditOrderPosition = new Guna.UI2.WinForms.Guna2Button();
             this.tableLayoutOrderPosition = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.ordUPbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUP = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDown = new Guna.UI2.WinForms.Guna2Button();
             this.OrderGrid = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.ordpositionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.materialdesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ordbatchDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.formulaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.slifeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ordtypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.materialidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ord_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ord_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.location_prefix = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ord_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.location_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inkjet_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
@@ -122,6 +114,7 @@
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.txtRS232Status = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -135,7 +128,6 @@
             this.guna2GroupBox2.SuspendLayout();
             this.tableLayoutOrderPosition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             this.tableLayoutPanel9.SuspendLayout();
             this.guna2GroupBox3.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -147,6 +139,7 @@
             this.panel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.menuStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -811,7 +804,7 @@
             this.btnEditOrderPosition.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnEditOrderPosition.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnEditOrderPosition.ForeColor = System.Drawing.Color.White;
-            this.btnEditOrderPosition.Location = new System.Drawing.Point(1111, 0);
+            this.btnEditOrderPosition.Location = new System.Drawing.Point(1119, 0);
             this.btnEditOrderPosition.Name = "btnEditOrderPosition";
             this.btnEditOrderPosition.Size = new System.Drawing.Size(180, 28);
             this.btnEditOrderPosition.TabIndex = 2;
@@ -828,10 +821,10 @@
             this.tableLayoutOrderPosition.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutOrderPosition.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutOrderPosition.Controls.Add(this.guna2Button3, 3, 0);
-            this.tableLayoutOrderPosition.Controls.Add(this.guna2Button2, 2, 0);
-            this.tableLayoutOrderPosition.Controls.Add(this.guna2Button1, 0, 0);
-            this.tableLayoutOrderPosition.Controls.Add(this.ordUPbtn, 1, 0);
-            this.tableLayoutOrderPosition.Location = new System.Drawing.Point(614, 0);
+            this.tableLayoutOrderPosition.Controls.Add(this.btnCancel, 2, 0);
+            this.tableLayoutOrderPosition.Controls.Add(this.btnUP, 0, 0);
+            this.tableLayoutOrderPosition.Controls.Add(this.btnDown, 1, 0);
+            this.tableLayoutOrderPosition.Location = new System.Drawing.Point(751, 0);
             this.tableLayoutOrderPosition.Name = "tableLayoutOrderPosition";
             this.tableLayoutOrderPosition.RowCount = 1;
             this.tableLayoutOrderPosition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -855,95 +848,86 @@
             this.guna2Button3.Text = "Save";
             this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
-            // guna2Button2
+            // btnCancel
             // 
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(277, 3);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(131, 25);
-            this.guna2Button2.TabIndex = 2;
-            this.guna2Button2.Text = "ยกเลิก";
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(277, 3);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(131, 25);
+            this.btnCancel.TabIndex = 2;
+            this.btnCancel.Text = "ยกเลิก";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // guna2Button1
+            // btnUP
             // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(3, 3);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(131, 25);
-            this.guna2Button1.TabIndex = 1;
-            this.guna2Button1.Text = "UP";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btnUP.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUP.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnUP.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnUP.ForeColor = System.Drawing.Color.White;
+            this.btnUP.Location = new System.Drawing.Point(3, 3);
+            this.btnUP.Name = "btnUP";
+            this.btnUP.Size = new System.Drawing.Size(131, 25);
+            this.btnUP.TabIndex = 1;
+            this.btnUP.Text = "UP";
+            this.btnUP.Click += new System.EventHandler(this.btnUP_Click);
             // 
-            // ordUPbtn
+            // btnDown
             // 
-            this.ordUPbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.ordUPbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.ordUPbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.ordUPbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ordUPbtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ordUPbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ordUPbtn.ForeColor = System.Drawing.Color.White;
-            this.ordUPbtn.Location = new System.Drawing.Point(140, 3);
-            this.ordUPbtn.Name = "ordUPbtn";
-            this.ordUPbtn.Size = new System.Drawing.Size(131, 25);
-            this.ordUPbtn.TabIndex = 0;
-            this.ordUPbtn.Text = "DOWN";
-            this.ordUPbtn.Click += new System.EventHandler(this.ordUPbtn_Click);
+            this.btnDown.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDown.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDown.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDown.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDown.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDown.ForeColor = System.Drawing.Color.White;
+            this.btnDown.Location = new System.Drawing.Point(140, 3);
+            this.btnDown.Name = "btnDown";
+            this.btnDown.Size = new System.Drawing.Size(131, 25);
+            this.btnDown.TabIndex = 0;
+            this.btnDown.Text = "DOWN";
+            this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
             // 
             // OrderGrid
             // 
             this.OrderGrid.AllowUserToAddRows = false;
             this.OrderGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.OrderGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.OrderGrid.AutoGenerateColumns = false;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.OrderGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.OrderGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.OrderGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.OrderGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.OrderGrid.ColumnHeadersHeight = 25;
             this.OrderGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.OrderGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ordpositionDataGridViewTextBoxColumn,
-            this.materialdesDataGridViewTextBoxColumn,
-            this.ordbatchDataGridViewTextBoxColumn,
-            this.formulaDataGridViewTextBoxColumn,
-            this.slifeDataGridViewTextBoxColumn,
-            this.ordtypeDataGridViewTextBoxColumn,
-            this.materialidDataGridViewTextBoxColumn,
             this.ord_date,
             this.ord_status,
             this.location_prefix,
             this.ord_id,
             this.location_id,
             this.inkjet_id});
-            this.OrderGrid.DataSource = this.orderBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.OrderGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.OrderGrid.DefaultCellStyle = dataGridViewCellStyle9;
             this.OrderGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OrderGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.OrderGrid.Location = new System.Drawing.Point(5, 30);
@@ -975,65 +959,6 @@
             this.OrderGrid.ThemeStyle.RowsStyle.Height = 23;
             this.OrderGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.OrderGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // ordpositionDataGridViewTextBoxColumn
-            // 
-            this.ordpositionDataGridViewTextBoxColumn.DataPropertyName = "ord_position";
-            this.ordpositionDataGridViewTextBoxColumn.HeaderText = "อันดับการพิมพ์";
-            this.ordpositionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ordpositionDataGridViewTextBoxColumn.Name = "ordpositionDataGridViewTextBoxColumn";
-            this.ordpositionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // materialdesDataGridViewTextBoxColumn
-            // 
-            this.materialdesDataGridViewTextBoxColumn.DataPropertyName = "material_des";
-            this.materialdesDataGridViewTextBoxColumn.HeaderText = "รายละเอียดวัสดุ";
-            this.materialdesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.materialdesDataGridViewTextBoxColumn.Name = "materialdesDataGridViewTextBoxColumn";
-            this.materialdesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // ordbatchDataGridViewTextBoxColumn
-            // 
-            this.ordbatchDataGridViewTextBoxColumn.DataPropertyName = "ord_batch";
-            this.ordbatchDataGridViewTextBoxColumn.HeaderText = "Batch";
-            this.ordbatchDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ordbatchDataGridViewTextBoxColumn.Name = "ordbatchDataGridViewTextBoxColumn";
-            this.ordbatchDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ordbatchDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // formulaDataGridViewTextBoxColumn
-            // 
-            this.formulaDataGridViewTextBoxColumn.DataPropertyName = "formula";
-            this.formulaDataGridViewTextBoxColumn.HeaderText = "Formula";
-            this.formulaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.formulaDataGridViewTextBoxColumn.Name = "formulaDataGridViewTextBoxColumn";
-            this.formulaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // slifeDataGridViewTextBoxColumn
-            // 
-            this.slifeDataGridViewTextBoxColumn.DataPropertyName = "slife";
-            this.slifeDataGridViewTextBoxColumn.HeaderText = "SLIfe";
-            this.slifeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.slifeDataGridViewTextBoxColumn.Name = "slifeDataGridViewTextBoxColumn";
-            this.slifeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.slifeDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // ordtypeDataGridViewTextBoxColumn
-            // 
-            this.ordtypeDataGridViewTextBoxColumn.DataPropertyName = "ord_type";
-            this.ordtypeDataGridViewTextBoxColumn.HeaderText = "ประเภท";
-            this.ordtypeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ordtypeDataGridViewTextBoxColumn.Name = "ordtypeDataGridViewTextBoxColumn";
-            this.ordtypeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // materialidDataGridViewTextBoxColumn
-            // 
-            this.materialidDataGridViewTextBoxColumn.DataPropertyName = "material_id";
-            this.materialidDataGridViewTextBoxColumn.HeaderText = "material_id";
-            this.materialidDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.materialidDataGridViewTextBoxColumn.Name = "materialidDataGridViewTextBoxColumn";
-            this.materialidDataGridViewTextBoxColumn.ReadOnly = true;
-            this.materialidDataGridViewTextBoxColumn.Visible = false;
             // 
             // ord_date
             // 
@@ -1088,10 +1013,6 @@
             this.inkjet_id.Name = "inkjet_id";
             this.inkjet_id.ReadOnly = true;
             this.inkjet_id.Visible = false;
-            // 
-            // orderBindingSource
-            // 
-            this.orderBindingSource.DataSource = typeof(Deksomboon_Inkjet.Class.Order);
             // 
             // tableLayoutPanel9
             // 
@@ -1583,6 +1504,10 @@
             this.guna2HtmlLabel5.Text = "Inkjet : Not Connect";
             this.guna2HtmlLabel5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // orderBindingSource
+            // 
+            this.orderBindingSource.DataSource = typeof(Deksomboon_Inkjet.Class.Order);
+            // 
             // frmPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1610,7 +1535,6 @@
             this.guna2GroupBox2.ResumeLayout(false);
             this.tableLayoutOrderPosition.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
             this.tableLayoutPanel9.ResumeLayout(false);
             this.guna2GroupBox3.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
@@ -1628,6 +1552,7 @@
             this.tableLayoutPanel2.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1703,24 +1628,17 @@
         private Guna.UI2.WinForms.Guna2TextBox txtOrdID;
         private Guna.UI2.WinForms.Guna2TextBox txtCountEnd;
         private Guna.UI2.WinForms.Guna2TextBox txtOrderDateStart;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ordpositionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn materialdesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ordbatchDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn formulaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn slifeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ordtypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn materialidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutOrderPosition;
+        private Guna.UI2.WinForms.Guna2Button btnUP;
+        private Guna.UI2.WinForms.Guna2Button btnDown;
+        private Guna.UI2.WinForms.Guna2Button btnEditOrderPosition;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btnCancel;
         private System.Windows.Forms.DataGridViewTextBoxColumn ord_date;
         private System.Windows.Forms.DataGridViewTextBoxColumn ord_status;
         private System.Windows.Forms.DataGridViewTextBoxColumn location_prefix;
         private System.Windows.Forms.DataGridViewTextBoxColumn ord_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn location_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn inkjet_id;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutOrderPosition;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button ordUPbtn;
-        private Guna.UI2.WinForms.Guna2Button btnEditOrderPosition;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }
