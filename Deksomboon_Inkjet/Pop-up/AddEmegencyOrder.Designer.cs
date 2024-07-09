@@ -66,6 +66,8 @@
             this.txtEmpID = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtOrderDate = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2DateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.cboTypePrint = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
@@ -184,7 +186,7 @@
             this.btnClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(334, 601);
+            this.btnClose.Location = new System.Drawing.Point(333, 674);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(119, 45);
             this.btnClose.TabIndex = 63;
@@ -201,7 +203,7 @@
             this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(135)))), ((int)(((byte)(84)))));
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(218, 601);
+            this.btnSave.Location = new System.Drawing.Point(217, 674);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(110, 45);
             this.btnSave.TabIndex = 62;
@@ -364,7 +366,7 @@
             this.guna2GroupBox1.Controls.Add(this.txtTenDigit);
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox1.Location = new System.Drawing.Point(25, 467);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(26, 524);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.Padding = new System.Windows.Forms.Padding(5);
             this.guna2GroupBox1.Size = new System.Drawing.Size(428, 128);
@@ -548,6 +550,7 @@
             this.txtOrdID.SelectedText = "";
             this.txtOrdID.Size = new System.Drawing.Size(79, 26);
             this.txtOrdID.TabIndex = 105;
+            this.txtOrdID.Visible = false;
             // 
             // guna2HtmlLabel10
             // 
@@ -591,7 +594,7 @@
             this.txtEmpcode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmpcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtEmpcode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmpcode.Location = new System.Drawing.Point(25, 635);
+            this.txtEmpcode.Location = new System.Drawing.Point(26, 693);
             this.txtEmpcode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpcode.MaxLength = 3;
             this.txtEmpcode.Name = "txtEmpcode";
@@ -615,7 +618,7 @@
             this.txtEmppass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmppass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtEmppass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmppass.Location = new System.Drawing.Point(111, 635);
+            this.txtEmppass.Location = new System.Drawing.Point(111, 692);
             this.txtEmppass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmppass.MaxLength = 3;
             this.txtEmppass.Name = "txtEmppass";
@@ -639,7 +642,7 @@
             this.txtTenDigitOld.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenDigitOld.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtTenDigitOld.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenDigitOld.Location = new System.Drawing.Point(25, 602);
+            this.txtTenDigitOld.Location = new System.Drawing.Point(25, 659);
             this.txtTenDigitOld.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTenDigitOld.MaxLength = 3;
             this.txtTenDigitOld.Name = "txtTenDigitOld";
@@ -733,11 +736,44 @@
             this.guna2DateTimePicker1.TabIndex = 114;
             this.guna2DateTimePicker1.ValueChanged += new System.EventHandler(this.guna2DateTimePicker1_ValueChanged_1);
             // 
+            // guna2HtmlLabel11
+            // 
+            this.guna2HtmlLabel11.AutoSize = false;
+            this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel11.Location = new System.Drawing.Point(25, 472);
+            this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
+            this.guna2HtmlLabel11.Size = new System.Drawing.Size(141, 31);
+            this.guna2HtmlLabel11.TabIndex = 115;
+            this.guna2HtmlLabel11.Text = "รูปแบบการพิมพ์";
+            // 
+            // cboTypePrint
+            // 
+            this.cboTypePrint.BackColor = System.Drawing.Color.Transparent;
+            this.cboTypePrint.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboTypePrint.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTypePrint.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboTypePrint.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboTypePrint.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cboTypePrint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cboTypePrint.ItemHeight = 30;
+            this.cboTypePrint.Items.AddRange(new object[] {
+            "2 บรรทัด",
+            "2 บรรทัด-สลับ",
+            "3 บรรทัด"});
+            this.cboTypePrint.Location = new System.Drawing.Point(174, 467);
+            this.cboTypePrint.Name = "cboTypePrint";
+            this.cboTypePrint.Size = new System.Drawing.Size(193, 36);
+            this.cboTypePrint.StartIndex = 1;
+            this.cboTypePrint.TabIndex = 116;
+            // 
             // AddEmegencyOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 665);
+            this.ClientSize = new System.Drawing.Size(493, 731);
+            this.Controls.Add(this.cboTypePrint);
+            this.Controls.Add(this.guna2HtmlLabel11);
             this.Controls.Add(this.guna2DateTimePicker1);
             this.Controls.Add(this.txtOrderDate);
             this.Controls.Add(this.txtEmpID);
@@ -822,5 +858,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtEmpID;
         private Guna.UI2.WinForms.Guna2TextBox txtOrderDate;
         private System.Windows.Forms.DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
+        private Guna.UI2.WinForms.Guna2ComboBox cboTypePrint;
     }
 }

@@ -138,9 +138,6 @@
   <metadata name="menuStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>381, 17</value>
   </metadata>
-  <metadata name="menuStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>381, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="StopButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -201,6 +198,23 @@
         HWWon13fJ3bt4/PhgOAblIjERy2K2w6tkr9JNxzifwwuo//nPmLJBZLp9zP1+x6LstCqqVZeBbXQxNPo
         4sKqq+hvCLJZzgzzpHwHQ4wASDohdfWjK4zN/tmDLjVR391W38QQGhr+AxJs7Mm+D7WBAAAAAElFTkSu
         QmCC
+</value>
+  </data>
+  <data name="TestPrintButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAqFJREFUaEPtmDtvE0EUhR0QDUQ8e+gjKhpECYoEouIhg/gDlmzjtS0jnCJkgTSA
+        QJSUiDRBSPwCpJSpTQkNgaQIVdo0GL4b3YkGa514vHccRdojHe3snZlz5o7Xdx+lAgUKhKNWq00nSXK3
+        1Wo9bjab3TxUjTudTueEyscFhrNwHf415jqbclNt4oCduo5Rf8DYkv12u31D7Wwhlw0J/HJmtNfga9ov
+        8lA1fkKnuxHlctJr3l/8ae3KjWq1esZPgl/htnbZAeE5Z8DiX2rYDOi+cvpwTsP5MFBtvjgDacPMqpKD
+        /+mr5/jVCYFY1SaU4dWJzGNXm1COXp1iVZtQqmd4dYpZbUIxVnViYNRqswem8HwLt/DtcbwkQY5h1YnJ
+        T90EaWs4OmR3vYWKd0/iwes5qATwazpf5ZbED00C/EEvyKKdN3wj8UOTgIACch7PBN7idEpiwesJnhAZ
+        pglUKpVjxBbgN/jHjctL1frOcV481G4HxOwSIPbR9cUinstqtwOzBGhfcfHYxOuy2pomQGjX5EOapke0
+        KzdEC/0lpy9e2mWaQJhQIMx8zYQCYeZrJhQIM18zoUCY+ZoJBcLMl4GpiVAghun7cZhqeDgYVPcmfNLw
+        gSXA+WcX55G7puHh4IHqopsA5V20w+39+KQTEE/aj6B7N+83Go0ZHb43GPxeJ2UydgJZpP+dDt0f3W73
+        FJNWB0UcJ50AfSvs/kkdOhrK5fJRJiYIfIXbA4KTSGCbWI9L+qHJY4tvEDuBGPpFAvthEgksOAP4TMNm
+        QP+5p/9Ew3bA4L5n8IPzeZj1lXkcitaap39Pbe1Qr9fPYfLbM4nFTW6eZ9XWFohfEwPPzJqy+KtqFwey
+        O/wSDzBbhJlflsfgomjKx1y1KVCgwEgolf4B1dViL/EGCYwAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="StartButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

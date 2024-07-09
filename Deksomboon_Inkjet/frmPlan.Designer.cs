@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPlan));
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -114,6 +114,7 @@
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.txtRS232Status = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.TestPrintButton = new System.Windows.Forms.ToolStripMenuItem();
             this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -900,17 +901,17 @@
             // 
             this.OrderGrid.AllowUserToAddRows = false;
             this.OrderGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.OrderGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.OrderGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.OrderGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.OrderGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.OrderGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.OrderGrid.ColumnHeadersHeight = 25;
             this.OrderGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.OrderGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -920,14 +921,14 @@
             this.ord_id,
             this.location_id,
             this.inkjet_id});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.OrderGrid.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.OrderGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.OrderGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OrderGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.OrderGrid.Location = new System.Drawing.Point(5, 30);
@@ -1188,7 +1189,7 @@
             this.txtPrintState.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrintState.Location = new System.Drawing.Point(131, 3);
             this.txtPrintState.Name = "txtPrintState";
-            this.txtPrintState.Size = new System.Drawing.Size(508, 22);
+            this.txtPrintState.Size = new System.Drawing.Size(152, 18);
             this.txtPrintState.TabIndex = 19;
             this.txtPrintState.Text = "Print States : Not Connect";
             this.txtPrintState.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1233,7 +1234,7 @@
             this.txtJetState.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtJetState.Location = new System.Drawing.Point(131, 3);
             this.txtJetState.Name = "txtJetState";
-            this.txtJetState.Size = new System.Drawing.Size(508, 22);
+            this.txtJetState.Size = new System.Drawing.Size(137, 18);
             this.txtJetState.TabIndex = 19;
             this.txtJetState.Text = "Jet State : Not Connect";
             this.txtJetState.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1277,7 +1278,7 @@
             this.txtDBStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDBStatus.Location = new System.Drawing.Point(131, 3);
             this.txtDBStatus.Name = "txtDBStatus";
-            this.txtDBStatus.Size = new System.Drawing.Size(508, 21);
+            this.txtDBStatus.Size = new System.Drawing.Size(145, 18);
             this.txtDBStatus.TabIndex = 19;
             this.txtDBStatus.Text = "Database : Not Connect";
             this.txtDBStatus.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1321,7 +1322,7 @@
             this.txtRS232S.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRS232S.Location = new System.Drawing.Point(131, 3);
             this.txtRS232S.Name = "txtRS232S";
-            this.txtRS232S.Size = new System.Drawing.Size(508, 19);
+            this.txtRS232S.Size = new System.Drawing.Size(129, 18);
             this.txtRS232S.TabIndex = 19;
             this.txtRS232S.Text = "RS-232 : Not Connect";
             this.txtRS232S.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1360,13 +1361,14 @@
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.StopButton,
             this.EndBatchButton,
+            this.TestPrintButton,
             this.StartButton,
             this.EndOrderButton,
             this.EmegencyButton,
             this.UpdateButton});
-            this.menuStrip2.Location = new System.Drawing.Point(495, 0);
+            this.menuStrip2.Location = new System.Drawing.Point(476, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(353, 105);
+            this.menuStrip2.Size = new System.Drawing.Size(392, 105);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -1406,6 +1408,7 @@
             this.StartButton.Size = new System.Drawing.Size(101, 81);
             this.StartButton.Text = "เริ่มผลิต";
             this.StartButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.StartButton.Visible = false;
             this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
             // EndOrderButton
@@ -1503,6 +1506,18 @@
             this.guna2HtmlLabel5.TabIndex = 19;
             this.guna2HtmlLabel5.Text = "Inkjet : Not Connect";
             this.guna2HtmlLabel5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TestPrintButton
+            // 
+            this.TestPrintButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TestPrintButton.Image = ((System.Drawing.Image)(resources.GetObject("TestPrintButton.Image")));
+            this.TestPrintButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.TestPrintButton.Margin = new System.Windows.Forms.Padding(10);
+            this.TestPrintButton.Name = "TestPrintButton";
+            this.TestPrintButton.Size = new System.Drawing.Size(140, 81);
+            this.TestPrintButton.Text = "ทดสอบพิมพ์";
+            this.TestPrintButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.TestPrintButton.Click += new System.EventHandler(this.TestPrintButton_Click);
             // 
             // orderBindingSource
             // 
@@ -1640,5 +1655,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ord_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn location_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn inkjet_id;
+        private System.Windows.Forms.ToolStripMenuItem TestPrintButton;
     }
 }

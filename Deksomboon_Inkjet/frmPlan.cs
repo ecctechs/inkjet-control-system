@@ -480,7 +480,7 @@ namespace Deksomboon_Inkjet
                 string BBF = GenerateBatchNumber.order_bbf_generate(order_date_test, slife);
 
                 txtTenDigit.Text = tenDigit;
-                txtBBF.Text = "" + BBF;
+                txtBBF.Text = "BBF " + BBF;
                 //row1order.Text = tenDigit;
                 //row2order.Text = BBF;
             }
@@ -794,7 +794,7 @@ namespace Deksomboon_Inkjet
         {
             bool send_text = false;
             string tenDigit = txtTenDigit.Text;
-            string bbf = "BBF "+txtBBF.Text;
+            string bbf = txtBBF.Text;
 
             byte[] messageBytes = Encoding.UTF8.GetBytes(tenDigit);
             byte[] messageBytes2 = Encoding.UTF8.GetBytes(bbf);
@@ -1486,6 +1486,120 @@ namespace Deksomboon_Inkjet
             OrderGrid.ClearSelection();
             OrderGrid.Rows[0].Selected = true;
             OrderGrid.Enabled = false;
+        }
+
+        private async void TestPrintButton_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtBatch.Text))
+            {
+                //if (serialPortManager.IsOpen())
+                //{
+                    bool isConnected = await DatabaseManager.CheckDataBaseAsync();
+
+                    if (isConnected == true)
+                    {
+                        string[] status = await command_status();
+                        txtJetState.Text = "Jet State : " + status[0];
+                        Console.WriteLine(status[0]);
+
+                        //if (status[0] == "Jet Running")
+                        //{
+                            //if (status[1] == "Waiting" || status[1] == "Printing")
+                            //{
+                            string emp_id = Authorized.authorized_level_1(txtEmployeeCode.Text, txtEmployeepass.Text);
+
+                            if (!string.IsNullOrEmpty(emp_id))
+                            {
+                                DialogResult confrim_start_print = MessageBox.Show("คุณต้องการทดสอบพิมพ์ Formula : " + txtFormula.Text + " , batch : " + txtBatch.Text + " หรือไม่ ", "คุณต้องการทดสอบการพิมพ์หรือไม่ ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                if (confrim_start_print == DialogResult.Yes)
+                                {
+                                    bool start_print = await command_start_print();
+                                    StartButton.Enabled = false;
+
+                                    if (start_print == true)
+                                    {
+                                        int count_inkjet = await command_count();
+                                        txtCount.Text = count_inkjet.ToString();
+
+                                        StartButton.Visible = true;
+                                        EmegencyButton.Visible = true;
+                                        UpdateButton.Visible = true;
+                                        TestPrintButton.Visible = false;
+
+                                        StopButton.Visible = false;
+                                        EndBatchButton.Visible = false;
+                                        EndOrderButton.Visible = false;
+
+                                        DateTime st = DateTime.Now.AddYears(-543);
+                                        string start_date = st.AddSeconds(-st.Second).ToString();
+                                        txtOrderDateStart.Text = start_date;
+
+                                        Order.Update_Order_Status(txtOrdID.Text, txtBatch.Text, "ทดสอบพิมพ์");
+                                        //DataLog.Add_DatLog(Int32.Parse(txtOrdID.Text), txtTenDigit.Text, 0, start_date, "", Int32.Parse(emp_id));
+                                        DataLog.Add_Authorized_Log(Int32.Parse(txtOrdID.Text), Int32.Parse(emp_id), start_date, "ทดสอบพิมพ์", 1, txtTenDigit.Text);
+                                        refreash_order();
+
+                                        //DialogResult confrim_send_text = MessageBox.Show("คุณต้องการส่งข้อความไปที่ inkjet หรือไม่ ", "Comfirm Send Text", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                        //if (confrim_send_text == DialogResult.Yes)
+                                        //{
+                                        bool check_send_text = await command_send_text();
+
+                                        if (check_send_text == true)
+                                        {
+                                            MessageBox.Show("ส่งข้อความไปที่เครื่องอินเจ็กเรียบร้อยแล้ว", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        
+                                    refreash_order();
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("ส่งข้อความล้มเหลว", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        }
+                                        //}
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Start Jet ไม่สําเร็จ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+                                }
+                            }
+                        //}
+                        //else if (status[0] == "Jet Stopped")
+                        //{
+                        //    DialogResult confrim_startjet = MessageBox.Show("อินเจ็กของคุณยังไม่เริ่มทํางาน คุณต้องการส่งคําสั่งไปเริ่มอินเจ็กหรือไม่ ?", "Comfrim Start Jet", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        //    if (confrim_startjet == DialogResult.Yes)
+                        //    {
+                        //        bool jet_start = await command_start_jet();
+                        //        if (jet_start == true)
+                        //        {
+                        //            MessageBox.Show("กําลังเริ่มอินเจ็กกรุณารอสักครู่", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //        }
+                        //        else
+                        //        {
+                        //            MessageBox.Show("ไม่สามารถส่งคําสั่ง start jet โปรดตรวจสอบอินเจ็กว่าพร้อมใช้งานหรือไม่", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        //        }
+                        //        refreash_order();
+                        //    }
+                        //}
+                        else
+                        {
+                            MessageBox.Show("Jet State is not available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Database is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Serial Port is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("กรุณาใส่ batch ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            StartButton.Enabled = true;
         }
     }
 }

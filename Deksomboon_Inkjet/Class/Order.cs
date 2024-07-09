@@ -559,7 +559,8 @@ namespace Deksomboon_Inkjet.Class
     AND (order_detail.ord_status = 'รับออร์เดอร์' 
          OR order_detail.ord_status = 'กำลังผลิต' 
          OR order_detail.ord_status = 'หยุดผลิตชั่วคราว' 
-         OR order_detail.ord_status = 'จบ batch')
+         OR order_detail.ord_status = 'จบ batch'
+         OR order_detail.ord_status = 'ทดสอบพิมพ์')
     ORDER BY order_detail.ord_position";
 
                     using (NpgsqlCommand command = new NpgsqlCommand(query, dbManager.connection))
