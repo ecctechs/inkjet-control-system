@@ -17,7 +17,7 @@ namespace Deksomboon_Inkjet.Pop_up
 {
     public partial class AddEmegencyOrder : Form
     {
-        public AddEmegencyOrder(Order obj,string form , string emp_code ,string emp_pass , int sum_count , string emp_id , string ord_date_start)
+        public AddEmegencyOrder(Order obj,string form , string emp_code ,string emp_pass , int sum_count , string emp_id , string ord_date_start , string amount)
         {
             InitializeComponent();
 
@@ -40,11 +40,13 @@ namespace Deksomboon_Inkjet.Pop_up
                 {
                     cboMaterial.Enabled = true;
                     cboPosition.Enabled = true;
-
+                txtAmount.Enabled = true;
+                txtAmount.FillColor = Color.White;
                 guna2HtmlLabel1.Text = "เพิ่มงานด่วน";
                 cboOrdType.Text = "งานเร่งด่วน";
                 txtEmpID.Text = emp_id.ToString();
                 txtOrdID.Text = obj.ord_id.ToString();
+                txtAmount.Text = "0";
                 this.Text = "งานเร่งด่วน";
 
                 }
@@ -52,9 +54,13 @@ namespace Deksomboon_Inkjet.Pop_up
                 {
                     cboMaterial.Enabled = false;
                     cboPosition.Enabled = false;
+                txtAmount.Enabled = false;
+                txtAmount.FillColor = Color.FromArgb(193, 200, 207);
 
+                cboTypePrint.Text = obj.ord_type_print.ToString();
                 txtEmpID.Text = emp_id.ToString();
                 txtOrdID.Text = obj.ord_id.ToString();
+                txtAmount.Text = amount.ToString();
                 //MessageBox.Show(obj.ord_type.ToString());
                 cboOrdType.Text = obj.ord_type.ToString();
                 guna2HtmlLabel1.Text = "แก้ไข Order";
@@ -198,6 +204,9 @@ namespace Deksomboon_Inkjet.Pop_up
             string type = cboOrdType.Text;
             string form = txtCheckForm.Text;
             string ord_id = txtOrdID.Text;
+            string ord_type_print = cboTypePrint.Text;
+            string amount = txtAmount.Text;
+
             //string ord_date = guna2DateTimePicker1.Value.ToString();
 
             //DateTime st1 = guna2DateTimePicker1.Value.AddYears(-543);
@@ -228,11 +237,15 @@ namespace Deksomboon_Inkjet.Pop_up
             {
                 MessageBox.Show("กรุณาใส่ batch");
             }
+            else if (amount == "0" || amount == null)
+            {
+                MessageBox.Show("กรุณาใส่จํานวนผลิต");
+            }
             else
             {
                 if (form == "1") // emegency order
                 {
-                    Order.Add_OrderEmergency(material_selected, Int32.Parse(line), batch, Int32.Parse(inkjet), type, ord_position, 0, "0", date_now);
+                    Order.Add_OrderEmergency(material_selected, Int32.Parse(line), batch, Int32.Parse(inkjet), type, ord_position, 0, "0", date_now , amount , ord_type_print);
                     DataLog.Add_Authorized_Log(Int32.Parse(ord_id), Int32.Parse(txtEmpID.Text), DateTime.Now.AddYears(-543).AddSeconds(DateTime.Now.AddYears(-543).Second).ToString(), "เพิ่มงานด่วน", 1, txtTenDigit.Text);
                     DialogResult = DialogResult.OK;
                 }
@@ -241,7 +254,7 @@ namespace Deksomboon_Inkjet.Pop_up
                     string emp_id = Authorized.authorized_level_2(txtEmpcode.Text, txtEmppass.Text);
                     if (!string.IsNullOrEmpty(emp_id))
                     {
-                        Order.Update_Order(ord_id, line, inkjet, material_selected, batch, type, date_now);
+                        Order.Update_Order(ord_id, line, inkjet, material_selected, batch, type, date_now , ord_type_print , amount);
                         DataLog.Add_Authorized_Log(Int32.Parse(ord_id), Int32.Parse(emp_id), DateTime.Now.AddYears(-543).AddSeconds(DateTime.Now.AddYears(-543).Second).ToString(), "แก้ไขวันที่/เปลี่ยนbatch", 2, txtTenDigit.Text);
                         DialogResult = DialogResult.OK;
                     }
@@ -254,7 +267,7 @@ namespace Deksomboon_Inkjet.Pop_up
                     DialogResult confrim_startjet = MessageBox.Show("คุณแน่ใจที่จะจบ batch : "+ txtTenDigitOld.Text + " หรือไม่", "Comfrim End Batch", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (confrim_startjet == DialogResult.Yes)
                     {
-                        Order.Update_Order(ord_id, line, inkjet, material_selected, batch, type, date);
+                        Order.Update_Order(ord_id, line, inkjet, material_selected, batch, type, date , ord_type_print , amount);
                         Order.Update_Order_Status(ord_id, batch, "จบ batch");
                         DataLog.Update_DateLog(Int32.Parse(ord_id), Int32.Parse(txtSumCount.Text), start_date, Int32.Parse(txtEmpID.Text), txtTenDigitOld.Text, txtOrderDate.Text);
 

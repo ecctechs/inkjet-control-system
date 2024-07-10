@@ -69,7 +69,7 @@ namespace Deksomboon_Inkjet.Class
                 string resultDateString = resultDate.AddYears(-543).ToString("dd/MM/yyyy"); // รูปแบบสตริงตามที่ต้องการ เช่น "yyyy-MM-dd"
 
                 Console.WriteLine(resultDateString);
-                BBF = resultDateString;
+                BBF = "BBF "+ resultDateString;
             }
             return BBF;
         }

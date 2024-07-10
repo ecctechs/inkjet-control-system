@@ -167,43 +167,56 @@ namespace Deksomboon_Inkjet.Pop_up
                         {
                             string material_id = row[0].Trim();
                             string ord_batch = row[1].Trim();
+                            string amount = row[2].Trim();
 
                             // ตรวจสอบความถูกต้องของ ord_batch
                             if (ord_batch.Length <= 1 )
                             {
-                                // เพิ่มการตรวจสอบว่า material_id มีอยู่ในตาราง material หรือไม่
-                                string checkMaterialQuery = "SELECT COUNT(*) FROM material WHERE material_id = @material_id";
-                                using (NpgsqlCommand checkMaterialCommand = new NpgsqlCommand(checkMaterialQuery, connection))
+                                if (amount.Length == 0 )
                                 {
-                                    checkMaterialCommand.Parameters.AddWithValue("@material_id", material_id);
-                                    int materialCount = Convert.ToInt32(checkMaterialCommand.ExecuteScalar());
+                                    MessageBox.Show("กรุณาระบุจํานวนผลิต สินค้า :  " + material_id);
+                                }
+                                else
+                                {
 
-                                    if (materialCount > 0)
+                                    // เพิ่มการตรวจสอบว่า material_id มีอยู่ในตาราง material หรือไม่
+                                    string checkMaterialQuery = "SELECT COUNT(*) FROM material WHERE material_id = @material_id";
+                                    using (NpgsqlCommand checkMaterialCommand = new NpgsqlCommand(checkMaterialQuery, connection))
                                     {
-                                        string query = @"INSERT INTO order_preview (material_id, location_id, ord_batch, inkjet_id , ord_type , ord_status , ord_date) 
-                                         VALUES (@material_id, @location_id, @ord_batch, @inkjet_id , @ord_type , @ord_status , @ord_date) 
+                                        checkMaterialCommand.Parameters.AddWithValue("@material_id", material_id);
+                                        int materialCount = Convert.ToInt32(checkMaterialCommand.ExecuteScalar());
+
+                                        if (materialCount > 0)
+                                        {
+                                            string query = @"INSERT INTO order_preview (material_id, location_id, ord_batch, inkjet_id , ord_type , ord_status , ord_date , ord_count_amount , ord_count , ord_status_print , ord_type_print ) 
+                                         VALUES (@material_id, @location_id, @ord_batch, @inkjet_id , @ord_type , @ord_status , @ord_date , @ord_count_amount , @ord_count , @ord_status_print , @ord_type_print) 
                                          ON CONFLICT (ord_id) DO UPDATE
                                          SET material_id = EXCLUDED.material_id, 
                                              location_id = EXCLUDED.location_id, 
                                              ord_batch = EXCLUDED.ord_batch, 
                                              inkjet_id = EXCLUDED.inkjet_id";
 
-                                        using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
-                                        {
-                                            command.Parameters.AddWithValue("@material_id", material_id);
-                                            command.Parameters.AddWithValue("@location_id", location_id);
-                                            command.Parameters.AddWithValue("@ord_batch", ord_batch);
-                                            command.Parameters.AddWithValue("@inkjet_id", inkjet_id);
-                                            command.Parameters.AddWithValue("@ord_type", type);
-                                            command.Parameters.AddWithValue("@ord_status", "ยังไม่เสร็จ");
-                                            command.Parameters.AddWithValue("@ord_date", date_now);
+                                            using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
+                                            {
+                                                command.Parameters.AddWithValue("@material_id", material_id);
+                                                command.Parameters.AddWithValue("@location_id", location_id);
+                                                command.Parameters.AddWithValue("@ord_batch", ord_batch);
+                                                command.Parameters.AddWithValue("@inkjet_id", inkjet_id);
+                                                command.Parameters.AddWithValue("@ord_type", type);
+                                                command.Parameters.AddWithValue("@ord_status", "ยังไม่เสร็จ");
+                                                command.Parameters.AddWithValue("@ord_date", date_now);
+                                                command.Parameters.AddWithValue("@ord_count_amount", Int32.Parse(amount));
+                                                command.Parameters.AddWithValue("@ord_count", 0);
+                                                command.Parameters.AddWithValue("@ord_status_print", "รอผลิต");
+                                                command.Parameters.AddWithValue("@ord_type_print", "2 บรรทัด");
 
-                                            command.ExecuteNonQuery();
+                                                command.ExecuteNonQuery();
+                                            }
                                         }
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("Material not found for material_id: " + material_id);
+                                        else
+                                        {
+                                            Console.WriteLine("Material not found for material_id: " + material_id);
+                                        }
                                     }
                                 }
                             }

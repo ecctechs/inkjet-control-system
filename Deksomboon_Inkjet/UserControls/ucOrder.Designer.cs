@@ -40,6 +40,7 @@
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnUpload = new Guna.UI2.WinForms.Guna2Button();
             this.DataGridOrder = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ordertempBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ordidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materialidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.locationidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,7 +57,7 @@
             this.ordpositionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ordtempDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orddateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ordertempBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ord_count_amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2GroupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridOrder)).BeginInit();
@@ -222,7 +223,8 @@
             this.ordstatusDataGridViewTextBoxColumn,
             this.ordpositionDataGridViewTextBoxColumn,
             this.ordtempDataGridViewTextBoxColumn,
-            this.orddateDataGridViewTextBoxColumn});
+            this.orddateDataGridViewTextBoxColumn,
+            this.ord_count_amount});
             this.DataGridOrder.DataSource = this.ordertempBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -262,6 +264,10 @@
             this.DataGridOrder.ThemeStyle.RowsStyle.Height = 30;
             this.DataGridOrder.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridOrder.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // ordertempBindingSource
+            // 
+            this.ordertempBindingSource.DataSource = typeof(Deksomboon_Inkjet.Class.Order_temp);
             // 
             // ordidDataGridViewTextBoxColumn
             // 
@@ -400,9 +406,13 @@
             this.orddateDataGridViewTextBoxColumn.ReadOnly = true;
             this.orddateDataGridViewTextBoxColumn.Visible = false;
             // 
-            // ordertempBindingSource
+            // ord_count_amount
             // 
-            this.ordertempBindingSource.DataSource = typeof(Deksomboon_Inkjet.Class.Order_temp);
+            this.ord_count_amount.DataPropertyName = "ord_count_amount";
+            this.ord_count_amount.HeaderText = "จํานวนผลิต";
+            this.ord_count_amount.MinimumWidth = 6;
+            this.ord_count_amount.Name = "ord_count_amount";
+            this.ord_count_amount.ReadOnly = true;
             // 
             // ucOrder
             // 
@@ -430,6 +440,7 @@
         private Guna.UI2.WinForms.Guna2Button btnUpload;
         private Guna.UI2.WinForms.Guna2DataGridView DataGridOrder;
         private System.Windows.Forms.BindingSource ordertempBindingSource;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ordidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn materialidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn locationidDataGridViewTextBoxColumn;
@@ -446,6 +457,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ordpositionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ordtempDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn orddateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ord_count_amount;
     }
 }

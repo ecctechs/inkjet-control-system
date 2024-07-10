@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +17,7 @@ namespace Deksomboon_Inkjet.Pop_up
 {
     public partial class ChangeBatch : Form
     {
-        public ChangeBatch(Order obj, string form, string emp_code, string emp_pass, int sum_count, string emp_id, string ord_date_start)
+        public ChangeBatch(Order obj, string form, string emp_code, string emp_pass, int sum_count, string emp_id, string ord_date_start , string amount)
         {
             InitializeComponent();
 
@@ -26,6 +27,7 @@ namespace Deksomboon_Inkjet.Pop_up
             List<Inkjet> record = Inkjet.ListInkjetLocationByInkjetName(inkjet_name);
             //Console.WriteLine(record[0].location_id.ToString());
 
+            txtAmount.Text = amount;
             txtLine.Text = lcation_prefix;
             txtLineID.Text = record[0].location_id.ToString();
             txtInkjetID.Text = record[0].inkjet_id.ToString();
@@ -48,6 +50,7 @@ namespace Deksomboon_Inkjet.Pop_up
             txtSumCount.Text = sum_count.ToString();
             txtEmpID.Text = emp_id.ToString();
             txtOrderDate.Text = ord_date_start;
+            cboTypePrint.Text = obj.ord_type_print.ToString();
 
             //DateTime myDate = DateTime.ParseExact(obj.ord_date.ToString(), "dd/MM/yyyy hh:mm",
             //                     System.Globalization.CultureInfo.InvariantCulture);
@@ -70,6 +73,8 @@ namespace Deksomboon_Inkjet.Pop_up
             string type = cboOrdType.Text;
             string form = txtCheckForm.Text;
             string ord_id = txtOrdID.Text;
+            string ord_type_print = cboTypePrint.Text;
+            string amount = txtAmount.Text;
 
             DateTime st = DateTime.Now.AddYears(-543);
             string start_date = st.AddSeconds(-st.Second).ToString();
@@ -87,7 +92,7 @@ namespace Deksomboon_Inkjet.Pop_up
                 DialogResult confrim_startjet = MessageBox.Show("คุณแน่ใจที่จะจบ batch : " + txtBatchOld.Text + " หรือไม่", "Comfrim End Batch", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (confrim_startjet == DialogResult.Yes)
                 {
-                    Order.Update_Order(ord_id, line, inkjet, material_selected, batch, type, date);
+                    Order.Update_Order(ord_id, line, inkjet, material_selected, batch, type, date , ord_type_print , amount);
                     Order.Update_Order_Status(ord_id, batch, "จบ batch");
                     DataLog.Update_DateLog(Int32.Parse(ord_id), Int32.Parse(txtSumCount.Text), start_date, Int32.Parse(txtEmpID.Text), txtTenDigitOld.Text, txtOrderDate.Text);
 
@@ -111,6 +116,7 @@ namespace Deksomboon_Inkjet.Pop_up
             string formula = txtFormula.Text;
             string line = txtLine.Text;
             string slife = txtSLife.Text;
+           
 
             Console.WriteLine(order_date_test);
 

@@ -28,9 +28,14 @@ namespace Deksomboon_Inkjet.Class
         public string ord_temp { get; set; }
         public string ord_date { get; set; }
 
-        public int ord_amount { get; set; }
+        public int ord_count_amount { get; set; }
 
         public int ord_count { get; set; }
+
+        public string ord_status_print { get; set; }
+
+        public string ord_type_print { get; set; }
+
 
         public static List<Order_temp> ListOrder()
         {
@@ -70,6 +75,7 @@ namespace Deksomboon_Inkjet.Class
                                 inkjet_name = reader.GetString(reader.GetOrdinal("inkjet_name")),
                                 ord_type = reader.GetString(reader.GetOrdinal("ord_type")),
                                 ord_status = reader.GetString(reader.GetOrdinal("ord_status")),
+                                ord_count_amount = reader.GetInt32(reader.GetOrdinal("ord_count_amount")),
 
                                 // เพิ่ม properties อื่น ๆ ตามต้องการ
                             };
@@ -87,7 +93,7 @@ namespace Deksomboon_Inkjet.Class
             return listOrder;
         }
 
-        public static void Add_Order(string material_id, string line, string batch, string inkjet_id, string type)
+        public static void Add_Order(string material_id, string line, string batch, string inkjet_id, string type , int amount)
         {
             try
             {
@@ -98,8 +104,8 @@ namespace Deksomboon_Inkjet.Class
                 {
                     dbManager.OpenConnection();
 
-                    string query = @"INSERT INTO order_preview ( material_id, location_id, ord_batch, inkjet_id , ord_type , ord_status , ord_date) 
-                             VALUES ( @material_id, @location_id, @ord_batch, @inkjet_id , @ord_type , @ord_status , @ord_date)";
+                    string query = @"INSERT INTO order_preview ( material_id, location_id, ord_batch, inkjet_id , ord_type , ord_status , ord_date , ord_count_amount , ord_count , ord_status_print , ord_type_print) 
+                             VALUES ( @material_id, @location_id, @ord_batch, @inkjet_id , @ord_type , @ord_status , @ord_date , @ord_count_amount , @ord_count , @ord_status_print , @ord_type_print)";
 
                     //Console.WriteLine(query);
                     using (NpgsqlCommand command = new NpgsqlCommand(query, dbManager.connection))
@@ -111,6 +117,10 @@ namespace Deksomboon_Inkjet.Class
                         command.Parameters.AddWithValue("@ord_type", type);
                         command.Parameters.AddWithValue("@ord_status", "รับออร์เดอร์");
                         command.Parameters.AddWithValue("@ord_date", date_now);
+                        command.Parameters.AddWithValue("@ord_count_amount", amount);
+                        command.Parameters.AddWithValue("@ord_count", 0);
+                        command.Parameters.AddWithValue("@ord_status_print", "รอผลิต");
+                        command.Parameters.AddWithValue("@ord_type_print", "2 บรรทัด");
 
                         command.ExecuteNonQuery();
 
@@ -217,7 +227,7 @@ namespace Deksomboon_Inkjet.Class
         }
 
 
-        public static void Update_Order(string order_id, string line, string inkjet, string material, string batch, string type)
+        public static void Update_Order(string order_id, string line, string inkjet, string material, string batch, string type, int amount)
         {
             try
             {
@@ -230,7 +240,8 @@ namespace Deksomboon_Inkjet.Class
                              material_id = @material_id, 
                              inkjet_id = @inkjet_id, 
                              ord_batch = @ord_batch,
-                             ord_type = @ord_type 
+                             ord_type = @ord_type,
+                             ord_count_amount = @ord_count_amount 
                              WHERE ord_id = " + Int32.Parse(order_id);
                     Console.WriteLine(query);
 
@@ -242,6 +253,7 @@ namespace Deksomboon_Inkjet.Class
                         command.Parameters.AddWithValue("@material_id", material);
                         command.Parameters.AddWithValue("@ord_batch", batch);
                         command.Parameters.AddWithValue("@ord_type", type);
+                        command.Parameters.AddWithValue("@ord_count_amount", amount);
 
 
                         // Execute the SQL command
@@ -522,7 +534,11 @@ namespace Deksomboon_Inkjet.Class
                                 inkjet_name = reader.GetString(reader.GetOrdinal("inkjet_name")),
                                 ord_type = reader.GetString(reader.GetOrdinal("ord_type")),
                                 ord_status = reader.GetString(reader.GetOrdinal("ord_status")),
-                                ord_date = reader.GetString(reader.GetOrdinal("ord_date"))
+                                ord_date = reader.GetString(reader.GetOrdinal("ord_date")),
+                                ord_count = reader.GetInt32(reader.GetOrdinal("ord_count")),
+                                ord_count_amount = reader.GetInt32(reader.GetOrdinal("ord_count_amount")),
+                                ord_status_print = reader.GetString(reader.GetOrdinal("ord_status_print")),
+                                ord_type_print = reader.GetString(reader.GetOrdinal("ord_type_print"))
 
                             };
 
@@ -533,8 +549,8 @@ namespace Deksomboon_Inkjet.Class
                     // เพิ่มข้อมูลในตาราง order_detail จาก listOrder
                     foreach (Order_temp order in listOrder)
                     {
-                        string insertQuery = @"INSERT INTO order_detail (material_id, location_id, ord_batch, inkjet_id, ord_type, ord_status , ord_date) 
-                                       VALUES (@material_id, @location_id, @ord_batch, @inkjet_id, @ord_type, @ord_status, @ord_date)";
+                        string insertQuery = @"INSERT INTO order_detail (material_id, location_id, ord_batch, inkjet_id, ord_type, ord_status , ord_date , ord_count_amount , ord_count , ord_status_print , ord_type_print) 
+                                       VALUES (@material_id, @location_id, @ord_batch, @inkjet_id, @ord_type, @ord_status, @ord_date , @ord_count_amount , @ord_count , @ord_status_print , @ord_type_print)";
 
                         using (NpgsqlCommand command = new NpgsqlCommand(insertQuery, dbManager.connection))
                         {
@@ -545,6 +561,10 @@ namespace Deksomboon_Inkjet.Class
                             command.Parameters.AddWithValue("@ord_type", order.ord_type);
                             command.Parameters.AddWithValue("@ord_status", "รับออร์เดอร์");
                             command.Parameters.AddWithValue("@ord_date", order.ord_date);
+                            command.Parameters.AddWithValue("@ord_count", order.ord_count);
+                            command.Parameters.AddWithValue("@ord_count_amount", order.ord_count_amount);
+                            command.Parameters.AddWithValue("@ord_status_print", order.ord_status_print);
+                            command.Parameters.AddWithValue("@ord_type_print", order.ord_type_print);
 
                             command.ExecuteNonQuery();
 

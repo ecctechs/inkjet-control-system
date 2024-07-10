@@ -29,9 +29,14 @@ namespace Deksomboon_Inkjet.Class
 
         public string location_prefix { get; set; }
 
-        public int ord_amount { get; set; }
+        public int ord_count_amount { get; set; }
 
         public int ord_count { get; set; }
+
+        public string ord_status_print { get; set; }
+
+        public string ord_type_print { get; set; }
+
 
         public static List<Order> ListOrder()
         {
@@ -237,11 +242,10 @@ namespace Deksomboon_Inkjet.Class
         //        MessageBox.Show("Order adding material: " + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         //    }
         //}
-        public static void Add_OrderEmergency(string material_id, int line, string batch, int inkjet_id, string type, int ord_position, int emp_id, string tenDigit , string date)
+        public static void Add_OrderEmergency(string material_id, int line, string batch, int inkjet_id, string type, int ord_position, int emp_id, string tenDigit , string date , string amount , string ord_type_print)
         {
             try
             {
-
                 using (var dbManager = new DatabaseManager())
                 {
                     dbManager.OpenConnection();
@@ -291,8 +295,8 @@ namespace Deksomboon_Inkjet.Class
                                 }
                             }
 
-                            string query2 = @"INSERT INTO order_detail ( material_id, ord_batch, location_id, inkjet_id , ord_type , ord_status , ord_position ,ord_date) 
-                             VALUES ( @material_id, @ord_batch, @location_id, @inkjet_id , @ord_type , @ord_status , @ord_position , @ord_date)";
+                            string query2 = @"INSERT INTO order_detail ( material_id, ord_batch, location_id, inkjet_id , ord_type , ord_status , ord_position ,ord_date , ord_count_amount , ord_count , ord_status_print , ord_type_print) 
+                             VALUES ( @material_id, @ord_batch, @location_id, @inkjet_id , @ord_type , @ord_status , @ord_position , @ord_date , @ord_count_amount , @ord_count , @ord_status_print , @ord_type_print)";
                             //Console.WriteLine(query2);
                             //Console.WriteLine(line);
                             //Console.WriteLine(inkjet_id);
@@ -307,6 +311,10 @@ namespace Deksomboon_Inkjet.Class
                                 insertCommand.Parameters.AddWithValue("@ord_status", "รับออร์เดอร์");
                                 insertCommand.Parameters.AddWithValue("@ord_position", ord_position);
                                 insertCommand.Parameters.AddWithValue("@ord_date", date);
+                                insertCommand.Parameters.AddWithValue("@ord_count_amount", Int32.Parse(amount));
+                                insertCommand.Parameters.AddWithValue("@ord_count", 0);
+                                insertCommand.Parameters.AddWithValue("@ord_status_print", "รอผลิต");
+                                insertCommand.Parameters.AddWithValue("@ord_type_print", ord_type_print);
 
                                 insertCommand.ExecuteNonQuery();
 
@@ -325,7 +333,7 @@ namespace Deksomboon_Inkjet.Class
                             transaction.Commit();
 
                             Console.WriteLine("Emergency order added successfully.");
-                            MessageBox.Show("Emergency order added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("เพิ่มออร์เดอร์เร่งด่วนสําเร็จ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         catch (Exception ex)
                         {
@@ -397,7 +405,7 @@ namespace Deksomboon_Inkjet.Class
             }
         }
 
-        public static void Update_Order(string order_id, string line, string inkjet, string material, string batch, string type , string ord_date)
+        public static void Update_Order(string order_id, string line, string inkjet, string material, string batch, string type , string ord_date , string ord_type_print , string amount)
         {
             try
             {
@@ -411,7 +419,9 @@ namespace Deksomboon_Inkjet.Class
                              inkjet_id = @inkjet_id, 
                              ord_batch = @ord_batch,
                              ord_date = @ord_date,
-                             ord_type = @ord_type 
+                             ord_type = @ord_type,
+                             ord_type_print = @ord_type_print,
+                             ord_count_amount = @ord_count_amount 
                              WHERE ord_id = " + Int32.Parse(order_id);
                     //Console.WriteLine(query);
 
@@ -424,7 +434,8 @@ namespace Deksomboon_Inkjet.Class
                         command.Parameters.AddWithValue("@ord_batch", batch);
                         command.Parameters.AddWithValue("@ord_type", type);
                         command.Parameters.AddWithValue("@ord_date", ord_date);
-
+                        command.Parameters.AddWithValue("@ord_type_print", ord_type_print);
+                        command.Parameters.AddWithValue("@ord_count_amount", Int32.Parse(amount));
 
                         // Execute the SQL command
                         int rowsAffected = command.ExecuteNonQuery();
@@ -588,6 +599,12 @@ namespace Deksomboon_Inkjet.Class
                                     ord_status = reader.GetString(reader.GetOrdinal("ord_status")),
                                     location_prefix = reader.GetString(reader.GetOrdinal("location_prefix")),
                                     ord_date = reader.GetString(reader.GetOrdinal("ord_date")),
+
+                                    ord_count_amount = reader.GetInt32(reader.GetOrdinal("ord_count_amount")),
+                                    ord_count = reader.GetInt32(reader.GetOrdinal("ord_count")),
+                                    ord_status_print = reader.GetString(reader.GetOrdinal("ord_status_print")),
+                                    ord_type_print = reader.GetString(reader.GetOrdinal("ord_type_print")),
+
                                     //ord_position = reader.GetInt32(reader.GetOrdinal("ord_position")),
                                 };
 

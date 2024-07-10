@@ -26,6 +26,7 @@ namespace Deksomboon_Inkjet.Pop_up
                 comboBox1.Text = obj.location_name;
                 comboBox2.Text = obj.inkjet_name;
                 comboBox3.SelectedValue = obj.material_id;
+                txtCountAmount.Text = obj.ord_count_amount.ToString();
 
                 batchnumberbox.Text = obj.ord_batch;
                 OrdTypecomboBox4.Text = obj.ord_type;
@@ -91,10 +92,12 @@ namespace Deksomboon_Inkjet.Pop_up
             string type = OrdTypecomboBox4.Text;
             string batch = batchnumberbox.Text;
             string Order_id = orderidtext.Text;
+            int amount = Int32.Parse(txtCountAmount.Text);
 
             if (line == "0" ||
                inkjet == "0" ||
                material == "0" ||
+               amount == 0 ||
                string.IsNullOrWhiteSpace(type))
             {
                 MessageBox.Show("กรุณากรอกข้อมูลให้ครบทุกช่อง");
@@ -103,12 +106,12 @@ namespace Deksomboon_Inkjet.Pop_up
 
             if (Order_id == "0") // Add
             {
-                Order_temp.Add_Order(material, line, batch, inkjet, type);
+                Order_temp.Add_Order(material, line, batch, inkjet, type , amount);
                 DialogResult = DialogResult.OK;
             }
             else // Update
             {
-                Order_temp.Update_Order(Order_id, line, inkjet, material, batch, type);
+                Order_temp.Update_Order(Order_id, line, inkjet, material, batch, type , amount);
                 DialogResult = DialogResult.OK;
             }
         }

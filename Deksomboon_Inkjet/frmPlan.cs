@@ -240,6 +240,7 @@ namespace Deksomboon_Inkjet
                 {
                     frmSettingInstance = new frmSetting();
                     refreash_order();
+                    clear_authroized();
                 }
 
                 // แสดงฟอร์มการตั้งค่า
@@ -250,7 +251,7 @@ namespace Deksomboon_Inkjet
                     string location_local = LocalStorage.ReadLocationData();
                     txtLineSetting.Text = location_local;
                     txtInkjetSetting.Text = inkjet_local;
-                    Console.WriteLine("----------------<<<"+txtOrdID.Text+ txtTenDigit.Text);
+                    //Console.WriteLine("----------------<<<"+txtOrdID.Text+ txtTenDigit.Text);
                     if (string.IsNullOrEmpty(txtOrdID.Text) || string.IsNullOrEmpty(txtTenDigit.Text))
                     {
                         DataLog.Add_Authorized_Log(0, Int32.Parse(emp_id), start_date, "เปลี่ยนไลน์ผลิต/เครื่องพิมพ์", 1, txtTenDigit.Text);
@@ -260,6 +261,7 @@ namespace Deksomboon_Inkjet
                         DataLog.Add_Authorized_Log(Int32.Parse(txtOrdID.Text), Int32.Parse(emp_id), start_date, "เปลี่ยนไลน์ผลิต/เครื่องพิมพ์", 1, txtTenDigit.Text);
                     }                   
                         refreash_order();
+                    clear_authroized();
                 }
             }
         }
@@ -298,6 +300,7 @@ namespace Deksomboon_Inkjet
             //    }
             //    btnHome.Enabled = true;
                 refreash_order();
+            clear_authroized();
         }
 
         private async void btnSetting_Click(object sender, EventArgs e)
@@ -316,11 +319,13 @@ namespace Deksomboon_Inkjet
             }
             btnHome.Enabled = true;
             refreash_order();
+            clear_authroized();
         }
 
         private void frmPlan_Load_1(object sender, EventArgs e)
         {
             refreash_order();
+            clear_authroized();
             update_order_date();
         }
 
@@ -330,7 +335,7 @@ namespace Deksomboon_Inkjet
             get_setting();
             get_order_detail_first_row();
             gen_10_number();
-            clear_authroized();
+            //clear_authroized();
         }
 
         public void update_order_date()
@@ -363,13 +368,17 @@ namespace Deksomboon_Inkjet
                 table.Columns.Add("ลำดับการพิมพ์", typeof(int));
                 table.Columns.Add("รายละเอียดวัสดุ", typeof(string));
                 table.Columns.Add("Formula", typeof(string));
+                table.Columns.Add("Batch", typeof(string));
+                table.Columns.Add("สถานะผลิต", typeof(string));  
                 table.Columns.Add("ประเภท", typeof(string));
                 table.Columns.Add("ord_id", typeof(int));
-                table.Columns.Add("ordbatchDataGridViewTextBoxColumn", typeof(string));
                 table.Columns.Add("slifeDataGridViewTextBoxColumn", typeof(int));  // เพิ่ม column สำหรับ slife
                 table.Columns.Add("location_prefix", typeof(string));  // เพิ่ม column สำหรับ location_prefix
                 table.Columns.Add("ord_date", typeof(string));  // เพิ่ม column สำหรับ ord_date
                 table.Columns.Add("ord_status", typeof(string));  // เพิ่ม column สำหรับ ord_date
+                table.Columns.Add("ord_count_amount", typeof(string));  // เพิ่ม column สำหรับ ord_date
+                table.Columns.Add("ord_type_print", typeof(string));  // เพิ่ม column สำหรับ ord_date
+
 
             }
             else
@@ -385,13 +394,16 @@ namespace Deksomboon_Inkjet
                     record.ord_position,
                     record.material_des,
                     record.formula,
-                    record.ord_type,
-                    record.ord_id,
                     record.ord_batch,
+                    record.ord_status_print,
+                    record.ord_type,
+                    record.ord_id,                  
                     record.slife,  // เพิ่มข้อมูลสำหรับ slife
                     record.location_prefix,  // เพิ่มข้อมูลสำหรับ location_prefix
                     record.ord_date,  // เพิ่มข้อมูลสำหรับ ord_date
-                    record.ord_status
+                    record.ord_status,
+                    record.ord_count_amount,
+                    record.ord_type_print
                 // เพิ่มข้อมูลอื่นๆ ตามต้องการ
                 );
             }
@@ -418,7 +430,7 @@ namespace Deksomboon_Inkjet
                 if (selectedRow != null)
                 {
                     // รับค่าข้อมูลจากเซลล์แต่ละเซลล์ในแถวที่เลือก
-                    string columnBatch = selectedRow["ordbatchDataGridViewTextBoxColumn"].ToString();
+                    string columnBatch = selectedRow["Batch"].ToString();
                     string columnDate = selectedRow["ord_date"].ToString();
                     string columnMaterial = selectedRow["รายละเอียดวัสดุ"].ToString();
                     string columnFormula = selectedRow["Formula"].ToString();
@@ -426,6 +438,7 @@ namespace Deksomboon_Inkjet
                     string columnSlife = selectedRow["slifeDataGridViewTextBoxColumn"].ToString();
                     string columnLocationPrefix = selectedRow["location_prefix"].ToString();
                     string columnOrderID = selectedRow["ord_id"].ToString();
+                    string columnCount_Amount = selectedRow["ord_count_amount"].ToString();
 
                     // นำข้อมูลไปแสดงใน TextBox หรือคอนโทรลที่ต้องการ
                     txtBatch.Text = columnBatch;
@@ -436,6 +449,7 @@ namespace Deksomboon_Inkjet
                     txtSLife.Text = columnSlife;
                     locationprefixtextbox.Text = columnLocationPrefix;
                     txtOrdID.Text = columnOrderID;
+                    txtAmount.Text = columnCount_Amount;
                 }
             }
             else
@@ -450,8 +464,10 @@ namespace Deksomboon_Inkjet
                 locationprefixtextbox.Text = "";
                 txtOrdID.Text = "";
             }
-            OrderGrid.Columns["ordbatchDataGridViewTextBoxColumn"].Visible = false;
+            //OrderGrid.Columns["Batch"].Visible = false;
             OrderGrid.Columns["slifeDataGridViewTextBoxColumn"].Visible = false;
+            OrderGrid.Columns["ord_count_amount"].Visible = false;
+            //OrderGrid.Columns["ord_type_print"].Visible = false;
         }
 
         public void get_setting()
@@ -479,10 +495,29 @@ namespace Deksomboon_Inkjet
                 string tenDigit = GenerateBatchNumber.order_batch_number_generate(order_date_test, batch, formula, line);
                 string BBF = GenerateBatchNumber.order_bbf_generate(order_date_test, slife);
 
-                txtTenDigit.Text = tenDigit;
-                txtBBF.Text = "BBF " + BBF;
-                //row1order.Text = tenDigit;
-                //row2order.Text = BBF;
+                if (table.Rows.Count > 0) // ตรวจสอบว่า DataTable (table) มีข้อมูลหรือไม่
+                {
+                    DataRow selectedRow = table.Rows[0];
+                    string columnTypePrint = selectedRow["ord_type_print"].ToString();
+
+                    if(columnTypePrint == "2 บรรทัด")
+                    {
+                        txtTenDigit.Text = tenDigit;
+                        txtBBF.Text = BBF;
+                    }
+                    else if(columnTypePrint == "2 บรรทัด-สลับ")
+                    {
+                        txtTenDigit.Text = BBF;
+                        txtBBF.Text = tenDigit;
+                    }
+                    else
+                    {
+                        txtTenDigit.Text = "";
+                        txtBBF.Text = "";
+                    }
+
+                }
+
             }
         }
 
@@ -1017,6 +1052,7 @@ namespace Deksomboon_Inkjet
                                         DataLog.Add_DatLog(Int32.Parse(txtOrdID.Text), txtTenDigit.Text, 0, start_date, "", Int32.Parse(emp_id));
                                         DataLog.Add_Authorized_Log(Int32.Parse(txtOrdID.Text), Int32.Parse(emp_id), start_date, "กำลังผลิต", 1, txtTenDigit.Text);
                                         refreash_order();
+                                        clear_authroized();
 
                                         //DialogResult confrim_send_text = MessageBox.Show("คุณต้องการส่งข้อความไปที่ inkjet หรือไม่ ", "Comfirm Send Text", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                                         //if (confrim_send_text == DialogResult.Yes)
@@ -1027,6 +1063,7 @@ namespace Deksomboon_Inkjet
                                         {
                                             MessageBox.Show("ส่งข้อความไปที่เครื่องอินเจ็กเรียบร้อยแล้ว", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                             refreash_order();
+                                            clear_authroized();
                                         }
                                         else
                                         {
@@ -1061,6 +1098,7 @@ namespace Deksomboon_Inkjet
                                     MessageBox.Show("ไม่สามารถส่งคําสั่ง start jet โปรดตรวจสอบอินเจ็กว่าพร้อมใช้งานหรือไม่", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                                 refreash_order();
+                                clear_authroized();
                             }
                         }
                         else
@@ -1143,7 +1181,8 @@ namespace Deksomboon_Inkjet
                                         }
                                         DataLog.Add_Authorized_Log(Int32.Parse(ord_id), Int32.Parse(emp_id), end_date, "หยุดผลิตชั่วคราว", 1, txtTenDigit.Text);
                                         refreash_order();
-                                    }
+                                    clear_authroized();
+                                }
                                     else
                                     {
                                         MessageBox.Show("Stop Print ไม่สําเร็จ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -1198,8 +1237,9 @@ namespace Deksomboon_Inkjet
                             txtCountEnd.Text = count_inkjet.ToString();
 
                             int sum_count = Int32.Parse(txtCountEnd.Text) - Int32.Parse(txtCount.Text);
+                    //int sum_count = 0;
 
-                            using (ChangeBatch frm = new ChangeBatch(obj, form, txtEmployeeCode.Text, txtEmployeepass.Text, sum_count, emp_id, txtOrderDateStart.Text))
+                    using (ChangeBatch frm = new ChangeBatch(obj, form, txtEmployeeCode.Text, txtEmployeepass.Text, sum_count, emp_id, txtOrderDateStart.Text , txtAmount.Text))
                             {
                                 if (frm.ShowDialog() == DialogResult.OK)
                                 {
@@ -1213,6 +1253,7 @@ namespace Deksomboon_Inkjet
                                     EndOrderButton.Visible = false;
                                     await command_stop_print();
                                     refreash_order();
+                                    clear_authroized();
                                 }
                             }
                         }
@@ -1252,15 +1293,17 @@ namespace Deksomboon_Inkjet
                     Order obj = orderBindingSource.Current as Order;
                     string form = "1";
 
-                    using (AddEmegencyOrder frm = new AddEmegencyOrder(obj, form, txtEmployeeCode.Text, txtEmployeepass.Text, 0, emp_id, txtOrderDateStart.Text))
+                    using (AddEmegencyOrder frm = new AddEmegencyOrder(obj, form, txtEmployeeCode.Text, txtEmployeepass.Text, 0, emp_id, txtOrderDateStart.Text , txtAmount.Text))
                     {
                         if (frm.ShowDialog() == DialogResult.OK)
                         {
                             refreash_order();
+                            clear_authroized();
                         }
                         else
                         {
                             refreash_order();
+                            clear_authroized();
                         }
                     }
                 }
@@ -1290,15 +1333,17 @@ namespace Deksomboon_Inkjet
                     {
                         string form = "2";
 
-                        using (AddEmegencyOrder frm = new AddEmegencyOrder(obj, form, txtEmployeeCode.Text, txtEmployeepass.Text, 0, emp_id, txtOrderDateStart.Text))
+                        using (AddEmegencyOrder frm = new AddEmegencyOrder(obj, form, txtEmployeeCode.Text, txtEmployeepass.Text, 0, emp_id, txtOrderDateStart.Text , txtAmount.Text))
                         {
                             if (frm.ShowDialog() == DialogResult.OK)
                             {
                                 refreash_order();
+                                clear_authroized();
                             }
                             else
                             {
                                 refreash_order();
+                                clear_authroized();
                             }
                         }
                     }
@@ -1351,6 +1396,7 @@ namespace Deksomboon_Inkjet
                                 DataLog.Update_DateLog(Int32.Parse(ord_id), sum_count, end_date, Int32.Parse(emp_id), txtTenDigit.Text, txtOrderDateStart.Text);
                                 DataLog.Add_Authorized_Log(Int32.Parse(ord_id), Int32.Parse(emp_id), end_date, "จบออร์เดอร์", 1, txtTenDigit.Text);
                                 refreash_order();
+                                clear_authroized();
                                 await command_stop_print();
                             }
                         }
@@ -1424,6 +1470,7 @@ namespace Deksomboon_Inkjet
                 // ให้ DataGridView ทำการ Refresh เพื่อแสดงค่า ord_position ใหม่
                 OrderGrid.Refresh();
                 refreash_order();
+                clear_authroized();
             }
 
         }
@@ -1538,18 +1585,20 @@ namespace Deksomboon_Inkjet
                                         //DataLog.Add_DatLog(Int32.Parse(txtOrdID.Text), txtTenDigit.Text, 0, start_date, "", Int32.Parse(emp_id));
                                         DataLog.Add_Authorized_Log(Int32.Parse(txtOrdID.Text), Int32.Parse(emp_id), start_date, "ทดสอบพิมพ์", 1, txtTenDigit.Text);
                                         refreash_order();
+                                clear_authroized();
 
-                                        //DialogResult confrim_send_text = MessageBox.Show("คุณต้องการส่งข้อความไปที่ inkjet หรือไม่ ", "Comfirm Send Text", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                                        //if (confrim_send_text == DialogResult.Yes)
-                                        //{
-                                        bool check_send_text = await command_send_text();
+                                //DialogResult confrim_send_text = MessageBox.Show("คุณต้องการส่งข้อความไปที่ inkjet หรือไม่ ", "Comfirm Send Text", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                //if (confrim_send_text == DialogResult.Yes)
+                                //{
+                                bool check_send_text = await command_send_text();
 
                                         if (check_send_text == true)
                                         {
                                             MessageBox.Show("ส่งข้อความไปที่เครื่องอินเจ็กเรียบร้อยแล้ว", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         
                                     refreash_order();
-                                        }
+                                    clear_authroized();
+                                }
                                         else
                                         {
                                             MessageBox.Show("ส่งข้อความล้มเหลว", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
