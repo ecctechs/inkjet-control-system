@@ -17,7 +17,7 @@ namespace Deksomboon_Inkjet.Pop_up
 {
     public partial class ChangeBatch : Form
     {
-        public ChangeBatch(Order obj, string form, string emp_code, string emp_pass, int sum_count, string emp_id, string ord_date_start , string amount)
+        public ChangeBatch(Order obj, string form, string emp_code, string emp_pass, int sum_count, string emp_id, string ord_date_start , string amount , string count_print)
         {
             InitializeComponent();
 
@@ -34,7 +34,7 @@ namespace Deksomboon_Inkjet.Pop_up
 
             txtEmpcode.Text = emp_code;
             txtEmppass.Text = emp_pass;
-
+            txtCount.Text = count_print;
             txtCheckForm.Text = form;
 
             get_product();
@@ -75,6 +75,7 @@ namespace Deksomboon_Inkjet.Pop_up
             string ord_id = txtOrdID.Text;
             string ord_type_print = cboTypePrint.Text;
             string amount = txtAmount.Text;
+            //string count = txtCount.Text;   
 
             DateTime st = DateTime.Now.AddYears(-543);
             string start_date = st.AddSeconds(-st.Second).ToString();
@@ -92,8 +93,19 @@ namespace Deksomboon_Inkjet.Pop_up
                 DialogResult confrim_startjet = MessageBox.Show("คุณแน่ใจที่จะจบ batch : " + txtBatchOld.Text + " หรือไม่", "Comfrim End Batch", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (confrim_startjet == DialogResult.Yes)
                 {
+
+                    string ord_status_print = "";
+                    if (Int32.Parse(txtCount.Text) >= Int32.Parse(txtAmount.Text))
+                    {
+                        ord_status_print = "ผลิตครบแล้ว";
+                    }
+                    else
+                    {
+                        ord_status_print = "ยังผลิตไม่ครบ";
+                    }
+
                     Order.Update_Order(ord_id, line, inkjet, material_selected, batch, type, date , ord_type_print , amount);
-                    Order.Update_Order_Status(ord_id, batch, "จบ batch");
+                    Order.Update_Order_Status(ord_id, batch, "จบ batch", ord_status_print);
                     DataLog.Update_DateLog(Int32.Parse(ord_id), Int32.Parse(txtSumCount.Text), start_date, Int32.Parse(txtEmpID.Text), txtTenDigitOld.Text, txtOrderDate.Text);
 
                     //DataLog.Add_DatLog(Int32.Parse(ord_id), txtTenDigit.Text, 0, start_date, end_date, Int32.Parse(txtEmpID.Text));

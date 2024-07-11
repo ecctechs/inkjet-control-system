@@ -59,6 +59,7 @@
             this.txtEmppass = new Guna.UI2.WinForms.Guna2TextBox();
             this.cboTypePrint = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtAmount = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCount = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -672,11 +673,36 @@
             this.txtAmount.TabIndex = 128;
             this.txtAmount.Visible = false;
             // 
+            // txtCount
+            // 
+            this.txtCount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCount.DefaultText = "";
+            this.txtCount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCount.Enabled = false;
+            this.txtCount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtCount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCount.Location = new System.Drawing.Point(400, 345);
+            this.txtCount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCount.MaxLength = 3;
+            this.txtCount.Name = "txtCount";
+            this.txtCount.PasswordChar = '\0';
+            this.txtCount.PlaceholderText = "";
+            this.txtCount.ReadOnly = true;
+            this.txtCount.SelectedText = "";
+            this.txtCount.Size = new System.Drawing.Size(54, 26);
+            this.txtCount.TabIndex = 129;
+            this.txtCount.Visible = false;
+            // 
             // ChangeBatch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(493, 604);
+            this.Controls.Add(this.txtCount);
             this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.cboTypePrint);
             this.Controls.Add(this.txtEmppass);
@@ -749,5 +775,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtEmppass;
         private Guna.UI2.WinForms.Guna2TextBox cboTypePrint;
         private Guna.UI2.WinForms.Guna2TextBox txtAmount;
+        private Guna.UI2.WinForms.Guna2TextBox txtCount;
     }
 }

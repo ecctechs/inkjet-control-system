@@ -23,6 +23,7 @@ namespace Deksomboon_Inkjet
         private frmConnection frmConnectionInstance;
         private SerialPortManager serialPortManager;
         private Timer timer;
+        private Timer timer2;
         private DatabaseManager databaseManager;
 
         public static List<string> bytesCount_list = new List<string>();
@@ -37,6 +38,7 @@ namespace Deksomboon_Inkjet
             InitializeComponent();
             InitializeDatabaseManager();
             InitializeTimer();
+            InitializeTimer_refreash();
             serialPortManager = SerialPortManager.Instance;
             serialPortManager.DataReceived += SerialPortManager_DataReceived;
         }
@@ -54,12 +56,24 @@ namespace Deksomboon_Inkjet
             timer.Start();
         }
 
+        private void InitializeTimer_refreash()
+        {
+            timer2 = new Timer();
+            timer2.Interval = 30000; // 5 วินาที
+            timer2.Tick += new EventHandler(OnTimerTick_refreash);
+            timer2.Start();
+        }
+
         private async void OnTimerTick(object sender, EventArgs e)
         {
             //bool isConnected = await databaseManager.CheckDatabaseConnectionAsync();
             bool isConnected = await DatabaseManager.CheckDataBaseAsync();
             string[] jetStatus = await command_status();
             UpdateStatus(isConnected, jetStatus[0], jetStatus[1]);
+        }
+        private async void OnTimerTick_refreash(object sender, EventArgs e)
+        {
+            refreash_order();
         }
 
         private void UpdateStatus(bool isConnected,string jetStatus, string PrintStatus)
@@ -378,7 +392,7 @@ namespace Deksomboon_Inkjet
                 table.Columns.Add("ord_status", typeof(string));  // เพิ่ม column สำหรับ ord_date
                 table.Columns.Add("ord_count_amount", typeof(string));  // เพิ่ม column สำหรับ ord_date
                 table.Columns.Add("ord_type_print", typeof(string));  // เพิ่ม column สำหรับ ord_date
-
+                table.Columns.Add("ord_count", typeof(string));  // เพิ่ม column สำหรับ ord_date
 
             }
             else
@@ -403,7 +417,8 @@ namespace Deksomboon_Inkjet
                     record.ord_date,  // เพิ่มข้อมูลสำหรับ ord_date
                     record.ord_status,
                     record.ord_count_amount,
-                    record.ord_type_print
+                    record.ord_type_print,
+                    record.ord_count
                 // เพิ่มข้อมูลอื่นๆ ตามต้องการ
                 );
             }
@@ -439,6 +454,7 @@ namespace Deksomboon_Inkjet
                     string columnLocationPrefix = selectedRow["location_prefix"].ToString();
                     string columnOrderID = selectedRow["ord_id"].ToString();
                     string columnCount_Amount = selectedRow["ord_count_amount"].ToString();
+                    string columnCount = selectedRow["ord_count"].ToString();
 
                     // นำข้อมูลไปแสดงใน TextBox หรือคอนโทรลที่ต้องการ
                     txtBatch.Text = columnBatch;
@@ -450,6 +466,8 @@ namespace Deksomboon_Inkjet
                     locationprefixtextbox.Text = columnLocationPrefix;
                     txtOrdID.Text = columnOrderID;
                     txtAmount.Text = columnCount_Amount;
+                                     
+                    txtCount.Text = columnCount;
                 }
             }
             else
@@ -463,11 +481,14 @@ namespace Deksomboon_Inkjet
                 txtSLife.Text = "";
                 locationprefixtextbox.Text = "";
                 txtOrdID.Text = "";
+                txtCount.Text = "";
+                txtAmount.Text = "";
             }
             //OrderGrid.Columns["Batch"].Visible = false;
             OrderGrid.Columns["slifeDataGridViewTextBoxColumn"].Visible = false;
             OrderGrid.Columns["ord_count_amount"].Visible = false;
-            //OrderGrid.Columns["ord_type_print"].Visible = false;
+            OrderGrid.Columns["ord_count"].Visible = false;
+            OrderGrid.Columns["ord_type_print"].Visible = false;
         }
 
         public void get_setting()
@@ -1006,8 +1027,8 @@ namespace Deksomboon_Inkjet
         {
             if (!string.IsNullOrEmpty(txtBatch.Text))
             {
-                if (serialPortManager.IsOpen())
-                {
+                //if (serialPortManager.IsOpen())
+                //{
                     bool isConnected = await DatabaseManager.CheckDataBaseAsync();
 
                     if (isConnected == true)
@@ -1016,8 +1037,8 @@ namespace Deksomboon_Inkjet
                         txtJetState.Text = "Jet State : " + status[0];
                         Console.WriteLine(status[0]);
 
-                        if (status[0] == "Jet Running")
-                        {
+                        //if (status[0] == "Jet Running")
+                        //{
                             //if (status[1] == "Waiting" || status[1] == "Printing")
                             //{
                             string emp_id = Authorized.authorized_level_1(txtEmployeeCode.Text, txtEmployeepass.Text);
@@ -1033,8 +1054,9 @@ namespace Deksomboon_Inkjet
                                     if (start_print == true)
                                     {
                                         //MessageBox.Show("Start Jet สําเร็จ");
-                                        int count_inkjet = await command_count();
-                                        txtCount.Text = count_inkjet.ToString();
+                                        int count_inkjet = await command_count();                                       
+                                        txtCount2.Text = count_inkjet.ToString();
+                                     
 
                                         StartButton.Visible = false;
                                         EmegencyButton.Visible = false;
@@ -1048,7 +1070,17 @@ namespace Deksomboon_Inkjet
                                         string start_date = st.AddSeconds(-st.Second).ToString();
                                         txtOrderDateStart.Text = start_date;
 
-                                        Order.Update_Order_Status(txtOrdID.Text, txtBatch.Text, "กำลังผลิต");
+                                string ord_status_print = "";
+                                if (Int32.Parse(txtCount.Text) >= Int32.Parse(txtAmount.Text))
+                                {
+                                    ord_status_print = "ผลิตครบแล้ว";
+                                }
+                                else
+                                {
+                                    ord_status_print = "ยังผลิตไม่ครบ";
+                                }
+
+                                Order.Update_Order_Status(txtOrdID.Text, txtBatch.Text, "กำลังผลิต" , ord_status_print);
                                         DataLog.Add_DatLog(Int32.Parse(txtOrdID.Text), txtTenDigit.Text, 0, start_date, "", Int32.Parse(emp_id));
                                         DataLog.Add_Authorized_Log(Int32.Parse(txtOrdID.Text), Int32.Parse(emp_id), start_date, "กำลังผลิต", 1, txtTenDigit.Text);
                                         refreash_order();
@@ -1083,24 +1115,24 @@ namespace Deksomboon_Inkjet
                             //    MessageBox.Show("Printing State is not available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             //}
                         }
-                        else if (status[0] == "Jet Stopped")
-                        {
-                            DialogResult confrim_startjet = MessageBox.Show("อินเจ็กของคุณยังไม่เริ่มทํางาน คุณต้องการส่งคําสั่งไปเริ่มอินเจ็กหรือไม่ ?", "Comfrim Start Jet", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                            if (confrim_startjet == DialogResult.Yes)
-                            {
-                                bool jet_start = await command_start_jet();
-                                if (jet_start == true)
-                                {
-                                    MessageBox.Show("กําลังเริ่มอินเจ็กกรุณารอสักครู่", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                }
-                                else
-                                {
-                                    MessageBox.Show("ไม่สามารถส่งคําสั่ง start jet โปรดตรวจสอบอินเจ็กว่าพร้อมใช้งานหรือไม่", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-                                refreash_order();
-                                clear_authroized();
-                            }
-                        }
+                        //else if (status[0] == "Jet Stopped")
+                        //{
+                        //    DialogResult confrim_startjet = MessageBox.Show("อินเจ็กของคุณยังไม่เริ่มทํางาน คุณต้องการส่งคําสั่งไปเริ่มอินเจ็กหรือไม่ ?", "Comfrim Start Jet", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        //    if (confrim_startjet == DialogResult.Yes)
+                        //    {
+                        //        bool jet_start = await command_start_jet();
+                        //        if (jet_start == true)
+                        //        {
+                        //            MessageBox.Show("กําลังเริ่มอินเจ็กกรุณารอสักครู่", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //        }
+                        //        else
+                        //        {
+                        //            MessageBox.Show("ไม่สามารถส่งคําสั่ง start jet โปรดตรวจสอบอินเจ็กว่าพร้อมใช้งานหรือไม่", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        //        }
+                        //        refreash_order();
+                        //        clear_authroized();
+                        //    }
+                        //}
                         else
                         {
                             MessageBox.Show("Jet State is not available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -1110,16 +1142,16 @@ namespace Deksomboon_Inkjet
                     {
                         MessageBox.Show("Database is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Serial Port is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                MessageBox.Show("กรุณาใส่ batch ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Serial Port is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //}
+            //}
+            //else
+            //{
+            //    MessageBox.Show("กรุณาใส่ batch ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
 
             StartButton.Enabled = true;
         }
@@ -1158,7 +1190,7 @@ namespace Deksomboon_Inkjet
                                         int count_inkjet = await command_count();
                                         txtCountEnd.Text = count_inkjet.ToString();
 
-                                        int sum_count = Int32.Parse(txtCountEnd.Text) - Int32.Parse(txtCount.Text);
+                                        int sum_count = Int32.Parse(txtCountEnd.Text) - Int32.Parse(txtCount2.Text);
                                         DateTime st = DateTime.Now.AddYears(-543);
                                         string end_date = st.AddSeconds(-st.Second).ToString();
 
@@ -1170,7 +1202,17 @@ namespace Deksomboon_Inkjet
                                         EndBatchButton.Visible = false;
                                         EndOrderButton.Visible = false;
 
-                                        Order.Update_Order_Status(ord_id, batch, "หยุดผลิตชั่วคราว");
+                                        string ord_status_print = "";
+                                    if (Int32.Parse(txtCount.Text) >=  Int32.Parse(txtAmount.Text))
+                                    {
+                                        ord_status_print = "ผลิตครบแล้ว";
+                                    }
+                                    else
+                                    {
+                                        ord_status_print = "ยังผลิตไม่ครบ";
+                                    }
+
+                                        Order.Update_Order_Status(ord_id, batch, "หยุดผลิตชั่วคราว" , ord_status_print);
                                         if (sum_count == 0)
                                         {
                                             DataLog.Delete_DataLog(Int32.Parse(ord_id), txtOrderDateStart.Text);
@@ -1236,10 +1278,10 @@ namespace Deksomboon_Inkjet
                             int count_inkjet = await command_count();
                             txtCountEnd.Text = count_inkjet.ToString();
 
-                            int sum_count = Int32.Parse(txtCountEnd.Text) - Int32.Parse(txtCount.Text);
+                            int sum_count = Int32.Parse(txtCountEnd.Text) - Int32.Parse(txtCount2.Text);
                     //int sum_count = 0;
 
-                    using (ChangeBatch frm = new ChangeBatch(obj, form, txtEmployeeCode.Text, txtEmployeepass.Text, sum_count, emp_id, txtOrderDateStart.Text , txtAmount.Text))
+                    using (ChangeBatch frm = new ChangeBatch(obj, form, txtEmployeeCode.Text, txtEmployeepass.Text, sum_count, emp_id, txtOrderDateStart.Text , txtAmount.Text , txtCount.Text))
                             {
                                 if (frm.ShowDialog() == DialogResult.OK)
                                 {
@@ -1389,10 +1431,20 @@ namespace Deksomboon_Inkjet
                                 string end_date = st.AddSeconds(-st.Second).ToString();
                                 txtCountEnd.Text = count_inkjet.ToString();
 
-                                int sum_count = Int32.Parse(txtCountEnd.Text) - Int32.Parse(txtCount.Text);
-                                
+                                int sum_count = Int32.Parse(txtCountEnd.Text) - Int32.Parse(txtCount2.Text);
+
+                                string ord_status_print = "";
+                                if (Int32.Parse(txtCount2.Text) >= Int32.Parse(txtAmount.Text))
+                                {
+                                    ord_status_print = "ผลิตครบแล้ว";
+                                }
+                                else
+                                {
+                                    ord_status_print = "ยังผลิตไม่ครบ";
+                                }
+
                                 MessageBox.Show("จบออร์เดอร์สําเร็จ");
-                                Order.Update_Order_Status(ord_id, batch, "จบออร์เดอร์");
+                                Order.Update_Order_Status(ord_id, batch, "จบออร์เดอร์", ord_status_print);
                                 DataLog.Update_DateLog(Int32.Parse(ord_id), sum_count, end_date, Int32.Parse(emp_id), txtTenDigit.Text, txtOrderDateStart.Text);
                                 DataLog.Add_Authorized_Log(Int32.Parse(ord_id), Int32.Parse(emp_id), end_date, "จบออร์เดอร์", 1, txtTenDigit.Text);
                                 refreash_order();
@@ -1426,6 +1478,7 @@ namespace Deksomboon_Inkjet
 
         private void btnEditOrderPosition_Click(object sender, EventArgs e)
         {
+            timer2.Stop();
             tableLayoutOrderPosition.Visible = true;
             btnEditOrderPosition.Visible = false;
 
@@ -1527,6 +1580,7 @@ namespace Deksomboon_Inkjet
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            timer2.Start();
             tableLayoutOrderPosition.Visible = false;
             btnEditOrderPosition.Visible = true;
 
@@ -1565,8 +1619,8 @@ namespace Deksomboon_Inkjet
 
                                     if (start_print == true)
                                     {
-                                        int count_inkjet = await command_count();
-                                        txtCount.Text = count_inkjet.ToString();
+                                        //int count_inkjet = await command_count();
+                                        //txtCount.Text = count_inkjet.ToString();
 
                                         StartButton.Visible = true;
                                         EmegencyButton.Visible = true;
@@ -1581,7 +1635,16 @@ namespace Deksomboon_Inkjet
                                         string start_date = st.AddSeconds(-st.Second).ToString();
                                         txtOrderDateStart.Text = start_date;
 
-                                        Order.Update_Order_Status(txtOrdID.Text, txtBatch.Text, "ทดสอบพิมพ์");
+                                string ord_status_print = "";
+                                if (Int32.Parse(txtCount2.Text) >= Int32.Parse(txtAmount.Text))
+                                {
+                                    ord_status_print = "ผลิตครบแล้ว";
+                                }
+                                else
+                                {
+                                    ord_status_print = "ยังผลิตไม่ครบ";
+                                }
+                                Order.Update_Order_Status(txtOrdID.Text, txtBatch.Text, "ทดสอบพิมพ์" , "รอผลิต");
                                         //DataLog.Add_DatLog(Int32.Parse(txtOrdID.Text), txtTenDigit.Text, 0, start_date, "", Int32.Parse(emp_id));
                                         DataLog.Add_Authorized_Log(Int32.Parse(txtOrdID.Text), Int32.Parse(emp_id), start_date, "ทดสอบพิมพ์", 1, txtTenDigit.Text);
                                         refreash_order();

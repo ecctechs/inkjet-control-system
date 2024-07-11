@@ -112,9 +112,9 @@
             this.EndBatchButton = new System.Windows.Forms.ToolStripMenuItem();
             this.TestPrintButton = new System.Windows.Forms.ToolStripMenuItem();
             this.StartButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.UpdateButton = new System.Windows.Forms.ToolStripMenuItem();
             this.EndOrderButton = new System.Windows.Forms.ToolStripMenuItem();
             this.EmegencyButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.UpdateButton = new System.Windows.Forms.ToolStripMenuItem();
             this.btnHome = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnSetting = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
@@ -1298,7 +1298,7 @@
             this.txtPrintState.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrintState.Location = new System.Drawing.Point(131, 3);
             this.txtPrintState.Name = "txtPrintState";
-            this.txtPrintState.Size = new System.Drawing.Size(508, 22);
+            this.txtPrintState.Size = new System.Drawing.Size(152, 18);
             this.txtPrintState.TabIndex = 19;
             this.txtPrintState.Text = "Print States : Not Connect";
             this.txtPrintState.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1343,7 +1343,7 @@
             this.txtJetState.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtJetState.Location = new System.Drawing.Point(131, 3);
             this.txtJetState.Name = "txtJetState";
-            this.txtJetState.Size = new System.Drawing.Size(508, 22);
+            this.txtJetState.Size = new System.Drawing.Size(137, 18);
             this.txtJetState.TabIndex = 19;
             this.txtJetState.Text = "Jet State : Not Connect";
             this.txtJetState.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1387,7 +1387,7 @@
             this.txtDBStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDBStatus.Location = new System.Drawing.Point(131, 3);
             this.txtDBStatus.Name = "txtDBStatus";
-            this.txtDBStatus.Size = new System.Drawing.Size(508, 21);
+            this.txtDBStatus.Size = new System.Drawing.Size(145, 18);
             this.txtDBStatus.TabIndex = 19;
             this.txtDBStatus.Text = "Database : Not Connect";
             this.txtDBStatus.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1431,7 +1431,7 @@
             this.txtRS232S.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRS232S.Location = new System.Drawing.Point(131, 3);
             this.txtRS232S.Name = "txtRS232S";
-            this.txtRS232S.Size = new System.Drawing.Size(508, 19);
+            this.txtRS232S.Size = new System.Drawing.Size(129, 18);
             this.txtRS232S.TabIndex = 19;
             this.txtRS232S.Text = "RS-232 : Not Connect";
             this.txtRS232S.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1475,9 +1475,9 @@
             this.UpdateButton,
             this.EndOrderButton,
             this.EmegencyButton});
-            this.menuStrip2.Location = new System.Drawing.Point(410, 0);
+            this.menuStrip2.Location = new System.Drawing.Point(132, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(524, 105);
+            this.menuStrip2.Size = new System.Drawing.Size(1079, 105);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -1504,6 +1504,7 @@
             this.EndBatchButton.Size = new System.Drawing.Size(110, 81);
             this.EndBatchButton.Text = "จบbatch";
             this.EndBatchButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.EndBatchButton.Visible = false;
             this.EndBatchButton.Click += new System.EventHandler(this.EndBatchButton_Click);
             // 
             // TestPrintButton
@@ -1531,6 +1532,18 @@
             this.StartButton.Visible = false;
             this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
+            // UpdateButton
+            // 
+            this.UpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateButton.Image = ((System.Drawing.Image)(resources.GetObject("UpdateButton.Image")));
+            this.UpdateButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.UpdateButton.Margin = new System.Windows.Forms.Padding(10);
+            this.UpdateButton.Name = "UpdateButton";
+            this.UpdateButton.Size = new System.Drawing.Size(80, 81);
+            this.UpdateButton.Text = "แก้ไข";
+            this.UpdateButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
+            // 
             // EndOrderButton
             // 
             this.EndOrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1556,18 +1569,6 @@
             this.EmegencyButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.EmegencyButton.Click += new System.EventHandler(this.EmegencyButton_Click);
             // 
-            // UpdateButton
-            // 
-            this.UpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateButton.Image = ((System.Drawing.Image)(resources.GetObject("UpdateButton.Image")));
-            this.UpdateButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.UpdateButton.Margin = new System.Windows.Forms.Padding(10);
-            this.UpdateButton.Name = "UpdateButton";
-            this.UpdateButton.Size = new System.Drawing.Size(80, 81);
-            this.UpdateButton.Text = "แก้ไข";
-            this.UpdateButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
-            // 
             // btnHome
             // 
             this.btnHome.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
@@ -1579,7 +1580,7 @@
             this.btnHome.Location = new System.Drawing.Point(3, 3);
             this.btnHome.Name = "btnHome";
             this.btnHome.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnHome.Size = new System.Drawing.Size(127, 114);
+            this.btnHome.Size = new System.Drawing.Size(126, 114);
             this.btnHome.TabIndex = 1;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
@@ -1591,10 +1592,10 @@
             this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
             this.btnSetting.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnSetting.ImageRotate = 0F;
-            this.btnSetting.Location = new System.Drawing.Point(1213, 3);
+            this.btnSetting.Location = new System.Drawing.Point(1214, 3);
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnSetting.Size = new System.Drawing.Size(128, 114);
+            this.btnSetting.Size = new System.Drawing.Size(127, 114);
             this.btnSetting.TabIndex = 2;
             this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
             // 

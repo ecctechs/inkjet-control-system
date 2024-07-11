@@ -268,7 +268,7 @@ namespace Deksomboon_Inkjet.Pop_up
                     if (confrim_startjet == DialogResult.Yes)
                     {
                         Order.Update_Order(ord_id, line, inkjet, material_selected, batch, type, date , ord_type_print , amount);
-                        Order.Update_Order_Status(ord_id, batch, "จบ batch");
+                        //Order.Update_Order_Status(ord_id, batch, "จบ batch");
                         DataLog.Update_DateLog(Int32.Parse(ord_id), Int32.Parse(txtSumCount.Text), start_date, Int32.Parse(txtEmpID.Text), txtTenDigitOld.Text, txtOrderDate.Text);
 
                         //DataLog.Add_DatLog(Int32.Parse(ord_id), txtTenDigit.Text, 0, start_date, end_date, Int32.Parse(txtEmpID.Text));

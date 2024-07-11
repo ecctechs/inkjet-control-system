@@ -461,7 +461,7 @@ namespace Deksomboon_Inkjet.Class
             }
         }
 
-        public static void Update_Order_Status(string order_id, string batch, string ord_status)
+        public static void Update_Order_Status(string order_id, string batch, string ord_status , string ord_status_print)
         {
             try
             {
@@ -471,7 +471,8 @@ namespace Deksomboon_Inkjet.Class
 
                     string query = @"UPDATE order_detail 
                              SET ord_status = @ord_status,
-                             ord_batch = @ord_batch 
+                             ord_batch = @ord_batch,
+                             ord_status_print = @ord_status_print 
                              WHERE ord_id = " + Int32.Parse(order_id);
                     //Console.WriteLine(query);
 
@@ -481,8 +482,7 @@ namespace Deksomboon_Inkjet.Class
                         command.Parameters.AddWithValue("@order_id", Int32.Parse(order_id));
                         command.Parameters.AddWithValue("@ord_status", ord_status);
                         command.Parameters.AddWithValue("@ord_batch", batch);
-
-
+                        command.Parameters.AddWithValue("@ord_status_print", ord_status_print);
 
                         // Execute the SQL command
                         int rowsAffected = command.ExecuteNonQuery();
