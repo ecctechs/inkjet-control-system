@@ -75,7 +75,8 @@ namespace Deksomboon_Inkjet.Pop_up
             string ord_id = txtOrdID.Text;
             string ord_type_print = cboTypePrint.Text;
             string amount = txtAmount.Text;
-            //string count = txtCount.Text;   
+            string sum_count = txtSumCount.Text;    
+            string count = txtCount.Text;   
 
             DateTime st = DateTime.Now.AddYears(-543);
             string start_date = st.AddSeconds(-st.Second).ToString();
@@ -93,7 +94,6 @@ namespace Deksomboon_Inkjet.Pop_up
                 DialogResult confrim_startjet = MessageBox.Show("คุณแน่ใจที่จะจบ batch : " + txtBatchOld.Text + " หรือไม่", "Comfrim End Batch", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (confrim_startjet == DialogResult.Yes)
                 {
-
                     string ord_status_print = "";
                     if (Int32.Parse(txtCount.Text) >= Int32.Parse(txtAmount.Text))
                     {
@@ -104,13 +104,13 @@ namespace Deksomboon_Inkjet.Pop_up
                         ord_status_print = "ยังผลิตไม่ครบ";
                     }
 
+                    //int diffcount = Int32.Parse(txtCount.Text) + Int32.Parse(sum_count);
                     Order.Update_Order(ord_id, line, inkjet, material_selected, batch, type, date , ord_type_print , amount);
-                    Order.Update_Order_Status(ord_id, batch, "จบ batch", ord_status_print);
+                    Order.Update_Order_Status(ord_id, batch, "จบ batch", ord_status_print , Int32.Parse(txtCount.Text));
                     DataLog.Update_DateLog(Int32.Parse(ord_id), Int32.Parse(txtSumCount.Text), start_date, Int32.Parse(txtEmpID.Text), txtTenDigitOld.Text, txtOrderDate.Text);
 
                     //DataLog.Add_DatLog(Int32.Parse(ord_id), txtTenDigit.Text, 0, start_date, end_date, Int32.Parse(txtEmpID.Text));
                     DataLog.Add_Authorized_Log(Int32.Parse(ord_id), Int32.Parse(txtEmpID.Text), start_date, "จบ batch", 1, txtTenDigitOld.Text);
-
                     DialogResult = DialogResult.OK;
                 }
             }

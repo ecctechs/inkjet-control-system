@@ -756,7 +756,6 @@
             this.txtCountEnd.SelectedText = "";
             this.txtCountEnd.Size = new System.Drawing.Size(37, 25);
             this.txtCountEnd.TabIndex = 31;
-            this.txtCountEnd.Visible = false;
             // 
             // txtOrderDateStart
             // 
@@ -857,15 +856,14 @@
             this.txtCount2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCount2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCount2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCount2.Location = new System.Drawing.Point(185, 189);
+            this.txtCount2.Location = new System.Drawing.Point(75, 164);
             this.txtCount2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCount2.Name = "txtCount2";
             this.txtCount2.PasswordChar = '\0';
             this.txtCount2.PlaceholderText = "";
             this.txtCount2.SelectedText = "";
-            this.txtCount2.Size = new System.Drawing.Size(34, 27);
+            this.txtCount2.Size = new System.Drawing.Size(42, 27);
             this.txtCount2.TabIndex = 29;
-            this.txtCount2.Visible = false;
             // 
             // locationprefixtextbox
             // 
@@ -1475,9 +1473,9 @@
             this.UpdateButton,
             this.EndOrderButton,
             this.EmegencyButton});
-            this.menuStrip2.Location = new System.Drawing.Point(132, 0);
+            this.menuStrip2.Location = new System.Drawing.Point(133, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1079, 105);
+            this.menuStrip2.Size = new System.Drawing.Size(1077, 105);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -1504,7 +1502,6 @@
             this.EndBatchButton.Size = new System.Drawing.Size(110, 81);
             this.EndBatchButton.Text = "จบbatch";
             this.EndBatchButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.EndBatchButton.Visible = false;
             this.EndBatchButton.Click += new System.EventHandler(this.EndBatchButton_Click);
             // 
             // TestPrintButton

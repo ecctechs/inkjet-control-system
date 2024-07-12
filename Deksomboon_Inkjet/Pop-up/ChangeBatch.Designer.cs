@@ -507,7 +507,6 @@
             this.txtSumCount.SelectedText = "";
             this.txtSumCount.Size = new System.Drawing.Size(52, 26);
             this.txtSumCount.TabIndex = 121;
-            this.txtSumCount.Visible = false;
             // 
             // txtEmpID
             // 
@@ -685,7 +684,7 @@
             this.txtCount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtCount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCount.Location = new System.Drawing.Point(400, 345);
+            this.txtCount.Location = new System.Drawing.Point(384, 345);
             this.txtCount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCount.MaxLength = 3;
             this.txtCount.Name = "txtCount";
@@ -693,9 +692,8 @@
             this.txtCount.PlaceholderText = "";
             this.txtCount.ReadOnly = true;
             this.txtCount.SelectedText = "";
-            this.txtCount.Size = new System.Drawing.Size(54, 26);
+            this.txtCount.Size = new System.Drawing.Size(70, 26);
             this.txtCount.TabIndex = 129;
-            this.txtCount.Visible = false;
             // 
             // ChangeBatch
             // 
