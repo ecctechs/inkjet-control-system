@@ -151,7 +151,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
             this.panel2.Controls.Add(this.tableLayoutPanel3);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -184,8 +184,8 @@
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.24691F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.75309F));
             this.tableLayoutPanel4.Controls.Add(this.guna2GroupBox1, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.guna2GroupBox4, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -199,26 +199,29 @@
             // guna2GroupBox1
             // 
             this.guna2GroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GroupBox1.BorderColor = System.Drawing.Color.Black;
             this.guna2GroupBox1.Controls.Add(this.tableLayoutPanel15);
             this.guna2GroupBox1.Controls.Add(this.tableLayoutPanel8);
             this.guna2GroupBox1.Controls.Add(this.tableLayoutPanel11);
             this.guna2GroupBox1.Controls.Add(this.tableLayoutPanel12);
             this.guna2GroupBox1.Controls.Add(this.tableLayoutPanel13);
             this.guna2GroupBox1.Controls.Add(this.tableLayoutPanel14);
+            this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(101)))), ((int)(((byte)(183)))));
             this.guna2GroupBox1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 25, 0, 0);
             this.guna2GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
             this.guna2GroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.White;
             this.guna2GroupBox1.Location = new System.Drawing.Point(3, 3);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(1030, 214);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(1033, 214);
             this.guna2GroupBox1.TabIndex = 0;
             this.guna2GroupBox1.Text = "Detail Order";
             this.guna2GroupBox1.TextOffset = new System.Drawing.Point(0, -7);
             // 
             // tableLayoutPanel15
             // 
-            this.tableLayoutPanel15.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
             this.tableLayoutPanel15.ColumnCount = 2;
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -249,8 +252,7 @@
             // 
             // txtCount
             // 
-            this.txtCount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
-            this.txtCount.BorderRadius = 5;
+            this.txtCount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.txtCount.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCount.DefaultText = "";
             this.txtCount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -258,23 +260,24 @@
             this.txtCount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtCount.Enabled = false;
-            this.txtCount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
+            this.txtCount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.txtCount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtCount.ForeColor = System.Drawing.Color.Black;
             this.txtCount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCount.Location = new System.Drawing.Point(157, 4);
             this.txtCount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCount.Name = "txtCount";
             this.txtCount.PasswordChar = '\0';
             this.txtCount.PlaceholderText = "";
+            this.txtCount.ReadOnly = true;
             this.txtCount.SelectedText = "";
             this.txtCount.Size = new System.Drawing.Size(148, 36);
             this.txtCount.TabIndex = 22;
             // 
             // tableLayoutPanel8
             // 
-            this.tableLayoutPanel8.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
             this.tableLayoutPanel8.ColumnCount = 4;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -284,7 +287,7 @@
             this.tableLayoutPanel8.Controls.Add(this.guna2HtmlLabel3, 2, 0);
             this.tableLayoutPanel8.Controls.Add(this.guna2HtmlLabel6, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.txtLineSetting, 1, 0);
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(22, 37);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 37);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -293,7 +296,7 @@
             // 
             // txtInkjetSetting
             // 
-            this.txtInkjetSetting.BorderRadius = 5;
+            this.txtInkjetSetting.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.txtInkjetSetting.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtInkjetSetting.DefaultText = "";
             this.txtInkjetSetting.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -301,16 +304,17 @@
             this.txtInkjetSetting.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtInkjetSetting.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtInkjetSetting.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtInkjetSetting.Enabled = false;
-            this.txtInkjetSetting.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
+            this.txtInkjetSetting.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.txtInkjetSetting.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtInkjetSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtInkjetSetting.ForeColor = System.Drawing.Color.Black;
             this.txtInkjetSetting.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtInkjetSetting.Location = new System.Drawing.Point(501, 4);
             this.txtInkjetSetting.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtInkjetSetting.Name = "txtInkjetSetting";
             this.txtInkjetSetting.PasswordChar = '\0';
             this.txtInkjetSetting.PlaceholderText = "";
+            this.txtInkjetSetting.ReadOnly = true;
             this.txtInkjetSetting.SelectedText = "";
             this.txtInkjetSetting.Size = new System.Drawing.Size(160, 36);
             this.txtInkjetSetting.TabIndex = 24;
@@ -345,8 +349,7 @@
             // 
             // txtLineSetting
             // 
-            this.txtLineSetting.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
-            this.txtLineSetting.BorderRadius = 5;
+            this.txtLineSetting.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.txtLineSetting.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtLineSetting.DefaultText = "";
             this.txtLineSetting.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -354,23 +357,24 @@
             this.txtLineSetting.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtLineSetting.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtLineSetting.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtLineSetting.Enabled = false;
-            this.txtLineSetting.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
+            this.txtLineSetting.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.txtLineSetting.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLineSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtLineSetting.ForeColor = System.Drawing.Color.Black;
             this.txtLineSetting.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLineSetting.Location = new System.Drawing.Point(169, 4);
             this.txtLineSetting.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLineSetting.Name = "txtLineSetting";
             this.txtLineSetting.PasswordChar = '\0';
             this.txtLineSetting.PlaceholderText = "";
+            this.txtLineSetting.ReadOnly = true;
             this.txtLineSetting.SelectedText = "";
             this.txtLineSetting.Size = new System.Drawing.Size(160, 36);
             this.txtLineSetting.TabIndex = 22;
             // 
             // tableLayoutPanel11
             // 
-            this.tableLayoutPanel11.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
             this.tableLayoutPanel11.ColumnCount = 2;
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -401,8 +405,7 @@
             // 
             // txtSLife
             // 
-            this.txtSLife.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
-            this.txtSLife.BorderRadius = 5;
+            this.txtSLife.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.txtSLife.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSLife.DefaultText = "";
             this.txtSLife.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -410,23 +413,24 @@
             this.txtSLife.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSLife.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSLife.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSLife.Enabled = false;
-            this.txtSLife.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
+            this.txtSLife.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.txtSLife.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSLife.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtSLife.ForeColor = System.Drawing.Color.Black;
             this.txtSLife.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSLife.Location = new System.Drawing.Point(157, 4);
             this.txtSLife.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSLife.Name = "txtSLife";
             this.txtSLife.PasswordChar = '\0';
             this.txtSLife.PlaceholderText = "";
+            this.txtSLife.ReadOnly = true;
             this.txtSLife.SelectedText = "";
             this.txtSLife.Size = new System.Drawing.Size(148, 36);
             this.txtSLife.TabIndex = 22;
             // 
             // tableLayoutPanel12
             // 
-            this.tableLayoutPanel12.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
             this.tableLayoutPanel12.ColumnCount = 4;
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -436,7 +440,7 @@
             this.tableLayoutPanel12.Controls.Add(this.guna2HtmlLabel14, 2, 0);
             this.tableLayoutPanel12.Controls.Add(this.guna2HtmlLabel15, 0, 0);
             this.tableLayoutPanel12.Controls.Add(this.txtDate, 1, 0);
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(22, 160);
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 157);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 1;
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -445,7 +449,7 @@
             // 
             // txtAmount
             // 
-            this.txtAmount.BorderRadius = 5;
+            this.txtAmount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.txtAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAmount.DefaultText = "";
             this.txtAmount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -453,16 +457,17 @@
             this.txtAmount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtAmount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtAmount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtAmount.Enabled = false;
-            this.txtAmount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
+            this.txtAmount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.txtAmount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtAmount.ForeColor = System.Drawing.Color.Black;
             this.txtAmount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAmount.Location = new System.Drawing.Point(501, 4);
             this.txtAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.PasswordChar = '\0';
             this.txtAmount.PlaceholderText = "";
+            this.txtAmount.ReadOnly = true;
             this.txtAmount.SelectedText = "";
             this.txtAmount.Size = new System.Drawing.Size(160, 36);
             this.txtAmount.TabIndex = 24;
@@ -497,8 +502,7 @@
             // 
             // txtDate
             // 
-            this.txtDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
-            this.txtDate.BorderRadius = 5;
+            this.txtDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.txtDate.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDate.DefaultText = "";
             this.txtDate.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -506,23 +510,24 @@
             this.txtDate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtDate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDate.Enabled = false;
-            this.txtDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
+            this.txtDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.txtDate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtDate.ForeColor = System.Drawing.Color.Black;
             this.txtDate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDate.Location = new System.Drawing.Point(169, 4);
             this.txtDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDate.Name = "txtDate";
             this.txtDate.PasswordChar = '\0';
             this.txtDate.PlaceholderText = "";
+            this.txtDate.ReadOnly = true;
             this.txtDate.SelectedText = "";
             this.txtDate.Size = new System.Drawing.Size(160, 36);
             this.txtDate.TabIndex = 22;
             // 
             // tableLayoutPanel13
             // 
-            this.tableLayoutPanel13.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
             this.tableLayoutPanel13.ColumnCount = 4;
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -532,7 +537,7 @@
             this.tableLayoutPanel13.Controls.Add(this.guna2HtmlLabel16, 2, 0);
             this.tableLayoutPanel13.Controls.Add(this.guna2HtmlLabel17, 0, 0);
             this.tableLayoutPanel13.Controls.Add(this.txtMaterialDes, 1, 0);
-            this.tableLayoutPanel13.Location = new System.Drawing.Point(22, 96);
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(3, 97);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 1;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -542,7 +547,7 @@
             // 
             // txtFormula
             // 
-            this.txtFormula.BorderRadius = 5;
+            this.txtFormula.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.txtFormula.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFormula.DefaultText = "";
             this.txtFormula.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -550,16 +555,17 @@
             this.txtFormula.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtFormula.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtFormula.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtFormula.Enabled = false;
-            this.txtFormula.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
+            this.txtFormula.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.txtFormula.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFormula.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtFormula.ForeColor = System.Drawing.Color.Black;
             this.txtFormula.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFormula.Location = new System.Drawing.Point(501, 4);
             this.txtFormula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFormula.Name = "txtFormula";
             this.txtFormula.PasswordChar = '\0';
             this.txtFormula.PlaceholderText = "";
+            this.txtFormula.ReadOnly = true;
             this.txtFormula.SelectedText = "";
             this.txtFormula.Size = new System.Drawing.Size(160, 36);
             this.txtFormula.TabIndex = 24;
@@ -594,8 +600,7 @@
             // 
             // txtMaterialDes
             // 
-            this.txtMaterialDes.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
-            this.txtMaterialDes.BorderRadius = 5;
+            this.txtMaterialDes.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.txtMaterialDes.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaterialDes.DefaultText = "";
             this.txtMaterialDes.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -603,29 +608,30 @@
             this.txtMaterialDes.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtMaterialDes.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtMaterialDes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtMaterialDes.Enabled = false;
-            this.txtMaterialDes.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
+            this.txtMaterialDes.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.txtMaterialDes.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaterialDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtMaterialDes.ForeColor = System.Drawing.Color.Black;
             this.txtMaterialDes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaterialDes.Location = new System.Drawing.Point(169, 4);
             this.txtMaterialDes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMaterialDes.Name = "txtMaterialDes";
             this.txtMaterialDes.PasswordChar = '\0';
             this.txtMaterialDes.PlaceholderText = "";
+            this.txtMaterialDes.ReadOnly = true;
             this.txtMaterialDes.SelectedText = "";
             this.txtMaterialDes.Size = new System.Drawing.Size(160, 36);
             this.txtMaterialDes.TabIndex = 22;
             // 
             // tableLayoutPanel14
             // 
-            this.tableLayoutPanel14.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
             this.tableLayoutPanel14.ColumnCount = 2;
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel14.Controls.Add(this.txtOrderStatus, 0, 0);
             this.tableLayoutPanel14.Controls.Add(this.guna2HtmlLabel18, 0, 0);
-            this.tableLayoutPanel14.Location = new System.Drawing.Point(710, 93);
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(710, 97);
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 1;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -634,7 +640,7 @@
             // 
             // txtOrderStatus
             // 
-            this.txtOrderStatus.BorderRadius = 5;
+            this.txtOrderStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.txtOrderStatus.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtOrderStatus.DefaultText = "";
             this.txtOrderStatus.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -642,16 +648,17 @@
             this.txtOrderStatus.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtOrderStatus.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtOrderStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtOrderStatus.Enabled = false;
-            this.txtOrderStatus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
+            this.txtOrderStatus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.txtOrderStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtOrderStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtOrderStatus.ForeColor = System.Drawing.Color.Black;
             this.txtOrderStatus.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtOrderStatus.Location = new System.Drawing.Point(157, 4);
             this.txtOrderStatus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOrderStatus.Name = "txtOrderStatus";
             this.txtOrderStatus.PasswordChar = '\0';
             this.txtOrderStatus.PlaceholderText = "";
+            this.txtOrderStatus.ReadOnly = true;
             this.txtOrderStatus.SelectedText = "";
             this.txtOrderStatus.Size = new System.Drawing.Size(148, 36);
             this.txtOrderStatus.TabIndex = 25;
@@ -672,6 +679,7 @@
             // 
             // guna2GroupBox4
             // 
+            this.guna2GroupBox4.BorderColor = System.Drawing.Color.Black;
             this.guna2GroupBox4.Controls.Add(this.guna2TextBox1);
             this.guna2GroupBox4.Controls.Add(this.txtBatch);
             this.guna2GroupBox4.Controls.Add(this.txtCountEnd);
@@ -681,20 +689,24 @@
             this.guna2GroupBox4.Controls.Add(this.txtTenDigit);
             this.guna2GroupBox4.Controls.Add(this.txtCount2);
             this.guna2GroupBox4.Controls.Add(this.locationprefixtextbox);
+            this.guna2GroupBox4.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(101)))), ((int)(((byte)(183)))));
             this.guna2GroupBox4.CustomBorderThickness = new System.Windows.Forms.Padding(0, 25, 0, 0);
             this.guna2GroupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2GroupBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
             this.guna2GroupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GroupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox4.Location = new System.Drawing.Point(1039, 3);
+            this.guna2GroupBox4.ForeColor = System.Drawing.Color.White;
+            this.guna2GroupBox4.Location = new System.Drawing.Point(1059, 3);
+            this.guna2GroupBox4.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.guna2GroupBox4.Name = "guna2GroupBox4";
             this.guna2GroupBox4.Padding = new System.Windows.Forms.Padding(5);
-            this.guna2GroupBox4.Size = new System.Drawing.Size(254, 214);
+            this.guna2GroupBox4.Size = new System.Drawing.Size(234, 214);
             this.guna2GroupBox4.TabIndex = 1;
             this.guna2GroupBox4.Text = "ข้อความที่พิมพ์";
             this.guna2GroupBox4.TextOffset = new System.Drawing.Point(0, -7);
             // 
             // guna2TextBox1
             // 
+            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox1.DefaultText = "";
             this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -702,6 +714,7 @@
             this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2TextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -712,7 +725,7 @@
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.ReadOnly = true;
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(244, 46);
+            this.guna2TextBox1.Size = new System.Drawing.Size(224, 46);
             this.guna2TextBox1.TabIndex = 34;
             this.guna2TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -801,6 +814,7 @@
             // 
             // txtBBF
             // 
+            this.txtBBF.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.txtBBF.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBBF.DefaultText = "";
             this.txtBBF.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -808,6 +822,7 @@
             this.txtBBF.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtBBF.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtBBF.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtBBF.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.txtBBF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBBF.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBBF.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -818,12 +833,13 @@
             this.txtBBF.PlaceholderText = "";
             this.txtBBF.ReadOnly = true;
             this.txtBBF.SelectedText = "";
-            this.txtBBF.Size = new System.Drawing.Size(244, 46);
+            this.txtBBF.Size = new System.Drawing.Size(224, 46);
             this.txtBBF.TabIndex = 1;
             this.txtBBF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTenDigit
             // 
+            this.txtTenDigit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.txtTenDigit.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenDigit.DefaultText = "";
             this.txtTenDigit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -831,6 +847,7 @@
             this.txtTenDigit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTenDigit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTenDigit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtTenDigit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.txtTenDigit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenDigit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTenDigit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -841,7 +858,7 @@
             this.txtTenDigit.PlaceholderText = "";
             this.txtTenDigit.ReadOnly = true;
             this.txtTenDigit.SelectedText = "";
-            this.txtTenDigit.Size = new System.Drawing.Size(244, 46);
+            this.txtTenDigit.Size = new System.Drawing.Size(224, 46);
             this.txtTenDigit.TabIndex = 0;
             this.txtTenDigit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -888,16 +905,19 @@
             // 
             // guna2GroupBox2
             // 
+            this.guna2GroupBox2.BackColor = System.Drawing.Color.White;
+            this.guna2GroupBox2.BorderColor = System.Drawing.Color.Black;
             this.guna2GroupBox2.Controls.Add(this.btnEditOrderPosition);
             this.guna2GroupBox2.Controls.Add(this.tableLayoutOrderPosition);
             this.guna2GroupBox2.Controls.Add(this.OrderGrid);
+            this.guna2GroupBox2.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(101)))), ((int)(((byte)(183)))));
             this.guna2GroupBox2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 25, 0, 0);
             this.guna2GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GroupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GroupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2GroupBox2.ForeColor = System.Drawing.Color.White;
             this.guna2GroupBox2.Location = new System.Drawing.Point(3, 243);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
-            this.guna2GroupBox2.Padding = new System.Windows.Forms.Padding(5);
+            this.guna2GroupBox2.Padding = new System.Windows.Forms.Padding(3);
             this.guna2GroupBox2.Size = new System.Drawing.Size(1296, 192);
             this.guna2GroupBox2.TabIndex = 1;
             this.guna2GroupBox2.Text = "Order List Record";
@@ -912,9 +932,9 @@
             this.btnEditOrderPosition.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnEditOrderPosition.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnEditOrderPosition.ForeColor = System.Drawing.Color.White;
-            this.btnEditOrderPosition.Location = new System.Drawing.Point(1119, 0);
+            this.btnEditOrderPosition.Location = new System.Drawing.Point(1121, 1);
             this.btnEditOrderPosition.Name = "btnEditOrderPosition";
-            this.btnEditOrderPosition.Size = new System.Drawing.Size(180, 28);
+            this.btnEditOrderPosition.Size = new System.Drawing.Size(173, 27);
             this.btnEditOrderPosition.TabIndex = 2;
             this.btnEditOrderPosition.Text = "แก้ไขลําดับออร์เดอร์";
             this.btnEditOrderPosition.Click += new System.EventHandler(this.btnEditOrderPosition_Click);
@@ -932,7 +952,7 @@
             this.tableLayoutOrderPosition.Controls.Add(this.btnCancel, 2, 0);
             this.tableLayoutOrderPosition.Controls.Add(this.btnUP, 0, 0);
             this.tableLayoutOrderPosition.Controls.Add(this.btnDown, 1, 0);
-            this.tableLayoutOrderPosition.Location = new System.Drawing.Point(751, 0);
+            this.tableLayoutOrderPosition.Location = new System.Drawing.Point(753, -2);
             this.tableLayoutOrderPosition.Name = "tableLayoutOrderPosition";
             this.tableLayoutOrderPosition.RowCount = 1;
             this.tableLayoutOrderPosition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1031,20 +1051,20 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.OrderGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.OrderGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OrderGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.OrderGrid.Location = new System.Drawing.Point(5, 30);
+            this.OrderGrid.Location = new System.Drawing.Point(3, 28);
             this.OrderGrid.Name = "OrderGrid";
             this.OrderGrid.ReadOnly = true;
             this.OrderGrid.RowHeadersVisible = false;
             this.OrderGrid.RowHeadersWidth = 51;
             this.OrderGrid.RowTemplate.Height = 23;
-            this.OrderGrid.Size = new System.Drawing.Size(1286, 157);
+            this.OrderGrid.Size = new System.Drawing.Size(1290, 161);
             this.OrderGrid.TabIndex = 0;
             this.OrderGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.OrderGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -1140,10 +1160,13 @@
             // 
             // guna2GroupBox3
             // 
+            this.guna2GroupBox3.BorderColor = System.Drawing.Color.Black;
             this.guna2GroupBox3.Controls.Add(this.tableLayoutPanel7);
+            this.guna2GroupBox3.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(101)))), ((int)(((byte)(183)))));
             this.guna2GroupBox3.CustomBorderThickness = new System.Windows.Forms.Padding(0, 25, 0, 0);
+            this.guna2GroupBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
             this.guna2GroupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GroupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2GroupBox3.ForeColor = System.Drawing.Color.White;
             this.guna2GroupBox3.Location = new System.Drawing.Point(3, 3);
             this.guna2GroupBox3.Name = "guna2GroupBox3";
             this.guna2GroupBox3.Size = new System.Drawing.Size(642, 102);
@@ -1153,7 +1176,7 @@
             // 
             // tableLayoutPanel7
             // 
-            this.tableLayoutPanel7.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
             this.tableLayoutPanel7.ColumnCount = 4;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -1173,7 +1196,7 @@
             // 
             // txtEmployeepass
             // 
-            this.txtEmployeepass.BorderRadius = 5;
+            this.txtEmployeepass.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.txtEmployeepass.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmployeepass.DefaultText = "";
             this.txtEmployeepass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -1224,7 +1247,7 @@
             // 
             // txtEmployeeCode
             // 
-            this.txtEmployeeCode.BorderRadius = 5;
+            this.txtEmployeeCode.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.txtEmployeeCode.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmployeeCode.DefaultText = "";
             this.txtEmployeeCode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -1445,7 +1468,6 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
@@ -1473,9 +1495,9 @@
             this.UpdateButton,
             this.EndOrderButton,
             this.EmegencyButton});
-            this.menuStrip2.Location = new System.Drawing.Point(133, 0);
+            this.menuStrip2.Location = new System.Drawing.Point(486, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1077, 105);
+            this.menuStrip2.Size = new System.Drawing.Size(372, 105);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -1502,6 +1524,7 @@
             this.EndBatchButton.Size = new System.Drawing.Size(110, 81);
             this.EndBatchButton.Text = "จบbatch";
             this.EndBatchButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.EndBatchButton.Visible = false;
             this.EndBatchButton.Click += new System.EventHandler(this.EndBatchButton_Click);
             // 
             // TestPrintButton
@@ -1509,9 +1532,8 @@
             this.TestPrintButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TestPrintButton.Image = ((System.Drawing.Image)(resources.GetObject("TestPrintButton.Image")));
             this.TestPrintButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.TestPrintButton.Margin = new System.Windows.Forms.Padding(10);
             this.TestPrintButton.Name = "TestPrintButton";
-            this.TestPrintButton.Size = new System.Drawing.Size(140, 81);
+            this.TestPrintButton.Size = new System.Drawing.Size(140, 101);
             this.TestPrintButton.Text = "ทดสอบพิมพ์";
             this.TestPrintButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.TestPrintButton.Click += new System.EventHandler(this.TestPrintButton_Click);
@@ -1521,9 +1543,8 @@
             this.StartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StartButton.Image = ((System.Drawing.Image)(resources.GetObject("StartButton.Image")));
             this.StartButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.StartButton.Margin = new System.Windows.Forms.Padding(10);
             this.StartButton.Name = "StartButton";
-            this.StartButton.Size = new System.Drawing.Size(101, 81);
+            this.StartButton.Size = new System.Drawing.Size(101, 101);
             this.StartButton.Text = "เริ่มผลิต";
             this.StartButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.StartButton.Visible = false;
@@ -1583,6 +1604,7 @@
             // 
             // btnSetting
             // 
+            this.btnSetting.BackColor = System.Drawing.Color.Transparent;
             this.btnSetting.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnSetting.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSetting.HoverState.ImageSize = new System.Drawing.Size(64, 64);
