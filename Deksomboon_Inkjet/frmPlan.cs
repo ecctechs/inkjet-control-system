@@ -451,7 +451,9 @@ namespace Deksomboon_Inkjet
                 // เซ็ตสีพื้นหลังของแถวแรก
                 //table.Rows[0]["ลำดับการพิมพ์"] = customColor;
                 OrderGrid.Enabled = false;
-
+                OrderGrid.DefaultCellStyle.ForeColor = Color.Black;
+                OrderGrid.DefaultCellStyle.SelectionForeColor = Color.Black; // สีข้อความที่ต้องการ
+                OrderGrid.DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 183, 77);
                 // รับข้อมูลจากแถวที่เลือก (แถวที่ 0)
                 DataRow selectedRow = table.Rows[0];
 

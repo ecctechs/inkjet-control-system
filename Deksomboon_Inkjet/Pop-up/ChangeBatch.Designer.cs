@@ -76,6 +76,7 @@
             // 
             // txtBatch
             // 
+            this.txtBatch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.txtBatch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBatch.DefaultText = "";
             this.txtBatch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -112,13 +113,15 @@
             // cboMaterial
             // 
             this.cboMaterial.BackColor = System.Drawing.Color.Transparent;
+            this.cboMaterial.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.cboMaterial.DisplayMember = "material_des";
             this.cboMaterial.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cboMaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMaterial.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.cboMaterial.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cboMaterial.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cboMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.cboMaterial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cboMaterial.ForeColor = System.Drawing.Color.Black;
             this.cboMaterial.ItemHeight = 30;
             this.cboMaterial.Location = new System.Drawing.Point(173, 92);
             this.cboMaterial.Name = "cboMaterial";
@@ -129,15 +132,17 @@
             // 
             // txtFormula
             // 
+            this.txtFormula.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.txtFormula.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFormula.DefaultText = "";
             this.txtFormula.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtFormula.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtFormula.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtFormula.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFormula.Enabled = false;
+            this.txtFormula.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.txtFormula.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFormula.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtFormula.ForeColor = System.Drawing.Color.Black;
             this.txtFormula.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFormula.Location = new System.Drawing.Point(173, 156);
             this.txtFormula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -152,15 +157,17 @@
             // 
             // txtSLife
             // 
+            this.txtSLife.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.txtSLife.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSLife.DefaultText = "";
             this.txtSLife.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtSLife.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtSLife.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSLife.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSLife.Enabled = false;
+            this.txtSLife.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.txtSLife.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSLife.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtSLife.ForeColor = System.Drawing.Color.Black;
             this.txtSLife.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSLife.Location = new System.Drawing.Point(173, 220);
             this.txtSLife.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -207,15 +214,17 @@
             // 
             // txtBatchOld
             // 
+            this.txtBatchOld.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.txtBatchOld.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBatchOld.DefaultText = "";
             this.txtBatchOld.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtBatchOld.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtBatchOld.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtBatchOld.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBatchOld.Enabled = false;
+            this.txtBatchOld.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.txtBatchOld.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBatchOld.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtBatchOld.ForeColor = System.Drawing.Color.Black;
             this.txtBatchOld.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBatchOld.Location = new System.Drawing.Point(173, 279);
             this.txtBatchOld.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -243,8 +252,9 @@
             // 
             this.guna2GroupBox1.Controls.Add(this.txtBBF);
             this.guna2GroupBox1.Controls.Add(this.txtTenDigit);
+            this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(101)))), ((int)(((byte)(183)))));
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.White;
             this.guna2GroupBox1.Location = new System.Drawing.Point(26, 403);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.Size = new System.Drawing.Size(428, 118);
@@ -253,6 +263,7 @@
             // 
             // txtBBF
             // 
+            this.txtBBF.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.txtBBF.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBBF.DefaultText = "";
             this.txtBBF.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -260,9 +271,10 @@
             this.txtBBF.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtBBF.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtBBF.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtBBF.Enabled = false;
+            this.txtBBF.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.txtBBF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBBF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtBBF.ForeColor = System.Drawing.Color.Black;
             this.txtBBF.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBBF.Location = new System.Drawing.Point(0, 76);
             this.txtBBF.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -276,6 +288,7 @@
             // 
             // txtTenDigit
             // 
+            this.txtTenDigit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.txtTenDigit.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenDigit.DefaultText = "";
             this.txtTenDigit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -283,9 +296,10 @@
             this.txtTenDigit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTenDigit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTenDigit.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtTenDigit.Enabled = false;
+            this.txtTenDigit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.txtTenDigit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenDigit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtTenDigit.ForeColor = System.Drawing.Color.Black;
             this.txtTenDigit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenDigit.Location = new System.Drawing.Point(0, 40);
             this.txtTenDigit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -507,6 +521,7 @@
             this.txtSumCount.SelectedText = "";
             this.txtSumCount.Size = new System.Drawing.Size(52, 26);
             this.txtSumCount.TabIndex = 121;
+            this.txtSumCount.Visible = false;
             // 
             // txtEmpID
             // 
@@ -694,11 +709,13 @@
             this.txtCount.SelectedText = "";
             this.txtCount.Size = new System.Drawing.Size(70, 26);
             this.txtCount.TabIndex = 129;
+            this.txtCount.Visible = false;
             // 
             // ChangeBatch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(493, 604);
             this.Controls.Add(this.txtCount);
             this.Controls.Add(this.txtAmount);

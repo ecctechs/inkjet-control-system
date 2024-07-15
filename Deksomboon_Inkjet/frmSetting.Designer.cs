@@ -63,7 +63,7 @@
             this.btnClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(337, 289);
+            this.btnClose.Location = new System.Drawing.Point(337, 275);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(144, 45);
             this.btnClose.TabIndex = 25;
@@ -80,7 +80,7 @@
             this.btnConnect.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(135)))), ((int)(((byte)(84)))));
             this.btnConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnConnect.ForeColor = System.Drawing.Color.White;
-            this.btnConnect.Location = new System.Drawing.Point(210, 289);
+            this.btnConnect.Location = new System.Drawing.Point(212, 275);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(110, 45);
             this.btnConnect.TabIndex = 24;
@@ -158,7 +158,7 @@
             this.guna2HtmlLabel2.AutoSize = false;
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(12, 96);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(12, 76);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(141, 31);
             this.guna2HtmlLabel2.TabIndex = 18;
@@ -169,7 +169,7 @@
             this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(200, 27);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(200, 22);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(92, 31);
             this.guna2HtmlLabel1.TabIndex = 17;
@@ -214,6 +214,7 @@
             // cboCOMPort
             // 
             this.cboCOMPort.BackColor = System.Drawing.Color.Transparent;
+            this.cboCOMPort.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.cboCOMPort.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cboCOMPort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCOMPort.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -221,7 +222,7 @@
             this.cboCOMPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.cboCOMPort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cboCOMPort.ItemHeight = 30;
-            this.cboCOMPort.Location = new System.Drawing.Point(200, 91);
+            this.cboCOMPort.Location = new System.Drawing.Point(200, 71);
             this.cboCOMPort.Name = "cboCOMPort";
             this.cboCOMPort.Size = new System.Drawing.Size(281, 36);
             this.cboCOMPort.TabIndex = 31;
@@ -249,7 +250,7 @@
             this.guna2HtmlLabel7.AutoSize = false;
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(12, 155);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(12, 137);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(141, 31);
             this.guna2HtmlLabel7.TabIndex = 33;
@@ -260,7 +261,7 @@
             this.guna2HtmlLabel8.AutoSize = false;
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(12, 220);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(12, 204);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(141, 31);
             this.guna2HtmlLabel8.TabIndex = 34;
@@ -269,6 +270,7 @@
             // cboLine
             // 
             this.cboLine.BackColor = System.Drawing.Color.Transparent;
+            this.cboLine.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.cboLine.DataSource = this.locationBindingSource;
             this.cboLine.DisplayMember = "location_name";
             this.cboLine.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -278,7 +280,7 @@
             this.cboLine.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cboLine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cboLine.ItemHeight = 30;
-            this.cboLine.Location = new System.Drawing.Point(200, 150);
+            this.cboLine.Location = new System.Drawing.Point(200, 137);
             this.cboLine.Name = "cboLine";
             this.cboLine.Size = new System.Drawing.Size(140, 36);
             this.cboLine.TabIndex = 35;
@@ -291,6 +293,7 @@
             // 
             // txtLocationPrefix
             // 
+            this.txtLocationPrefix.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.txtLocationPrefix.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtLocationPrefix.DefaultText = "";
             this.txtLocationPrefix.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -300,7 +303,7 @@
             this.txtLocationPrefix.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLocationPrefix.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtLocationPrefix.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLocationPrefix.Location = new System.Drawing.Point(362, 150);
+            this.txtLocationPrefix.Location = new System.Drawing.Point(362, 137);
             this.txtLocationPrefix.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLocationPrefix.Name = "txtLocationPrefix";
             this.txtLocationPrefix.PasswordChar = '\0';
@@ -313,6 +316,7 @@
             // guna2ComboBox2
             // 
             this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.guna2ComboBox2.DataSource = this.inkjetBindingSource;
             this.guna2ComboBox2.DisplayMember = "inkjet_name";
             this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -322,7 +326,7 @@
             this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.Location = new System.Drawing.Point(200, 215);
+            this.guna2ComboBox2.Location = new System.Drawing.Point(200, 199);
             this.guna2ComboBox2.Name = "guna2ComboBox2";
             this.guna2ComboBox2.Size = new System.Drawing.Size(281, 36);
             this.guna2ComboBox2.TabIndex = 37;
@@ -336,7 +340,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 360);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
+            this.ClientSize = new System.Drawing.Size(493, 332);
             this.Controls.Add(this.guna2ComboBox2);
             this.Controls.Add(this.txtLocationPrefix);
             this.Controls.Add(this.cboLine);
@@ -358,7 +363,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmSetting";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RS-232 Setting";
+            this.Text = "Setting";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmSetting_FormClosing);
             this.Load += new System.EventHandler(this.frmSetting_Load);
             ((System.ComponentModel.ISupportInitialize)(this.locationBindingSource)).EndInit();

@@ -377,7 +377,7 @@
             this.txtCountAmount.Location = new System.Drawing.Point(173, 477);
             this.txtCountAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCountAmount.Maximum = new decimal(new int[] {
-            9999,
+            999999,
             0,
             0,
             0});

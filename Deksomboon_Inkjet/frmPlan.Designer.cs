@@ -717,6 +717,7 @@
             this.guna2TextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Location = new System.Drawing.Point(5, 122);
             this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -825,6 +826,7 @@
             this.txtBBF.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.txtBBF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBBF.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtBBF.ForeColor = System.Drawing.Color.Black;
             this.txtBBF.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBBF.Location = new System.Drawing.Point(5, 76);
             this.txtBBF.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -850,6 +852,7 @@
             this.txtTenDigit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.txtTenDigit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenDigit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTenDigit.ForeColor = System.Drawing.Color.Black;
             this.txtTenDigit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenDigit.Location = new System.Drawing.Point(5, 30);
             this.txtTenDigit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1495,9 +1498,9 @@
             this.UpdateButton,
             this.EndOrderButton,
             this.EmegencyButton});
-            this.menuStrip2.Location = new System.Drawing.Point(486, 0);
+            this.menuStrip2.Location = new System.Drawing.Point(506, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(372, 105);
+            this.menuStrip2.Size = new System.Drawing.Size(332, 101);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -1506,9 +1509,8 @@
             this.StopButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StopButton.Image = ((System.Drawing.Image)(resources.GetObject("StopButton.Image")));
             this.StopButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.StopButton.Margin = new System.Windows.Forms.Padding(10);
             this.StopButton.Name = "StopButton";
-            this.StopButton.Size = new System.Drawing.Size(105, 81);
+            this.StopButton.Size = new System.Drawing.Size(105, 97);
             this.StopButton.Text = "หยุดผลิต";
             this.StopButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.StopButton.Visible = false;
@@ -1519,9 +1521,8 @@
             this.EndBatchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EndBatchButton.Image = ((System.Drawing.Image)(resources.GetObject("EndBatchButton.Image")));
             this.EndBatchButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.EndBatchButton.Margin = new System.Windows.Forms.Padding(10);
             this.EndBatchButton.Name = "EndBatchButton";
-            this.EndBatchButton.Size = new System.Drawing.Size(110, 81);
+            this.EndBatchButton.Size = new System.Drawing.Size(110, 97);
             this.EndBatchButton.Text = "จบbatch";
             this.EndBatchButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.EndBatchButton.Visible = false;
@@ -1533,7 +1534,7 @@
             this.TestPrintButton.Image = ((System.Drawing.Image)(resources.GetObject("TestPrintButton.Image")));
             this.TestPrintButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.TestPrintButton.Name = "TestPrintButton";
-            this.TestPrintButton.Size = new System.Drawing.Size(140, 101);
+            this.TestPrintButton.Size = new System.Drawing.Size(140, 97);
             this.TestPrintButton.Text = "ทดสอบพิมพ์";
             this.TestPrintButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.TestPrintButton.Click += new System.EventHandler(this.TestPrintButton_Click);
@@ -1544,7 +1545,7 @@
             this.StartButton.Image = ((System.Drawing.Image)(resources.GetObject("StartButton.Image")));
             this.StartButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.StartButton.Name = "StartButton";
-            this.StartButton.Size = new System.Drawing.Size(101, 101);
+            this.StartButton.Size = new System.Drawing.Size(101, 97);
             this.StartButton.Text = "เริ่มผลิต";
             this.StartButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.StartButton.Visible = false;
@@ -1555,9 +1556,8 @@
             this.UpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateButton.Image = ((System.Drawing.Image)(resources.GetObject("UpdateButton.Image")));
             this.UpdateButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.UpdateButton.Margin = new System.Windows.Forms.Padding(10);
             this.UpdateButton.Name = "UpdateButton";
-            this.UpdateButton.Size = new System.Drawing.Size(80, 81);
+            this.UpdateButton.Size = new System.Drawing.Size(80, 97);
             this.UpdateButton.Text = "แก้ไข";
             this.UpdateButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
@@ -1567,9 +1567,8 @@
             this.EndOrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EndOrderButton.Image = ((System.Drawing.Image)(resources.GetObject("EndOrderButton.Image")));
             this.EndOrderButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.EndOrderButton.Margin = new System.Windows.Forms.Padding(10);
             this.EndOrderButton.Name = "EndOrderButton";
-            this.EndOrderButton.Size = new System.Drawing.Size(139, 81);
+            this.EndOrderButton.Size = new System.Drawing.Size(139, 97);
             this.EndOrderButton.Text = "จบออร์เดอร์";
             this.EndOrderButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.EndOrderButton.Visible = false;
@@ -1580,9 +1579,8 @@
             this.EmegencyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmegencyButton.Image = ((System.Drawing.Image)(resources.GetObject("EmegencyButton.Image")));
             this.EmegencyButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.EmegencyButton.Margin = new System.Windows.Forms.Padding(10);
             this.EmegencyButton.Name = "EmegencyButton";
-            this.EmegencyButton.Size = new System.Drawing.Size(104, 81);
+            this.EmegencyButton.Size = new System.Drawing.Size(104, 97);
             this.EmegencyButton.Text = "งานด่วน";
             this.EmegencyButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.EmegencyButton.Click += new System.EventHandler(this.EmegencyButton_Click);

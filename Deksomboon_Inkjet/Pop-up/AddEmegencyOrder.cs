@@ -52,10 +52,10 @@ namespace Deksomboon_Inkjet.Pop_up
                 }
                 else if (form == "2")
                 {
-                    cboMaterial.Enabled = false;
-                    cboPosition.Enabled = false;
-                txtAmount.Enabled = false;
-                txtAmount.FillColor = Color.FromArgb(193, 200, 207);
+                 cboMaterial.Enabled = false;
+                cboPosition.Enabled = false;
+                //txtAmount.Enabled = false;
+                //txtAmount.FillColor = Color.FromArgb(193, 200, 207);
 
                 cboTypePrint.Text = obj.ord_type_print.ToString();
                 txtEmpID.Text = emp_id.ToString();

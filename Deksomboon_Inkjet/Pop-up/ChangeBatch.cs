@@ -41,6 +41,7 @@ namespace Deksomboon_Inkjet.Pop_up
 
             cboMaterial.Enabled = false;
 
+
             txtOrdID.Text = obj.ord_id.ToString();
             cboOrdType.Text = obj.ord_type.ToString();
             guna2HtmlLabel1.Text = "เปลี่ยน batch";
