@@ -188,8 +188,8 @@ namespace Deksomboon_Inkjet.Pop_up
 
                                         if (materialCount > 0)
                                         {
-                                            string query = @"INSERT INTO order_preview (material_id, location_id, ord_batch, inkjet_id , ord_type , ord_status , ord_date , ord_count_amount , ord_count , ord_status_print , ord_type_print ) 
-                                         VALUES (@material_id, @location_id, @ord_batch, @inkjet_id , @ord_type , @ord_status , @ord_date , @ord_count_amount , @ord_count , @ord_status_print , @ord_type_print) 
+                                            string query = @"INSERT INTO order_preview (material_id, location_id, ord_batch, inkjet_id , ord_type , ord_status , ord_date , ord_count_amount , ord_count , ord_status_print , ord_type_print , ord_type_print_swap , ord_type_print_time) 
+                                         VALUES (@material_id, @location_id, @ord_batch, @inkjet_id , @ord_type , @ord_status , @ord_date , @ord_count_amount , @ord_count , @ord_status_print , @ord_type_print , @ord_type_print_swap , @ord_type_print_time) 
                                          ON CONFLICT (ord_id) DO UPDATE
                                          SET material_id = EXCLUDED.material_id, 
                                              location_id = EXCLUDED.location_id, 
@@ -209,6 +209,8 @@ namespace Deksomboon_Inkjet.Pop_up
                                                 command.Parameters.AddWithValue("@ord_count", 0);
                                                 command.Parameters.AddWithValue("@ord_status_print", "รอผลิต");
                                                 command.Parameters.AddWithValue("@ord_type_print", "2 บรรทัด");
+                                                command.Parameters.AddWithValue("@ord_type_print_swap", false);
+                                                command.Parameters.AddWithValue("@ord_type_print_time", false);
 
                                                 command.ExecuteNonQuery();
                                             }

@@ -83,6 +83,7 @@ namespace Deksomboon_Inkjet
         }
         private async void OnTimerTick_refreash(object sender, EventArgs e)
         {
+            //update_order_time();
             refreash_order();
         }
         private async void OnTimerTick_count(object sender, EventArgs e)
@@ -352,9 +353,9 @@ namespace Deksomboon_Inkjet
 
         private void frmPlan_Load_1(object sender, EventArgs e)
         {
-            refreash_order();
-            clear_authroized();
             update_order_date();
+            refreash_order();
+            clear_authroized();          
         }
 
         public void refreash_order()
@@ -374,6 +375,15 @@ namespace Deksomboon_Inkjet
             //orderBindingSource.DataSource = records;
 
             Order.Update_Order_Date(records);
+        }
+        public void update_order_time()
+        {
+            string inkjet_local = LocalStorage.ReadInkjetData();
+            string location_local = LocalStorage.ReadLocationData();
+            List<Order> records = Order.ListAndUpdateOrderByInkjetLocation(location_local, inkjet_local);
+            //orderBindingSource.DataSource = records;
+            string date_update = txtDate.Text;
+            Order.Update_Order_Timer(records , date_update);
         }
 
         public void clear_authroized()
@@ -407,6 +417,8 @@ namespace Deksomboon_Inkjet
                 table.Columns.Add("ord_count_amount", typeof(string));  // เพิ่ม column สำหรับ ord_date
                 table.Columns.Add("ord_type_print", typeof(string));  // เพิ่ม column สำหรับ ord_date
                 table.Columns.Add("ord_count", typeof(string));  // เพิ่ม column สำหรับ ord_date
+                table.Columns.Add("ord_type_print_swap", typeof(bool));  // เพิ่ม column สำหรับ ord_date
+                table.Columns.Add("ord_type_print_time", typeof(bool));  // เพิ่ม column สำหรับ ord_date
 
             }
             else
@@ -432,7 +444,9 @@ namespace Deksomboon_Inkjet
                     record.ord_status,
                     record.ord_count_amount,
                     record.ord_type_print,
-                    record.ord_count
+                    record.ord_count,
+                    record.ord_type_print_swap,
+                    record.ord_type_print_time
                 // เพิ่มข้อมูลอื่นๆ ตามต้องการ
                 );
             }
@@ -471,6 +485,7 @@ namespace Deksomboon_Inkjet
                     string columnOrderID = selectedRow["ord_id"].ToString();
                     string columnCount_Amount = selectedRow["ord_count_amount"].ToString();
                     string columnCount = selectedRow["ord_count"].ToString();
+
 
                     // นำข้อมูลไปแสดงใน TextBox หรือคอนโทรลที่ต้องการ
                     txtBatch.Text = columnBatch;
@@ -516,6 +531,8 @@ namespace Deksomboon_Inkjet
             OrderGrid.Columns["ord_count_amount"].Visible = false;
             OrderGrid.Columns["ord_count"].Visible = false;
             OrderGrid.Columns["ord_type_print"].Visible = false;
+            OrderGrid.Columns["ord_type_print_swap"].Visible = false;
+            OrderGrid.Columns["ord_type_print_time"].Visible = false;
         }
 
         public void get_setting()
@@ -530,6 +547,10 @@ namespace Deksomboon_Inkjet
         {
             if (OrderGrid.RowCount > 0)
             {
+                DataRow selectedRow = table.Rows[0];
+                bool column_ord_type_print_swap = bool.Parse(selectedRow["ord_type_print_swap"].ToString());
+                bool column_ord_type_print_time = bool.Parse(selectedRow["ord_type_print_time"].ToString());
+
                 string date_order = txtDate.Text;
                 DateTime order_date_test = DateTime.Parse(date_order).AddYears(+543);
                 //DateTime order_date = dateTimePicker1.Value;
@@ -541,22 +562,38 @@ namespace Deksomboon_Inkjet
                 string slife = txtSLife.Text;
 
                 string tenDigit = GenerateBatchNumber.order_batch_number_generate(order_date_test, batch, formula, line);
-                string BBF = GenerateBatchNumber.order_bbf_generate(order_date_test, slife);
+                string BBF = GenerateBatchNumber.order_bbf_generate(order_date_test, slife , column_ord_type_print_swap , column_ord_type_print_time);
+                string MFG = GenerateBatchNumber.order_mfg_generate(order_date_test, slife , column_ord_type_print_swap , column_ord_type_print_time);
+                string EXP = GenerateBatchNumber.order_exp_generate(order_date_test, slife , column_ord_type_print_swap , column_ord_type_print_time);
 
                 if (table.Rows.Count > 0) // ตรวจสอบว่า DataTable (table) มีข้อมูลหรือไม่
                 {
-                    DataRow selectedRow = table.Rows[0];
+                    
                     string columnTypePrint = selectedRow["ord_type_print"].ToString();
 
                     if(columnTypePrint == "2 บรรทัด")
                     {
                         txtTenDigit.Text = tenDigit;
                         txtBBF.Text = BBF;
+                        txtExp.Text = "";
                     }
                     else if(columnTypePrint == "2 บรรทัด-สลับ")
                     {
                         txtTenDigit.Text = BBF;
                         txtBBF.Text = tenDigit;
+                        txtExp.Text = "";
+                    }
+                    else if (columnTypePrint == "3 บรรทัด")
+                    {
+                        txtTenDigit.Text = tenDigit;
+                        txtBBF.Text = MFG;
+                        txtExp.Text = EXP;
+                    }
+                    else if (columnTypePrint == "3 บรรทัด-สลับ")
+                    {
+                        txtTenDigit.Text = MFG;
+                        txtBBF.Text = EXP;
+                        txtExp.Text = tenDigit;
                     }
                     else
                     {
@@ -878,9 +915,11 @@ namespace Deksomboon_Inkjet
             bool send_text = false;
             string tenDigit = txtTenDigit.Text;
             string bbf = txtBBF.Text;
+            string exp = txtExp.Text;
 
             byte[] messageBytes = Encoding.UTF8.GetBytes(tenDigit);
             byte[] messageBytes2 = Encoding.UTF8.GetBytes(bbf);
+            byte[] messageBytes3 = Encoding.UTF8.GetBytes(exp);
 
             // สร้างไบต์คำสั่งทั้งหมด
             List<byte> commandBytesList = new List<byte> { 0x1B, 0x02, 0x9E, 0x01 };
@@ -899,8 +938,17 @@ namespace Deksomboon_Inkjet
             commandBytesList2.Add(0x1B);
             commandBytesList2.Add(0x03);
 
+            List<byte> commandBytesList3 = new List<byte> { 0x1B, 0x02, 0x9E, 0x01 };
+            commandBytesList3.AddRange(Encoding.UTF8.GetBytes("EXP"));
+            commandBytesList3.Add(0x00);
+            commandBytesList3.AddRange(messageBytes3);
+            commandBytesList3.Add(0x00);
+            commandBytesList3.Add(0x1B);
+            commandBytesList3.Add(0x03);
+
             byte[] commandBytes = commandBytesList.ToArray();
             byte[] commandBytes2 = commandBytesList2.ToArray();
+            byte[] commandBytes3 = commandBytesList3.ToArray();
 
             // ส่งคำสั่งแรกและตรวจสอบสถานะ
             send_text = await SendCommandAndCheckStatusAsync(commandBytes);
@@ -918,6 +966,20 @@ namespace Deksomboon_Inkjet
 
             // ส่งคำสั่งที่สองและตรวจสอบสถานะ
             send_text = await SendCommandAndCheckStatusAsync(commandBytes2);
+            if (!send_text)
+            {
+                return false; // ส่งคำสั่งไม่สำเร็จ
+            }
+
+            // ล้างสถานะ
+            bytesCount_list.Clear();
+            bytesStatus_list.Clear();
+            bytesJETstart_list.Clear();
+            bytesJETstop_list.Clear();
+            bytesJETstartPrint_list.Clear();
+
+            // ส่งคำสั่งที่สองและตรวจสอบสถานะ
+            send_text = await SendCommandAndCheckStatusAsync(commandBytes3);
             if (!send_text)
             {
                 return false; // ส่งคำสั่งไม่สำเร็จ
@@ -1306,7 +1368,7 @@ namespace Deksomboon_Inkjet
 
             //if (serialPortManager.IsOpen())
             //{
-                bool isConnected = await DatabaseManager.CheckDataBaseAsync();
+            bool isConnected = await DatabaseManager.CheckDataBaseAsync();
 
                 if (isConnected == true)
                 {

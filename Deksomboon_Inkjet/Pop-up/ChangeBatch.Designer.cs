@@ -40,6 +40,7 @@
             this.txtBatchOld = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.txtExp = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtBBF = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenDigit = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
@@ -60,6 +61,8 @@
             this.cboTypePrint = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtAmount = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCount = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCheckSwap = new System.Windows.Forms.CheckBox();
+            this.txtCheckTime = new System.Windows.Forms.CheckBox();
             this.guna2GroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -250,6 +253,7 @@
             // 
             // guna2GroupBox1
             // 
+            this.guna2GroupBox1.Controls.Add(this.txtExp);
             this.guna2GroupBox1.Controls.Add(this.txtBBF);
             this.guna2GroupBox1.Controls.Add(this.txtTenDigit);
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(101)))), ((int)(((byte)(183)))));
@@ -257,9 +261,34 @@
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.White;
             this.guna2GroupBox1.Location = new System.Drawing.Point(26, 403);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(428, 118);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(428, 167);
             this.guna2GroupBox1.TabIndex = 79;
             this.guna2GroupBox1.Text = "พรีวิว";
+            // 
+            // txtExp
+            // 
+            this.txtExp.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
+            this.txtExp.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtExp.DefaultText = "";
+            this.txtExp.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtExp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtExp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtExp.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtExp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtExp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
+            this.txtExp.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtExp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtExp.ForeColor = System.Drawing.Color.Black;
+            this.txtExp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtExp.Location = new System.Drawing.Point(0, 118);
+            this.txtExp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtExp.Name = "txtExp";
+            this.txtExp.PasswordChar = '\0';
+            this.txtExp.PlaceholderText = "";
+            this.txtExp.ReadOnly = true;
+            this.txtExp.SelectedText = "";
+            this.txtExp.Size = new System.Drawing.Size(428, 42);
+            this.txtExp.TabIndex = 63;
             // 
             // txtBBF
             // 
@@ -321,7 +350,7 @@
             this.btnClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(335, 540);
+            this.btnClose.Location = new System.Drawing.Point(335, 614);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(119, 45);
             this.btnClose.TabIndex = 81;
@@ -338,7 +367,7 @@
             this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(135)))), ((int)(((byte)(84)))));
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(218, 540);
+            this.btnSave.Location = new System.Drawing.Point(219, 614);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(110, 45);
             this.btnSave.TabIndex = 80;
@@ -487,7 +516,7 @@
             this.txtTenDigitOld.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenDigitOld.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtTenDigitOld.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenDigitOld.Location = new System.Drawing.Point(26, 528);
+            this.txtTenDigitOld.Location = new System.Drawing.Point(26, 598);
             this.txtTenDigitOld.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTenDigitOld.MaxLength = 3;
             this.txtTenDigitOld.Name = "txtTenDigitOld";
@@ -603,7 +632,7 @@
             this.txtEmpcode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmpcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtEmpcode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmpcode.Location = new System.Drawing.Point(26, 562);
+            this.txtEmpcode.Location = new System.Drawing.Point(26, 632);
             this.txtEmpcode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpcode.MaxLength = 3;
             this.txtEmpcode.Name = "txtEmpcode";
@@ -627,7 +656,7 @@
             this.txtEmppass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmppass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtEmppass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmppass.Location = new System.Drawing.Point(111, 562);
+            this.txtEmppass.Location = new System.Drawing.Point(111, 632);
             this.txtEmppass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmppass.MaxLength = 3;
             this.txtEmppass.Name = "txtEmppass";
@@ -711,12 +740,36 @@
             this.txtCount.TabIndex = 129;
             this.txtCount.Visible = false;
             // 
+            // txtCheckSwap
+            // 
+            this.txtCheckSwap.AutoSize = true;
+            this.txtCheckSwap.Location = new System.Drawing.Point(263, 285);
+            this.txtCheckSwap.Name = "txtCheckSwap";
+            this.txtCheckSwap.Size = new System.Drawing.Size(95, 20);
+            this.txtCheckSwap.TabIndex = 130;
+            this.txtCheckSwap.Text = "checkBox1";
+            this.txtCheckSwap.UseVisualStyleBackColor = true;
+            this.txtCheckSwap.Visible = false;
+            // 
+            // txtCheckTime
+            // 
+            this.txtCheckTime.AutoSize = true;
+            this.txtCheckTime.Location = new System.Drawing.Point(263, 319);
+            this.txtCheckTime.Name = "txtCheckTime";
+            this.txtCheckTime.Size = new System.Drawing.Size(95, 20);
+            this.txtCheckTime.TabIndex = 131;
+            this.txtCheckTime.Text = "checkBox2";
+            this.txtCheckTime.UseVisualStyleBackColor = true;
+            this.txtCheckTime.Visible = false;
+            // 
             // ChangeBatch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(493, 604);
+            this.ClientSize = new System.Drawing.Size(493, 671);
+            this.Controls.Add(this.txtCheckTime);
+            this.Controls.Add(this.txtCheckSwap);
             this.Controls.Add(this.txtCount);
             this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.cboTypePrint);
@@ -754,6 +807,7 @@
             this.Load += new System.EventHandler(this.ChangeBatch_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -791,5 +845,8 @@
         private Guna.UI2.WinForms.Guna2TextBox cboTypePrint;
         private Guna.UI2.WinForms.Guna2TextBox txtAmount;
         private Guna.UI2.WinForms.Guna2TextBox txtCount;
+        private Guna.UI2.WinForms.Guna2TextBox txtExp;
+        private System.Windows.Forms.CheckBox txtCheckSwap;
+        private System.Windows.Forms.CheckBox txtCheckTime;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -55,9 +56,56 @@ namespace Deksomboon_Inkjet.Class
             return tenDigit;
         }
 
-        public static string order_bbf_generate(DateTime date, string slife)
+        public static string order_bbf_generate(DateTime date, string slife , bool column_ord_type_print_swap , bool column_ord_type_print_time)
         {
             string BBF = "";
+            DateTime currentTime = DateTime.Now;
+            if (slife != "")
+            {
+                int numberOfDays = Int32.Parse(slife);
+
+                // บวกจำนวนวันกับวันที่ปัจจุบัน
+                DateTime resultDate = date.AddMonths(numberOfDays);
+                string resultDateString = "";
+                //string resultDateString = resultDate.AddYears(-543).ToString("dd/MM/yyyy"); // รูปแบบสตริงตามที่ต้องการ เช่น "yyyy-MM-dd"
+                if (column_ord_type_print_swap == false)
+                {
+                    if (column_ord_type_print_time == false)
+                    {
+                        resultDateString = resultDate.AddYears(-543).ToString("dd/MM/yyyy");
+                    }
+                    else
+                    {
+                        resultDateString = resultDate.AddYears(-543).ToString("dd/MM/yyyy HH:mm");
+                    }
+                }
+                else
+                {                     
+                    if (column_ord_type_print_time == false)
+                    {
+                        resultDateString = resultDate.AddYears(-543).ToString("yyyy/MM/dd");
+                    }
+                    else
+                    {
+                        resultDateString = resultDate.AddYears(-543).ToString("yyyy/MM/dd HH:mm");
+                    }
+                }
+                // Combine with current time if needed
+                if (column_ord_type_print_time)
+                {
+                    resultDateString = resultDate.AddYears(-543).ToString("yyyy/MM/dd") + " " + currentTime.ToString("HH:mm");
+                }
+
+                //Console.WriteLine(resultDateString);
+                BBF = "BBF "+ resultDateString;
+            }
+            return BBF;
+        }
+
+        public static string order_exp_generate(DateTime date, string slife , bool column_ord_type_print_swap, bool column_ord_type_print_time)
+        {
+            string BBF = "";
+            DateTime currentTime = DateTime.Now;
 
             if (slife != "")
             {
@@ -66,10 +114,84 @@ namespace Deksomboon_Inkjet.Class
                 // บวกจำนวนวันกับวันที่ปัจจุบัน
                 DateTime resultDate = date.AddMonths(numberOfDays);
 
-                string resultDateString = resultDate.AddYears(-543).ToString("dd/MM/yyyy"); // รูปแบบสตริงตามที่ต้องการ เช่น "yyyy-MM-dd"
+                //string resultDateString = resultDate.AddYears(-543).ToString("yyyy/MM/dd"); // รูปแบบสตริงตามที่ต้องการ เช่น "yyyy-MM-dd"
+                string resultDateString = "";
+                //string resultDateString = resultDate.AddYears(-543).ToString("dd/MM/yyyy"); // รูปแบบสตริงตามที่ต้องการ เช่น "yyyy-MM-dd"
+                if (column_ord_type_print_swap == false)
+                {
+                    if (column_ord_type_print_time == false)
+                    {
+                        resultDateString = resultDate.AddYears(-543).ToString("dd/MM/yyyy");
+                    }
+                    else
+                    {
+                        resultDateString = resultDate.AddYears(-543).ToString("dd/MM/yyyy HH:mm");
+                    }
+                }
+                else
+                {
+                    if (column_ord_type_print_time == false)
+                    {
+                        resultDateString = resultDate.AddYears(-543).ToString("yyyy/MM/dd");
+                    }
+                    else
+                    {
+                        resultDateString = resultDate.AddYears(-543).ToString("yyyy/MM/dd HH:mm");
+                    }
+                }
 
-                Console.WriteLine(resultDateString);
-                BBF = "BBF "+ resultDateString;
+                // Combine with current time if needed
+                if (column_ord_type_print_time)
+                {
+                    resultDateString = resultDate.AddYears(-543).ToString("yyyy/MM/dd") + " " + currentTime.ToString("HH:mm");
+                }
+
+                //Console.WriteLine(resultDateString);
+                BBF = "EXP " + resultDateString;
+            }
+            return BBF;
+        }
+
+
+        public static string order_mfg_generate(DateTime date, string slife , bool column_ord_type_print_swap, bool column_ord_type_print_time)
+        {
+            string BBF = "";
+
+            if (slife != "")
+            {
+                int numberOfDays = Int32.Parse(slife);
+
+                // บวกจำนวนวันกับวันที่ปัจจุบัน
+                //DateTime resultDate = date.AddMonths(numberOfDays);
+                DateTime resultDate = DateTime.Now;
+
+                //string resultDateString = resultDate.AddYears(-543).ToString("yyyy/MM/dd"); // รูปแบบสตริงตามที่ต้องการ เช่น "yyyy-MM-dd"
+                string resultDateString = "";
+                //string resultDateString = resultDate.AddYears(-543).ToString("dd/MM/yyyy"); // รูปแบบสตริงตามที่ต้องการ เช่น "yyyy-MM-dd"
+                if (column_ord_type_print_swap == false)
+                {
+                    if (column_ord_type_print_time == false)
+                    {
+                        resultDateString = resultDate.AddYears(-543).ToString("dd/MM/yyyy");
+                    }
+                    else
+                    {
+                        resultDateString = resultDate.AddYears(-543).ToString("dd/MM/yyyy HH:mm");
+                    }
+                }
+                else
+                {
+                    if (column_ord_type_print_time == false)
+                    {
+                        resultDateString = resultDate.AddYears(-543).ToString("yyyy/MM/dd");
+                    }
+                    else
+                    {
+                        resultDateString = resultDate.AddYears(-543).ToString("yyyy/MM/dd HH:mm");
+                    }
+                }
+                //Console.WriteLine(resultDateString);
+                BBF = "MFG " + resultDateString;
             }
             return BBF;
         }

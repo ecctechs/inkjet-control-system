@@ -62,7 +62,7 @@
             this.txtOrderStatus = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel18 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtExp = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtBatch = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCountEnd = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtOrderDateStart = new Guna.UI2.WinForms.Guna2TextBox();
@@ -680,7 +680,7 @@
             // guna2GroupBox4
             // 
             this.guna2GroupBox4.BorderColor = System.Drawing.Color.Black;
-            this.guna2GroupBox4.Controls.Add(this.guna2TextBox1);
+            this.guna2GroupBox4.Controls.Add(this.txtExp);
             this.guna2GroupBox4.Controls.Add(this.txtBatch);
             this.guna2GroupBox4.Controls.Add(this.txtCountEnd);
             this.guna2GroupBox4.Controls.Add(this.txtOrderDateStart);
@@ -704,31 +704,31 @@
             this.guna2GroupBox4.Text = "ข้อความที่พิมพ์";
             this.guna2GroupBox4.TextOffset = new System.Drawing.Point(0, -7);
             // 
-            // guna2TextBox1
+            // txtExp
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2TextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(5, 122);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.ReadOnly = true;
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(224, 46);
-            this.guna2TextBox1.TabIndex = 34;
-            this.guna2TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtExp.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
+            this.txtExp.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtExp.DefaultText = "";
+            this.txtExp.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtExp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtExp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtExp.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtExp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtExp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
+            this.txtExp.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtExp.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtExp.ForeColor = System.Drawing.Color.Black;
+            this.txtExp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtExp.Location = new System.Drawing.Point(5, 122);
+            this.txtExp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtExp.Name = "txtExp";
+            this.txtExp.PasswordChar = '\0';
+            this.txtExp.PlaceholderText = "";
+            this.txtExp.ReadOnly = true;
+            this.txtExp.SelectedText = "";
+            this.txtExp.Size = new System.Drawing.Size(224, 46);
+            this.txtExp.TabIndex = 34;
+            this.txtExp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBatch
             // 
@@ -1322,7 +1322,7 @@
             this.txtPrintState.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrintState.Location = new System.Drawing.Point(131, 3);
             this.txtPrintState.Name = "txtPrintState";
-            this.txtPrintState.Size = new System.Drawing.Size(152, 18);
+            this.txtPrintState.Size = new System.Drawing.Size(508, 22);
             this.txtPrintState.TabIndex = 19;
             this.txtPrintState.Text = "Print States : Not Connect";
             this.txtPrintState.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1367,7 +1367,7 @@
             this.txtJetState.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtJetState.Location = new System.Drawing.Point(131, 3);
             this.txtJetState.Name = "txtJetState";
-            this.txtJetState.Size = new System.Drawing.Size(137, 18);
+            this.txtJetState.Size = new System.Drawing.Size(508, 22);
             this.txtJetState.TabIndex = 19;
             this.txtJetState.Text = "Jet State : Not Connect";
             this.txtJetState.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1411,7 +1411,7 @@
             this.txtDBStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDBStatus.Location = new System.Drawing.Point(131, 3);
             this.txtDBStatus.Name = "txtDBStatus";
-            this.txtDBStatus.Size = new System.Drawing.Size(145, 18);
+            this.txtDBStatus.Size = new System.Drawing.Size(508, 21);
             this.txtDBStatus.TabIndex = 19;
             this.txtDBStatus.Text = "Database : Not Connect";
             this.txtDBStatus.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1455,7 +1455,7 @@
             this.txtRS232S.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRS232S.Location = new System.Drawing.Point(131, 3);
             this.txtRS232S.Name = "txtRS232S";
-            this.txtRS232S.Size = new System.Drawing.Size(129, 18);
+            this.txtRS232S.Size = new System.Drawing.Size(508, 19);
             this.txtRS232S.TabIndex = 19;
             this.txtRS232S.Text = "RS-232 : Not Connect";
             this.txtRS232S.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1787,6 +1787,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2TextBox txtCount;
         private Guna.UI2.WinForms.Guna2TextBox txtBatch;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtExp;
     }
 }

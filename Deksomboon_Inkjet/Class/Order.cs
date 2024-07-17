@@ -37,6 +37,12 @@ namespace Deksomboon_Inkjet.Class
 
         public string ord_type_print { get; set; }
 
+        public bool ord_type_print_swap { get; set; }
+
+        public bool ord_type_print_time { get; set; }
+
+
+
 
         public static List<Order> ListOrder()
         {
@@ -208,41 +214,8 @@ namespace Deksomboon_Inkjet.Class
             }
         }
 
-        //public static void Add_OrderEmergency(string material_id, string line, int batch, string inkjet_id, string type , int ord_position)
-        //{
-        //    try
-        //    {
-        //        using (var dbManager = new DatabaseManager())
-        //        {
-        //            dbManager.OpenConnection();
-
-        //            string query = @"INSERT INTO order_detail ( material_id, location_id, ord_batch, inkjet_id , ord_type , ord_status) 
-        //                     VALUES ( @material_id, @location_id, @ord_batch, @inkjet_id , @ord_type , @ord_status)";
-
-        //            //Console.WriteLine(query);
-        //            using (NpgsqlCommand command = new NpgsqlCommand(query, dbManager.connection))
-        //            {
-        //                command.Parameters.AddWithValue("@material_id", material_id);
-        //                command.Parameters.AddWithValue("@location_id", Int32.Parse(line));
-        //                command.Parameters.AddWithValue("@ord_batch", batch);
-        //                command.Parameters.AddWithValue("@inkjet_id", Int32.Parse(inkjet_id));
-        //                command.Parameters.AddWithValue("@ord_type", type);
-        //                command.Parameters.AddWithValue("@ord_status", "รับออร์เดอร์");
-
-        //                command.ExecuteNonQuery();
-
-        //                Console.WriteLine("Order added successfully.");
-        //                MessageBox.Show("Order added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //            }
-        //        }
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        Console.WriteLine("Order adding material: " + e.ToString());
-        //        MessageBox.Show("Order adding material: " + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //}
-        public static void Add_OrderEmergency(string material_id, int line, string batch, int inkjet_id, string type, int ord_position, int emp_id, string tenDigit , string date , string amount , string ord_type_print)
+   
+        public static void Add_OrderEmergency(string material_id, int line, string batch, int inkjet_id, string type, int ord_position, int emp_id, string tenDigit , string date , string amount , string ord_type_print , bool check_swap, bool check_time)
         {
             try
             {
@@ -295,8 +268,8 @@ namespace Deksomboon_Inkjet.Class
                                 }
                             }
 
-                            string query2 = @"INSERT INTO order_detail ( material_id, ord_batch, location_id, inkjet_id , ord_type , ord_status , ord_position ,ord_date , ord_count_amount , ord_count , ord_status_print , ord_type_print) 
-                             VALUES ( @material_id, @ord_batch, @location_id, @inkjet_id , @ord_type , @ord_status , @ord_position , @ord_date , @ord_count_amount , @ord_count , @ord_status_print , @ord_type_print)";
+                            string query2 = @"INSERT INTO order_detail ( material_id, ord_batch, location_id, inkjet_id , ord_type , ord_status , ord_position ,ord_date , ord_count_amount , ord_count , ord_status_print , ord_type_print , ord_type_print_swap , ord_type_print_time) 
+                             VALUES ( @material_id, @ord_batch, @location_id, @inkjet_id , @ord_type , @ord_status , @ord_position , @ord_date , @ord_count_amount , @ord_count , @ord_status_print , @ord_type_print , @ord_type_print_swap , @ord_type_print_time)";
                             //Console.WriteLine(query2);
                             //Console.WriteLine(line);
                             //Console.WriteLine(inkjet_id);
@@ -315,6 +288,8 @@ namespace Deksomboon_Inkjet.Class
                                 insertCommand.Parameters.AddWithValue("@ord_count", 0);
                                 insertCommand.Parameters.AddWithValue("@ord_status_print", "รอผลิต");
                                 insertCommand.Parameters.AddWithValue("@ord_type_print", ord_type_print);
+                                insertCommand.Parameters.AddWithValue("@ord_type_print_swap", check_swap);
+                                insertCommand.Parameters.AddWithValue("@ord_type_print_time", check_time);
 
                                 insertCommand.ExecuteNonQuery();
 
@@ -405,7 +380,63 @@ namespace Deksomboon_Inkjet.Class
             }
         }
 
-        public static void Update_Order(string order_id, string line, string inkjet, string material, string batch, string type , string ord_date , string ord_type_print , string amount)
+        public static void Update_Order_Timer(List<Order> record , string date_update)
+        {
+            try
+            {
+                DateTime st1 = DateTime.Parse(date_update);
+                string date_now = st1.AddSeconds(-st1.Second).ToString("dd/MM/yyyy HH:mm");
+               
+
+                using (var dbManager = new DatabaseManager())
+                {
+                    dbManager.OpenConnection();
+
+                    foreach (Order order in record)
+                    {
+                        string query = @"UPDATE order_detail 
+                                 SET location_id = @location_id, 
+                                     material_id = @material_id, 
+                                     inkjet_id = @inkjet_id, 
+                                     ord_batch = @ord_batch,
+                                     ord_date = @ord_date,
+                                     ord_type = @ord_type 
+                                 WHERE ord_id = @ord_id";
+
+                        using (NpgsqlCommand command = new NpgsqlCommand(query, dbManager.connection))
+                        {
+                            command.Parameters.AddWithValue("@location_id", order.location_id); // ตั้งค่าพารามิเตอร์ต่างๆ
+                            command.Parameters.AddWithValue("@inkjet_id", order.inkjet_id);
+                            command.Parameters.AddWithValue("@material_id", order.material_id);
+                            command.Parameters.AddWithValue("@ord_batch", order.ord_batch);
+                            command.Parameters.AddWithValue("@ord_type", order.ord_type);
+                            command.Parameters.AddWithValue("@ord_date", date_now); // ตั้งค่า ord_date เป็นวันที่ปัจจุบัน
+                            command.Parameters.AddWithValue("@ord_id", order.ord_id); // ตั้งค่า ord_id
+
+                            int rowsAffected = command.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
+                            {
+                                Console.WriteLine("Order with ID " + order.ord_id + " updated successfully.");
+                                // แสดงผลลัพธ์หรือแจ้งเตือนตามที่คุณต้องการ
+                            }
+                            else
+                            {
+                                Console.WriteLine("Order with ID " + order.ord_id + " not found.");
+                                // แสดงผลลัพธ์หรือแจ้งเตือนตามที่คุณต้องการ
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error updating Order: " + e.ToString());
+                // แสดงข้อผิดพลาดหรือแจ้งเตือนตามที่คุณต้องการ
+            }
+        }
+
+        public static void Update_Order(string order_id, string line, string inkjet, string material, string batch, string type , string ord_date , string ord_type_print , string amount , bool check_swap , bool check_time)
         {
             try
             {
@@ -421,7 +452,9 @@ namespace Deksomboon_Inkjet.Class
                              ord_date = @ord_date,
                              ord_type = @ord_type,
                              ord_type_print = @ord_type_print,
-                             ord_count_amount = @ord_count_amount 
+                             ord_count_amount = @ord_count_amount,
+                             ord_type_print_swap = @ord_type_print_swap,
+                             ord_type_print_time = @ord_type_print_time 
                              WHERE ord_id = " + Int32.Parse(order_id);
                     //Console.WriteLine(query);
 
@@ -436,6 +469,8 @@ namespace Deksomboon_Inkjet.Class
                         command.Parameters.AddWithValue("@ord_date", ord_date);
                         command.Parameters.AddWithValue("@ord_type_print", ord_type_print);
                         command.Parameters.AddWithValue("@ord_count_amount", Int32.Parse(amount));
+                        command.Parameters.AddWithValue("@ord_type_print_swap", check_swap);
+                        command.Parameters.AddWithValue("@ord_type_print_time", check_time);
 
                         // Execute the SQL command
                         int rowsAffected = command.ExecuteNonQuery();
@@ -606,6 +641,9 @@ namespace Deksomboon_Inkjet.Class
                                     ord_count = reader.GetInt32(reader.GetOrdinal("ord_count")),
                                     ord_status_print = reader.GetString(reader.GetOrdinal("ord_status_print")),
                                     ord_type_print = reader.GetString(reader.GetOrdinal("ord_type_print")),
+
+                                    ord_type_print_swap = reader.GetBoolean(reader.GetOrdinal("ord_type_print_swap")),
+                                    ord_type_print_time = reader.GetBoolean(reader.GetOrdinal("ord_type_print_time")),
 
                                     //ord_position = reader.GetInt32(reader.GetOrdinal("ord_position")),
                                 };

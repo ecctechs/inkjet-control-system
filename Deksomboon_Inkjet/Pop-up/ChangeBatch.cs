@@ -53,6 +53,9 @@ namespace Deksomboon_Inkjet.Pop_up
             txtOrderDate.Text = ord_date_start;
             cboTypePrint.Text = obj.ord_type_print.ToString();
 
+            txtCheckSwap.Checked = obj.ord_type_print_swap;
+            txtCheckTime.Checked = obj.ord_type_print_time;
+
             //DateTime myDate = DateTime.ParseExact(obj.ord_date.ToString(), "dd/MM/yyyy hh:mm",
             //                     System.Globalization.CultureInfo.InvariantCulture);
             DateTime dateInBuddhistEra = DateTime.ParseExact(obj.ord_date, "d/M/yyyy H:mm:ss", CultureInfo.InvariantCulture);
@@ -77,7 +80,10 @@ namespace Deksomboon_Inkjet.Pop_up
             string ord_type_print = cboTypePrint.Text;
             string amount = txtAmount.Text;
             string sum_count = txtSumCount.Text;    
-            string count = txtCount.Text;   
+            string count = txtCount.Text;
+
+            bool check_swap = txtCheckSwap.Checked;
+            bool check_time = txtCheckTime.Checked;
 
             DateTime st = DateTime.Now.AddYears(-543);
             string start_date = st.AddSeconds(-st.Second).ToString();
@@ -106,7 +112,7 @@ namespace Deksomboon_Inkjet.Pop_up
                     }
 
                     //int diffcount = Int32.Parse(txtCount.Text) + Int32.Parse(sum_count);
-                    Order.Update_Order(ord_id, line, inkjet, material_selected, batch, type, date , ord_type_print , amount);
+                    Order.Update_Order(ord_id, line, inkjet, material_selected, batch, type, date , ord_type_print , amount , check_swap , check_time);
                     Order.Update_Order_Status(ord_id, batch, "จบ batch", ord_status_print , Int32.Parse(txtCount.Text));
                     DataLog.Update_DateLog(Int32.Parse(ord_id), Int32.Parse(txtSumCount.Text), start_date, Int32.Parse(txtEmpID.Text), txtTenDigitOld.Text, txtOrderDate.Text);
 
@@ -124,20 +130,65 @@ namespace Deksomboon_Inkjet.Pop_up
 
         public void gen10number()
         {
+            //DateTime order_date_test = guna2DateTimePicker1.Value;
+            //string batch = txtBatch.Text;
+            //string formula = txtFormula.Text;
+            //string line = txtLine.Text;
+            //string slife = txtSLife.Text;
+
+            //bool column_ord_type_print_swap = false;
+            //bool column_ord_type_print_time = false;
+
+            //string tenDigit = GenerateBatchNumber.order_batch_number_generate(order_date_test, batch, formula, line);
+            //string BBF = GenerateBatchNumber.order_bbf_generate(order_date_test, slife , column_ord_type_print_swap , column_ord_type_print_time);
+
+            //txtTenDigit.Text = tenDigit;
+            //txtBBF.Text = BBF;
+
+            string selected_type_print = cboTypePrint.Text;
             DateTime order_date_test = guna2DateTimePicker1.Value;
             string batch = txtBatch.Text;
             string formula = txtFormula.Text;
             string line = txtLine.Text;
             string slife = txtSLife.Text;
-           
+            bool check_swap = txtCheckSwap.Checked;
+            bool check_time = txtCheckTime.Checked;
+            var selected_material = cboMaterial.SelectedValue;
 
-            Console.WriteLine(order_date_test);
 
             string tenDigit = GenerateBatchNumber.order_batch_number_generate(order_date_test, batch, formula, line);
-            string BBF = GenerateBatchNumber.order_bbf_generate(order_date_test, slife);
+            string BBF = GenerateBatchNumber.order_bbf_generate(order_date_test, slife, check_swap, check_time);
+            string MFG = GenerateBatchNumber.order_mfg_generate(order_date_test, slife, check_swap, check_time);
+            string EXP = GenerateBatchNumber.order_exp_generate(order_date_test, slife, check_swap, check_time);
 
-            txtTenDigit.Text = tenDigit;
-            txtBBF.Text = BBF;
+            if (selected_type_print == "2 บรรทัด")
+            {
+
+                txtTenDigit.Text = tenDigit;
+                txtBBF.Text = BBF;
+                txtExp.Text = "";
+
+            }
+            else if (selected_type_print == "2 บรรทัด-สลับ")
+            {
+
+                txtTenDigit.Text = BBF;
+                txtBBF.Text = tenDigit;
+                txtExp.Text = "";
+
+            }
+            else if (selected_type_print == "3 บรรทัด")
+            {
+                txtTenDigit.Text = tenDigit;
+                txtBBF.Text = MFG;
+                txtExp.Text = EXP;
+            }
+            else
+            {
+                txtTenDigit.Text = MFG;
+                txtBBF.Text = EXP;
+                txtExp.Text = tenDigit;
+            }
         }
 
         public void get_product()
@@ -149,18 +200,66 @@ namespace Deksomboon_Inkjet.Pop_up
 
         public void get_old_10_digit()
         {
+            //DateTime order_date_test = guna2DateTimePicker1.Value;
+            //string batch = txtBatch.Text;
+            //string formula = txtFormula.Text;
+            //string line = txtLine.Text;
+            //string slife = txtSLife.Text;
+
+            ////Console.WriteLine(order_date_test);
+            //bool column_ord_type_print_swap = false;
+            //bool column_ord_type_print_time = false;
+
+
+            //string tenDigit = GenerateBatchNumber.order_batch_number_generate(order_date_test, batch, formula, line);
+            //string BBF = GenerateBatchNumber.order_bbf_generate(order_date_test, slife , column_ord_type_print_swap , column_ord_type_print_time);
+            
+            string selected_type_print = cboTypePrint.Text;
             DateTime order_date_test = guna2DateTimePicker1.Value;
             string batch = txtBatch.Text;
             string formula = txtFormula.Text;
             string line = txtLine.Text;
             string slife = txtSLife.Text;
+            bool check_swap = txtCheckSwap.Checked;
+            bool check_time = txtCheckTime.Checked;
+            var selected_material = cboMaterial.SelectedValue;
 
-            Console.WriteLine(order_date_test);
 
             string tenDigit = GenerateBatchNumber.order_batch_number_generate(order_date_test, batch, formula, line);
-            string BBF = GenerateBatchNumber.order_bbf_generate(order_date_test, slife);
-
+            string BBF = GenerateBatchNumber.order_bbf_generate(order_date_test, slife, check_swap, check_time);
+            string MFG = GenerateBatchNumber.order_mfg_generate(order_date_test, slife, check_swap, check_time);
+            string EXP = GenerateBatchNumber.order_exp_generate(order_date_test, slife, check_swap, check_time);
+            
             txtTenDigitOld.Text = tenDigit;
+
+            if (selected_type_print == "2 บรรทัด")
+            {
+
+                txtTenDigit.Text = tenDigit;
+                txtBBF.Text = BBF;
+                txtExp.Text = "";
+
+            }
+            else if (selected_type_print == "2 บรรทัด-สลับ")
+            {
+
+                txtTenDigit.Text = BBF;
+                txtBBF.Text = tenDigit;
+                txtExp.Text = "";
+
+            }
+            else if (selected_type_print == "3 บรรทัด")
+            {
+                txtTenDigit.Text = tenDigit;
+                txtBBF.Text = MFG;
+                txtExp.Text = EXP;
+            }
+            else
+            {
+                txtTenDigit.Text = MFG;
+                txtBBF.Text = EXP;
+                txtExp.Text = tenDigit;
+            }
 
 
         }

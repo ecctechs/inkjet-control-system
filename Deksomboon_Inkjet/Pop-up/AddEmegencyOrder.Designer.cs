@@ -49,6 +49,7 @@
             this.txtLine = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtInkjet = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.txtExp = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtBBF = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenDigit = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtLineFull = new Guna.UI2.WinForms.Guna2TextBox();
@@ -66,14 +67,17 @@
             this.txtEmpID = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtOrderDate = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2DateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cboTypePrint = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtAmount = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.txtSwapFormat = new System.Windows.Forms.CheckBox();
+            this.txtShowTime = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtAmount)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -81,7 +85,7 @@
             this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(183, 23);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(160, 12);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(289, 31);
             this.guna2HtmlLabel1.TabIndex = 54;
@@ -92,7 +96,7 @@
             this.guna2HtmlLabel8.AutoSize = false;
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(17, 506);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(33, 459);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(141, 31);
             this.guna2HtmlLabel8.TabIndex = 70;
@@ -113,7 +117,7 @@
             this.cboPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.cboPosition.ForeColor = System.Drawing.Color.Black;
             this.cboPosition.ItemHeight = 30;
-            this.cboPosition.Location = new System.Drawing.Point(180, 501);
+            this.cboPosition.Location = new System.Drawing.Point(200, 459);
             this.cboPosition.Name = "cboPosition";
             this.cboPosition.Size = new System.Drawing.Size(140, 36);
             this.cboPosition.TabIndex = 69;
@@ -137,15 +141,14 @@
             this.txtBatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtBatch.ForeColor = System.Drawing.Color.Black;
             this.txtBatch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBatch.Location = new System.Drawing.Point(180, 437);
+            this.txtBatch.Location = new System.Drawing.Point(200, 402);
             this.txtBatch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBatch.MaxLength = 1;
             this.txtBatch.Name = "txtBatch";
             this.txtBatch.PasswordChar = '\0';
             this.txtBatch.PlaceholderText = "";
-            this.txtBatch.ReadOnly = true;
             this.txtBatch.SelectedText = "";
-            this.txtBatch.Size = new System.Drawing.Size(57, 36);
+            this.txtBatch.Size = new System.Drawing.Size(57, 37);
             this.txtBatch.TabIndex = 68;
             this.txtBatch.TextChanged += new System.EventHandler(this.batchnumberbox_TextChanged);
             this.txtBatch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBatch_KeyPress);
@@ -155,7 +158,7 @@
             this.guna2HtmlLabel7.AutoSize = false;
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(17, 446);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(33, 408);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(141, 31);
             this.guna2HtmlLabel7.TabIndex = 67;
@@ -176,9 +179,9 @@
             this.cboMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.cboMaterial.ForeColor = System.Drawing.Color.Black;
             this.cboMaterial.ItemHeight = 30;
-            this.cboMaterial.Location = new System.Drawing.Point(180, 88);
+            this.cboMaterial.Location = new System.Drawing.Point(200, 58);
             this.cboMaterial.Name = "cboMaterial";
-            this.cboMaterial.Size = new System.Drawing.Size(281, 36);
+            this.cboMaterial.Size = new System.Drawing.Size(267, 36);
             this.cboMaterial.TabIndex = 66;
             this.cboMaterial.ValueMember = "material_id";
             this.cboMaterial.SelectedIndexChanged += new System.EventHandler(this.cboMaterial_SelectedIndexChanged);
@@ -198,7 +201,7 @@
             this.btnClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(335, 774);
+            this.btnClose.Location = new System.Drawing.Point(341, 791);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(119, 45);
             this.btnClose.TabIndex = 63;
@@ -215,7 +218,7 @@
             this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(135)))), ((int)(((byte)(84)))));
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(210, 774);
+            this.btnSave.Location = new System.Drawing.Point(225, 792);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(110, 45);
             this.btnSave.TabIndex = 62;
@@ -236,7 +239,7 @@
             this.txtFormula.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtFormula.ForeColor = System.Drawing.Color.Black;
             this.txtFormula.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFormula.Location = new System.Drawing.Point(180, 145);
+            this.txtFormula.Location = new System.Drawing.Point(200, 119);
             this.txtFormula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFormula.MaxLength = 3;
             this.txtFormula.Name = "txtFormula";
@@ -244,7 +247,7 @@
             this.txtFormula.PlaceholderText = "";
             this.txtFormula.ReadOnly = true;
             this.txtFormula.SelectedText = "";
-            this.txtFormula.Size = new System.Drawing.Size(281, 36);
+            this.txtFormula.Size = new System.Drawing.Size(267, 36);
             this.txtFormula.TabIndex = 61;
             // 
             // txtSLife
@@ -261,14 +264,14 @@
             this.txtSLife.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtSLife.ForeColor = System.Drawing.Color.Black;
             this.txtSLife.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSLife.Location = new System.Drawing.Point(180, 197);
+            this.txtSLife.Location = new System.Drawing.Point(201, 174);
             this.txtSLife.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSLife.Name = "txtSLife";
             this.txtSLife.PasswordChar = '\0';
             this.txtSLife.PlaceholderText = "";
             this.txtSLife.ReadOnly = true;
             this.txtSLife.SelectedText = "";
-            this.txtSLife.Size = new System.Drawing.Size(281, 36);
+            this.txtSLife.Size = new System.Drawing.Size(267, 36);
             this.txtSLife.TabIndex = 60;
             // 
             // guna2HtmlLabel6
@@ -276,7 +279,7 @@
             this.guna2HtmlLabel6.AutoSize = false;
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(25, 149);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(33, 124);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(141, 31);
             this.guna2HtmlLabel6.TabIndex = 59;
@@ -287,7 +290,7 @@
             this.guna2HtmlLabel5.AutoSize = false;
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(25, 202);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(33, 179);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(141, 31);
             this.guna2HtmlLabel5.TabIndex = 58;
@@ -310,7 +313,7 @@
             this.guna2HtmlLabel3.AutoSize = false;
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(25, 93);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(33, 63);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(141, 31);
             this.guna2HtmlLabel3.TabIndex = 56;
@@ -378,17 +381,45 @@
             // 
             // guna2GroupBox1
             // 
+            this.guna2GroupBox1.Controls.Add(this.txtExp);
             this.guna2GroupBox1.Controls.Add(this.txtBBF);
             this.guna2GroupBox1.Controls.Add(this.txtTenDigit);
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(101)))), ((int)(((byte)(183)))));
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(12, 623);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(17, 620);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.guna2GroupBox1.Size = new System.Drawing.Size(450, 129);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(450, 162);
             this.guna2GroupBox1.TabIndex = 76;
             this.guna2GroupBox1.Text = "พรีวิว";
+            // 
+            // txtExp
+            // 
+            this.txtExp.BackColor = System.Drawing.Color.White;
+            this.txtExp.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
+            this.txtExp.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtExp.DefaultText = "";
+            this.txtExp.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtExp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtExp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtExp.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtExp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtExp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
+            this.txtExp.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtExp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtExp.ForeColor = System.Drawing.Color.Black;
+            this.txtExp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtExp.Location = new System.Drawing.Point(5, 117);
+            this.txtExp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtExp.Name = "txtExp";
+            this.txtExp.PasswordChar = '\0';
+            this.txtExp.PlaceholderForeColor = System.Drawing.Color.White;
+            this.txtExp.PlaceholderText = "";
+            this.txtExp.ReadOnly = true;
+            this.txtExp.SelectedText = "";
+            this.txtExp.Size = new System.Drawing.Size(440, 36);
+            this.txtExp.TabIndex = 63;
             // 
             // txtBBF
             // 
@@ -521,7 +552,7 @@
             this.guna2HtmlLabel9.AutoSize = false;
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(17, 327);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(33, 292);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             this.guna2HtmlLabel9.Size = new System.Drawing.Size(141, 31);
             this.guna2HtmlLabel9.TabIndex = 103;
@@ -539,7 +570,7 @@
             this.txtCheckForm.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCheckForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtCheckForm.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCheckForm.Location = new System.Drawing.Point(2, 56);
+            this.txtCheckForm.Location = new System.Drawing.Point(2, 35);
             this.txtCheckForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCheckForm.MaxLength = 3;
             this.txtCheckForm.Name = "txtCheckForm";
@@ -563,7 +594,7 @@
             this.txtOrdID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtOrdID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtOrdID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOrdID.Location = new System.Drawing.Point(111, 55);
+            this.txtOrdID.Location = new System.Drawing.Point(84, 35);
             this.txtOrdID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOrdID.MaxLength = 3;
             this.txtOrdID.Name = "txtOrdID";
@@ -580,7 +611,7 @@
             this.guna2HtmlLabel10.AutoSize = false;
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(17, 262);
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(33, 235);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             this.guna2HtmlLabel10.Size = new System.Drawing.Size(141, 31);
             this.guna2HtmlLabel10.TabIndex = 106;
@@ -603,7 +634,7 @@
             this.cboOrdType.Items.AddRange(new object[] {
             "งานทั่วไป",
             "งานเร่งด่วน"});
-            this.cboOrdType.Location = new System.Drawing.Point(180, 257);
+            this.cboOrdType.Location = new System.Drawing.Point(201, 230);
             this.cboOrdType.Name = "cboOrdType";
             this.cboOrdType.Size = new System.Drawing.Size(187, 36);
             this.cboOrdType.TabIndex = 107;
@@ -620,7 +651,7 @@
             this.txtEmpcode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmpcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtEmpcode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmpcode.Location = new System.Drawing.Point(12, 793);
+            this.txtEmpcode.Location = new System.Drawing.Point(17, 826);
             this.txtEmpcode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpcode.MaxLength = 3;
             this.txtEmpcode.Name = "txtEmpcode";
@@ -644,7 +675,7 @@
             this.txtEmppass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmppass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtEmppass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmppass.Location = new System.Drawing.Point(97, 792);
+            this.txtEmppass.Location = new System.Drawing.Point(102, 826);
             this.txtEmppass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmppass.MaxLength = 3;
             this.txtEmppass.Name = "txtEmppass";
@@ -668,7 +699,7 @@
             this.txtTenDigitOld.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenDigitOld.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtTenDigitOld.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenDigitOld.Location = new System.Drawing.Point(10, 759);
+            this.txtTenDigitOld.Location = new System.Drawing.Point(17, 792);
             this.txtTenDigitOld.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTenDigitOld.MaxLength = 3;
             this.txtTenDigitOld.Name = "txtTenDigitOld";
@@ -692,7 +723,7 @@
             this.txtSumCount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSumCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtSumCount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSumCount.Location = new System.Drawing.Point(241, 56);
+            this.txtSumCount.Location = new System.Drawing.Point(241, 35);
             this.txtSumCount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSumCount.MaxLength = 3;
             this.txtSumCount.Name = "txtSumCount";
@@ -716,7 +747,7 @@
             this.txtEmpID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmpID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtEmpID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmpID.Location = new System.Drawing.Point(326, 56);
+            this.txtEmpID.Location = new System.Drawing.Point(326, 35);
             this.txtEmpID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpID.MaxLength = 3;
             this.txtEmpID.Name = "txtEmpID";
@@ -740,7 +771,7 @@
             this.txtOrderDate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtOrderDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.txtOrderDate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOrderDate.Location = new System.Drawing.Point(411, 55);
+            this.txtOrderDate.Location = new System.Drawing.Point(411, 35);
             this.txtOrderDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOrderDate.MaxLength = 3;
             this.txtOrderDate.Name = "txtOrderDate";
@@ -757,22 +788,11 @@
             this.guna2DateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.guna2DateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.guna2DateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(180, 327);
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(201, 292);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
             this.guna2DateTimePicker1.Size = new System.Drawing.Size(280, 27);
             this.guna2DateTimePicker1.TabIndex = 114;
             this.guna2DateTimePicker1.ValueChanged += new System.EventHandler(this.guna2DateTimePicker1_ValueChanged_1);
-            // 
-            // guna2HtmlLabel11
-            // 
-            this.guna2HtmlLabel11.AutoSize = false;
-            this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel11.Location = new System.Drawing.Point(17, 569);
-            this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(141, 31);
-            this.guna2HtmlLabel11.TabIndex = 115;
-            this.guna2HtmlLabel11.Text = "รูปแบบการพิมพ์";
             // 
             // cboTypePrint
             // 
@@ -789,19 +809,21 @@
             this.cboTypePrint.Items.AddRange(new object[] {
             "2 บรรทัด",
             "2 บรรทัด-สลับ",
-            "3 บรรทัด"});
-            this.cboTypePrint.Location = new System.Drawing.Point(180, 564);
+            "3 บรรทัด",
+            "3 บรรทัด-สลับ"});
+            this.cboTypePrint.Location = new System.Drawing.Point(23, 38);
             this.cboTypePrint.Name = "cboTypePrint";
-            this.cboTypePrint.Size = new System.Drawing.Size(193, 36);
+            this.cboTypePrint.Size = new System.Drawing.Size(217, 36);
             this.cboTypePrint.StartIndex = 1;
             this.cboTypePrint.TabIndex = 116;
+            this.cboTypePrint.SelectedIndexChanged += new System.EventHandler(this.cboTypePrint_SelectedIndexChanged);
             // 
             // guna2HtmlLabel12
             // 
             this.guna2HtmlLabel12.AutoSize = false;
             this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel12.Location = new System.Drawing.Point(17, 384);
+            this.guna2HtmlLabel12.Location = new System.Drawing.Point(33, 348);
             this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
             this.guna2HtmlLabel12.Size = new System.Drawing.Size(141, 31);
             this.guna2HtmlLabel12.TabIndex = 117;
@@ -813,7 +835,7 @@
             this.txtAmount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
             this.txtAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAmount.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtAmount.Location = new System.Drawing.Point(180, 379);
+            this.txtAmount.Location = new System.Drawing.Point(200, 343);
             this.txtAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAmount.Maximum = new decimal(new int[] {
             999999,
@@ -824,16 +846,50 @@
             this.txtAmount.Size = new System.Drawing.Size(99, 36);
             this.txtAmount.TabIndex = 119;
             // 
+            // txtSwapFormat
+            // 
+            this.txtSwapFormat.AutoSize = true;
+            this.txtSwapFormat.Location = new System.Drawing.Point(275, 26);
+            this.txtSwapFormat.Name = "txtSwapFormat";
+            this.txtSwapFormat.Size = new System.Drawing.Size(104, 24);
+            this.txtSwapFormat.TabIndex = 123;
+            this.txtSwapFormat.Text = "ปี/เดือน/วัน";
+            this.txtSwapFormat.UseVisualStyleBackColor = true;
+            this.txtSwapFormat.Click += new System.EventHandler(this.txtSwapFormat_Click);
+            // 
+            // txtShowTime
+            // 
+            this.txtShowTime.AutoSize = true;
+            this.txtShowTime.Location = new System.Drawing.Point(275, 66);
+            this.txtShowTime.Name = "txtShowTime";
+            this.txtShowTime.Size = new System.Drawing.Size(100, 24);
+            this.txtShowTime.TabIndex = 124;
+            this.txtShowTime.Text = "แสดงเวลา";
+            this.txtShowTime.UseVisualStyleBackColor = true;
+            this.txtShowTime.Click += new System.EventHandler(this.txtShowTime_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cboTypePrint);
+            this.groupBox1.Controls.Add(this.txtShowTime);
+            this.groupBox1.Controls.Add(this.txtSwapFormat);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.groupBox1.Location = new System.Drawing.Point(17, 505);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(450, 96);
+            this.groupBox1.TabIndex = 125;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "รูปแบบการพิมพ์";
+            // 
             // AddEmegencyOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(493, 831);
+            this.ClientSize = new System.Drawing.Size(493, 847);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.guna2HtmlLabel12);
-            this.Controls.Add(this.cboTypePrint);
-            this.Controls.Add(this.guna2HtmlLabel11);
             this.Controls.Add(this.guna2DateTimePicker1);
             this.Controls.Add(this.txtOrderDate);
             this.Controls.Add(this.txtEmpID);
@@ -876,6 +932,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).EndInit();
             this.guna2GroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtAmount)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -919,9 +977,12 @@
         private Guna.UI2.WinForms.Guna2TextBox txtEmpID;
         private Guna.UI2.WinForms.Guna2TextBox txtOrderDate;
         private System.Windows.Forms.DateTimePicker guna2DateTimePicker1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
         private Guna.UI2.WinForms.Guna2ComboBox cboTypePrint;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
         private Guna.UI2.WinForms.Guna2NumericUpDown txtAmount;
+        private Guna.UI2.WinForms.Guna2TextBox txtExp;
+        private System.Windows.Forms.CheckBox txtSwapFormat;
+        private System.Windows.Forms.CheckBox txtShowTime;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

@@ -36,6 +36,10 @@ namespace Deksomboon_Inkjet.Class
 
         public string ord_type_print { get; set; }
 
+        public bool ord_type_print_swap { get; set; }
+
+        public bool ord_type_print_time { get; set; }
+
 
         public static List<Order_temp> ListOrder()
         {
@@ -104,8 +108,8 @@ namespace Deksomboon_Inkjet.Class
                 {
                     dbManager.OpenConnection();
 
-                    string query = @"INSERT INTO order_preview ( material_id, location_id, ord_batch, inkjet_id , ord_type , ord_status , ord_date , ord_count_amount , ord_count , ord_status_print , ord_type_print) 
-                             VALUES ( @material_id, @location_id, @ord_batch, @inkjet_id , @ord_type , @ord_status , @ord_date , @ord_count_amount , @ord_count , @ord_status_print , @ord_type_print)";
+                    string query = @"INSERT INTO order_preview ( material_id, location_id, ord_batch, inkjet_id , ord_type , ord_status , ord_date , ord_count_amount , ord_count , ord_status_print , ord_type_print , ord_type_print_swap , ord_type_print_time) 
+                             VALUES ( @material_id, @location_id, @ord_batch, @inkjet_id , @ord_type , @ord_status , @ord_date , @ord_count_amount , @ord_count , @ord_status_print , @ord_type_print , @ord_type_print_swap , @ord_type_print_time)";
 
                     //Console.WriteLine(query);
                     using (NpgsqlCommand command = new NpgsqlCommand(query, dbManager.connection))
@@ -121,6 +125,8 @@ namespace Deksomboon_Inkjet.Class
                         command.Parameters.AddWithValue("@ord_count", 0);
                         command.Parameters.AddWithValue("@ord_status_print", "รอผลิต");
                         command.Parameters.AddWithValue("@ord_type_print", "2 บรรทัด");
+                        command.Parameters.AddWithValue("@ord_type_print_swap", false);
+                        command.Parameters.AddWithValue("@ord_type_print_time", false);
 
                         command.ExecuteNonQuery();
 
@@ -538,7 +544,9 @@ namespace Deksomboon_Inkjet.Class
                                 ord_count = reader.GetInt32(reader.GetOrdinal("ord_count")),
                                 ord_count_amount = reader.GetInt32(reader.GetOrdinal("ord_count_amount")),
                                 ord_status_print = reader.GetString(reader.GetOrdinal("ord_status_print")),
-                                ord_type_print = reader.GetString(reader.GetOrdinal("ord_type_print"))
+                                ord_type_print = reader.GetString(reader.GetOrdinal("ord_type_print")),
+                                ord_type_print_swap = reader.GetBoolean(reader.GetOrdinal("ord_type_print_swap")),
+                                ord_type_print_time = reader.GetBoolean(reader.GetOrdinal("ord_type_print_time"))
 
                             };
 
@@ -549,8 +557,8 @@ namespace Deksomboon_Inkjet.Class
                     // เพิ่มข้อมูลในตาราง order_detail จาก listOrder
                     foreach (Order_temp order in listOrder)
                     {
-                        string insertQuery = @"INSERT INTO order_detail (material_id, location_id, ord_batch, inkjet_id, ord_type, ord_status , ord_date , ord_count_amount , ord_count , ord_status_print , ord_type_print) 
-                                       VALUES (@material_id, @location_id, @ord_batch, @inkjet_id, @ord_type, @ord_status, @ord_date , @ord_count_amount , @ord_count , @ord_status_print , @ord_type_print)";
+                        string insertQuery = @"INSERT INTO order_detail (material_id, location_id, ord_batch, inkjet_id, ord_type, ord_status , ord_date , ord_count_amount , ord_count , ord_status_print , ord_type_print , ord_type_print_swap , ord_type_print_time) 
+                                       VALUES (@material_id, @location_id, @ord_batch, @inkjet_id, @ord_type, @ord_status, @ord_date , @ord_count_amount , @ord_count , @ord_status_print , @ord_type_print , @ord_type_print_swap , @ord_type_print_time)";
 
                         using (NpgsqlCommand command = new NpgsqlCommand(insertQuery, dbManager.connection))
                         {
@@ -565,6 +573,8 @@ namespace Deksomboon_Inkjet.Class
                             command.Parameters.AddWithValue("@ord_count_amount", order.ord_count_amount);
                             command.Parameters.AddWithValue("@ord_status_print", order.ord_status_print);
                             command.Parameters.AddWithValue("@ord_type_print", order.ord_type_print);
+                            command.Parameters.AddWithValue("@ord_type_print_swap", order.ord_type_print_swap);
+                            command.Parameters.AddWithValue("@ord_type_print_time", order.ord_type_print_time);
 
                             command.ExecuteNonQuery();
 
