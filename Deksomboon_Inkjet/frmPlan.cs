@@ -494,12 +494,18 @@ namespace Deksomboon_Inkjet
                     string columnCount_Amount = selectedRow["ord_count_amount"].ToString();
                     string columnCount = selectedRow["ord_count"].ToString();
 
-                    string dateOnly = columnDate.Substring(0, 10); // หาวันที่เท่านั้น
-                  
+                    //string dateOnly = columnDate.Substring(0, 10); // หาวันที่เท่านั้น
+
+                    DateTime order_date_test = DateTime.Parse(columnDate).AddYears(543);
+
+                    // เก็บเฉพาะวันที่
+                    DateTime onlyDate = order_date_test.Date;
+                    // แสดงวันที่ในรูปแบบที่คุณต้องการ (ไม่รวมเวลา)
+                    string formattedDate = onlyDate.ToString("dd/MM/yyyy");
 
                     // นำข้อมูลไปแสดงใน TextBox หรือคอนโทรลที่ต้องการ
                     txtBatch.Text = columnBatch;
-                    txtDate.Text = dateOnly;
+                    txtDate.Text = formattedDate;
                     txtMaterialDes.Text = columnMaterial;
                     txtFormula.Text = columnFormula;
                     txtOrderStatus.Text = columnOrderStaus;
@@ -562,34 +568,33 @@ namespace Deksomboon_Inkjet
                 bool column_ord_type_print_time = bool.Parse(selectedRow["ord_type_print_time"].ToString());
 
                 string date_order = txtDate.Text;
+
                 DateTime order_date_test = DateTime.Parse(date_order).AddYears(+543);
-                //DateTime order_date = dateTimePicker1.Value;
-                //Console.WriteLine(order_date.ToString());
-                //Console.WriteLine(order_date_test.ToString());
+
                 string batch = txtBatch.Text;
                 string formula = txtFormula.Text;
                 string line = locationprefixtextbox.Text;
                 string slife = txtSLife.Text;
 
                 string tenDigit = GenerateBatchNumber.order_batch_number_generate(order_date_test, batch, formula, line);
-                string BBF = GenerateBatchNumber.order_bbf_generate(order_date_test, slife , column_ord_type_print_swap , column_ord_type_print_time);
-                string MFG = GenerateBatchNumber.order_mfg_generate(order_date_test, slife , column_ord_type_print_swap , column_ord_type_print_time);
-                string EXP = GenerateBatchNumber.order_exp_generate(order_date_test, slife , column_ord_type_print_swap , column_ord_type_print_time);
+                string BBF = GenerateBatchNumber.order_bbf_generate(order_date_test, slife, column_ord_type_print_swap, column_ord_type_print_time);
+                string MFG = GenerateBatchNumber.order_mfg_generate(order_date_test, slife, column_ord_type_print_swap, column_ord_type_print_time);
+                string EXP = GenerateBatchNumber.order_exp_generate(order_date_test, slife, column_ord_type_print_swap, column_ord_type_print_time);
 
                 txtTenDigit_temp.Text = tenDigit;
 
                 if (table.Rows.Count > 0) // ตรวจสอบว่า DataTable (table) มีข้อมูลหรือไม่
                 {
-                    
+
                     string columnTypePrint = selectedRow["ord_type_print"].ToString();
 
-                    if(columnTypePrint == "2 บรรทัด")
+                    if (columnTypePrint == "2 บรรทัด")
                     {
                         txtTenDigit.Text = tenDigit;
                         txtBBF.Text = BBF;
                         txtExp.Text = "";
                     }
-                    else if(columnTypePrint == "2 บรรทัด-สลับ")
+                    else if (columnTypePrint == "2 บรรทัด-สลับ")
                     {
                         txtTenDigit.Text = BBF;
                         txtBBF.Text = tenDigit;
