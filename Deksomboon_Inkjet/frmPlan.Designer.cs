@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPlan));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPlan));
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtAmount = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtCount = new Guna.UI2.WinForms.Guna2TextBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.txtInkjetSetting = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -49,8 +49,8 @@
             this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtSLife = new Guna.UI2.WinForms.Guna2TextBox();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtAmount = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtCount = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtDate = new Guna.UI2.WinForms.Guna2TextBox();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
@@ -62,6 +62,7 @@
             this.txtOrderStatus = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel18 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.txtTenDigit_temp = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtExp = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtBatch = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCountEnd = new Guna.UI2.WinForms.Guna2TextBox();
@@ -227,14 +228,39 @@
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel15.Controls.Add(this.txtAmount, 1, 0);
             this.tableLayoutPanel15.Controls.Add(this.guna2HtmlLabel4, 0, 0);
-            this.tableLayoutPanel15.Controls.Add(this.txtCount, 1, 0);
             this.tableLayoutPanel15.Location = new System.Drawing.Point(710, 160);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 1;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel15.Size = new System.Drawing.Size(308, 44);
             this.tableLayoutPanel15.TabIndex = 28;
+            // 
+            // txtAmount
+            // 
+            this.txtAmount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
+            this.txtAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAmount.DefaultText = "";
+            this.txtAmount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAmount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAmount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAmount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAmount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtAmount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
+            this.txtAmount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtAmount.ForeColor = System.Drawing.Color.Black;
+            this.txtAmount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAmount.Location = new System.Drawing.Point(157, 4);
+            this.txtAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.PasswordChar = '\0';
+            this.txtAmount.PlaceholderText = "";
+            this.txtAmount.ReadOnly = true;
+            this.txtAmount.SelectedText = "";
+            this.txtAmount.Size = new System.Drawing.Size(148, 36);
+            this.txtAmount.TabIndex = 24;
             // 
             // guna2HtmlLabel4
             // 
@@ -247,33 +273,8 @@
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(148, 38);
             this.guna2HtmlLabel4.TabIndex = 0;
-            this.guna2HtmlLabel4.Text = "ผลิตไปแล้ว";
+            this.guna2HtmlLabel4.Text = "จํานวนผลิต";
             this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtCount
-            // 
-            this.txtCount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
-            this.txtCount.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCount.DefaultText = "";
-            this.txtCount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtCount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
-            this.txtCount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.txtCount.ForeColor = System.Drawing.Color.Black;
-            this.txtCount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCount.Location = new System.Drawing.Point(157, 4);
-            this.txtCount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtCount.Name = "txtCount";
-            this.txtCount.PasswordChar = '\0';
-            this.txtCount.PlaceholderText = "";
-            this.txtCount.ReadOnly = true;
-            this.txtCount.SelectedText = "";
-            this.txtCount.Size = new System.Drawing.Size(148, 36);
-            this.txtCount.TabIndex = 22;
             // 
             // tableLayoutPanel8
             // 
@@ -436,8 +437,8 @@
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel12.Controls.Add(this.txtAmount, 3, 0);
             this.tableLayoutPanel12.Controls.Add(this.guna2HtmlLabel14, 2, 0);
+            this.tableLayoutPanel12.Controls.Add(this.txtCount, 3, 0);
             this.tableLayoutPanel12.Controls.Add(this.guna2HtmlLabel15, 0, 0);
             this.tableLayoutPanel12.Controls.Add(this.txtDate, 1, 0);
             this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 157);
@@ -446,31 +447,6 @@
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel12.Size = new System.Drawing.Size(664, 44);
             this.tableLayoutPanel12.TabIndex = 25;
-            // 
-            // txtAmount
-            // 
-            this.txtAmount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
-            this.txtAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAmount.DefaultText = "";
-            this.txtAmount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtAmount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtAmount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAmount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAmount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtAmount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
-            this.txtAmount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.txtAmount.ForeColor = System.Drawing.Color.Black;
-            this.txtAmount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAmount.Location = new System.Drawing.Point(501, 4);
-            this.txtAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtAmount.Name = "txtAmount";
-            this.txtAmount.PasswordChar = '\0';
-            this.txtAmount.PlaceholderText = "";
-            this.txtAmount.ReadOnly = true;
-            this.txtAmount.SelectedText = "";
-            this.txtAmount.Size = new System.Drawing.Size(160, 36);
-            this.txtAmount.TabIndex = 24;
             // 
             // guna2HtmlLabel14
             // 
@@ -483,8 +459,33 @@
             this.guna2HtmlLabel14.Name = "guna2HtmlLabel14";
             this.guna2HtmlLabel14.Size = new System.Drawing.Size(160, 38);
             this.guna2HtmlLabel14.TabIndex = 23;
-            this.guna2HtmlLabel14.Text = "จํานวนที่ต้องผลิต";
+            this.guna2HtmlLabel14.Text = "ผลิตไปแล้ว";
             this.guna2HtmlLabel14.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtCount
+            // 
+            this.txtCount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
+            this.txtCount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCount.DefaultText = "";
+            this.txtCount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
+            this.txtCount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtCount.ForeColor = System.Drawing.Color.Black;
+            this.txtCount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCount.Location = new System.Drawing.Point(501, 4);
+            this.txtCount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCount.Name = "txtCount";
+            this.txtCount.PasswordChar = '\0';
+            this.txtCount.PlaceholderText = "";
+            this.txtCount.ReadOnly = true;
+            this.txtCount.SelectedText = "";
+            this.txtCount.Size = new System.Drawing.Size(160, 36);
+            this.txtCount.TabIndex = 22;
             // 
             // guna2HtmlLabel15
             // 
@@ -680,6 +681,7 @@
             // guna2GroupBox4
             // 
             this.guna2GroupBox4.BorderColor = System.Drawing.Color.Black;
+            this.guna2GroupBox4.Controls.Add(this.txtTenDigit_temp);
             this.guna2GroupBox4.Controls.Add(this.txtExp);
             this.guna2GroupBox4.Controls.Add(this.txtBatch);
             this.guna2GroupBox4.Controls.Add(this.txtCountEnd);
@@ -703,6 +705,27 @@
             this.guna2GroupBox4.TabIndex = 1;
             this.guna2GroupBox4.Text = "ข้อความที่พิมพ์";
             this.guna2GroupBox4.TextOffset = new System.Drawing.Point(0, -7);
+            // 
+            // txtTenDigit_temp
+            // 
+            this.txtTenDigit_temp.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenDigit_temp.DefaultText = "";
+            this.txtTenDigit_temp.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenDigit_temp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenDigit_temp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenDigit_temp.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenDigit_temp.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenDigit_temp.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTenDigit_temp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenDigit_temp.Location = new System.Drawing.Point(131, 164);
+            this.txtTenDigit_temp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTenDigit_temp.Name = "txtTenDigit_temp";
+            this.txtTenDigit_temp.PasswordChar = '\0';
+            this.txtTenDigit_temp.PlaceholderText = "";
+            this.txtTenDigit_temp.SelectedText = "";
+            this.txtTenDigit_temp.Size = new System.Drawing.Size(83, 27);
+            this.txtTenDigit_temp.TabIndex = 35;
+            this.txtTenDigit_temp.Visible = false;
             // 
             // txtExp
             // 
@@ -933,6 +956,7 @@
             this.btnEditOrderPosition.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnEditOrderPosition.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnEditOrderPosition.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEditOrderPosition.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(27)))), ((int)(((byte)(146)))));
             this.btnEditOrderPosition.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnEditOrderPosition.ForeColor = System.Drawing.Color.White;
             this.btnEditOrderPosition.Location = new System.Drawing.Point(1121, 1);
@@ -945,21 +969,21 @@
             // tableLayoutOrderPosition
             // 
             this.tableLayoutOrderPosition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutOrderPosition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.tableLayoutOrderPosition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(101)))), ((int)(((byte)(183)))));
             this.tableLayoutOrderPosition.ColumnCount = 4;
-            this.tableLayoutOrderPosition.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutOrderPosition.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutOrderPosition.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutOrderPosition.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutOrderPosition.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutOrderPosition.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutOrderPosition.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutOrderPosition.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutOrderPosition.Controls.Add(this.guna2Button3, 3, 0);
             this.tableLayoutOrderPosition.Controls.Add(this.btnCancel, 2, 0);
             this.tableLayoutOrderPosition.Controls.Add(this.btnUP, 0, 0);
             this.tableLayoutOrderPosition.Controls.Add(this.btnDown, 1, 0);
-            this.tableLayoutOrderPosition.Location = new System.Drawing.Point(753, -2);
+            this.tableLayoutOrderPosition.Location = new System.Drawing.Point(951, 1);
             this.tableLayoutOrderPosition.Name = "tableLayoutOrderPosition";
             this.tableLayoutOrderPosition.RowCount = 1;
             this.tableLayoutOrderPosition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutOrderPosition.Size = new System.Drawing.Size(548, 31);
+            this.tableLayoutOrderPosition.Size = new System.Drawing.Size(345, 28);
             this.tableLayoutOrderPosition.TabIndex = 1;
             this.tableLayoutOrderPosition.Visible = false;
             // 
@@ -970,13 +994,14 @@
             this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(155)))), ((int)(((byte)(36)))));
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(414, 3);
+            this.guna2Button3.Location = new System.Drawing.Point(244, 3);
             this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(131, 25);
+            this.guna2Button3.Size = new System.Drawing.Size(98, 22);
             this.guna2Button3.TabIndex = 3;
-            this.guna2Button3.Text = "Save";
+            this.guna2Button3.Text = "บันทึก";
             this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // btnCancel
@@ -986,11 +1011,12 @@
             this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(277, 3);
+            this.btnCancel.Location = new System.Drawing.Point(141, 3);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(131, 25);
+            this.btnCancel.Size = new System.Drawing.Size(97, 22);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "ยกเลิก";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -1002,13 +1028,14 @@
             this.btnUP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnUP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnUP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnUP.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
             this.btnUP.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnUP.ForeColor = System.Drawing.Color.White;
+            this.btnUP.Image = ((System.Drawing.Image)(resources.GetObject("btnUP.Image")));
             this.btnUP.Location = new System.Drawing.Point(3, 3);
             this.btnUP.Name = "btnUP";
-            this.btnUP.Size = new System.Drawing.Size(131, 25);
+            this.btnUP.Size = new System.Drawing.Size(63, 22);
             this.btnUP.TabIndex = 1;
-            this.btnUP.Text = "UP";
             this.btnUP.Click += new System.EventHandler(this.btnUP_Click);
             // 
             // btnDown
@@ -1018,13 +1045,14 @@
             this.btnDown.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnDown.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnDown.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDown.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
             this.btnDown.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDown.ForeColor = System.Drawing.Color.White;
-            this.btnDown.Location = new System.Drawing.Point(140, 3);
+            this.btnDown.Image = ((System.Drawing.Image)(resources.GetObject("btnDown.Image")));
+            this.btnDown.Location = new System.Drawing.Point(72, 3);
             this.btnDown.Name = "btnDown";
-            this.btnDown.Size = new System.Drawing.Size(131, 25);
+            this.btnDown.Size = new System.Drawing.Size(63, 22);
             this.btnDown.TabIndex = 0;
-            this.btnDown.Text = "DOWN";
             this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
             // 
             // OrderGrid
@@ -1035,10 +1063,10 @@
             this.OrderGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.OrderGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(177)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(177)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.OrderGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -1078,15 +1106,15 @@
             this.OrderGrid.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.OrderGrid.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.OrderGrid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.OrderGrid.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderGrid.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.OrderGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.OrderGrid.ThemeStyle.HeaderStyle.Height = 25;
             this.OrderGrid.ThemeStyle.ReadOnly = true;
             this.OrderGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.OrderGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.OrderGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OrderGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.OrderGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.OrderGrid.ThemeStyle.RowsStyle.Height = 23;
             this.OrderGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.OrderGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -1322,7 +1350,7 @@
             this.txtPrintState.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrintState.Location = new System.Drawing.Point(131, 3);
             this.txtPrintState.Name = "txtPrintState";
-            this.txtPrintState.Size = new System.Drawing.Size(508, 22);
+            this.txtPrintState.Size = new System.Drawing.Size(152, 18);
             this.txtPrintState.TabIndex = 19;
             this.txtPrintState.Text = "Print States : Not Connect";
             this.txtPrintState.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1367,7 +1395,7 @@
             this.txtJetState.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtJetState.Location = new System.Drawing.Point(131, 3);
             this.txtJetState.Name = "txtJetState";
-            this.txtJetState.Size = new System.Drawing.Size(508, 22);
+            this.txtJetState.Size = new System.Drawing.Size(137, 18);
             this.txtJetState.TabIndex = 19;
             this.txtJetState.Text = "Jet State : Not Connect";
             this.txtJetState.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1411,7 +1439,7 @@
             this.txtDBStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDBStatus.Location = new System.Drawing.Point(131, 3);
             this.txtDBStatus.Name = "txtDBStatus";
-            this.txtDBStatus.Size = new System.Drawing.Size(508, 21);
+            this.txtDBStatus.Size = new System.Drawing.Size(145, 18);
             this.txtDBStatus.TabIndex = 19;
             this.txtDBStatus.Text = "Database : Not Connect";
             this.txtDBStatus.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1455,7 +1483,7 @@
             this.txtRS232S.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRS232S.Location = new System.Drawing.Point(131, 3);
             this.txtRS232S.Name = "txtRS232S";
-            this.txtRS232S.Size = new System.Drawing.Size(508, 19);
+            this.txtRS232S.Size = new System.Drawing.Size(129, 18);
             this.txtRS232S.TabIndex = 19;
             this.txtRS232S.Text = "RS-232 : Not Connect";
             this.txtRS232S.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1498,9 +1526,9 @@
             this.UpdateButton,
             this.EndOrderButton,
             this.EmegencyButton});
-            this.menuStrip2.Location = new System.Drawing.Point(506, 0);
+            this.menuStrip2.Location = new System.Drawing.Point(203, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(332, 101);
+            this.menuStrip2.Size = new System.Drawing.Size(937, 106);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -1509,6 +1537,7 @@
             this.StopButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StopButton.Image = ((System.Drawing.Image)(resources.GetObject("StopButton.Image")));
             this.StopButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.StopButton.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.StopButton.Name = "StopButton";
             this.StopButton.Size = new System.Drawing.Size(105, 97);
             this.StopButton.Text = "หยุดผลิต";
@@ -1522,7 +1551,7 @@
             this.EndBatchButton.Image = ((System.Drawing.Image)(resources.GetObject("EndBatchButton.Image")));
             this.EndBatchButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.EndBatchButton.Name = "EndBatchButton";
-            this.EndBatchButton.Size = new System.Drawing.Size(110, 97);
+            this.EndBatchButton.Size = new System.Drawing.Size(110, 102);
             this.EndBatchButton.Text = "จบbatch";
             this.EndBatchButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.EndBatchButton.Visible = false;
@@ -1534,7 +1563,7 @@
             this.TestPrintButton.Image = ((System.Drawing.Image)(resources.GetObject("TestPrintButton.Image")));
             this.TestPrintButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.TestPrintButton.Name = "TestPrintButton";
-            this.TestPrintButton.Size = new System.Drawing.Size(140, 97);
+            this.TestPrintButton.Size = new System.Drawing.Size(140, 102);
             this.TestPrintButton.Text = "ทดสอบพิมพ์";
             this.TestPrintButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.TestPrintButton.Click += new System.EventHandler(this.TestPrintButton_Click);
@@ -1545,7 +1574,7 @@
             this.StartButton.Image = ((System.Drawing.Image)(resources.GetObject("StartButton.Image")));
             this.StartButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.StartButton.Name = "StartButton";
-            this.StartButton.Size = new System.Drawing.Size(101, 97);
+            this.StartButton.Size = new System.Drawing.Size(101, 102);
             this.StartButton.Text = "เริ่มผลิต";
             this.StartButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.StartButton.Visible = false;
@@ -1557,7 +1586,7 @@
             this.UpdateButton.Image = ((System.Drawing.Image)(resources.GetObject("UpdateButton.Image")));
             this.UpdateButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.UpdateButton.Name = "UpdateButton";
-            this.UpdateButton.Size = new System.Drawing.Size(80, 97);
+            this.UpdateButton.Size = new System.Drawing.Size(80, 102);
             this.UpdateButton.Text = "แก้ไข";
             this.UpdateButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
@@ -1568,7 +1597,7 @@
             this.EndOrderButton.Image = ((System.Drawing.Image)(resources.GetObject("EndOrderButton.Image")));
             this.EndOrderButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.EndOrderButton.Name = "EndOrderButton";
-            this.EndOrderButton.Size = new System.Drawing.Size(139, 97);
+            this.EndOrderButton.Size = new System.Drawing.Size(139, 102);
             this.EndOrderButton.Text = "จบออร์เดอร์";
             this.EndOrderButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.EndOrderButton.Visible = false;
@@ -1580,7 +1609,7 @@
             this.EmegencyButton.Image = ((System.Drawing.Image)(resources.GetObject("EmegencyButton.Image")));
             this.EmegencyButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.EmegencyButton.Name = "EmegencyButton";
-            this.EmegencyButton.Size = new System.Drawing.Size(104, 97);
+            this.EmegencyButton.Size = new System.Drawing.Size(104, 102);
             this.EmegencyButton.Text = "งานด่วน";
             this.EmegencyButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.EmegencyButton.Click += new System.EventHandler(this.EmegencyButton_Click);
@@ -1598,6 +1627,7 @@
             this.btnHome.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnHome.Size = new System.Drawing.Size(126, 114);
             this.btnHome.TabIndex = 1;
+            this.btnHome.Visible = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnSetting
@@ -1788,5 +1818,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtCount;
         private Guna.UI2.WinForms.Guna2TextBox txtBatch;
         private Guna.UI2.WinForms.Guna2TextBox txtExp;
+        private Guna.UI2.WinForms.Guna2TextBox txtTenDigit_temp;
     }
 }

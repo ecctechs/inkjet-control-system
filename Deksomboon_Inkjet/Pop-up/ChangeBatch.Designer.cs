@@ -63,6 +63,7 @@
             this.txtCount = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCheckSwap = new System.Windows.Forms.CheckBox();
             this.txtCheckTime = new System.Windows.Forms.CheckBox();
+            this.txtTenDitgit_temp = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -253,6 +254,7 @@
             // 
             // guna2GroupBox1
             // 
+            this.guna2GroupBox1.Controls.Add(this.txtTenDitgit_temp);
             this.guna2GroupBox1.Controls.Add(this.txtExp);
             this.guna2GroupBox1.Controls.Add(this.txtBBF);
             this.guna2GroupBox1.Controls.Add(this.txtTenDigit);
@@ -762,6 +764,30 @@
             this.txtCheckTime.UseVisualStyleBackColor = true;
             this.txtCheckTime.Visible = false;
             // 
+            // txtTenDitgit_temp
+            // 
+            this.txtTenDitgit_temp.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenDitgit_temp.DefaultText = "";
+            this.txtTenDitgit_temp.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenDitgit_temp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenDitgit_temp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenDitgit_temp.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenDitgit_temp.Enabled = false;
+            this.txtTenDitgit_temp.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenDitgit_temp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtTenDitgit_temp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenDitgit_temp.Location = new System.Drawing.Point(289, 6);
+            this.txtTenDitgit_temp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTenDitgit_temp.MaxLength = 3;
+            this.txtTenDitgit_temp.Name = "txtTenDitgit_temp";
+            this.txtTenDitgit_temp.PasswordChar = '\0';
+            this.txtTenDitgit_temp.PlaceholderText = "";
+            this.txtTenDitgit_temp.ReadOnly = true;
+            this.txtTenDitgit_temp.SelectedText = "";
+            this.txtTenDitgit_temp.Size = new System.Drawing.Size(117, 26);
+            this.txtTenDitgit_temp.TabIndex = 132;
+            this.txtTenDitgit_temp.Visible = false;
+            // 
             // ChangeBatch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -848,5 +874,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtExp;
         private System.Windows.Forms.CheckBox txtCheckSwap;
         private System.Windows.Forms.CheckBox txtCheckTime;
+        private Guna.UI2.WinForms.Guna2TextBox txtTenDitgit_temp;
     }
 }

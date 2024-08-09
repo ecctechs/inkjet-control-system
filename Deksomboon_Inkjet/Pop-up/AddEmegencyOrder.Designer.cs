@@ -49,6 +49,7 @@
             this.txtLine = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtInkjet = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.txtTenDigit_temp = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtExp = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtBBF = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenDigit = new Guna.UI2.WinForms.Guna2TextBox();
@@ -69,14 +70,13 @@
             this.guna2DateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.cboTypePrint = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtAmount = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.txtSwapFormat = new System.Windows.Forms.CheckBox();
             this.txtShowTime = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtAmount = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAmount)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -381,6 +381,7 @@
             // 
             // guna2GroupBox1
             // 
+            this.guna2GroupBox1.Controls.Add(this.txtTenDigit_temp);
             this.guna2GroupBox1.Controls.Add(this.txtExp);
             this.guna2GroupBox1.Controls.Add(this.txtBBF);
             this.guna2GroupBox1.Controls.Add(this.txtTenDigit);
@@ -393,6 +394,30 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(450, 162);
             this.guna2GroupBox1.TabIndex = 76;
             this.guna2GroupBox1.Text = "พรีวิว";
+            // 
+            // txtTenDigit_temp
+            // 
+            this.txtTenDigit_temp.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenDigit_temp.DefaultText = "";
+            this.txtTenDigit_temp.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenDigit_temp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenDigit_temp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenDigit_temp.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenDigit_temp.Enabled = false;
+            this.txtTenDigit_temp.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenDigit_temp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtTenDigit_temp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenDigit_temp.Location = new System.Drawing.Point(275, 11);
+            this.txtTenDigit_temp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTenDigit_temp.MaxLength = 3;
+            this.txtTenDigit_temp.Name = "txtTenDigit_temp";
+            this.txtTenDigit_temp.PasswordChar = '\0';
+            this.txtTenDigit_temp.PlaceholderText = "";
+            this.txtTenDigit_temp.ReadOnly = true;
+            this.txtTenDigit_temp.SelectedText = "";
+            this.txtTenDigit_temp.Size = new System.Drawing.Size(157, 26);
+            this.txtTenDigit_temp.TabIndex = 126;
+            this.txtTenDigit_temp.Visible = false;
             // 
             // txtExp
             // 
@@ -829,23 +854,6 @@
             this.guna2HtmlLabel12.TabIndex = 117;
             this.guna2HtmlLabel12.Text = "จํานวนผลิต";
             // 
-            // txtAmount
-            // 
-            this.txtAmount.BackColor = System.Drawing.Color.Transparent;
-            this.txtAmount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
-            this.txtAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAmount.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtAmount.Location = new System.Drawing.Point(200, 343);
-            this.txtAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtAmount.Maximum = new decimal(new int[] {
-            999999,
-            0,
-            0,
-            0});
-            this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(99, 36);
-            this.txtAmount.TabIndex = 119;
-            // 
             // txtSwapFormat
             // 
             this.txtSwapFormat.AutoSize = true;
@@ -881,14 +889,40 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "รูปแบบการพิมพ์";
             // 
+            // txtAmount
+            // 
+            this.txtAmount.BackColor = System.Drawing.Color.Black;
+            this.txtAmount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(123)))), ((int)(((byte)(189)))));
+            this.txtAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAmount.DefaultText = "";
+            this.txtAmount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAmount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAmount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAmount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAmount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtAmount.ForeColor = System.Drawing.Color.Black;
+            this.txtAmount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAmount.Location = new System.Drawing.Point(200, 342);
+            this.txtAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAmount.MaxLength = 6;
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.PasswordChar = '\0';
+            this.txtAmount.PlaceholderText = "";
+            this.txtAmount.SelectedText = "";
+            this.txtAmount.Size = new System.Drawing.Size(105, 37);
+            this.txtAmount.TabIndex = 126;
+            this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
+            this.txtAmount.Leave += new System.EventHandler(this.txtAmount_Leave);
+            // 
             // AddEmegencyOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(493, 847);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtAmount);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.guna2HtmlLabel12);
             this.Controls.Add(this.guna2DateTimePicker1);
             this.Controls.Add(this.txtOrderDate);
@@ -931,7 +965,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).EndInit();
             this.guna2GroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtAmount)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -979,10 +1012,11 @@
         private System.Windows.Forms.DateTimePicker guna2DateTimePicker1;
         private Guna.UI2.WinForms.Guna2ComboBox cboTypePrint;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
-        private Guna.UI2.WinForms.Guna2NumericUpDown txtAmount;
         private Guna.UI2.WinForms.Guna2TextBox txtExp;
         private System.Windows.Forms.CheckBox txtSwapFormat;
         private System.Windows.Forms.CheckBox txtShowTime;
         private System.Windows.Forms.GroupBox groupBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtTenDigit_temp;
+        private Guna.UI2.WinForms.Guna2TextBox txtAmount;
     }
 }

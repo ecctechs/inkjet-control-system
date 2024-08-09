@@ -251,7 +251,7 @@ namespace Deksomboon_Inkjet.Class
                         else
                         {
                             Console.WriteLine("Order with ID " + ord_id + " not found.");
-                            MessageBox.Show("Order with ID " + ord_id + " not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Order with ID 2222 " + ord_id + " not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }

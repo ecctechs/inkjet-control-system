@@ -161,6 +161,7 @@ namespace Deksomboon_Inkjet.Pop_up
             string MFG = GenerateBatchNumber.order_mfg_generate(order_date_test, slife, check_swap, check_time);
             string EXP = GenerateBatchNumber.order_exp_generate(order_date_test, slife, check_swap, check_time);
 
+            txtTenDitgit_temp.Text = tenDigit;
             if (selected_type_print == "2 บรรทัด")
             {
 

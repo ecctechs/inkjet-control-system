@@ -8,6 +8,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using Deksomboon_Inkjet.Class;
 using Deksomboon_Inkjet.UserControls;
@@ -213,6 +214,8 @@ namespace Deksomboon_Inkjet.Pop_up
             string MFG = GenerateBatchNumber.order_mfg_generate(order_date_test, slife, check_swap, check_time);
             string EXP = GenerateBatchNumber.order_exp_generate(order_date_test, slife, check_swap, check_time);
 
+            txtTenDigit_temp.Text = tenDigit;
+
             if (selected_type_print == "2 บรรทัด")
             {
 
@@ -302,7 +305,7 @@ namespace Deksomboon_Inkjet.Pop_up
                 if (form == "1") // emegency order
                 {
                     Order.Add_OrderEmergency(material_selected, Int32.Parse(line), batch, Int32.Parse(inkjet), type, ord_position, 0, "0", date_now , amount , ord_type_print , check_swap , check_time);
-                    DataLog.Add_Authorized_Log(Int32.Parse(ord_id), Int32.Parse(txtEmpID.Text), DateTime.Now.AddYears(-543).AddSeconds(DateTime.Now.AddYears(-543).Second).ToString(), "เพิ่มงานด่วน", 1, txtTenDigit.Text);
+                    DataLog.Add_Authorized_Log(Int32.Parse(ord_id), Int32.Parse(txtEmpID.Text), DateTime.Now.AddYears(-543).AddSeconds(DateTime.Now.AddYears(-543).Second).ToString(), "เพิ่มงานด่วน", 1, txtTenDigit_temp.Text);
                     DialogResult = DialogResult.OK;
                 }
                 else if(form == "2") // update order
@@ -311,7 +314,7 @@ namespace Deksomboon_Inkjet.Pop_up
                     if (!string.IsNullOrEmpty(emp_id))
                     {
                         Order.Update_Order(ord_id, line, inkjet, material_selected, batch, type, date_now , ord_type_print , amount , check_swap, check_time);
-                        DataLog.Add_Authorized_Log(Int32.Parse(ord_id), Int32.Parse(emp_id), DateTime.Now.AddYears(-543).AddSeconds(DateTime.Now.AddYears(-543).Second).ToString(), "แก้ไขวันที่/เปลี่ยนbatch", 2, txtTenDigit.Text);
+                        DataLog.Add_Authorized_Log(Int32.Parse(ord_id), Int32.Parse(emp_id), DateTime.Now.AddYears(-543).AddSeconds(DateTime.Now.AddYears(-543).Second).ToString(), "แก้ไขวันที่/เปลี่ยนbatch", 2, txtTenDigit_temp.Text);
                         DialogResult = DialogResult.OK;
                     }
                 }
@@ -396,6 +399,32 @@ namespace Deksomboon_Inkjet.Pop_up
         private void txtShowTime_Click(object sender, EventArgs e)
         {
             gen10number();
+        }
+
+        private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Check if the input is a digit or control (like backspace)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Reject the input
+            }
+        }
+
+        private void txtAmount_Leave(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtAmount.Text, out int value))
+            {
+                if (value > 999999)
+                {
+                    MessageBox.Show("Please enter a number less than or equal to 100,000.");
+                    txtAmount.Text = "999999"; // Optionally reset to max
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid number.");
+                txtAmount.Clear();
+            }
         }
     }
 }
