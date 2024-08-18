@@ -1131,138 +1131,131 @@ namespace Deksomboon_Inkjet
 
         private async void StartButton_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtBatch.Text))
+            if (string.IsNullOrEmpty(txtBatch.Text))
             {
-                //if (serialPortManager.IsOpen())
-                //{
-                    bool isConnected = await DatabaseManager.CheckDataBaseAsync();
+                MessageBox.Show("กรุณาใส่ batch ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-                    if (isConnected == true)
+            if (!serialPortManager.IsOpen())
+            {
+                MessageBox.Show("Serial Port is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            bool isConnected = await DatabaseManager.CheckDataBaseAsync();
+            if (!isConnected)
+            {
+                MessageBox.Show("Database is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string[] status = await command_status();
+            txtJetState.Text = "Jet State : " + status[0];
+            Console.WriteLine(status[0]);
+
+            if (status[0] == "Jet Running")
+            {
+                // Commented code for potential future use
+                // if (status[1] == "Waiting" || status[1] == "Printing")
+                // {
+                string emp_id = Authorized.authorized_level_1(txtEmployeeCode.Text, txtEmployeepass.Text);
+
+                if (!string.IsNullOrEmpty(emp_id))
+                {
+                    DialogResult confirmStartPrint = MessageBox.Show(
+                        $"คุณต้องการเริ่มผลิต Formula : {txtFormula.Text} , batch : {txtBatch.Text} หรือไม่",
+                        "คุณต้องการเริ่มต้นการผลิตหรือไม่ ?",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question);
+
+                    if (confirmStartPrint == DialogResult.Yes)
                     {
-                        string[] status = await command_status();
-                        txtJetState.Text = "Jet State : " + status[0];
-                        Console.WriteLine(status[0]);
+                        btnEditOrderPosition.Visible = false;
+                        tableLayoutOrderPosition.Visible = false;
 
-                        //if (status[0] == "Jet Running")
-                        //{
-                            //if (status[1] == "Waiting" || status[1] == "Printing")
-                            //{
-                            string emp_id = Authorized.authorized_level_1(txtEmployeeCode.Text, txtEmployeepass.Text);
+                        bool startPrint = await command_start_print();
+                        StartButton.Enabled = false;
 
-                            if (!string.IsNullOrEmpty(emp_id))
+                        if (startPrint)
+                        {
+                            int countInkjet = await command_count();
+                            txtCount2.Text = "0";
+                            InitializeTimer_count();
+
+                            StartButton.Visible = false;
+                            EmegencyButton.Visible = false;
+                            UpdateButton.Visible = false;
+                            StopButton.Visible = true;
+                            EndBatchButton.Visible = false;
+                            EndOrderButton.Visible = true;
+
+                            DateTime st = DateTime.Now.AddYears(-543);
+                            string startDate = st.AddSeconds(-st.Second).ToString();
+                            txtOrderDateStart.Text = startDate;
+
+                            string ordStatusPrint = "กำลังผลิต";
+
+                            Order.Update_Order_Status(txtOrdID.Text, txtBatch.Text, "กำลังผลิต", ordStatusPrint, Int32.Parse(txtCount.Text));
+                            DataLog.Add_DatLog(Int32.Parse(txtOrdID.Text), txtTenDigit_temp.Text, 0, startDate, "", Int32.Parse(emp_id));
+                            DataLog.Add_Authorized_Log(Int32.Parse(txtOrdID.Text), Int32.Parse(emp_id), startDate, "กำลังผลิต", 1, txtTenDigit_temp.Text);
+
+                            refreash_order();
+                            clear_authroized();
+
+                            bool checkSendText = await command_send_text();
+                            if (checkSendText)
                             {
-                                DialogResult confrim_start_print = MessageBox.Show("คุณต้องการเริ่มผลิต Formula : " + txtFormula.Text + " , batch : " + txtBatch.Text + " หรือไม่ ", "คุณต้องการเริ่มต้นการผลิตหรือไม่ ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                                if (confrim_start_print == DialogResult.Yes)
-                                {
-                            btnEditOrderPosition.Visible = false;
-                            tableLayoutOrderPosition.Visible = false;
-                            bool start_print = await command_start_print();
-                                    StartButton.Enabled = false;
-
-                                    if (start_print == true)
-                                    {
-                                        //MessageBox.Show("Start Jet สําเร็จ");
-                                        int count_inkjet = await command_count();                                       
-                                        //txtCount2.Text = count_inkjet.ToString();
-                                txtCount2.Text = "0";
-                                InitializeTimer_count();
-
-                                        StartButton.Visible = false;
-                                        EmegencyButton.Visible = false;
-                                        UpdateButton.Visible = false;
-
-                                        StopButton.Visible = true;
-                                        EndBatchButton.Visible = false;
-                                        EndOrderButton.Visible = true;
-
-                                        DateTime st = DateTime.Now.AddYears(-543);
-                                        string start_date = st.AddSeconds(-st.Second).ToString();
-                                        txtOrderDateStart.Text = start_date;
-
-                                string ord_status_print = "กำลังผลิต";
-                                //if (Int32.Parse(txtCount.Text) >= Int32.Parse(txtAmount.Text))
-                                //{
-                                //    ord_status_print = "ผลิตครบแล้ว";
-                                //}
-                                //else
-                                //{
-                                //    ord_status_print = "ยังผลิตไม่ครบ";
-                                //}
-                        
-
-                                Order.Update_Order_Status(txtOrdID.Text, txtBatch.Text, "กำลังผลิต" , ord_status_print, Int32.Parse(txtCount.Text));
-                                        DataLog.Add_DatLog(Int32.Parse(txtOrdID.Text), txtTenDigit_temp.Text, 0, start_date, "", Int32.Parse(emp_id));
-                                        DataLog.Add_Authorized_Log(Int32.Parse(txtOrdID.Text), Int32.Parse(emp_id), start_date, "กำลังผลิต", 1, txtTenDigit_temp.Text);
-                                        refreash_order();
-                                        clear_authroized();
-
-                                        //DialogResult confrim_send_text = MessageBox.Show("คุณต้องการส่งข้อความไปที่ inkjet หรือไม่ ", "Comfirm Send Text", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                                        //if (confrim_send_text == DialogResult.Yes)
-                                        //{
-                                        bool check_send_text = await command_send_text();
-
-                                        if (check_send_text == true)
-                                        {
-                                            MessageBox.Show("ส่งข้อความไปที่เครื่องอินเจ็กเรียบร้อยแล้ว", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    InitializeTimer_send_text();
-                                    refreash_order();
-                                            clear_authroized();
-                                        }
-                                        else
-                                        {
-                                            MessageBox.Show("ส่งข้อความล้มเหลว", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                        }
-                                        //}
-                                    }
-                                    else
-                                    {
-                                        MessageBox.Show("Start Jet ไม่สําเร็จ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                    }
-                                }
+                                MessageBox.Show("ส่งข้อความไปที่เครื่องอินเจ็กเรียบร้อยแล้ว", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                InitializeTimer_send_text();
+                                refreash_order();
+                                clear_authroized();
                             }
-                            //}
-                            //else
-                            //{
-                            //    MessageBox.Show("Printing State is not available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            //}
+                            else
+                            {
+                                MessageBox.Show("ส่งข้อความล้มเหลว", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
-                        //else if (status[0] == "Jet Stopped")
-                        //{
-                        //    DialogResult confrim_startjet = MessageBox.Show("อินเจ็กของคุณยังไม่เริ่มทํางาน คุณต้องการส่งคําสั่งไปเริ่มอินเจ็กหรือไม่ ?", "Comfrim Start Jet", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        //    if (confrim_startjet == DialogResult.Yes)
-                        //    {
-                        //        bool jet_start = await command_start_jet();
-                        //        if (jet_start == true)
-                        //        {
-                        //            MessageBox.Show("กําลังเริ่มอินเจ็กกรุณารอสักครู่", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //        }
-                        //        else
-                        //        {
-                        //            MessageBox.Show("ไม่สามารถส่งคําสั่ง start jet โปรดตรวจสอบอินเจ็กว่าพร้อมใช้งานหรือไม่", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        //        }
-                        //        refreash_order();
-                        //        clear_authroized();
-                        //    }
-                        //}
                         else
                         {
-                            MessageBox.Show("Jet State is not available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Start Jet ไม่สำเร็จ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
+                    }
+                }
+                // }
+                // else
+                // {
+                //     MessageBox.Show("Printing State is not available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // }
+            }
+            else if (status[0] == "Jet Stopped")
+            {
+                DialogResult confirmStartJet = MessageBox.Show(
+                    "อินเจ็กของคุณยังไม่เริ่มทำงาน คุณต้องการส่งคำสั่งไปเริ่มอินเจ็กหรือไม่ ?",
+                    "Confirm Start Jet",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+                if (confirmStartJet == DialogResult.Yes)
+                {
+                    bool jetStart = await command_start_jet();
+                    if (jetStart)
+                    {
+                        MessageBox.Show("กำลังเริ่มอินเจ็กกรุณารอสักครู่", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Database is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("ไม่สามารถส่งคำสั่ง start jet โปรดตรวจสอบอินเจ็กว่าพร้อมใช้งานหรือไม่", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Serial Port is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //}
-            //}
-            //else
-            //{
-            //    MessageBox.Show("กรุณาใส่ batch ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+
+                    refreash_order();
+                    clear_authroized();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Jet State is not available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             StartButton.Enabled = true;
         }
@@ -1274,8 +1267,8 @@ namespace Deksomboon_Inkjet
             string ord_id = txtOrdID.Text;
             string batch = txtBatch.Text;
 
-            //if (serialPortManager.IsOpen())
-            //{
+            if (serialPortManager.IsOpen())
+            {
                 bool isConnected = await DatabaseManager.CheckDataBaseAsync();
 
                 if (isConnected == true)
@@ -1355,27 +1348,112 @@ namespace Deksomboon_Inkjet
                                     }
                                 }
                             }
-                        //}
-                        //else
-                        //{
-                        //    MessageBox.Show("Jet State is not available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        //}
-                    //}
-                    //else
-                    //{
-                    //    MessageBox.Show("Jet State is not available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //}
+                //}
+                else
+                {
+                    MessageBox.Show("Jet State is not available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Jet State is not available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //}
+            }
                 else
                 {
                     MessageBox.Show("Database is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Serial Port is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            }
+            else
+            {
+                MessageBox.Show("Serial Port is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
+        //private async void EndBatchButton_Click(object sender, EventArgs e)
+        //{
+        //    string ord_status = txtOrderStatus.Text;
+        //    string inkjet_local = LocalStorage.ReadInkjetData();
+        //    string location_local = LocalStorage.ReadLocationData();
+        //    List<Order> records = Order.ListAndUpdateOrderByInkjetLocation(location_local, inkjet_local);
+        //    orderBindingSource.DataSource = records;
+
+        //    if (serialPortManager.IsOpen())
+        //    {
+        //        bool isConnected = await DatabaseManager.CheckDataBaseAsync();
+
+        //        if (isConnected == true)
+        //        {
+        //            //if (ord_status.Trim() == "กำลังผลิต")
+        //            //{
+        //                string emp_id = Authorized.authorized_level_1(txtEmployeeCode.Text, txtEmployeepass.Text);
+        //                if (!string.IsNullOrEmpty(emp_id))
+        //                {
+        //            timer3.Stop();
+        //            timer4.Stop();
+        //            Order obj = orderBindingSource.Current as Order;
+        //                    string form = "3";
+
+        //                    int count_inkjet = await command_count();
+        //                    //txtCountEnd.Text = count_inkjet.ToString();
+        //                    int sim_data =  sim_count;
+        //                    txtCountEnd.Text = sim_data.ToString();
+
+
+        //            int dif_count = 0;
+        //            if (string.IsNullOrEmpty(txtCountEnd.Text) || string.IsNullOrEmpty(txtCount2.Text))
+        //            {
+        //                txtCount.Text = txtCount.Text;
+        //            }
+        //            else
+        //            {
+        //                dif_count = Int32.Parse(txtCountEnd.Text) - Int32.Parse(txtCount2.Text);
+
+        //                //txtCount.Text = sum_count.ToString();
+        //            }
+
+        //            //int sum_count = 0;
+
+        //            using (ChangeBatch frm = new ChangeBatch(obj, form, txtEmployeeCode.Text, txtEmployeepass.Text, dif_count, emp_id, txtOrderDateStart.Text , txtAmount.Text , txtCount.Text))
+        //                    {
+        //                        if (frm.ShowDialog() == DialogResult.OK)
+        //                        {
+
+        //                            MessageBox.Show("เปลี่ยน batch เรียบร้อยแล้ว");
+
+        //                    tableLayoutOrderPosition.Visible = false;
+        //                    txtCountEnd.Text = "";
+        //                    btnEditOrderPosition.Visible = true;
+        //                    StartButton.Visible = true;
+        //                            EmegencyButton.Visible = true;
+        //                            UpdateButton.Visible = true;
+
+        //                            StopButton.Visible = false;
+        //                            EndBatchButton.Visible = false;
+        //                            EndOrderButton.Visible = false;
+        //                            await command_stop_print();
+        //                    sim_count = 1;
+        //                            refreash_order();
+        //                            clear_authroized();
+        //                        }
+        //                    }
+        //                }
+        //            }
+        //            else
+        //            {
+        //                MessageBox.Show("ไม่สามารถจบ batch สถานะ " + ord_status, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //            }
+        //    }
+        //    else
+        //        {
+        //            MessageBox.Show("Database is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        }
+        //    }
+        //    else
+        //        {
+        //            MessageBox.Show("Serial Port is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        }
+        //    }
 
         private async void EndBatchButton_Click(object sender, EventArgs e)
         {
@@ -1385,82 +1463,81 @@ namespace Deksomboon_Inkjet
             List<Order> records = Order.ListAndUpdateOrderByInkjetLocation(location_local, inkjet_local);
             orderBindingSource.DataSource = records;
 
-            //if (serialPortManager.IsOpen())
-            //{
+            if (!serialPortManager.IsOpen())
+            {
+                MessageBox.Show("Serial Port is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             bool isConnected = await DatabaseManager.CheckDataBaseAsync();
+            if (!isConnected)
+            {
+                MessageBox.Show("Database is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-                if (isConnected == true)
-                {
-                    //if (ord_status.Trim() == "กำลังผลิต")
-                    //{
-                        string emp_id = Authorized.authorized_level_1(txtEmployeeCode.Text, txtEmployeepass.Text);
-                        if (!string.IsNullOrEmpty(emp_id))
-                        {
-                    timer3.Stop();
-                    timer4.Stop();
-                    Order obj = orderBindingSource.Current as Order;
-                            string form = "3";
-
-                            int count_inkjet = await command_count();
-                            //txtCountEnd.Text = count_inkjet.ToString();
-                            int sim_data =  sim_count;
-                            txtCountEnd.Text = sim_data.ToString();
-
-
-                    int dif_count = 0;
-                    if (string.IsNullOrEmpty(txtCountEnd.Text) || string.IsNullOrEmpty(txtCount2.Text))
-                    {
-                        txtCount.Text = txtCount.Text;
-                    }
-                    else
-                    {
-                        dif_count = Int32.Parse(txtCountEnd.Text) - Int32.Parse(txtCount2.Text);
-                        
-                        //txtCount.Text = sum_count.ToString();
-                    }
-
-                    //int sum_count = 0;
-
-                    using (ChangeBatch frm = new ChangeBatch(obj, form, txtEmployeeCode.Text, txtEmployeepass.Text, dif_count, emp_id, txtOrderDateStart.Text , txtAmount.Text , txtCount.Text))
-                            {
-                                if (frm.ShowDialog() == DialogResult.OK)
-                                {
-                                    
-                                    MessageBox.Show("เปลี่ยน batch เรียบร้อยแล้ว");
-                        
-                            tableLayoutOrderPosition.Visible = false;
-                            txtCountEnd.Text = "";
-                            btnEditOrderPosition.Visible = true;
-                            StartButton.Visible = true;
-                                    EmegencyButton.Visible = true;
-                                    UpdateButton.Visible = true;
-
-                                    StopButton.Visible = false;
-                                    EndBatchButton.Visible = false;
-                                    EndOrderButton.Visible = false;
-                                    await command_stop_print();
-                            sim_count = 1;
-                                    refreash_order();
-                                    clear_authroized();
-                                }
-                            }
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("ไม่สามารถจบ batch สถานะ " + ord_status, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                //}
-            //    else
-            //    {
-            //        MessageBox.Show("Database is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
-            //else
+            // if (ord_status.Trim() == "กำลังผลิต")
             //{
-            //    MessageBox.Show("Serial Port is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            string emp_id = Authorized.authorized_level_1(txtEmployeeCode.Text, txtEmployeepass.Text);
+            if (string.IsNullOrEmpty(emp_id))
+            {
+                MessageBox.Show("Unauthorized access", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            timer3.Stop();
+            timer4.Stop();
+
+            Order obj = orderBindingSource.Current as Order;
+            string form = "3";
+
+            int count_inkjet = await command_count();
+            int sim_data = sim_count;
+            txtCountEnd.Text = sim_data.ToString();
+
+            int dif_count = 0;
+            if (!string.IsNullOrEmpty(txtCountEnd.Text) && !string.IsNullOrEmpty(txtCount2.Text))
+            {
+                dif_count = Int32.Parse(txtCountEnd.Text) - Int32.Parse(txtCount2.Text);
+                // txtCount.Text = sum_count.ToString();
+            }
+            else
+            {
+                txtCount.Text = txtCount.Text;
+            }
+
+            using (ChangeBatch frm = new ChangeBatch(
+                obj, form, txtEmployeeCode.Text, txtEmployeepass.Text, dif_count, emp_id,
+                txtOrderDateStart.Text, txtAmount.Text, txtCount.Text))
+            {
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    MessageBox.Show("เปลี่ยน batch เรียบร้อยแล้ว");
+
+                    tableLayoutOrderPosition.Visible = false;
+                    txtCountEnd.Text = "";
+                    btnEditOrderPosition.Visible = true;
+                    StartButton.Visible = true;
+                    EmegencyButton.Visible = true;
+                    UpdateButton.Visible = true;
+                    StopButton.Visible = false;
+                    EndBatchButton.Visible = false;
+                    EndOrderButton.Visible = false;
+
+                    await command_stop_print();
+                    sim_count = 1;
+
+                    refreash_order();
+                    clear_authroized();
+                }
+            }
+        //}
+    //else
+    //        {
+    //            MessageBox.Show("ไม่สามารถจบ batch สถานะ " + ord_status, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+    //        }
         }
+
 
 
         private async void EmegencyButton_Click(object sender, EventArgs e)
@@ -1552,8 +1629,8 @@ namespace Deksomboon_Inkjet
             string batch = txtBatch.Text;
             string ord_status = txtOrderStatus.Text;
 
-            //if (serialPortManager.IsOpen())
-            //{
+            if (serialPortManager.IsOpen())
+            {
                 bool isConnected = await DatabaseManager.CheckDataBaseAsync();
 
                 if (isConnected == true)
@@ -1630,11 +1707,11 @@ namespace Deksomboon_Inkjet
                 {
                     MessageBox.Show("Database is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Serial Port is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            }
+            else
+            {
+                MessageBox.Show("Serial Port is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void frmPlan_FormClosed(object sender, FormClosedEventArgs e)
@@ -1761,8 +1838,8 @@ namespace Deksomboon_Inkjet
         {
             if (!string.IsNullOrEmpty(txtBatch.Text))
             {
-                //if (serialPortManager.IsOpen())
-                //{
+                if (serialPortManager.IsOpen())
+                {
                     bool isConnected = await DatabaseManager.CheckDataBaseAsync();
 
                     if (isConnected == true)
@@ -1843,24 +1920,24 @@ namespace Deksomboon_Inkjet
                                     }
                                 }
                             }
-                        //}
-                        //else if (status[0] == "Jet Stopped")
-                        //{
-                        //    DialogResult confrim_startjet = MessageBox.Show("อินเจ็กของคุณยังไม่เริ่มทํางาน คุณต้องการส่งคําสั่งไปเริ่มอินเจ็กหรือไม่ ?", "Comfrim Start Jet", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        //    if (confrim_startjet == DialogResult.Yes)
-                        //    {
-                        //        bool jet_start = await command_start_jet();
-                        //        if (jet_start == true)
-                        //        {
-                        //            MessageBox.Show("กําลังเริ่มอินเจ็กกรุณารอสักครู่", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //        }
-                        //        else
-                        //        {
-                        //            MessageBox.Show("ไม่สามารถส่งคําสั่ง start jet โปรดตรวจสอบอินเจ็กว่าพร้อมใช้งานหรือไม่", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        //        }
-                        //        refreash_order();
-                        //    }
-                        //}
+                    //}
+                    else if (status[0] == "Jet Stopped")
+                        {
+                            DialogResult confrim_startjet = MessageBox.Show("อินเจ็กของคุณยังไม่เริ่มทํางาน คุณต้องการส่งคําสั่งไปเริ่มอินเจ็กหรือไม่ ?", "Comfrim Start Jet", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            if (confrim_startjet == DialogResult.Yes)
+                            {
+                                bool jet_start = await command_start_jet();
+                                if (jet_start == true)
+                                {
+                                    MessageBox.Show("กําลังเริ่มอินเจ็กกรุณารอสักครู่", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                                else
+                                {
+                                    MessageBox.Show("ไม่สามารถส่งคําสั่ง start jet โปรดตรวจสอบอินเจ็กว่าพร้อมใช้งานหรือไม่", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                                refreash_order();
+                            }
+                        }
                         else
                         {
                             MessageBox.Show("Jet State is not available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -1871,11 +1948,11 @@ namespace Deksomboon_Inkjet
                         MessageBox.Show("Database is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                //else
-                //{
-                //    MessageBox.Show("Serial Port is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //}
-            //}
+                else
+                {
+                    MessageBox.Show("Serial Port is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
             else
             {
                 MessageBox.Show("กรุณาใส่ batch ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
