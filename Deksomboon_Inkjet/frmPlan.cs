@@ -1960,7 +1960,8 @@ namespace Deksomboon_Inkjet
             }
             else
             {
-                MessageBox.Show("กรุณาใส่ batch ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+              
+                MessageBox.Show("กรุณาใส่ batch ", "แจ้งเตือน", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             StartButton.Enabled = true;
         }
