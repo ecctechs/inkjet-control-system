@@ -151,7 +151,9 @@ namespace Deksomboon_Inkjet.Class
                                 inkjet_name = reader.GetString(reader.GetOrdinal("inkjet_name")),
                                 ord_type = reader.GetString(reader.GetOrdinal("ord_type")),
                                 ord_status = reader.GetString(reader.GetOrdinal("ord_status")),
-                                ord_date = reader.GetString(reader.GetOrdinal("ord_date"))
+                                ord_date = reader.GetString(reader.GetOrdinal("ord_date")),
+                                 ord_count = reader.GetInt32(reader.GetOrdinal("ord_count")),
+                                ord_count_amount = reader.GetInt32(reader.GetOrdinal("ord_count_amount"))
 
                                 // เพิ่ม properties อื่น ๆ ตามต้องการ
                             };
