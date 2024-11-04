@@ -79,27 +79,43 @@ namespace Deksomboon_Inkjet.Class
             return string.Empty;
         }
 
+        //public static string GetSecondString(string input)
+        //{
+        //    // แยกสตริงโดยใช้ช่องว่างเป็นตัวแบ่ง
+        //    string[] parts = input.Split(' ');
+
+        //    // ตรวจสอบว่ามีอย่างน้อย 1 องค์ประกอบในอาร์เรย์
+        //    if (parts.Length > 0)
+        //    {
+        //        // คืนค่าองค์ประกอบแรก
+        //        try
+        //        {
+        //            return parts[1];
+        //        }
+        //        catch (Exception e)
+        //        {
+        //            MessageBox.Show(e.ToString());
+        //            return parts[0];
+        //        }
+        //    }
+
+        //    // คืนค่าว่างถ้าไม่มีองค์ประกอบในอาร์เรย์
+        //    return string.Empty;
+        //}
+
         public static string GetSecondString(string input)
         {
             // แยกสตริงโดยใช้ช่องว่างเป็นตัวแบ่ง
             string[] parts = input.Split(' ');
 
-            // ตรวจสอบว่ามีอย่างน้อย 1 องค์ประกอบในอาร์เรย์
-            if (parts.Length > 0)
+            // ตรวจสอบว่ามีอย่างน้อย 2 องค์ประกอบในอาร์เรย์
+            if (parts.Length > 1)
             {
-                // คืนค่าองค์ประกอบแรก
-                try
-                {
-                    return parts[1];
-                }
-                catch (Exception e)
-                {
-                    MessageBox.Show(e.ToString());
-                    return parts[0];
-                }
+                // คืนค่าองค์ประกอบที่สอง
+                return parts[1];
             }
 
-            // คืนค่าว่างถ้าไม่มีองค์ประกอบในอาร์เรย์
+            // คืนค่าว่างถ้าไม่มีองค์ประกอบที่สอง
             return string.Empty;
         }
     }

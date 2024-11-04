@@ -712,6 +712,7 @@ namespace Deksomboon_Inkjet
 
             string byte_con_string = String.Join("", array_bytes);
             string recive_string = StringHelper.AddSpacesEveryTwoCharacters(byte_con_string);
+            //Console.WriteLine(recive_string);
 
             //Console.WriteLine("recive string  :" + recive_string);
             bool check_send_success = StringHelper.CheckIfSecondElementIs06(recive_string);
@@ -897,13 +898,13 @@ namespace Deksomboon_Inkjet
             string byte_con_string = String.Join("", array_bytes);
             string recive_string = StringHelper.AddSpacesEveryTwoCharacters(byte_con_string);
 
-            Console.WriteLine("recive string  :" + recive_string);
-            bool check_send_success = StringHelper.CheckIfSecondElementIs06(recive_string);
+            //Console.WriteLine("recive string  :" + recive_string);
+            //bool check_send_success = StringHelper.CheckIfSecondElementIs06(recive_string);
 
-            if (check_send_success)
-            {
+            //if (check_send_success)
+            //{
                 string count_byte = StringHelper.ExtractSubstringBetween(recive_string, "8D", "1B");
-                Console.WriteLine("Sub String Count :" + count_byte);
+                //Console.WriteLine("Sub String Count :" + count_byte);
 
                 string[] subArray = count_byte.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                 int sum = 0;
@@ -914,11 +915,11 @@ namespace Deksomboon_Inkjet
                 // Print the sum
                 Console.WriteLine($"Sum of the values: {sum}");
                 count_command = sum;
-            }
-            else
-            {
-                MessageBox.Show("ส่ง command ล้มเหลม โปรดตรวจสอบการเชื่อมต่อ inkjet");
-            }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("ส่ง command ล้มเหลม โปรดตรวจสอบการเชื่อมต่อ inkjet COUNT");
+            //}
             bytesCount_list.Clear();
             bytesStatus_list.Clear();
             bytesJETstart_list.Clear();
@@ -933,6 +934,8 @@ namespace Deksomboon_Inkjet
             string tenDigit = txtTenDigit.Text;
             string bbf = txtBBF.Text;
             string exp = txtExp.Text;
+
+            //Console.WriteLine(tenDigit);
 
             byte[] messageBytes = Encoding.UTF8.GetBytes(tenDigit);
             byte[] messageBytes2 = Encoding.UTF8.GetBytes(bbf);
@@ -1152,7 +1155,7 @@ namespace Deksomboon_Inkjet
 
             string[] status = await command_status();
             txtJetState.Text = "Jet State : " + status[0];
-            Console.WriteLine(status[0]);
+            //Console.WriteLine("STATUS>>>>"+status[0]);
 
             if (status[0] == "Jet Running")
             {
@@ -1180,7 +1183,9 @@ namespace Deksomboon_Inkjet
                         if (startPrint)
                         {
                             int countInkjet = await command_count();
-                            txtCount2.Text = "0";
+                            //txtCount2.Text = "0";
+                            //txtCount.Text = countInkjet.ToString();
+                            txtCount2.Text = countInkjet.ToString();
                             InitializeTimer_count();
 
                             StartButton.Visible = false;
@@ -1296,9 +1301,9 @@ namespace Deksomboon_Inkjet
                             timer3.Stop();
                             timer4.Stop();
                                         int count_inkjet = await command_count();
-                                        //txtCountEnd.Text = count_inkjet.ToString();
-                            int sim_data = sim_count;
-                            txtCountEnd.Text = sim_data.ToString();
+                                        txtCountEnd.Text = count_inkjet.ToString();
+                            //int sim_data = sim_count;
+                            //txtCountEnd.Text = sim_data.ToString();
 
                             int sum_count = Int32.Parse(txtCountEnd.Text) - Int32.Parse(txtCount2.Text);
                                         DateTime st = DateTime.Now.AddYears(-543);
@@ -1349,10 +1354,10 @@ namespace Deksomboon_Inkjet
                                 }
                             }
                 //}
-                else
-                {
-                    MessageBox.Show("Jet State is not available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                //else
+                //{
+                //    MessageBox.Show("Jet State is not available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //}
                 //}
                 //else
                 //{
@@ -1659,9 +1664,9 @@ namespace Deksomboon_Inkjet
                                 string end_date = st.AddSeconds(-st.Second).ToString();
 
                                 int count_inkjet = await command_count();
-                                //txtCountEnd.Text = count_inkjet.ToString();
-                                int sim_data = sim_count;
-                                txtCountEnd.Text = sim_data.ToString();
+                                txtCountEnd.Text = count_inkjet.ToString();
+                                //int sim_data = sim_count;
+                                //txtCountEnd.Text = sim_data.ToString();
 
 
                                 int sum_count = Int32.Parse(txtCountEnd.Text) - Int32.Parse(txtCount2.Text);
@@ -1967,7 +1972,7 @@ namespace Deksomboon_Inkjet
 
             int sim_data = sim_count;
             int count_inkjet = await command_count();
-            txtCountEnd.Text = sim_data.ToString();
+            txtCountEnd.Text = count_inkjet.ToString();
 
             int sum_count = Int32.Parse(columnCount) + Int32.Parse(txtCountEnd.Text) - Int32.Parse(txtCount2.Text);
 
