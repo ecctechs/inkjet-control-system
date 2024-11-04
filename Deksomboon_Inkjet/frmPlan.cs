@@ -1142,14 +1142,14 @@ namespace Deksomboon_Inkjet
 
             if (!serialPortManager.IsOpen())
             {
-                MessageBox.Show("Serial Port ขาดการเชื่อมต่อ ,กรุณาตรวจสอบสาย RS232 ว่าเชื่อมกับ inkjet แล้วหรือไม่ ?", "แจ้งเตือน", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Serial Port is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             bool isConnected = await DatabaseManager.CheckDataBaseAsync();
             if (!isConnected)
             {
-                MessageBox.Show("Database ขาดการเชื่อมต่อ ,กรุณาตรวจสอบเน็ตเวิร์ดใหม่อีกครั้ง", "แจ้งเตือน", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Database is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
