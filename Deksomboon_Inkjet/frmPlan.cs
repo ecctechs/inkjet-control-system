@@ -501,7 +501,7 @@ namespace Deksomboon_Inkjet
                     // เก็บเฉพาะวันที่
                     DateTime onlyDate = order_date_test.Date;
                     // แสดงวันที่ในรูปแบบที่คุณต้องการ (ไม่รวมเวลา)
-                    string formattedDate = onlyDate.ToString("dd/MM/yyyy");
+                    string formattedDate = onlyDate.AddYears(-543).ToString("dd/MM/yyyy");
 
                     // นำข้อมูลไปแสดงใน TextBox หรือคอนโทรลที่ต้องการ
                     txtBatch.Text = columnBatch;
@@ -1136,20 +1136,20 @@ namespace Deksomboon_Inkjet
         {
             if (string.IsNullOrEmpty(txtBatch.Text))
             {
-                MessageBox.Show("กรุณาใส่ batch ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("กรุณาใส่ batch ", "แจ้งเตือน", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (!serialPortManager.IsOpen())
             {
-                MessageBox.Show("Serial Port is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Serial Port ขาดการเชื่อมต่อ ,กรุณาตรวจสอบสาย RS232 ว่าเชื่อมกับ inkjet แล้วหรือไม่ ?", "แจ้งเตือน", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             bool isConnected = await DatabaseManager.CheckDataBaseAsync();
             if (!isConnected)
             {
-                MessageBox.Show("Database is Disconnect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Database ขาดการเชื่อมต่อ ,กรุณาตรวจสอบเน็ตเวิร์ดใหม่อีกครั้ง", "แจ้งเตือน", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

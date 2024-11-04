@@ -284,21 +284,21 @@ namespace Deksomboon_Inkjet.Pop_up
             int ord_position;
             if (!int.TryParse(cboPosition.Text, out ord_position))
             {
-                MessageBox.Show("กรุณาระบุลําดับออร์เดอร์ที่ต้องการแทรก");
+                MessageBox.Show("กรุณาระบุลําดับออร์เดอร์ที่ต้องการแทรก","แจ้งเตือน",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return;
             }
 
             if (material_selected == "0" ) 
             {
-                MessageBox.Show("กรุณาเลือก Material");
+                MessageBox.Show("กรุณาเลือก Material", "แจ้งเตือน", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if(string.IsNullOrEmpty(batch))
             {
-                MessageBox.Show("กรุณาใส่ batch");
+                MessageBox.Show("กรุณาใส่ batch", "แจ้งเตือน", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (amount == "0" || amount == null)
             {
-                MessageBox.Show("กรุณาใส่จํานวนผลิต");
+                MessageBox.Show("กรุณาใส่จํานวนผลิต", "แจ้งเตือน", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {

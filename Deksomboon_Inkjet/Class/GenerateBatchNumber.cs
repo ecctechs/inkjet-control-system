@@ -76,7 +76,8 @@ namespace Deksomboon_Inkjet.Class
                     }
                     else
                     {
-                        resultDateString = resultDate.AddYears(-543).ToString("dd/MM/yyyy HH:mm");
+                        //resultDateString = resultDate.AddYears(-543).ToString("dd/MM/yyyy HH:mm");
+                        resultDateString = resultDate.AddYears(-543).ToString("dd/MM/yyyy") + " " + currentTime.ToString("HH:mm");
                     }
                 }
                 else
@@ -87,14 +88,15 @@ namespace Deksomboon_Inkjet.Class
                     }
                     else
                     {
-                        resultDateString = resultDate.AddYears(-543).ToString("yyyy/MM/dd HH:mm");
+                        //resultDateString = resultDate.AddYears(-543).ToString("yyyy/MM/dd HH:mm");
+                        resultDateString = resultDate.AddYears(-543).ToString("yyyy/MM/dd") + " " + currentTime.ToString("HH:mm");
                     }
                 }
                 // Combine with current time if needed
-                if (column_ord_type_print_time)
-                {
-                    resultDateString = resultDate.AddYears(-543).ToString("yyyy/MM/dd") + " " + currentTime.ToString("HH:mm");
-                }
+                //if (column_ord_type_print_time)
+                //{
+                //    resultDateString = resultDate.AddYears(-543).ToString("yyyy/MM/dd") + " " + currentTime.ToString("HH:mm");
+                //}
 
                 //Console.WriteLine(resultDateString);
                 BBF = "BBF "+ resultDateString;
@@ -125,7 +127,8 @@ namespace Deksomboon_Inkjet.Class
                     }
                     else
                     {
-                        resultDateString = resultDate.AddYears(-543).ToString("dd/MM/yyyy HH:mm");
+                        //resultDateString = resultDate.AddYears(-543).ToString("dd/MM/yyyy HH:mm");
+                        resultDateString = resultDate.AddYears(-543).ToString("dd/MM/yyyy") + " " + currentTime.ToString("HH:mm");
                     }
                 }
                 else
@@ -136,15 +139,16 @@ namespace Deksomboon_Inkjet.Class
                     }
                     else
                     {
-                        resultDateString = resultDate.AddYears(-543).ToString("yyyy/MM/dd HH:mm");
+                        //resultDateString = resultDate.AddYears(-543).ToString("yyyy/MM/dd HH:mm");
+                        resultDateString = resultDate.AddYears(-543).ToString("yyyy/MM/dd") + " " + currentTime.ToString("HH:mm");
                     }
                 }
 
                 // Combine with current time if needed
-                if (column_ord_type_print_time)
-                {
-                    resultDateString = resultDate.AddYears(-543).ToString("yyyy/MM/dd") + " " + currentTime.ToString("HH:mm");
-                }
+                //if (column_ord_type_print_time)
+                //{
+                //    resultDateString = resultDate.AddYears(-543).ToString("yyyy/MM/dd") + " " + currentTime.ToString("HH:mm");
+                //}
 
                 //Console.WriteLine(resultDateString);
                 BBF = "EXP " + resultDateString;
