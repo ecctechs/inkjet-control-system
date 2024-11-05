@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPlan));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -279,7 +279,7 @@
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(111, 30);
             this.guna2HtmlLabel4.TabIndex = 0;
-            this.guna2HtmlLabel4.Text = "จํานวนผลิต";
+            this.guna2HtmlLabel4.Text = "จํานวนผลิต (ขวด)";
             this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel8
@@ -719,7 +719,7 @@
             this.guna2GroupBox4.Location = new System.Drawing.Point(795, 3);
             this.guna2GroupBox4.Margin = new System.Windows.Forms.Padding(15, 3, 2, 3);
             this.guna2GroupBox4.Name = "guna2GroupBox4";
-            this.guna2GroupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2GroupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.guna2GroupBox4.Size = new System.Drawing.Size(176, 172);
             this.guna2GroupBox4.TabIndex = 1;
             this.guna2GroupBox4.Text = "ข้อความที่พิมพ์";
@@ -1087,17 +1087,17 @@
             // 
             this.OrderGrid.AllowUserToAddRows = false;
             this.OrderGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.OrderGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.OrderGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.OrderGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(177)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(177)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.OrderGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(177)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(177)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.OrderGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.OrderGrid.ColumnHeadersHeight = 25;
             this.OrderGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.OrderGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1107,14 +1107,14 @@
             this.ord_id,
             this.location_id,
             this.inkjet_id});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.OrderGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.OrderGrid.DefaultCellStyle = dataGridViewCellStyle6;
             this.OrderGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OrderGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.OrderGrid.Location = new System.Drawing.Point(2, 28);
@@ -1575,10 +1575,10 @@
             this.UpdateButton,
             this.EndOrderButton,
             this.EmegencyButton});
-            this.menuStrip2.Location = new System.Drawing.Point(131, 0);
+            this.menuStrip2.Location = new System.Drawing.Point(367, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(5, 1, 0, 1);
-            this.menuStrip2.Size = new System.Drawing.Size(746, 98);
+            this.menuStrip2.Size = new System.Drawing.Size(274, 94);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -1601,7 +1601,7 @@
             this.EndBatchButton.Image = ((System.Drawing.Image)(resources.GetObject("EndBatchButton.Image")));
             this.EndBatchButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.EndBatchButton.Name = "EndBatchButton";
-            this.EndBatchButton.Size = new System.Drawing.Size(88, 96);
+            this.EndBatchButton.Size = new System.Drawing.Size(88, 92);
             this.EndBatchButton.Text = "จบbatch";
             this.EndBatchButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.EndBatchButton.Visible = false;
@@ -1613,7 +1613,7 @@
             this.TestPrintButton.Image = ((System.Drawing.Image)(resources.GetObject("TestPrintButton.Image")));
             this.TestPrintButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.TestPrintButton.Name = "TestPrintButton";
-            this.TestPrintButton.Size = new System.Drawing.Size(109, 96);
+            this.TestPrintButton.Size = new System.Drawing.Size(109, 92);
             this.TestPrintButton.Text = "ทดสอบพิมพ์";
             this.TestPrintButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.TestPrintButton.Click += new System.EventHandler(this.TestPrintButton_Click);
@@ -1624,7 +1624,7 @@
             this.StartButton.Image = ((System.Drawing.Image)(resources.GetObject("StartButton.Image")));
             this.StartButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.StartButton.Name = "StartButton";
-            this.StartButton.Size = new System.Drawing.Size(77, 96);
+            this.StartButton.Size = new System.Drawing.Size(77, 92);
             this.StartButton.Text = "เริ่มผลิต";
             this.StartButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.StartButton.Visible = false;
@@ -1636,7 +1636,7 @@
             this.UpdateButton.Image = ((System.Drawing.Image)(resources.GetObject("UpdateButton.Image")));
             this.UpdateButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.UpdateButton.Name = "UpdateButton";
-            this.UpdateButton.Size = new System.Drawing.Size(76, 96);
+            this.UpdateButton.Size = new System.Drawing.Size(76, 92);
             this.UpdateButton.Text = "แก้ไข";
             this.UpdateButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
@@ -1647,7 +1647,7 @@
             this.EndOrderButton.Image = ((System.Drawing.Image)(resources.GetObject("EndOrderButton.Image")));
             this.EndOrderButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.EndOrderButton.Name = "EndOrderButton";
-            this.EndOrderButton.Size = new System.Drawing.Size(101, 96);
+            this.EndOrderButton.Size = new System.Drawing.Size(101, 92);
             this.EndOrderButton.Text = "จบออร์เดอร์";
             this.EndOrderButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.EndOrderButton.Visible = false;
@@ -1659,7 +1659,7 @@
             this.EmegencyButton.Image = ((System.Drawing.Image)(resources.GetObject("EmegencyButton.Image")));
             this.EmegencyButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.EmegencyButton.Name = "EmegencyButton";
-            this.EmegencyButton.Size = new System.Drawing.Size(82, 96);
+            this.EmegencyButton.Size = new System.Drawing.Size(82, 92);
             this.EmegencyButton.Text = "งานด่วน";
             this.EmegencyButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.EmegencyButton.Click += new System.EventHandler(this.EmegencyButton_Click);

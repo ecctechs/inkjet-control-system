@@ -1650,13 +1650,15 @@ namespace Deksomboon_Inkjet
                             {
                                 tableLayoutOrderPosition.Visible = false;
                                 btnEditOrderPosition.Visible = true;
-                                StartButton.Visible = true;
+                                //StartButton.Visible = true;
                                 EmegencyButton.Visible = true;
                                 UpdateButton.Visible = true;
 
                                 StopButton.Visible = false;
                                 EndBatchButton.Visible = false;
                                 EndOrderButton.Visible = false;
+                            StartButton.Visible = false;
+                            TestPrintButton.Visible = true;
 
                                
                                 //string end_date = DateTime.Now.AddYears(-543).ToString("dd/MM/yyyy hh:mm");
@@ -1728,14 +1730,24 @@ namespace Deksomboon_Inkjet
 
         private void btnEditOrderPosition_Click(object sender, EventArgs e)
         {
-            timer2.Stop();
-            tableLayoutOrderPosition.Visible = true;
-            btnEditOrderPosition.Visible = false;
+            string emp_id = Authorized.authorized_level_1(txtEmployeeCode.Text, txtEmployeepass.Text);
 
+            if (!string.IsNullOrEmpty(emp_id))
+            {
+                timer2.Stop();
+                tableLayoutOrderPosition.Visible = true;
+                btnEditOrderPosition.Visible = false;
+
+
+                //OrderGrid.Rows[0].Selected = true;
+                OrderGrid.Enabled = true;
+                OrderGrid.ClearSelection();
+            }
+            else
+            {
+                clear_authroized();
+            }
             
-            //OrderGrid.Rows[0].Selected = true;
-            OrderGrid.Enabled = true;
-            OrderGrid.ClearSelection();
 
         }
 
@@ -1769,6 +1781,8 @@ namespace Deksomboon_Inkjet
                     // ตัวอย่างเช่น records[i].ord_position = ordPosition;
                     // โดย records คือ List<Order> ที่ถูกใช้ในการสร้าง DataTable
                 }
+                StartButton.Visible = false;
+                TestPrintButton.Visible = true;
 
                 // ให้ DataGridView ทำการ Refresh เพื่อแสดงค่า ord_position ใหม่
                 OrderGrid.Refresh();
