@@ -22,8 +22,11 @@
 
 ภาพรวมการทำงานของระบบ:
 
-![หน้าจอ Dashboard](./image/dashboard.jpg)  
-*รูปที่ 1: หน้า Dashboard*
+![หน้าจอ controlroom](./image/control-room.jpg)  
+*รูปที่ 1: หน้า controlroom*
+
+![หน้าจอ line](./image/line.jpg)  
+*รูปที่ 2: หน้า ไลน์ผลิต*
 
 ---
 
